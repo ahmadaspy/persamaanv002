@@ -47,25 +47,15 @@
                     </div>
                 </div>
             </div>
-            @include('siswa.spldv.metode grafik.mari mencoba.mari_mencoba')
-
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                Gunakan koordinat \(x\) dan \(y\) untuk membantu kalian mencari titik potong !, klik <a
-                    href="{{ route('grafik_view') }}" target="_blank" rel="noreferrer noopener">disini</a> untuk
-                membuka !
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-
+            @include('siswa.spldv.metode subtitusi.mari mencoba.mari_mencoba')
         </div>
     </div>
-    @include('siswa.spldv.metode grafik.halaman_footer')
+    @include('siswa.spldv.metode subtitusi.halaman_footer')
+
 @endsection
 @section('script_bawah')
     <script>
         window.onload = function() {
-
             var jawaban = {!! json_encode($jawaban_siswa) !!};
             if (jawaban != null) {
                 for (const [key, value] of Object.entries(jawaban)) {
@@ -82,7 +72,6 @@
             if (percobaan > 3) {
                 $("#myModal").modal('show');
             }
-
         }
     </script>
 

@@ -13,6 +13,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        \App\Models\MariMencobaSpldvElminasi::factory(5)->create();
+        \App\Models\MariMencobaSpldvSubtitusi::factory(5)->create();
         \App\Models\MariMencobaSPLDVGrafik::factory(5)->create();
         \App\Models\KodeKelas::factory(5)->create();
         $this->call(LaratrustSeeder::class);

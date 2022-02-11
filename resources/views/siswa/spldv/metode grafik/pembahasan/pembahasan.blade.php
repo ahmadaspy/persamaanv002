@@ -25,7 +25,7 @@
                             <div class="overflow-auto">
                                 <div class="card" style="background-color: #e3e3e3">
                                     <div class="card-body">
-                                        <p>Dengan \(y = 0\) :</p>
+                                        <p>Dengan \(x = 0\) :</p>
                                         $$\displaylines{
                                         {{ $pembahasan_soal->soal_1_x }}
                                         }$$
@@ -82,7 +82,7 @@
                             <div class="overflow-auto">
                                 <div class="card" style="background-color: #e3e3e3">
                                     <div class="card-body">
-                                        <p>Dengan \(y = 0\) :</p>
+                                        <p>Dengan \(x = 0\) :</p>
                                         $$\displaylines{
                                         {{ $pembahasan_soal->soal_2_x }}
                                         }$$
@@ -138,8 +138,9 @@
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
                                 aria-hidden="true">&times;</span>
                         </button>
-                        <i class="icon-screen-smartphone menu-icon" id="icon_smartphone"></i>You should check in on some of
-                        those fields below.
+                        <i class="icon-screen-smartphone menu-icon" id="icon_smartphone"></i> Apabila kalian membuka dengan
+                        tampilan handphone atau mobile, <strong>Miringkan perangkat kalian</strong> untuk memudahkan melihat
+                        titik koordinat
                     </div>
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item" src="{{ $pembahasan_soal->link_geogebra }}"

@@ -11,6 +11,7 @@ class MariMencobaSPLDVGrafikFactory extends Factory
      *
      * @return array
      */
+
     public function definition()
     {
         $soal_colect = collect([

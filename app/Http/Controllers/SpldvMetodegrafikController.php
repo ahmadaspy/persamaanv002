@@ -89,7 +89,7 @@ class SpldvMetodegrafikController extends Controller
         } else {
             $percobaan = 0;
             toast('Yay! jawaban kamu benar', 'success');
-            return redirect()->back()->with(compact('mari_mencoba', 'id', 'banyak_soal', 'i', 'jawaban_siswa', 'percobaan'))->withInput();
+            return redirect()->back()->with(compact('mari_mencoba', 'id', 'banyak_soal', 'i', 'jawaban_siswa', 'percobaan'))->withInput()->with('benar', 'kamu berhasil');
         }
     }
     public function halaman3_pembahasan(Request $request)
@@ -97,5 +97,9 @@ class SpldvMetodegrafikController extends Controller
         $pembahasan_soal = MariMencobaSPLDVGrafik::find($request->id);
         $nomor = $request->nomor;
         return view('siswa.spldv.metode grafik.pembahasan.pembahasan', compact('pembahasan_soal', 'nomor'));
+    }
+    public function grafik_view()
+    {
+        return view('siswa.spldv.metode grafik.grafik');
     }
 }

@@ -4,7 +4,10 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\DashController;
 use App\Http\Controllers\KikdController;
 use App\Http\Controllers\ProfileSiswaController;
+use App\Http\Controllers\SpldvMetodeEliminasiController;
+use App\Http\Controllers\SpldvMetodeGabunganController;
 use App\Http\Controllers\SpldvMetodegrafikController;
+use App\Http\Controllers\SpldvMetodesubtitusiController;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -42,6 +45,20 @@ Route::prefix('siswa')->group(function () {
             Route::get('/metodegrafik/3/{soal}/{i}', [SpldvMetodegrafikController::class, 'halaman_3'])->name('spldv_grafik_3');
             Route::post('/metodegrafik/3/pembahasan', [SpldvMetodegrafikController::class, 'halaman3_pembahasan'])->name('halaman3_pembahasan');
             Route::post('/metodegrafik/3/{id}/{i}', [SpldvMetodegrafikController::class, 'halaman_3_koreksi'])->name('halaman_3_koreksi');
+            Route::get('/metodegrafik/grafik', [SpldvMetodegrafikController::class, 'grafik_view'])->name('grafik_view');
+            Route::get('/metodesubtitusi/1', [SpldvMetodesubtitusiController::class, 'halaman_1'])->name('spldv_subtitusi_1');
+            Route::get('/metodesubtitusi/2/{id}/{nomor}', [SpldvMetodesubtitusiController::class, 'halaman_2'])->name('spldv_subtitusi_2');
+            Route::post('/metodesubtitusi/2/pembahasan', [SpldvMetodesubtitusiController::class, 'pembahasan'])->name('pembahasan_spldv_subtitusi');
+            Route::post('/metodesubtitusi/2/{nomor}', [SpldvMetodesubtitusiController::class, 'halaman_2_post'])->name('spldv_subtitusi_2_post');
+            Route::prefix('metodeeliminasi')->group(function () {
+                Route::get('/1', [SpldvMetodeEliminasiController::class, 'halaman_1'])->name('spldv_eliminasi_1');
+                Route::get('/2/{id}/{nomor}', [SpldvMetodeEliminasiController::class, 'halaman_2'])->name('spldv_eliminasi_2');
+                Route::post('/2/pembahasan', [SpldvMetodeEliminasiController::class, 'halaman_eliminasi_2_pembahasan'])->name('spldv_eliminasi_2_pembahasan');
+                Route::post('/2/{nomor}', [SpldvMetodeEliminasiController::class, 'halaman_eliminasi_2_post'])->name('spldv_eliminasi_2_post');
+            });
+            Route::prefix('metodegabungan')->group(function () {
+                Route::get('/1', [SpldvMetodeGabunganController::class, 'halaman_1_gabungan'])->name('spldv_gabungan_1');
+            });
         });
     });
 });

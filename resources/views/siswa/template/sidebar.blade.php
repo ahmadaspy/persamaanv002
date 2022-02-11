@@ -35,12 +35,27 @@
                                         <div class="col-11">Menyelesaikan persamaan dengan metode grafik</div>
                                     </a></li>
                             </div>
-                            <div class="row">
+                            {{-- <div class="row">
                                 <li><a href="{{ route('profile') }}">
                                         <div class="col-2">1.2</div>
                                         <div class="col-11">Menyelesaikan persamaan linear secara aljabar</div>
                                     </a></li>
-                            </div>
+                            </div> --}}
+
+                            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                                    <div class="row">
+                                        <div class="col-2">1.2</div>
+                                        <div class="col-11">Menyelesaikan persamaan linear secara aljabar</div>
+                                    </div>
+                                </a>
+                                <ul aria-expanded="false">
+                                    <li><a href="{{ route('spldv_subtitusi_1') }}">Metode Subtitusi</a></li>
+                                    <li><a href="{{ route('spldv_eliminasi_1') }}">Metode Eliminasi</a></li>
+                                    <li><a href="{{ route('spldv_gabungan_1') }}">Metode gabubgan subtitusi dan
+                                            eliminasi</a></li>
+                                </ul>
+                            </li>
+
                             <div class="row">
                                 <li><a href="./index.html">
                                         <div class="col-6">Kuis</div>

@@ -1,5 +1,23 @@
 <div class="card">
     <div class="card-body">
+        @if (session('benar'))
+            <div class="alert alert-dismissible fade show alert-success" role="alert">
+                <form method="POST" target="_blank" rel="noreferrer noopener"
+                    action="{{ route('halaman3_pembahasan') }}">
+                    @csrf
+                    <input type="hidden" name="id" value="{{ $mari_mencoba->id }}">
+                    <input type="hidden" name="nomor" value="{{ $i }}">
+                    Yay ! kamu benar menjawab, lihat pembahasan
+                    <button type="submit" class="btn btn-link">disini</button>
+                </form>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        @endif
+        <div class="row">
+
+        </div>
         <div class="row">
             <div class="col-1">
                 <p>
@@ -106,11 +124,11 @@
                     </tbody>
                 </table>
             </div>
-            @if ($jawaban_siswa != null)
+            {{-- @if ($jawaban_siswa != null)
                 @foreach ($jawaban_siswa as $key => $jawabans)
                     {{ $jawabans }}
                 @endforeach
-            @endif
+            @endif --}}
             <div class="tabel-responsive">
                 <table class="table table-bordered" id="TP">
                     <thead>
