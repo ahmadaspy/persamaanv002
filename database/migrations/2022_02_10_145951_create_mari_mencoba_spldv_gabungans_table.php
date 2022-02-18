@@ -15,6 +15,18 @@ class CreateMariMencobaSpldvGabungansTable extends Migration
     {
         Schema::create('mari_mencoba_spldv_gabungans', function (Blueprint $table) {
             $table->id();
+            $table->string('tipe');
+            $table->string('soal_1');
+            $table->string('soal_2')->nullable();
+            $table->string('x');
+            $table->string('y');
+            $table->string('jawaban_1')->nullable();
+            $table->string('jawaban_2')->nullable();
+            $table->text('penjelasan_1')->nullable();
+            $table->text('penjelasan_2')->nullable();
+            $table->text('penjelasan_3')->nullable();
+            $table->text('penjelasan_4')->nullable();
+            $table->text('penjelasan_5')->nullable();
             $table->timestamps();
         });
     }

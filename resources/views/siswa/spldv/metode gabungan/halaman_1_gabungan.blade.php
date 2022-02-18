@@ -11,6 +11,10 @@
                 sebaliknya. Dengan cara metode gabungan akan lebih cepat dalam mencari nilai dari variabel tersebut karena
                 apabila nilai variabel \(x\) atau \(y\) sudah di dapatkan menggunakan cara eliminasi, maka nilai yg belum
                 diketahui dapat di subtiutsikan.
+                {{-- @convert(10000)
+                @php
+                    echo number_format(10000);
+                @endphp --}}
             </p>
         </div>
     </div>

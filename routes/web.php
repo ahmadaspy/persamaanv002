@@ -8,6 +8,8 @@ use App\Http\Controllers\SpldvMetodeEliminasiController;
 use App\Http\Controllers\SpldvMetodeGabunganController;
 use App\Http\Controllers\SpldvMetodegrafikController;
 use App\Http\Controllers\SpldvMetodesubtitusiController;
+use App\Http\Controllers\spltv;
+use App\Http\Controllers\SpltvSubtitusi;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -58,6 +60,16 @@ Route::prefix('siswa')->group(function () {
             });
             Route::prefix('metodegabungan')->group(function () {
                 Route::get('/1', [SpldvMetodeGabunganController::class, 'halaman_1_gabungan'])->name('spldv_gabungan_1');
+                Route::get('/2/{id}/{nomor}', [SpldvMetodeGabunganController::class, 'halaman_2_gabungan'])->name('spldv_gabungan_2');
+                Route::post('/2/pembahasan', [SpldvMetodeGabunganController::class, 'halaman_gabungan_2_pembahasan'])->name('spldv_gabungan_2_pembahasan');
+                Route::post('/2/{nomor}', [SpldvMetodeGabunganController::class, 'halaman_gabungan_2_post'])->name('spldv_gabungan_2_post');
+            });
+        });
+        // route mater spltv
+        Route::prefix('spltv')->group(function () {
+            Route::get('/menyelesaikanspltv', [spltv::class, 'index'])->name('spltv_index');
+            Route::prefix('/metodesubtitusi')->group(function () {
+                Route::get('/1', [SpltvSubtitusi::class, 'spltv_subtitusi_1'])->name('spltv_subtitusi_1');
             });
         });
     });

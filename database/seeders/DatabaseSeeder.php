@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        \App\Models\MariMencobaSpldvGabungan::factory(5)->create();
         \App\Models\MariMencobaSpldvElminasi::factory(5)->create();
         \App\Models\MariMencobaSpldvSubtitusi::factory(5)->create();
         \App\Models\MariMencobaSPLDVGrafik::factory(5)->create();

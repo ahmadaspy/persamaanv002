@@ -76,13 +76,25 @@
                             </div>
                         </a>
                         <ul aria-expanded="false">
-                            <div class="row">
+                            {{-- <div class="row">
                                 <li><a href="./index.html">
                                         <div class="col-2">2.1</div>
                                         <div class="col-11">Menyelesaikan sistem persamaan linear tiga variabel
                                         </div>
                                     </a></li>
-                            </div>
+                            </div> --}}
+                            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                                    <div class="row">
+                                        <div class="col-2">2.1</div>
+                                        <div class="col-11">Menyelesaikan sistem persamaan linear tiga variabel
+                                        </div>
+                                    </div>
+                                </a>
+                                <ul aria-expanded="false">
+                                    <li><a href="{{ route('spltv_index') }}">Sistem persamaan linear tiga variabel</a></li>
+                                    <li><a href="{{ route('spltv_subtitusi_1') }}">Metode Subtitusi</a></li>
+                                </ul>
+                            </li>
                             <div class="row">
                                 <li><a href="./index.html">
                                         <div class="col-2">2.2</div>
