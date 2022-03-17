@@ -2,7 +2,7 @@
 @section('content')
     <div class="card shadow">
         <div class="card-header">
-            <h6>Kuis 1</h6>
+            <h6>Kuis 2</h6>
         </div>
         <div class="card-body">
             <div id="smartwizard">
@@ -15,7 +15,7 @@
                         </li>
                     @endforeach
                 </ul>
-                <form action="{{ route('kuis_1_post') }}" method="post" onsubmit="return validateForm()" name="myForm">
+                <form action="{{ route('kuis_2_post') }}" method="post" onsubmit="return validateForm()" name="myForm">
                     @csrf
                     <div class="tab-content">
                         @foreach ($soal_kuis as $key => $content_kuis)
@@ -30,9 +30,7 @@
                                             <div class="col">
                                                 <p>
                                                 <ul>
-                                                    <li>\({{ $content_kuis->soal_1 }}\)</li>
-                                                    <li>\({{ $content_kuis->soal_2 }}\)</li>
-                                                    <li>\({{ $content_kuis->soal_3 }}\)</li>
+                                                    <li>{{ $content_kuis->soal_1 }}</li>
                                                 </ul>
                                                 </p>
                                             </div>
@@ -94,7 +92,6 @@
             </div>
         </div>
     </div>
-
     <div class="bootstrap-modal">
         <!-- Modal -->
         <div class="modal fade" id="myModal">
@@ -174,6 +171,7 @@
     <script type="text/javascript">
         $(document).ready(function() {
             $('#smartwizard').smartWizard({
+
                 theme: 'progress',
                 transition: {
                     animation: 'fade',

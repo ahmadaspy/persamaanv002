@@ -23,6 +23,16 @@
 
                         </a>
                     </li>
+                    @php
+                        use App\Models\kuis_1_nilai;
+                        $kuis_1 = kuis_1_nilai::where('user_id', Auth::user()->id)
+                            ->where('nilai', '>=', 60)
+                            ->first();
+                        $kuis_1_trash = kuis_1_nilai::where('user_id', Auth::user()->id)
+                            ->where('nilai', '>=', 60)
+                            ->onlyTrashed()
+                            ->first();
+                    @endphp
                     <li class="mega-menu mega-menu-sm">
                         <a class="has-arrow" href="javascript:void()" aria-expanded="false">
                             <i class="icon-music-tone menu-icon"></i>
@@ -35,14 +45,32 @@
                         </a>
                         <ul aria-expanded="false">
                             <li><a href="{{ route('spltv_subtitusi_1') }}">Metode Subtitusi</a></li>
-                            <li><a href="{{route('spltv_eliminasi_1')}}">Metode Eliminasi</a></li>
-                            <li><a href="{{route('spltv_gabungan_1')}}">Metode Gabungan</a></li>
-                            <li><a href="{{route('kuis_index_page')}}">Kuis</a></li>
+                            <li><a href="{{ route('spltv_eliminasi_1') }}">Metode Eliminasi</a></li>
+                            <li><a href="{{ route('spltv_gabungan_1') }}">Metode Gabungan</a></li>
+                            <li><a href="{{ route('kuis_index_page') }}">Kuis</a></li>
+                            @if (($kuis_1 or $kuis_1_trash) != null)
+                                <li><a href="{{ route('kuis_1_hasil') }}">Hasil kuis</a></li>
+                            @endif
                         </ul>
                     </li>
+                    @php
+                        use App\Models\kuis_2_nilai;
+                        $kuis_2 = kuis_2_nilai::where('user_id', Auth::user()->id)
+                            ->where('nilai', '>=', 60)
+                            ->first();
+                        $kuis_2_trash = kuis_2_nilai::where('user_id', Auth::user()->id)
+                            ->where('nilai', '>=', 60)
+                            ->onlyTrashed()
+                            ->first();
+                    @endphp
                     <li class="mega-menu mega-menu-sm">
-                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="icon-music-tone-alt menu-icon"></i>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false"
+                            @if (($kuis_1 or $kuis_1_trash) == null) aria-disabled="true" @endif>
+                            @if (($kuis_1 or $kuis_1_trash) != null)
+                                <i class="icon-music-tone-alt menu-icon"></i>
+                            @else
+                                <i class="icon-lock menu-icon"></i>
+                            @endif
                             <span class="nav-text">2. Masalah yangmelibatkan persamaan linear tiga variabel</span>
                             {{-- <div class="row">
                                 <i class="icon-music-tone-alt menu-icon col-1"></i>
@@ -51,13 +79,23 @@
                             </div> --}}
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="./eeeaad.html">Dalam kehidupan sehari - hari</a></li>
-                            <li><a href="./dfeee.html">Kuis</a></li>
+                            <li><a href="{{ route('spltv_kehidupan_1') }}">Dalam kehidupan sehari - hari</a></li>
+                            <li><a href="{{ route('kuis_index2_page') }}">Kuis</a></li>
+                            @if (($kuis_2 or $kuis_2_trash) != null)
+                                <li><a href="{{ route('kuis_2_hasil') }}">Hasil kuis</a></li>
+                            @endif
                         </ul>
                     </li>
                     <li>
-                        <a href="{{ route('landing_page') }}" aria-expanded="false">
-                            <i class="icon-puzzle menu-icon"></i><span class="nav-text">Evaluasi</span>
+                        <a aria-expanded="false"
+                            @if ((($kuis_1 or $kuis_1_trash) or ($kuis_2 or $kuis_2_trash)) == null) href="javascript: void(0)" @else href="{{route('evaluasi_index')}}" @endif>
+                            @if ((($kuis_1 or $kuis_1_trash) or ($kuis_2 or $kuis_2_trash)) != null)
+                                <i class="icon-puzzle menu-icon"></i>
+                            @else
+                                <i class="icon-lock menu-icon"></i>
+                            @endif
+
+                            <span class="nav-text disabled">Evaluasi</span>
                         </a>
                     </li>
                     <li>

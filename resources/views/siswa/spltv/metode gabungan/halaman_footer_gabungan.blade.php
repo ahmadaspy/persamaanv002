@@ -28,14 +28,14 @@
                     @endif">
                         <a class="page-link" href="{{ route('spltv_gabungan_2', [$mari_mencoba->id, 1]) }}">2</a>
                     </li>
-                    {{-- @if (Request()->routeIs('spldv_gabungan_2'))
+                    @if (Request()->routeIs('spltv_gabungan_2'))
                         <li class="page-item">
-                            <a class="page-link" href="" aria-label="Next">
+                            <a class="page-link" href="{{route('kuis_index_page')}}" aria-label="Next">
                                 <span aria-hidden="true">Kuis</span>
 
                             </a>
                         </li>
-                    @endif --}}
+                    @endif
                 </ul>
             </nav>
         </div>

@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\DashController;
+use App\Http\Controllers\EvaluasiController;
 use App\Http\Controllers\KikdController;
+use App\Http\Controllers\KuisKeduaController;
 use App\Http\Controllers\KuisPertamaController;
 use App\Http\Controllers\ProfileSiswaController;
 use App\Http\Controllers\SpldvMetodeEliminasiController;
@@ -12,7 +14,9 @@ use App\Http\Controllers\SpldvMetodesubtitusiController;
 use App\Http\Controllers\spltv;
 use App\Http\Controllers\SpltvEliminasiController;
 use App\Http\Controllers\SpltvGabunganController;
+use App\Http\Controllers\SpltvKehidupanSehariController;
 use App\Http\Controllers\SpltvSubtitusi;
+use App\Models\KuisKedua;
 use App\Models\KuisPertama;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -92,6 +96,23 @@ Route::prefix('siswa')->group(function () {
             });
             Route::prefix('/kuis')->group(function () {
                 Route::get('/pertama', [KuisPertamaController::class, 'kuis_index_page'])->name('kuis_index_page');
+                Route::post('/pertama/post', [KuisPertamaController::class, 'kuis_1_post'])->name('kuis_1_post');
+                Route::get('/pertama/hasil', [KuisPertamaController::class, 'kuis_1_hasil'])->name('kuis_1_hasil');
+            });
+            Route::prefix('/kehidupansehari-hari')->group(function () {
+                Route::get('/1', [SpltvKehidupanSehariController::class, 'spltv_kehidupan_1'])->name('spltv_kehidupan_1');
+                Route::get('/2/{id}/{nomor}', [SpltvKehidupanSehariController::class, 'spltv_kehidupan_2'])->name('spltv_kehidupan_2');
+                Route::post('/2/pembahasan', [SpltvKehidupanSehariController::class, 'spltv_kehidupan_2_pembahasan'])->name('spltv_kehidupan_2_pembahasan');
+                Route::post('/2/{nomor}', [SpltvKehidupanSehariController::class, 'spltv_kehidupan_2_post'])->name('spltv_kehidupan_2_post');
+            });
+            Route::prefix('/kuis')->group(function () {
+                Route::get('/kedua', [KuisKeduaController::class, 'kuis_index2_page'])->name('kuis_index2_page');
+                Route::post('/kedua/post', [KuisKeduaController::class, 'kuis_2_post'])->name('kuis_2_post');
+                Route::get('/kedua/hasil', [KuisKeduaController::class, 'kuis_2_hasil'])->name('kuis_2_hasil');
+            });
+            Route::prefix('/evaluasi')->group(function () {
+                Route::get('/index', [EvaluasiController::class, 'evaluasi_index'])->name('evaluasi_index');
+                Route::post('/post', [EvaluasiController::class, 'evaluasi_post'])->name('evaluasi_post');
             });
         });
     });

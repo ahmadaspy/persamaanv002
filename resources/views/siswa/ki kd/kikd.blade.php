@@ -9,7 +9,7 @@
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>Menghargai dan menghayati ajaran agama yang dianutnya.</td>
+                        <td>Menghargai dan menghayati ajaran agama yang dianutnya. </td>
                     </tr>
                     <tr>
                         <td>2</td>

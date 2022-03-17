@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -21,7 +22,13 @@ class DatabaseSeeder extends Seeder
         \App\Models\MariMencobaSpltvSubtitusi::factory(5)->create();
         \App\Models\MariMencobaSpltvEliminasi::factory(5)->create();
         \App\Models\KodeKelas::factory(5)->create();
+        $this->call(KuisPertamaSeeder::class);
+        $this->call(KuisKeduaSeeder::class);
+        $this->call(MariMencobaSpltvKehidupanSeeder::class);
         $this->call(LaratrustSeeder::class);
-        \App\Models\User::factory(10)->create();
+        $this->call(UserSeeder::class);
+        $this->call(EvaluasiASeeder::class);
+        $this->call(EvaluasiBSeeder::class);
+        // \App\Models\User::factory(10)->create();
     }
 }

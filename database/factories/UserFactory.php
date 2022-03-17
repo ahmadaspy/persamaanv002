@@ -36,7 +36,7 @@ class UserFactory extends Factory
                 'updated_at' => Carbon::now(),
                 'created_at' => Carbon::now(),
             ]),
-            $user->attachRole($role->random()),
+            // $user->attachRole($role->random()),
         ];
         // ============ default user factory ==============
         // return [

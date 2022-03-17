@@ -25,8 +25,8 @@
                                 @endif" height="40" width="40" alt="{{Auth::user()->name}}">
                                 {{-- <div class="text-center"></div> --}}
                             </div>
-                            <div class="drop-down dropdown-profile   dropdown-menu">
-                                <div class="dropdown-content-body">
+                            <div class="drop-down dropdown-profile dropdown-menu">
+                                <div class="dropdown-content-body" >
                                     <ul>
                                         <li>
                                             <span>{{Auth::user()->name}}</span>

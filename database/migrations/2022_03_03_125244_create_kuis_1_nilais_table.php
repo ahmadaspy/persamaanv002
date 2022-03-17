@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateKuis1AcaksTable extends Migration
+class CreateKuis1NilaisTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,13 @@ class CreateKuis1AcaksTable extends Migration
      */
     public function up()
     {
-        Schema::create('kuis1_acaks', function (Blueprint $table) {
+        Schema::create('kuis_1_nilais', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->string('nilai');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -26,6 +30,6 @@ class CreateKuis1AcaksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kuis1_acaks');
+        Schema::dropIfExists('kuis_1_nilais');
     }
 }
