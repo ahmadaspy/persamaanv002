@@ -72,26 +72,32 @@ class KuisPertamaController extends Controller
         $jawaban_siswa = array();
         foreach ($request->except('_token') as $key => $req) {
             $jawaban = KuisPertama::find($key);
+            $jawaban_temp = array();
             if ($jawaban->jawaban_1 != null) {
                 if ($req['jawaban_1'] != $jawaban->jawaban_1) {
-                    $jawaban_siswa[$key] = 'salah';
+                    $jawaban_temp[0] = 'salah';
                 } else {
-                    $jawaban_siswa[$key] = 'benar';
+                    $jawaban_temp[0] = 'benar';
                 }
             }
             if ($jawaban->jawaban_2 != null) {
                 if ($req['jawaban_2'] != $jawaban->jawaban_2) {
-                    $jawaban_siswa[$key] = 'salah';
+                    $jawaban_temp[1] = 'salah';
                 } else {
-                    $jawaban_siswa[$key] = 'benar';
+                    $jawaban_temp[1] = 'benar';
                 }
             }
             if ($jawaban->jawaban_3 != null) {
                 if ($req['jawaban_3'] != $jawaban->jawaban_3) {
-                    $jawaban_siswa[$key] = 'salah';
+                    $jawaban_temp[2] = 'salah';
                 } else {
-                    $jawaban_siswa[$key] = 'benar';
+                    $jawaban_temp[2] = 'benar';
                 }
+            }
+            if(in_array('salah', $jawaban_temp)){
+                $jawaban_siswa[$key] = 'salah';
+            }else{
+                $jawaban_siswa[$key] = 'benar';
             }
         }
         $nilai = count(array_keys($jawaban_siswa, 'benar')) * 20;

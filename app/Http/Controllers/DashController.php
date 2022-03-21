@@ -12,8 +12,10 @@ class DashController extends Controller
     {
         if (Auth::user()->hasRole('admin')) {
         } elseif (Auth::user()->hasRole('guru')) {
+            // return view('guru.index_guru');
+            return redirect()->route('dashboard_guru');
         } elseif (Auth::user()->hasRole('siswa')) {
-
+            // dd(Auth::user()->nilaikuis1);
             return view('siswa.petunjuk.petunjuk');
         }
     }

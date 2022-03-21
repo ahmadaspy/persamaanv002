@@ -54,7 +54,7 @@
                     </div>
                     @if ($nilai->created_at != null)
                         <div class="card-footer text-muted">
-                            Terakhir melakukan kuis {{ $nilai->created_at->diffForHumans() }}
+                            Terakhir melakukan soal evaluasi {{ $nilai->created_at->diffForHumans() }}
                         </div>
                     @endif
 

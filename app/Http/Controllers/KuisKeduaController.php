@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\kuis_1_nilai;
 use App\Models\KuisKedua;
 use App\Models\kuis_2_nilai;
 use Illuminate\Http\Request;
@@ -11,34 +12,46 @@ class KuisKeduaController extends Controller
 {
     public function kuis_index2_page()
     {
-        $soal_kuis = KuisKedua::inRandomOrder()->limit(5)->get();
-        return view('siswa.spltv.Kuis 2.kuis_2', compact('soal_kuis'));
+        if(kuis_1_nilai::where('user_id', Auth::user()->id)->get()->isEmpty()){
+            return redirect()->route('kuis_index_page');
+        }else{
+            $soal_kuis = KuisKedua::inRandomOrder()->limit(5)->get();
+            return view('siswa.spltv.Kuis 2.kuis_2', compact('soal_kuis'));
+
+        }
+
     }
     public function kuis_2_post(Request $request)
     {
         $jawaban_siswa = array();
         foreach ($request->except('_token') as $key => $req) {
             $jawaban = KuisKedua::find($key);
+            $jawaban_temp = array();
             if ($jawaban->jawaban_1 != null) {
                 if ($req['jawaban_1'] != $jawaban->jawaban_1) {
-                    $jawaban_siswa[$key] = 'salah';
+                    $jawaban_temp[0] = 'salah';
                 } else {
-                    $jawaban_siswa[$key] = 'benar';
+                    $jawaban_temp[0] = 'benar';
                 }
             }
             if ($jawaban->jawaban_2 != null) {
                 if ($req['jawaban_2'] != $jawaban->jawaban_2) {
-                    $jawaban_siswa[$key] = 'salah';
+                    $jawaban_temp[1] = 'salah';
                 } else {
-                    $jawaban_siswa[$key] = 'benar';
+                    $jawaban_temp[1] = 'benar';
                 }
             }
             if ($jawaban->jawaban_3 != null) {
                 if ($req['jawaban_3'] != $jawaban->jawaban_3) {
-                    $jawaban_siswa[$key] = 'salah';
+                    $jawaban_temp[2] = 'salah';
                 } else {
-                    $jawaban_siswa[$key] = 'benar';
+                    $jawaban_temp[2] = 'benar';
                 }
+            }
+            if (in_array('salah', $jawaban_temp)) {
+                $jawaban_siswa[$key] = 'salah';
+            } else {
+                $jawaban_siswa[$key] = 'benar';
             }
         }
         $nilai = count(array_keys($jawaban_siswa, 'benar'))*20;

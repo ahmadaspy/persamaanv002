@@ -5,8 +5,8 @@
             <div class="nk-nav-scroll">
                 <ul class="metismenu" id="menu">
                     <li>
-                        <a href="{{ route('landing_page') }}" aria-expanded="false">
-                            <i class="icon-directions menu-icon"></i><span class="nav-text">Petunjuk</span>
+                        <a href="{{ route('dashboard_guru') }}" aria-expanded="false">
+                            <i class="icon-map menu-icon"></i><span class="nav-text">Dashboard</span>
                         </a>
                     </li>
                     <li>
@@ -37,11 +37,6 @@
                         <a class="has-arrow" href="javascript:void()" aria-expanded="false">
                             <i class="icon-music-tone menu-icon"></i>
                             <span class="nav-text">1. Menyelesaikan sistem persamaan linear tiga variabel</span>
-                            {{-- <div class="row">
-                                <i class="icon-music-tone menu-icon col-1"></i>
-                                <span class="col-1 nav-text">1</span>
-                                <span class="col-8 nav-text">Menyelesaikan sistem persamaan linear tiga variabel</span>
-                            </div> --}}
                         </a>
                         <ul aria-expanded="false">
                             <li><a href="{{ route('spltv_subtitusi_1') }}">Metode Subtitusi</a></li>
@@ -72,18 +67,12 @@
                                 <i class="icon-lock menu-icon"></i>
                             @endif
                             <span class="nav-text">2. Masalah yangmelibatkan persamaan linear tiga variabel</span>
-                            {{-- <div class="row">
-                                <i class="icon-music-tone-alt menu-icon col-1"></i>
-                                <span class="col-1 nav-text">2</span>
-                                <span class="col-8 nav-text">Masalah yang melibatkan persamaan linear tiga variabel</span>
-                            </div> --}}
+
                         </a>
                         <ul aria-expanded="false">
                             <li><a href="{{ route('spltv_kehidupan_1') }}">Dalam kehidupan sehari - hari</a></li>
                             <li><a href="{{ route('kuis_index2_page') }}">Kuis</a></li>
-                            {{-- @if (($kuis_2 or $kuis_2_trash) != null)
-                                <li><a href="{{ route('kuis_2_hasil') }}">Hasil kuis</a></li>
-                            @endif --}}
+
                             @if ((kuis_2_nilai::where('user_id', Auth::user()->id)->first() OR kuis_2_nilai::where('user_id', Auth::user()->id)->onlyTrashed()->first()) != null)
                                 <li><a href="{{ route('kuis_2_hasil') }}">Hasil kuis</a></li>
                             @endif
@@ -101,10 +90,10 @@
                             <span class="nav-text disabled">Evaluasi</span>
                         </a>
                     </li>
-                    {{-- @php
+                    @php
                         use App\Models\EvaluasiNilai;
-                    @endphp --}}
-                    @if (Auth::user()->nilaievaluasi != null)
+                    @endphp
+                    @if (EvaluasiNilai::where('user_id', Auth::user()->id)->get() != null)
                         <li>
                             <a aria-expanded="false" href="{{route('evaluasi_hasil')}}"><i class="icon-note menu-icon"></i><span class="nav-text disabled">Hasil Evaluasi</span></a>
                         </li>

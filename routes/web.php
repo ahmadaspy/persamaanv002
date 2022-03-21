@@ -3,6 +3,7 @@
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\DashController;
 use App\Http\Controllers\EvaluasiController;
+use App\Http\Controllers\GuruController;
 use App\Http\Controllers\KikdController;
 use App\Http\Controllers\KuisKeduaController;
 use App\Http\Controllers\KuisPertamaController;
@@ -40,6 +41,12 @@ Route::get('/', function () {
 Route::get('/logout', [Controller::class, 'logout'])->name('logout_user');
 
 Route::get('/landingpage', [DashController::class, 'landingpage'])->middleware(['auth'])->name('landing_page');
+// route guru
+Route::prefix('guru')->group(function(){
+    Route::middleware(['auth', 'role:guru'])->group(function(){
+        Route::get('/dashboard', [GuruController::class, 'dashboard_guru'])->name('dashboard_guru');
+    });
+});
 
 // route siswa
 Route::prefix('siswa')->group(function () {
@@ -113,6 +120,7 @@ Route::prefix('siswa')->group(function () {
             Route::prefix('/evaluasi')->group(function () {
                 Route::get('/index', [EvaluasiController::class, 'evaluasi_index'])->name('evaluasi_index');
                 Route::post('/post', [EvaluasiController::class, 'evaluasi_post'])->name('evaluasi_post');
+                Route::get('/hasil', [EvaluasiController::class, 'evaluasi_hasil'])->name('evaluasi_hasil');
             });
         });
     });

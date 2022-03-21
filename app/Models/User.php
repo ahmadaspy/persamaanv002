@@ -50,4 +50,16 @@ class User extends Authenticatable implements MustVerifyEmail
     public function kode_kelas(){
         return $this->hasOne(KodeKelas::class, 'id', 'kode_kelas_id');
     }
+    public function nilaikuis1()
+    {
+        return $this->hasOne(kuis_1_nilai::class, 'user_id', 'id');
+    }
+    public function nilaikuis2()
+    {
+        return $this->hasOne(kuis_2_nilai::class, 'user_id', 'id');
+    }
+    public function nilaievaluasi()
+    {
+        return $this->hasOne(EvaluasiNilai::class, 'user_id', 'id');
+    }
 }
