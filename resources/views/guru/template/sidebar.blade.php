@@ -10,6 +10,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="{{ route('halaman_siswa') }}" aria-expanded="false">
+                            <i class="icon-layers menu-icon"></i><span class="nav-text">Daftar Siswa</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="{{ route('kikd') }}" aria-expanded="false">
                             <i class="icon-notebook menu-icon"></i><span class="nav-text">KI | KD</span>
                         </a>

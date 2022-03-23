@@ -32,7 +32,8 @@ class KuisPertamaController extends Controller
         //     $soal_kuis = KuisPertama::inRandomOrder()->limit(5)->get();
         //     Session::put('soal_kuis', $soal_kuis);
         // }
-        $soal_kuis = KuisPertama::inRandomOrder()->limit(5)->get();
+        // $soal_kuis = KuisPertama::inRandomOrder()->limit(5)->get();
+        $soal_kuis = KuisPertama::inRandomOrder()->get();
         // dd(KuisPertama::inRandomOrder()->limit(5)->get());
         return view('siswa.spltv.Kuis 1.kuis_1', compact('soal_kuis'));
     }

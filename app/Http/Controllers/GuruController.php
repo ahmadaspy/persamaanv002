@@ -127,4 +127,9 @@ class GuruController extends Controller
 
         return view('guru.index_guru', compact('siswa', 'siswa_kuis1', 'siswa_kuis2', 'siswa_evaluasi', 'chartjs', 'chartjs2', 'avg_nilai'));
     }
+    public function halaman_siswa(){
+        $kelas_id = Auth::user()->kode_kelas->id;
+        $siswa = User::whereRoleIs('siswa')->where('kode_kelas_id', $kelas_id)->orderBy('name', 'ASC')->paginate();
+        dd($siswa);
+    }
 }
