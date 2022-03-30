@@ -58,12 +58,32 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->hasMany(kuis_1_nilai::class, 'user_id', 'id')->onlyTrashed();
     }
+    public function nilaikuis1_all()
+    {
+        return $this->hasMany(kuis_1_nilai::class, 'user_id', 'id')->withTrashed();
+    }
     public function nilaikuis2()
     {
         return $this->hasOne(kuis_2_nilai::class, 'user_id', 'id');
     }
+    public function nilaikuis2_trash()
+    {
+        return $this->hasMany(kuis_2_nilai::class, 'user_id', 'id')->onlyTrashed();
+    }
+    public function nilaikuis2_all()
+    {
+        return $this->hasMany(kuis_2_nilai::class, 'user_id', 'id')->withTrashed();
+    }
     public function nilaievaluasi()
     {
         return $this->hasOne(EvaluasiNilai::class, 'user_id', 'id');
+    }
+    public function nilaievaluasi_trash()
+    {
+        return $this->hasMany(EvaluasiNilai::class, 'user_id', 'id')->onlyTrashed();
+    }
+    public function nilaievaluasi_all()
+    {
+        return $this->hasMany(EvaluasiNilai::class, 'user_id', 'id')->withTrashed();
     }
 }

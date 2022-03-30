@@ -27,10 +27,10 @@
                                 @else
                                     <td>Data kosong</td>
                                 @endif --}}
-                                <td>{{ $siswas->nilaikuis1->nilai ?? 'Data kosong' }}</td>
-                                <td>{{ $siswas->nilaikuis2->nilai ?? 'Data kosong' }}</td>
-                                <td>{{ $siswas->nilaievaluasi->nilai ?? 'Data kosong' }}</td>
-                                <td>{{ (($siswas->nilaikuis1->nilai ?? 0) + ($siswas->nilaikuis2->nilai ?? 0) + ($siswas->nilaievaluasi->nilai ?? 0)) / 3 }}
+                                <td>{{ $siswas->nilaikuis1_all->max->nilai ?? 'Data kosong' }}</td>
+                                <td>{{ $siswas->nilaikuis2_all->max->nilai ?? 'Data kosong' }}</td>
+                                <td>{{ $siswas->nilaievaluasi_all->max->nilai ?? 'Data kosong' }}</td>
+                                <td>{{ (($siswas->nilaikuis1_all->max->nilai ?? 0) + ($siswas->nilaikuis2_all->max->nilai ?? 0) + ($siswas->nilaievaluasi_all->max->nilai ?? 0)) / 3 }}
                                 </td>
                                 <td><a href="{{route('halaman_siswa_detail', $siswas->id)}}"><button type="button" class="btn mb-1 btn-rounded btn-outline-info">Detail</button></a></td>
                             </tr>

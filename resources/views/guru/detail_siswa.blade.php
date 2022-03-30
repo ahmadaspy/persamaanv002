@@ -7,7 +7,7 @@
                     <div class="media align-items-center mb-4">
                         <img class="mr-3"
                             src="
-                                            @if (!$data_siswa->photo_profile) {{ asset('profile_image/default.png') }}
+                                                                @if (!$data_siswa->photo_profile) {{ asset('profile_image/default.png') }}
                         @else
                             {{ asset($data_siswa->photo_profile) }} @endif"
                             style="border-radius: 50%" width="80" height="80" alt="">
@@ -48,79 +48,249 @@
             </div>
         </div>
         <div class="col">
-            <div class="card shadow">
-                <div class="card-header">
-                    <h6 class="text-primary">Nilai Kuis 1</h6>
-                </div>
-                <div class="card-body">
+            <div class="row">
+                <div class="col">
                     <div class="card shadow">
                         <div class="card-header">
-                            <h6>Nilai kuis terbaru</h6>
+                            <h6 class="text-primary">Nilai Kuis 1</h6>
                         </div>
                         <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th>No</th>
-                                            <th>Nama</th>
-                                            <th>Nilai</th>
-                                            <th>Melakukan</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>{{ $data_siswa->nilaikuis1->user->name ?? 'Data Kosong' }}</td>
-                                            <td>{{ $data_siswa->nilaikuis1->nilai ?? 'Data Kosong' }}</td>
-                                            {{-- @if ($data_siswa->nilaikuis1->created_at == null)
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <h6>Nilai kuis terbaru</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>Nama</th>
+                                                    <th>Nilai</th>
+                                                    <th>Melakukan</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>{{ $data_siswa->nilaikuis1->user->name ?? 'Data Kosong' }}</td>
+                                                    <td>{{ $data_siswa->nilaikuis1->nilai ?? 'Data Kosong' }}</td>
+                                                    {{-- @if ($data_siswa->nilaikuis1->created_at == null)
                                                 <td>Data Kosong</td>
                                             @else
                                                 <td>{{$data_siswa->nilaikuis1->created_at->diffForhumans()}}</td>
                                             @endif --}}
-                                            <td>{{ $data_siswa->nilaikuis1 ? $data_siswa->nilaikuis1->created_at->diffForhumans() : 'Data Kosong' }} ({{$data_siswa->nilaikuis1 ? $data_siswa->nilaikuis1->created_at->format('H:i') : ''}})
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                                    <td>{{ $data_siswa->nilaikuis1 ? $data_siswa->nilaikuis1->created_at->diffForhumans() : 'Data Kosong' }}
+                                                        ({{ $data_siswa->nilaikuis1 ? $data_siswa->nilaikuis1->created_at->format('H:i') : '' }})
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <h6>Nilai kuis terdahulu</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>Nama</th>
+                                                    <th>Nilai</th>
+                                                    <th>Melakukan</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach ($data_siswa->nilaikuis1_trash as $key => $kuis1_trash)
+                                                    <tr>
+                                                        <th scope="row">{{ $key++ + 1 }}</th>
+                                                        <td>{{ $kuis1_trash->user->name ?? 'Data Kosong' }}</td>
+                                                        <td>{{ $kuis1_trash->nilai ?? 'Data Kosong' }}</td>
+                                                        <td>{{ $kuis1_trash ? $kuis1_trash->created_at->diffForhumans() : 'Data Kosong' }}
+                                                            ({{ $kuis1_trash ? $kuis1_trash->created_at->format('H:i') : '' }})
+                                                        </td>
+                                                    </tr>
+                                                @endforeach
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <h6>Grafik Kuis 1</h6>
+                                </div>
+                                <div class="card-body">
+                                    {!! $chart_kuis_1->render() !!}
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
                     <div class="card shadow">
                         <div class="card-header">
-                            <h6>Nilai kuis terdahulu</h6>
+                            <h6 class="text-primary">Nilai Kuis 2</h6>
                         </div>
                         <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th>No</th>
-                                            <th>Nama</th>
-                                            <th>Nilai</th>
-                                            <th>Melakukan</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach ($data_siswa->nilaikuis1_trash as $key => $kuis1_trash)
-                                            <tr>
-                                                <th scope="row">{{ $key++ + 1 }}</th>
-                                                <td>{{ $kuis1_trash->user->name ?? 'Data Kosong' }}</td>
-                                                <td>{{ $kuis1_trash->nilai ?? 'Data Kosong' }}</td>
-                                                <td>{{ $kuis1_trash ? $kuis1_trash->created_at->diffForhumans() : 'Data Kosong' }} ({{$kuis1_trash ? $kuis1_trash->created_at->format('H:i') : ''}})</td>
-                                            </tr>
-                                        @endforeach
-                                    </tbody>
-                                </table>
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <h6>Nilai kuis terbaru</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>Nama</th>
+                                                    <th>Nilai</th>
+                                                    <th>Melakukan</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>{{ $data_siswa->nilaikuis2->user->name ?? 'Data Kosong' }}</td>
+                                                    <td>{{ $data_siswa->nilaikuis2->nilai ?? 'Data Kosong' }}</td>
+                                                    {{-- @if ($data_siswa->nilaikuis1->created_at == null)
+                                                <td>Data Kosong</td>
+                                            @else
+                                                <td>{{$data_siswa->nilaikuis1->created_at->diffForhumans()}}</td>
+                                            @endif --}}
+                                                    <td>{{ $data_siswa->nilaikuis2 ? $data_siswa->nilaikuis2->created_at->diffForhumans() : 'Data Kosong' }}
+                                                        ({{ $data_siswa->nilaikuis2 ? $data_siswa->nilaikuis2->created_at->format('H:i') : '' }})
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <h6>Nilai kuis terdahulu</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>Nama</th>
+                                                    <th>Nilai</th>
+                                                    <th>Melakukan</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach ($data_siswa->nilaikuis2_trash as $key => $kuis2_trash)
+                                                    <tr>
+                                                        <th scope="row">{{ $key++ + 1 }}</th>
+                                                        <td>{{ $kuis2_trash->user->name ?? 'Data Kosong' }}</td>
+                                                        <td>{{ $kuis2_trash->nilai ?? 'Data Kosong' }}</td>
+                                                        <td>{{ $kuis2_trash ? $kuis2_trash->created_at->diffForhumans() : 'Data Kosong' }}
+                                                            ({{ $kuis2_trash ? $kuis2_trash->created_at->format('H:i') : '' }})
+                                                        </td>
+                                                    </tr>
+                                                @endforeach
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <h6>Grafik Kuis 2</h6>
+                                </div>
+                                <div class="card-body">
+                                    {!! $chart_kuis_2->render() !!}
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
                     <div class="card shadow">
                         <div class="card-header">
-                            <h6>Grafik Kuis 1</h6>
+                            <h6 class="text-primary">Evaluasi</h6>
                         </div>
                         <div class="card-body">
-                            {!!$chart_kuis_1->render()!!}
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <h6>Nilai evaluasi terbaru</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>Nama</th>
+                                                    <th>Nilai</th>
+                                                    <th>Melakukan</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>{{ $data_siswa->nilaievaluasi->user->name ?? 'Data Kosong' }}</td>
+                                                    <td>{{ $data_siswa->nilaievaluasi->nilai ?? 'Data Kosong' }}</td>
+                                                    <td>{{ $data_siswa->nilaievaluasi ? $data_siswa->nilaievaluasi->created_at->diffForhumans() : 'Data Kosong' }}
+                                                        ({{ $data_siswa->nilaievaluasi ? $data_siswa->nilaievaluasi->created_at->format('H:i') : '' }})
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <h6>Nilai evaluasi terdahulu</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>Nama</th>
+                                                    <th>Nilai</th>
+                                                    <th>Melakukan</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach ($data_siswa->nilaievaluasi_trash as $key => $evalausi_trash)
+                                                    <tr>
+                                                        <th scope="row">{{ $key++ + 1 }}</th>
+                                                        <td>{{ $evalausi_trash->user->name ?? 'Data Kosong' }}</td>
+                                                        <td>{{ $evalausi_trash->nilai ?? 'Data Kosong' }}</td>
+                                                        <td>{{ $evalausi_trash ? $evalausi_trash->created_at->diffForhumans() : 'Data Kosong' }}
+                                                            ({{ $evalausi_trash ? $evalausi_trash->created_at->format('H:i') : '' }})
+                                                        </td>
+                                                    </tr>
+                                                @endforeach
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <h6>Grafik evaluasi</h6>
+                                </div>
+                                <div class="card-body">
+                                    {!! $chart_evaluasi->render() !!}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

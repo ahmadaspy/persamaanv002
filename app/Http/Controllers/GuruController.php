@@ -76,8 +76,10 @@ class GuruController extends Controller
             $nilai_temp[2] = EvaluasiNilai::where('user_id', $siswas->id)->value('nilai');
             $nilai_evaluasi_max[$key] = max($nilai_temp);
             $nilai_evaluasi_min[$key] = min($nilai_temp);
+            // $nilai_evaluasi_max[$key] = $siswas->nilaievaluasi_all->max->nilai;
+            // dd($nilai_evaluasi_max[$key]);
+            // $nilai_evaluasi_min[$key] = min($nilai_temp);
         }
-
         $avg_nilai = array();
         foreach ($siswa as $key => $siswas) {
             $avg_nilai[$key] = ($nilai_kuis1_max[$key] + $nilai_kuis2_max[$key] + $nilai_evaluasi_max[$key]) / 3;
@@ -151,7 +153,7 @@ class GuruController extends Controller
         ($data_siswa->nilaikuis1) ? array_push($data_created_at, $data_siswa->nilaikuis1->created_at->format('d M Y H:m')) : '';
         // array_push($data_array, $data_siswa->nilaikuis1->nilai);
         $chart_kuis_1 = app()->chartjs
-            ->name('lineChartTest')
+            ->name('chart_kuis_1')
             ->type('line')
             ->size(['width' => 400, 'height' => 200])
             ->labels($data_created_at)
@@ -170,6 +172,64 @@ class GuruController extends Controller
                 ],
             ])
             ->options([]);
-        return view('guru.detail_siswa', compact('data_siswa', 'data_guru', 'chart_kuis_1'));
+        $data_array2 = array();
+        $data_created_at2 = array();
+        foreach ($data_siswa->nilaikuis2_trash as $key => $trash) {
+            // array_push($data_array, $trash->nilai);
+            $data_array2[$key] = $trash->nilai;
+            $data_created_at2[$key] = $trash->created_at->format('d M Y H:i');
+        }
+        ($data_siswa->nilaikuis2) ? array_push($data_array2, $data_siswa->nilaikuis2->nilai) : '';
+        ($data_siswa->nilaikuis2) ? array_push($data_created_at2, $data_siswa->nilaikuis2->created_at->format('d M Y H:m')) : '';
+        $chart_kuis_2 = app()->chartjs
+            ->name('chart_kuis_2')
+            ->type('line')
+            ->size(['width' => 400, 'height' => 200])
+            ->labels($data_created_at2)
+            ->datasets([
+                [
+                    "label" => "Nilai Kuis",
+                    "lineTension" => "0.4",
+                    'backgroundColor' => "rgba(38, 185, 154, 0.31)",
+                    'borderColor' => "rgba(38, 185, 154, 0.7)",
+                    "pointBorderColor" => "rgba(38, 185, 154, 0.7)",
+                    "pointBackgroundColor" => "rgba(38, 185, 154, 0.7)",
+                    "pointHoverBackgroundColor" => "#fff",
+                    "pointHoverBorderColor" => "rgba(220,220,220,1)",
+                    'data' =>
+                    $data_array2,
+                ],
+            ])
+            ->options([]);
+        $data_evaluasi = array();
+        $data_created_at_evaluasi = array();
+        foreach ($data_siswa->nilaievaluasi_trash as $key => $trash) {
+            // array_push($data_array, $trash->nilai);
+            $data_evaluasi[$key] = $trash->nilai;
+            $data_created_at_evaluasi[$key] = $trash->created_at->format('d M Y H:i');
+        }
+        ($data_siswa->nilaievaluasi) ? array_push($data_evaluasi, $data_siswa->nilaievaluasi->nilai) : '';
+        ($data_siswa->nilaievaluasi) ? array_push($data_created_at_evaluasi, $data_siswa->nilaievaluasi->created_at->format('d M Y H:m')) : '';
+        $chart_evaluasi = app()->chartjs
+            ->name('chart_evaluasi')
+            ->type('line')
+            ->size(['width' => 400, 'height' => 200])
+            ->labels($data_created_at_evaluasi)
+            ->datasets([
+                [
+                    "label" => "Nilai Kuis",
+                    "lineTension" => "0.4",
+                    'backgroundColor' => "rgba(38, 185, 154, 0.31)",
+                    'borderColor' => "rgba(38, 185, 154, 0.7)",
+                    "pointBorderColor" => "rgba(38, 185, 154, 0.7)",
+                    "pointBackgroundColor" => "rgba(38, 185, 154, 0.7)",
+                    "pointHoverBackgroundColor" => "#fff",
+                    "pointHoverBorderColor" => "rgba(220,220,220,1)",
+                    'data' =>
+                    $data_evaluasi,
+                ],
+            ])
+            ->options([]);
+        return view('guru.detail_siswa', compact('data_siswa', 'data_guru', 'chart_kuis_1', 'chart_kuis_2', 'chart_evaluasi'));
     }
 }
