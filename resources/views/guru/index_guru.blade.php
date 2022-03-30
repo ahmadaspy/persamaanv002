@@ -9,7 +9,7 @@
                         <h2 class="text-white">{{ Auth::user()->kode_kelas->kode_kelas }}</h2>
                         <p class="text-white mb-0">{{ Auth::user()->kode_kelas->created_at->diffForhumans() }}</p>
                     </div>
-                    <span class="float-right display-5 opacity-5"><i class="fa fa-shopping-cart"></i></span>
+                    <span class="float-right display-5 opacity-5"><i class="fa fa-id-badge"></i></span>
                 </div>
             </div>
         </div>
@@ -21,7 +21,7 @@
                         <h2 class="text-white">{{ $siswa->count() }}</h2>
                         <p class="text-white mb-0">{{ $siswa->last()->created_at->diffForhumans() }}</p>
                     </div>
-                    <span class="float-right display-5 opacity-5"><i class="fa fa-money"></i></span>
+                    <span class="float-right display-5 opacity-5"><i class="fa fa-registered"></i></span>
                 </div>
             </div>
         </div>
@@ -33,7 +33,7 @@
                         <h2 class="text-white">{{ $siswa->last()->name }}</h2>
                         <p class="text-white mb-0">{{ $siswa->last()->created_at->diffForhumans() }}</p>
                     </div>
-                    <span class="float-right display-5 opacity-5"><i class="fa fa-money"></i></span>
+                    <span class="float-right display-5 opacity-5"><i class="fa fa-user"></i></span>
                 </div>
             </div>
         </div>
@@ -46,7 +46,7 @@
 
                         <p class="text-white mb-0">Siswa {{ $siswa->count() }}</p>
                     </div>
-                    <span class="float-right display-5 opacity-5"><i class="fa fa-money"></i></span>
+                    <span class="float-right display-5 opacity-5"><i class="fa fa-star"></i></span>
                 </div>
             </div>
         </div>
@@ -61,7 +61,7 @@
                         <h2 class="text-white">Lulus : {{ count(array_keys($siswa_kuis2, 'lulus')) }}</h2>
                         <p class="text-white mb-0">Siswa {{ $siswa->count() }}</p>
                     </div>
-                    <span class="float-right display-5 opacity-5"><i class="fa fa-money"></i></span>
+                    <span class="float-right display-5 opacity-5"><i class="fa fa-star"></i></span>
                 </div>
             </div>
         </div>
@@ -73,7 +73,7 @@
                         <h2 class="text-white">Lulus : {{ count(array_keys($siswa_evaluasi, 'lulus')) }}</h2>
                         <p class="text-white mb-0">Siswa {{ $siswa->count() }}</p>
                     </div>
-                    <span class="float-right display-5 opacity-5"><i class="fa fa-money"></i></span>
+                    <span class="float-right display-5 opacity-5"><i class="fa fa-star"></i></span>
                 </div>
             </div>
         </div>
@@ -111,7 +111,7 @@
                         <img alt="" class="rounded-circle mt-3" src="{{asset($siswa[array_search(max($avg_nilai), $avg_nilai)]->photo_profile)}}">
                         <h4 class="card-widget__title text-dark mt-3">{{$siswa[array_search(max($avg_nilai), $avg_nilai)]->name}}</h4>
                         {{-- <p class="text-muted">Detail</p> --}}
-                        <a class="btn gradient-4 btn-lg border-0 btn-rounded px-5" href="javascript:void()">Detail</a>
+                        <a class="btn gradient-4 btn-lg border-0 btn-rounded px-5" href="{{route('halaman_siswa_detail', $siswa[array_search(max($avg_nilai), $avg_nilai)]->id)}}">Detail</a>
                     </div>
                 </div>
             </div>
@@ -126,7 +126,7 @@
                         <img alt="" class="rounded-circle mt-4" src="{{asset($siswa[array_search(min($avg_nilai), $avg_nilai)]->photo_profile)}}">
                         <h4 class="card-widget__title text-dark mt-3">{{$siswa[array_search(min($avg_nilai), $avg_nilai)]->name}}</h4>
                         {{-- <p class="text-muted">Detail</p> --}}
-                        <a class="btn gradient-4 btn-lg border-0 btn-rounded px-5" href="javascript:void()">Detail</a>
+                        <a class="btn gradient-4 btn-lg border-0 btn-rounded px-5" href="{{route('halaman_siswa_detail', $siswa[array_search(min($avg_nilai), $avg_nilai)]->id)}}">Detail</a>
                     </div>
                 </div>
             </div>

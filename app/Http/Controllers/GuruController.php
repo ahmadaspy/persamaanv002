@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\EvaluasiNilai;
 use App\Models\User;
 use App\Models\kuis_1_nilai;
 use App\Models\kuis_2_nilai;
 use Illuminate\Http\Request;
+use App\Models\EvaluasiNilai;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
 class GuruController extends Controller
@@ -76,9 +77,10 @@ class GuruController extends Controller
             $nilai_evaluasi_max[$key] = max($nilai_temp);
             $nilai_evaluasi_min[$key] = min($nilai_temp);
         }
+
         $avg_nilai = array();
-        foreach($siswa as $key => $siswas){
-            $avg_nilai[$key] = ($nilai_kuis1_max[$key] + $nilai_kuis2_max[$key] + $nilai_evaluasi_max[$key])/3;
+        foreach ($siswa as $key => $siswas) {
+            $avg_nilai[$key] = ($nilai_kuis1_max[$key] + $nilai_kuis2_max[$key] + $nilai_evaluasi_max[$key]) / 3;
         }
         // dd(array_search(min($avg_nilai), $avg_nilai));
         // dd(array_search(max($avg_nilai), $avg_nilai));
@@ -97,7 +99,7 @@ class GuruController extends Controller
                     "pointBackgroundColor" => "rgba(38, 185, 154, 0.7)",
                     "pointHoverBackgroundColor" => "#fff",
                     "pointHoverBorderColor" => "rgba(220,220,220,1)",
-                    'data' => [max($nilai_kuis1_max), max($nilai_kuis2_max), max($nilai_evaluasi_max)],
+                    'data' => [max($nilai_kuis1_max) ?? 0, max($nilai_kuis2_max) ?? 0, max($nilai_evaluasi_max) ?? 0],
                 ],
                 [
                     "label" => "Nilai minimum",
@@ -107,7 +109,7 @@ class GuruController extends Controller
                     "pointBackgroundColor" => "rgb(153, 51, 51)",
                     "pointHoverBackgroundColor" => "#fff",
                     "pointHoverBorderColor" => "rgba(220,220,220,1)",
-                    'data' => [min($nilai_kuis1_min), min($nilai_kuis2_min), min($nilai_evaluasi_min)],
+                    'data' => [min($nilai_kuis1_min) ?? 0, min($nilai_kuis2_min) ?? 0, min($nilai_evaluasi_min) ?? 0],
                 ]
             ])
             ->options([]);
@@ -118,7 +120,7 @@ class GuruController extends Controller
             ->labels(['Lulus', 'Gagal'])
             ->datasets([
                 [
-                    'backgroundColor' => ['#36A2EB','#FF6384'],
+                    'backgroundColor' => ['#36A2EB', '#FF6384'],
                     'hoverBackgroundColor' => ['#36A2EB', '#FF6384'],
                     'data' => [count(array_keys($siswa_evaluasi, 'lulus')), count(array_keys($siswa_evaluasi, 'gagal'))]
                 ]
@@ -127,9 +129,47 @@ class GuruController extends Controller
 
         return view('guru.index_guru', compact('siswa', 'siswa_kuis1', 'siswa_kuis2', 'siswa_evaluasi', 'chartjs', 'chartjs2', 'avg_nilai'));
     }
-    public function halaman_siswa(){
+    public function halaman_siswa()
+    {
         $kelas_id = Auth::user()->kode_kelas->id;
         $siswa = User::whereRoleIs('siswa')->where('kode_kelas_id', $kelas_id)->orderBy('name', 'ASC')->paginate();
-        dd($siswa);
+
+        return view('guru.daftar_siswa', compact('siswa'));
+    }
+    public function halaman_siswa_detail($id)
+    {
+        $data_siswa = User::find($id);
+        $data_guru = $data_siswa->whereRoleIs('guru')->where('kode_kelas_id', $data_siswa->kode_kelas->id)->first();
+        $data_array = array();
+        $data_created_at = array();
+        foreach ($data_siswa->nilaikuis1_trash as $key => $trash) {
+            // array_push($data_array, $trash->nilai);
+            $data_array[$key] = $trash->nilai;
+            $data_created_at[$key] = $trash->created_at->format('d M Y H:i');
+        }
+        ($data_siswa->nilaikuis1) ? array_push($data_array, $data_siswa->nilaikuis1->nilai) : '';
+        ($data_siswa->nilaikuis1) ? array_push($data_created_at, $data_siswa->nilaikuis1->created_at->format('d M Y H:m')) : '';
+        // array_push($data_array, $data_siswa->nilaikuis1->nilai);
+        $chart_kuis_1 = app()->chartjs
+            ->name('lineChartTest')
+            ->type('line')
+            ->size(['width' => 400, 'height' => 200])
+            ->labels($data_created_at)
+            ->datasets([
+                [
+                    "label" => "Nilai Kuis",
+                    "lineTension" => "0.4",
+                    'backgroundColor' => "rgba(38, 185, 154, 0.31)",
+                    'borderColor' => "rgba(38, 185, 154, 0.7)",
+                    "pointBorderColor" => "rgba(38, 185, 154, 0.7)",
+                    "pointBackgroundColor" => "rgba(38, 185, 154, 0.7)",
+                    "pointHoverBackgroundColor" => "#fff",
+                    "pointHoverBorderColor" => "rgba(220,220,220,1)",
+                    'data' =>
+                    $data_array,
+                ],
+            ])
+            ->options([]);
+        return view('guru.detail_siswa', compact('data_siswa', 'data_guru', 'chart_kuis_1'));
     }
 }

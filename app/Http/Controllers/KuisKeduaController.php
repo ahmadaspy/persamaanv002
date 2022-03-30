@@ -15,7 +15,7 @@ class KuisKeduaController extends Controller
         if(kuis_1_nilai::where('user_id', Auth::user()->id)->get()->isEmpty()){
             return redirect()->route('kuis_index_page');
         }else{
-            $soal_kuis = KuisKedua::inRandomOrder()->limit(5)->get();
+            $soal_kuis = KuisKedua::inRandomOrder()->get();
             return view('siswa.spltv.Kuis 2.kuis_2', compact('soal_kuis'));
 
         }
@@ -54,7 +54,7 @@ class KuisKeduaController extends Controller
                 $jawaban_siswa[$key] = 'benar';
             }
         }
-        $nilai = count(array_keys($jawaban_siswa, 'benar'))*20;
+        $nilai = count(array_keys($jawaban_siswa, 'benar'))*10;
         if(kuis_2_nilai::where('user_id', Auth::user()->id)->get()->isEmpty()){
             $insert = new kuis_2_nilai();
             $insert->user_id = Auth::user()->id;

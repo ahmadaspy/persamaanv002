@@ -101,7 +101,7 @@ class KuisPertamaController extends Controller
                 $jawaban_siswa[$key] = 'benar';
             }
         }
-        $nilai = count(array_keys($jawaban_siswa, 'benar')) * 20;
+        $nilai = count(array_keys($jawaban_siswa, 'benar')) * 10;
         if (kuis_1_nilai::where('user_id', Auth::user()->id)->get()->isEmpty()) {
             $insert = new kuis_1_nilai();
             $insert->user_id = Auth::user()->id;

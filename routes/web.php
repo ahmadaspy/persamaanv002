@@ -46,6 +46,7 @@ Route::prefix('guru')->group(function(){
     Route::middleware(['auth', 'role:guru'])->group(function(){
         Route::get('/dashboard', [GuruController::class, 'dashboard_guru'])->name('dashboard_guru');
         Route::get('/siswa', [GuruController::class, 'halaman_siswa'])->name('halaman_siswa');
+        Route::get('/siswa/detail/{id}', [GuruController::class, 'halaman_siswa_detail'])->name('halaman_siswa_detail');
     });
 });
 
