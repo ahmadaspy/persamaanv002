@@ -32,7 +32,7 @@
                                             <span>{{Auth::user()->name}}</span>
                                         </li>
                                         <li>
-                                            <a href="{{route('profile')}}"><i class="icon-user"></i>
+                                            <a href="{{route('profile_guru')}}"><i class="icon-user"></i>
                                                 <span>Profile</span></a>
                                         </li>
 

@@ -2,7 +2,7 @@
 @section('content')
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-4 col-xl-3">
+            <div class="col-lg-5 col-xl-4">
                 <div class="card">
                     <div class="card-body">
                         <div class="media align-items-center mb-4">
@@ -69,7 +69,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-8 col-xl-9">
+            <div class="col">
                 {{-- <div class="card">
                     <div class="card-body">
                         <form action="#" class="form-profile">

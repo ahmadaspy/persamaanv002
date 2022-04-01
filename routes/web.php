@@ -47,6 +47,9 @@ Route::prefix('guru')->group(function(){
         Route::get('/dashboard', [GuruController::class, 'dashboard_guru'])->name('dashboard_guru');
         Route::get('/siswa', [GuruController::class, 'halaman_siswa'])->name('halaman_siswa');
         Route::get('/siswa/detail/{id}', [GuruController::class, 'halaman_siswa_detail'])->name('halaman_siswa_detail');
+        Route::get('/profile', [GuruController::class, 'profile_guru'])->name('profile_guru');
+        Route::post('/profile/post', [GuruController::class, 'profile_guru_post'])->name('profile_guru_post');
+        Route::post('/profile/pass/post', [GuruController::class, 'profile_guru_pass'])->name('profile_guru_pass');
     });
 });
 

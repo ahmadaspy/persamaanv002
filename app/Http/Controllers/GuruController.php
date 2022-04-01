@@ -9,6 +9,9 @@ use Illuminate\Http\Request;
 use App\Models\EvaluasiNilai;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Intervention\Image\Facades\Image;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class GuruController extends Controller
 {
@@ -50,35 +53,36 @@ class GuruController extends Controller
         $nilai_kuis1_max = array();
         $nilai_kuis1_min = array();
         foreach ($siswa as $key => $siswas) {
-            $nilai_temp = array();
-            $nilai_temp[0] = kuis_1_nilai::where('user_id', $siswas->id)->withTrashed()->max('nilai');
-            $nilai_temp[1] = kuis_1_nilai::where('user_id', $siswas->id)->withTrashed()->min('nilai');
-            $nilai_temp[2] = kuis_1_nilai::where('user_id', $siswas->id)->value('nilai');
-            $nilai_kuis1_max[$key] = max($nilai_temp);
-            $nilai_kuis1_min[$key] = min($nilai_temp);
+            // $nilai_temp = array();
+            // $nilai_temp[0] = kuis_1_nilai::where('user_id', $siswas->id)->withTrashed()->max('nilai');
+            // $nilai_temp[1] = kuis_1_nilai::where('user_id', $siswas->id)->withTrashed()->min('nilai');
+            // $nilai_temp[2] = kuis_1_nilai::where('user_id', $siswas->id)->value('nilai');
+            // $nilai_kuis1_max[$key] = max($nilai_temp);
+            // $nilai_kuis1_min[$key] = min($nilai_temp);
+            $nilai_kuis1_max[$key] = $siswas->nilaikuis1_all->max->nilai;
+            $nilai_kuis1_min[$key] = $siswas->nilaikuis1_all->min->nilai;
         }
         $nilai_kuis2_max = array();
         $nilai_kuis2_min = array();
         foreach ($siswa as $key => $siswas) {
-            $nilai_temp = array();
-            $nilai_temp[0] = kuis_2_nilai::where('user_id', $siswas->id)->withTrashed()->max('nilai');
-            $nilai_temp[1] = kuis_2_nilai::where('user_id', $siswas->id)->withTrashed()->min('nilai');
-            $nilai_temp[2] = kuis_2_nilai::where('user_id', $siswas->id)->value('nilai');
-            $nilai_kuis2_max[$key] = max($nilai_temp);
-            $nilai_kuis2_min[$key] = min($nilai_temp);
+            // $nilai_temp = array();
+            // $nilai_temp[0] = kuis_2_nilai::where('user_id', $siswas->id)->withTrashed()->max('nilai');
+            // $nilai_temp[1] = kuis_2_nilai::where('user_id', $siswas->id)->withTrashed()->min('nilai');
+            // $nilai_temp[2] = kuis_2_nilai::where('user_id', $siswas->id)->value('nilai');
+            $nilai_kuis2_max[$key] = $siswas->nilaikuis2_all->max->nilai;
+            $nilai_kuis2_min[$key] = $siswas->nilaikuis2_all->min->nilai;
         }
         $nilai_evaluasi_max = array();
         $nilai_evaluasi_min = array();
         foreach ($siswa as $key => $siswas) {
-            $nilai_temp = array();
-            $nilai_temp[0] = EvaluasiNilai::where('user_id', $siswas->id)->withTrashed()->max('nilai');
-            $nilai_temp[1] = EvaluasiNilai::where('user_id', $siswas->id)->withTrashed()->min('nilai');
-            $nilai_temp[2] = EvaluasiNilai::where('user_id', $siswas->id)->value('nilai');
-            $nilai_evaluasi_max[$key] = max($nilai_temp);
-            $nilai_evaluasi_min[$key] = min($nilai_temp);
-            // $nilai_evaluasi_max[$key] = $siswas->nilaievaluasi_all->max->nilai;
-            // dd($nilai_evaluasi_max[$key]);
+            // $nilai_temp = array();
+            // $nilai_temp[0] = EvaluasiNilai::where('user_id', $siswas->id)->withTrashed()->max('nilai');
+            // $nilai_temp[1] = EvaluasiNilai::where('user_id', $siswas->id)->withTrashed()->min('nilai');
+            // $nilai_temp[2] = EvaluasiNilai::where('user_id', $siswas->id)->value('nilai');
+            // $nilai_evaluasi_max[$key] = max($nilai_temp);
             // $nilai_evaluasi_min[$key] = min($nilai_temp);
+            $nilai_evaluasi_max[$key] = $siswas->nilaievaluasi_all->max->nilai;
+            $nilai_evaluasi_min[$key] = $siswas->nilaievaluasi_all->min->nilai;
         }
         $avg_nilai = array();
         foreach ($siswa as $key => $siswas) {
@@ -141,7 +145,7 @@ class GuruController extends Controller
     public function halaman_siswa_detail($id)
     {
         $data_siswa = User::find($id);
-        $data_guru = $data_siswa->whereRoleIs('guru')->where('kode_kelas_id', $data_siswa->kode_kelas->id)->first();
+        $data_guru = $data_siswa->whereRoleIs('guru')->where('kode_kelas_id', $data_siswa->kode_kelas->id)->get();
         $data_array = array();
         $data_created_at = array();
         foreach ($data_siswa->nilaikuis1_trash as $key => $trash) {
@@ -231,5 +235,73 @@ class GuruController extends Controller
             ])
             ->options([]);
         return view('guru.detail_siswa', compact('data_siswa', 'data_guru', 'chart_kuis_1', 'chart_kuis_2', 'chart_evaluasi'));
+    }
+    public function profile_guru(){
+        return view('guru.profile_guru');
+    }
+    public function profile_guru_post(Request $request){
+        $request->validate([
+            'nama' => 'required',
+            'email' => 'required',
+            'image' => 'mimes:png,jpg,jpeg',
+        ]);
+        if (Auth::user()) {
+            if ($request->file('image')) {
+                if (Auth::user()->photo_profile) {
+                    unlink(Auth::user()->photo_profile);
+                }
+                $image = $request->file('image');
+                $name_gen = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
+                Image::make($image)->resize(null, 400, function ($constraint) {
+                    $constraint->aspectRatio();
+                })->save('profile_image/' . $name_gen);
+                if(Auth::user()->email != $request->email){
+                    User::find(Auth::user()->id)->update([
+                        'name' => $request->nama,
+                        'email' => $request->email,
+                        'email_verified_at' => null,
+                        'photo_profile' => 'profile_image/'.$name_gen,
+                    ]);
+                }else{
+                    User::find(Auth::user()->id)->update([
+                        'name' => $request->nama,
+                        'photo_profile' => 'profile_image/'.$name_gen,
+                    ]);
+                }
+                Alert::success('Sukses', 'data telah di perbarui');
+                return redirect()->route('profile_guru');
+            } else {
+                if(Auth::user()->email != $request->email){
+                    User::find(Auth::user()->id)->update([
+                        'name' => $request->nama,
+                        'email' => $request->email,
+                        'email_verified_at' => null,
+                    ]);
+                }else{
+                    User::find(Auth::user()->id)->update([
+                        'name' => $request->nama,
+                    ]);
+                }
+                Alert::success('Sukses', 'data telah di perbarui');
+                return redirect()->route('profile_guru');
+            }
+        }
+    }
+    public function profile_guru_pass(Request $request){
+        $request->validate([
+            'kata_sandi' => 'required',
+            'password' => 'required|confirmed',
+        ]);
+        if(Hash::check($request->kata_sandi, Auth::user()->password)){
+            $user = User::find(Auth::user()->id);
+            $user->password = Hash::make($request->password);
+            $user->save();
+            Auth::logout();
+            Alert::success('Sukses', 'data telah di perbarui');
+            return redirect()->route('profile_guru');
+        }else{
+            toast('kata sandi anda tidak cocok', 'error');
+            return redirect()->route('profile_guru');
+        }
     }
 }

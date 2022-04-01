@@ -1,16 +1,15 @@
 @extends('guru.template.main')
 @section('content')
     <div class="row">
-        <div class="col-lg-4 col-xl-3">
+        <div class="col-lg-5 col-xl-4 ">
             <div class="card shadow">
                 <div class="card-body">
                     <div class="media align-items-center mb-4">
-                        <img class="mr-3"
-                            src="
-                                                                @if (!$data_siswa->photo_profile) {{ asset('profile_image/default.png') }}
-                        @else
-                            {{ asset($data_siswa->photo_profile) }} @endif"
-                            style="border-radius: 50%" width="80" height="80" alt="">
+                        <img class="mr-3" src="
+                                                                    @if (!$data_siswa->photo_profile) {{ asset('profile_image/default.png') }}
+                    @else
+                        {{ asset($data_siswa->photo_profile) }} @endif"
+                        style="border-radius: 50%" width="80" height="80" alt="">
                         <div class="media-body">
                             <h3 class="mb-0">{{ $data_siswa->name }}</h3>
                             {{-- <p class="text-muted mb-0">Canada</p> --}}
@@ -30,7 +29,10 @@
                             <div class="card card-profile text-center">
                                 <span class="mb-1 text-warning"><i class="fa fa-book"></i></span>
                                 <h3 class="mb-0">Guru</h3>
-                                <p class="text-muted">{{ $data_guru->name }}</p>
+                                @foreach ($data_guru as $nama_guru)
+                                    <p class="text-muted">{{ $nama_guru->name }}</p>
+                                @endforeach
+
                             </div>
                         </div>
                     </div>
@@ -241,7 +243,8 @@
                                             <tbody>
                                                 <tr>
                                                     <td>1</td>
-                                                    <td>{{ $data_siswa->nilaievaluasi->user->name ?? 'Data Kosong' }}</td>
+                                                    <td>{{ $data_siswa->nilaievaluasi->user->name ?? 'Data Kosong' }}
+                                                    </td>
                                                     <td>{{ $data_siswa->nilaievaluasi->nilai ?? 'Data Kosong' }}</td>
                                                     <td>{{ $data_siswa->nilaievaluasi ? $data_siswa->nilaievaluasi->created_at->diffForhumans() : 'Data Kosong' }}
                                                         ({{ $data_siswa->nilaievaluasi ? $data_siswa->nilaievaluasi->created_at->format('H:i') : '' }})
