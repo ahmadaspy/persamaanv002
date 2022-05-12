@@ -11,6 +11,7 @@ class DashController extends Controller
     public function landingpage()
     {
         if (Auth::user()->hasRole('admin')) {
+            return redirect()->route('dashboard_admin');
         } elseif (Auth::user()->hasRole('guru')) {
             // return view('guru.index_guru');
             return redirect()->route('dashboard_guru');

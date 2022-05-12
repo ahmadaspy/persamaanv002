@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->unsignedBigInteger('kode_kelas_id');
+            $table->unsignedBigInteger('kode_kelas_id')->nullable();
             $table->foreign('kode_kelas_id')->references('id')->on('kode_kelas');
             $table->string('photo_profile')->nullable();
             $table->rememberToken();

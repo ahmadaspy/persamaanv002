@@ -25,9 +25,9 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="{{ asset('js/image_view.js') }}"></script>
-    <script src="{{ asset('js/siswa.js') }}"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
     @yield('script_atas')
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 
@@ -75,9 +75,9 @@
             Nav header end
         ***********************************-->
 
-        @include('siswa.template.header')
+        @include('admin.template.header')
 
-        @include('siswa.template.sidebar')
+        @include('admin.template.sidebar')
 
         <!--**********************************
             Content body start
@@ -134,6 +134,8 @@
     <script src="{{asset('template_asset/plugins/jquery-steps/build/jquery.steps.min.js')}}"></script>
     <script src="{{asset('template_asset/plugins/jquery-validation/jquery.validate.min.js')}}"></script>
     <script src="{{asset('template_asset/js/plugins-init/jquery-steps-init.js')}}"></script>
+    {{-- <script src="{{asset('template_asset/plugins/chart.js/Chart.bundle.min.js')}}"></script>
+    <script src="{{asset('template_asset/js/plugins-init/chartjs-init.js')}}"></script> --}}
     @yield('script_bawah')
 
 </body>

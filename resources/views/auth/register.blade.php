@@ -48,6 +48,29 @@
                                             alt="logo">
                                     </a>
                                 </div>
+                                <div>
+                                    @if (count($errors) > 0)
+                                        @foreach ($errors->all() as $message)
+                                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                                {{ $message }}
+                                                <button type="button" class="close" data-dismiss="alert"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                        @endforeach
+                                    @endif
+                                    @if (session('message'))
+                                        <div class="alert alert-dismissible fade show alert-danger" role="alert">
+                                            {{ session('message') }}
+                                            <button type="button" class="close" data-dismiss="alert"
+                                                aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                    @endif
+                                </div>
+
                                 <form class="mt-5 mb-5 login-input" action="{{ route('register') }}" method="POST">
                                     @csrf
                                     <div class="form-group">

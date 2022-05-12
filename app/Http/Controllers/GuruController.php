@@ -236,10 +236,12 @@ class GuruController extends Controller
             ->options([]);
         return view('guru.detail_siswa', compact('data_siswa', 'data_guru', 'chart_kuis_1', 'chart_kuis_2', 'chart_evaluasi'));
     }
-    public function profile_guru(){
+    public function profile_guru()
+    {
         return view('guru.profile_guru');
     }
-    public function profile_guru_post(Request $request){
+    public function profile_guru_post(Request $request)
+    {
         $request->validate([
             'nama' => 'required',
             'email' => 'required',
@@ -255,29 +257,29 @@ class GuruController extends Controller
                 Image::make($image)->resize(null, 400, function ($constraint) {
                     $constraint->aspectRatio();
                 })->save('profile_image/' . $name_gen);
-                if(Auth::user()->email != $request->email){
+                if (Auth::user()->email != $request->email) {
                     User::find(Auth::user()->id)->update([
                         'name' => $request->nama,
                         'email' => $request->email,
                         'email_verified_at' => null,
-                        'photo_profile' => 'profile_image/'.$name_gen,
+                        'photo_profile' => 'profile_image/' . $name_gen,
                     ]);
-                }else{
+                } else {
                     User::find(Auth::user()->id)->update([
                         'name' => $request->nama,
-                        'photo_profile' => 'profile_image/'.$name_gen,
+                        'photo_profile' => 'profile_image/' . $name_gen,
                     ]);
                 }
                 Alert::success('Sukses', 'data telah di perbarui');
                 return redirect()->route('profile_guru');
             } else {
-                if(Auth::user()->email != $request->email){
+                if (Auth::user()->email != $request->email) {
                     User::find(Auth::user()->id)->update([
                         'name' => $request->nama,
                         'email' => $request->email,
                         'email_verified_at' => null,
                     ]);
-                }else{
+                } else {
                     User::find(Auth::user()->id)->update([
                         'name' => $request->nama,
                     ]);
@@ -287,19 +289,20 @@ class GuruController extends Controller
             }
         }
     }
-    public function profile_guru_pass(Request $request){
+    public function profile_guru_pass(Request $request)
+    {
         $request->validate([
             'kata_sandi' => 'required',
             'password' => 'required|confirmed',
         ]);
-        if(Hash::check($request->kata_sandi, Auth::user()->password)){
+        if (Hash::check($request->kata_sandi, Auth::user()->password)) {
             $user = User::find(Auth::user()->id);
             $user->password = Hash::make($request->password);
             $user->save();
             Auth::logout();
             Alert::success('Sukses', 'data telah di perbarui');
             return redirect()->route('profile_guru');
-        }else{
+        } else {
             toast('kata sandi anda tidak cocok', 'error');
             return redirect()->route('profile_guru');
         }

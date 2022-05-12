@@ -50,11 +50,11 @@ class RegisteredUserController extends Controller
             ]);
             $user->attachRole('siswa');
         } else {
-            return redirect()->route('auth.login');
+            return redirect()->route('register')->with('message', 'Error Kode kelas tidak terdaftar');
         }
 
 
-        event(new Registered($user));
+        // event(new Registered($user));
 
         Auth::login($user);
 

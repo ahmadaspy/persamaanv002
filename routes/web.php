@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\DashController;
 use App\Http\Controllers\EvaluasiController;
@@ -41,6 +42,17 @@ Route::get('/', function () {
 Route::get('/logout', [Controller::class, 'logout'])->name('logout_user');
 
 Route::get('/landingpage', [DashController::class, 'landingpage'])->middleware(['auth'])->name('landing_page');
+
+// route admin
+
+Route::prefix('admin')->group(function(){
+    Route::middleware(['auth', 'role:admin'])->group(function(){
+        Route::get('/dashboard', [AdminController::class, 'dashboard_admin'])->name('dashboard_admin');
+        Route::get('/data/user', [AdminController::class, 'daftar_user'])->name('daftar_user');
+        Route::get('/data/user/{id}', [AdminController::class, 'edit_user'])->name('edit_user');
+    });
+});
+
 // route guru
 Route::prefix('guru')->group(function(){
     Route::middleware(['auth', 'role:guru'])->group(function(){
