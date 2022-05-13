@@ -14,5 +14,6 @@
             </p>
         </div>
     </div>
+    @include('siswa.spltv.dalam kehidupan sehari-hari.contoh konten.contoh_1')
     @include('siswa.spltv.dalam kehidupan sehari-hari.halaman_footer_kehidupan')
 @endsection

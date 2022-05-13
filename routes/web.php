@@ -125,9 +125,10 @@ Route::prefix('siswa')->group(function () {
             });
             Route::prefix('/kehidupansehari-hari')->group(function () {
                 Route::get('/1', [SpltvKehidupanSehariController::class, 'spltv_kehidupan_1'])->name('spltv_kehidupan_1');
-                Route::get('/2/{id}/{nomor}', [SpltvKehidupanSehariController::class, 'spltv_kehidupan_2'])->name('spltv_kehidupan_2');
-                Route::post('/2/pembahasan', [SpltvKehidupanSehariController::class, 'spltv_kehidupan_2_pembahasan'])->name('spltv_kehidupan_2_pembahasan');
-                Route::post('/2/{nomor}', [SpltvKehidupanSehariController::class, 'spltv_kehidupan_2_post'])->name('spltv_kehidupan_2_post');
+                Route::get('/2', [SpltvKehidupanSehariController::class, 'spltv_kehidupan_1_2'])->name('spltv_kehidupuan_1_2');
+                Route::get('/3/{id}/{nomor}', [SpltvKehidupanSehariController::class, 'spltv_kehidupan_2'])->name('spltv_kehidupan_2');
+                Route::post('/3/pembahasan', [SpltvKehidupanSehariController::class, 'spltv_kehidupan_2_pembahasan'])->name('spltv_kehidupan_2_pembahasan');
+                Route::post('/3/{nomor}', [SpltvKehidupanSehariController::class, 'spltv_kehidupan_2_post'])->name('spltv_kehidupan_2_post');
             });
             Route::prefix('/kuis')->group(function () {
                 Route::get('/kedua', [KuisKeduaController::class, 'kuis_index2_page'])->name('kuis_index2_page');
