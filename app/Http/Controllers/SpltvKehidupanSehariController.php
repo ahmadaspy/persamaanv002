@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\MariMencobaSpltvKehidupan;
 use Illuminate\Support\Facades\Validator;
 
+use function Ramsey\Uuid\v1;
+
 class SpltvKehidupanSehariController extends Controller
 {
     public function spltv_kehidupan_1()
@@ -73,5 +75,8 @@ class SpltvKehidupanSehariController extends Controller
         $pembahasan_soal = MariMencobaSpltvKehidupan::find($request->id);
         $nomor = $request->nomor;
         return view('siswa.spltv.dalam kehidupan sehari-hari.pembahasan.pembahasan_kehidupan', compact('pembahasan_soal', 'nomor'));
+    }
+    public function spltv_kehidupuan_1_2(){
+        return view('siswa.spltv.dalam kehidupan sehari-hari.halaman_1_2_kehidupan');
     }
 }
