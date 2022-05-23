@@ -76,7 +76,7 @@ class SpltvKehidupanSehariController extends Controller
         $nomor = $request->nomor;
         return view('siswa.spltv.dalam kehidupan sehari-hari.pembahasan.pembahasan_kehidupan', compact('pembahasan_soal', 'nomor'));
     }
-    public function spltv_kehidupuan_1_2(){
+    public function spltv_kehidupan_1_2(){
         return view('siswa.spltv.dalam kehidupan sehari-hari.halaman_1_2_kehidupan');
     }
 }

@@ -48,7 +48,8 @@
                     <div class="card-header">
                         <h6>
                             <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#satu"
-                                id="btn_1">1. Eliminasi salah satu dari variabel x atau y atau z yang akan menghasilkan
+                                style="white-space: normal" id="btn_1">1. Eliminasi salah satu dari variabel x atau y
+                                atau z yang akan menghasilkan
                                 persamaan linear dua variabel</button>
                         </h6>
                     </div>
@@ -66,16 +67,19 @@
                                                         type="text" onchange="step_1_input_1()" id="step_1_input_1"
                                                         style=" border-radius: 6px; border: 1px solid #ccc;  width: 40px">
                                                     \(|\)</td>
-                                                <td><input type="text" onchange="step_1_input_2()" id="step_1_input_2" disabled
+                                                <td><input type="text" onchange="step_1_input_2()" id="step_1_input_2"
+                                                        disabled
                                                         style=" border-radius: 6px; border: 1px solid #ccc; width: 100%">
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>\(x+4y+z=-6\)</td>
-                                                <td class="text-center">\(| \times \) <input type="text" onchange="step_1_input_3()" id="step_1_input_3"
+                                                <td class="text-center">\(| \times \) <input type="text"
+                                                        onchange="step_1_input_3()" id="step_1_input_3"
                                                         style=" border-radius: 6px; border: 1px solid #ccc;  width: 40px">
                                                     \(|\)</td>
-                                                <td><input type="text" onchange="step_1_input_4()" id="step_1_input_4" disabled
+                                                <td><input type="text" onchange="step_1_input_4()" id="step_1_input_4"
+                                                        disabled
                                                         style=" border-radius: 6px; border: 1px solid #ccc; width: 100%">
                                                 </td>
                                                 <td>\(-\)</td>
@@ -84,12 +88,14 @@
                                                 <td></td>
                                                 <td></td>
                                                 <td>
-                                                    \(-\)<input type="text" onchange="step_1_input_5()" id="step_1_input_5_1" disabled
+                                                    \(-\)<input type="text" onchange="step_1_input_5()"
+                                                        id="step_1_input_5_1" disabled
                                                         style=" border-radius: 6px; border: 1px solid #ccc; width: 40px">\(y+\)
-                                                        <input onchange="step_1_input_5()" id="step_1_input_5_2" disabled
+                                                    <input onchange="step_1_input_5()" id="step_1_input_5_2" disabled
                                                         type="text"
                                                         style=" border-radius: 6px; border: 1px solid #ccc; width: 40px">\(z=\)
-                                                    <input type="text" onchange="step_1_input_5()" id="step_1_input_5_3" disabled
+                                                    <input type="text" onchange="step_1_input_5()" id="step_1_input_5_3"
+                                                        disabled
                                                         style=" border-radius: 6px; border: 1px solid #ccc; width: 40px">
                                                     persamaan (4)
                                                 </td>
@@ -102,20 +108,23 @@
                                         <table class="table table-bordered ">
                                             <tr>
                                                 <td>\(x+4y+z=-6\)</td>
-                                                <td class="text-center" style="width: 10%">\(| \times \) <input onchange="step_1_input_6()" id="step_1_input_6"
-                                                        type="text"
+                                                <td class="text-center" style="width: 10%">\(| \times \) <input
+                                                        onchange="step_1_input_6()" id="step_1_input_6" type="text"
                                                         style=" border-radius: 6px; border: 1px solid #ccc;  width: 40px">
                                                     \(|\)</td>
-                                                <td><input type="text" onchange="step_1_input_7()" id="step_1_input_7" disabled
+                                                <td><input type="text" onchange="step_1_input_7()" id="step_1_input_7"
+                                                        disabled
                                                         style=" border-radius: 6px; border: 1px solid #ccc; width: 100%">
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>\(3x-2y-7z=0\)</td>
-                                                <td class="text-center">\(| \times \) <input type="text" onchange="step_1_input_8()" id="step_1_input_8"
+                                                <td class="text-center">\(| \times \) <input type="text"
+                                                        onchange="step_1_input_8()" id="step_1_input_8"
                                                         style=" border-radius: 6px; border: 1px solid #ccc;  width: 40px">
                                                     \(|\)</td>
-                                                <td><input type="text" onchange="step_1_input_9()" id="step_1_input_9" disabled
+                                                <td><input type="text" onchange="step_1_input_9()" id="step_1_input_9"
+                                                        disabled
                                                         style=" border-radius: 6px; border: 1px solid #ccc; width: 100%">
                                                 </td>
                                                 <td>\(-\)</td>
@@ -124,11 +133,14 @@
                                                 <td></td>
                                                 <td></td>
                                                 <td>
-                                                    <input type="text" onchange="step_1_input_10()" id="step_1_input_10_1" disabled
+                                                    <input type="text" onchange="step_1_input_10()"
+                                                        id="step_1_input_10_1" disabled
                                                         style=" border-radius: 6px; border: 1px solid #ccc; width: 40px">\(y+\)
-                                                    <input type="text" onchange="step_1_input_10()" id="step_1_input_10_2" disabled
+                                                    <input type="text" onchange="step_1_input_10()"
+                                                        id="step_1_input_10_2" disabled
                                                         style=" border-radius: 6px; border: 1px solid #ccc; width: 40px">\(z=-\)
-                                                    <input type="text" onchange="step_1_input_10()" id="step_1_input_10_3" disabled
+                                                    <input type="text" onchange="step_1_input_10()"
+                                                        id="step_1_input_10_3" disabled
                                                         style=" border-radius: 6px; border: 1px solid #ccc; width: 40px">
                                                     persamaan (5)
 
@@ -146,7 +158,8 @@
                     <div class="card-header">
                         <h6>
                             <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#dua"
-                                id="btn_2" disabled>2. Selesaikan persamaan linear dua variabel pada langkah 1 yang akan
+                                style="white-space: normal" id="btn_2" disabled>2. Selesaikan persamaan linear dua
+                                variabel pada langkah 1 yang akan
                                 menghasilkan nilai variabel x dan y, atau y dan z, atau x dan y.</button>
                         </h6>
                     </div>
@@ -164,16 +177,19 @@
                                                         type="text" onchange="step_2_input_1()" id="step_2_input_1"
                                                         style=" border-radius: 6px; border: 1px solid #ccc;  width: 40px">
                                                     \(|\)</td>
-                                                <td><input type="text" onchange="step_2_input_2()" id="step_2_input_2" disabled
+                                                <td><input type="text" onchange="step_2_input_2()" id="step_2_input_2"
+                                                        disabled
                                                         style=" border-radius: 6px; border: 1px solid #ccc; width: 100%">
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>\(14y+10z=-18\)</td>
-                                                <td class="text-center">\(| \times \) <input type="text" onchange="step_2_input_3()" id="step_2_input_3"
+                                                <td class="text-center">\(| \times \) <input type="text"
+                                                        onchange="step_2_input_3()" id="step_2_input_3"
                                                         style=" border-radius: 6px; border: 1px solid #ccc;  width: 40px">
                                                     \(|\)</td>
-                                                <td><input type="text" onchange="step_2_input_4()" id="step_2_input_4" disabled
+                                                <td><input type="text" onchange="step_2_input_4()" id="step_2_input_4"
+                                                        disabled
                                                         style=" border-radius: 6px; border: 1px solid #ccc; width: 100%">
                                                 </td>
                                                 <td>\(+\)</td>
@@ -183,15 +199,18 @@
                                                 <td></td>
                                                 <td>
                                                     <div>
-                                                        <input type="text" onchange="step_2_input_5()" id="step_2_input_5_1" disabled
+                                                        <input type="text" onchange="step_2_input_5()"
+                                                            id="step_2_input_5_1" disabled
                                                             style=" border-radius: 6px; border: 1px solid #ccc; width: 40px">\(z=\)
-                                                        <input type="text" onchange="step_2_input_5()" id="step_2_input_5_2" disabled
+                                                        <input type="text" onchange="step_2_input_5()"
+                                                            id="step_2_input_5_2" disabled
                                                             style=" border-radius: 6px; border: 1px solid #ccc; width: 40px">
 
                                                     </div>
                                                     <div class="mt-1">
                                                         \(z=\)
-                                                        <input type="text" onchange="step_2_input_6()" id="step_2_input_6" disabled
+                                                        <input type="text" onchange="step_2_input_6()"
+                                                            id="step_2_input_6" disabled
                                                             style=" border-radius: 6px; border: 1px solid #ccc; width: 40px">
                                                     </div>
                                                 </td>
@@ -207,16 +226,19 @@
                                                         type="text" onchange="step_2_input_7()" id="step_2_input_7"
                                                         style=" border-radius: 6px; border: 1px solid #ccc;  width: 40px">
                                                     \(|\)</td>
-                                                <td><input type="text" onchange="step_2_input_8()" id="step_2_input_8" disabled
+                                                <td><input type="text" onchange="step_2_input_8()" id="step_2_input_8"
+                                                        disabled
                                                         style=" border-radius: 6px; border: 1px solid #ccc; width: 100%">
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>\(14y+10z=-18\)</td>
-                                                <td class="text-center">\(| \times \) <input type="text" onchange="step_2_input_9()" id="step_2_input_9"
+                                                <td class="text-center">\(| \times \) <input type="text"
+                                                        onchange="step_2_input_9()" id="step_2_input_9"
                                                         style=" border-radius: 6px; border: 1px solid #ccc;  width: 40px">
                                                     \(|\)</td>
-                                                <td><input type="text" onchange="step_2_input_10()" id="step_2_input_10" disabled
+                                                <td><input type="text" onchange="step_2_input_10()" id="step_2_input_10"
+                                                        disabled
                                                         style=" border-radius: 6px; border: 1px solid #ccc; width: 100%">
                                                 </td>
                                                 <td>\(-\)</td>
@@ -227,14 +249,17 @@
                                                 <td>
                                                     <div>
                                                         \(-\)
-                                                        <input type="text" onchange="step_2_input_11()" id="step_2_input_11_1" disabled
+                                                        <input type="text" onchange="step_2_input_11()"
+                                                            id="step_2_input_11_1" disabled
                                                             style=" border-radius: 6px; border: 1px solid #ccc; width: 40px">\(y=\)
-                                                        <input type="text" onchange="step_2_input_11()" id="step_2_input_11_2" disabled
+                                                        <input type="text" onchange="step_2_input_11()"
+                                                            id="step_2_input_11_2" disabled
                                                             style=" border-radius: 6px; border: 1px solid #ccc; width: 40px">
                                                     </div>
                                                     <div class="mt-1">
                                                         \(y=-\)
-                                                        <input type="text" onchange="step_2_input_12()" id="step_2_input_12" disabled
+                                                        <input type="text" onchange="step_2_input_12()"
+                                                            id="step_2_input_12" disabled
                                                             style=" border-radius: 6px; border: 1px solid #ccc; width: 40px">
                                                     </div>
                                                 </td>
@@ -250,7 +275,8 @@
                     <div class="card-header">
                         <h6>
                             <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#tiga"
-                                id="btn_3" disabled>3. Subtitusikan nilai yang di dapat pada langkah 2 ke salah satu persamaan
+                                style="white-space: normal" id="btn_3" disabled>3. Subtitusikan nilai yang di dapat pada
+                                langkah 2 ke salah satu persamaan
                                 semula untuk mendapatkan nilai yang tersisa.</button>
                         </h6>
                     </div>
@@ -315,3 +341,5 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>

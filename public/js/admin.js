@@ -19,3 +19,18 @@ function nanya(ev) {
             }
         });
 }
+window.onload = kode_kelas_option;
+function kode_kelas_option() {
+    $data = document.getElementById('kode_kelas').value;
+    if ($data !== "kosong") {
+        document.getElementById('admin').disabled = true;
+        document.getElementById("guru").selected = true;
+        document.getElementById('guru').disabled = false;
+        document.getElementById('siswa').disabled = false;
+    } else {
+        document.getElementById("admin").selected = true;
+        document.getElementById('guru').disabled = true;
+        document.getElementById('siswa').disabled = true;
+        document.getElementById('admin').disabled = false;
+    }
+}

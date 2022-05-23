@@ -11,7 +11,7 @@
                         <div class="card-body">
                             <p>semisal ada persamaan (1) \(x+2y-z=-1\), persamaan (2) \(x-5y+6z=-1\), persamaan (3) \(2x+3y-4z=4\) maka pilihlah persamaan yang mempunyai variabel koefisien 1 seperti persamaan (1) atau persamaan (2)</p>
                             <div class="card" style="background-color: #e3e3e3">
-                                <div class="card-body">
+                                <div class="card-body" style="overflow-x: scroll;">
                                     <div class="mt-2">
                                         \(x+2y-z=-1\)
                                     </div>
@@ -35,7 +35,7 @@
                         <div class="card-body">
                             <p>subtitusikan persamaan (1) \(x=-2y+z-1\) ke persamaan (2) dan peramaan (3)</p>
                             <div class="card" style="background-color: #e3e3e3">
-                                <div class="card-body">
+                                <div class="card-body" style="overflow-x: scroll;">
                                     <div class="mt-2">
                                         \(x-5y+6z=-1\)
                                     </div>
@@ -51,7 +51,7 @@
                                 </div>
                             </div>
                             <div class="card" style="background-color: #e3e3e3">
-                                <div class="card-body">
+                                <div class="card-body" style="overflow-x: scroll;">
                                     <div class="mt-2">
                                         \(2x+3y-4z=4\)
                                     </div>
@@ -81,7 +81,7 @@
                         <div class="card-body">
                             <p>persamaan (4) dan persamaan (5) akan kita lakukan eliminasi salah satu variabel</p>
                             <div class="card"style="background-color: #e3e3e3">
-                                <div class="card-body" >
+                                <div class="card-body" style="overflow-x: scroll;">
                                     $$\begin{matrix} 7y+7z=0 & |\times 1| & -7y+7z=0 & \\ -y-2z=6 & |\times 7| & \underline{-7y-14z=42} & - \end{matrix}$$
                                     $$ 21z=-42 $$
                                     $$ z={-42 \over 21} $$
@@ -97,10 +97,10 @@
                     </div>
 
                     <div class="card">
-                        <div class="card-body">
+                        <div class="card-body" >
                             <p>dengan didapatkannya variabel z maka kita bisa subtitusikan ke persamaan (4) atau persamaan (5)</p>
                             <div class="card" style="background-color: #e3e3e3">
-                                <div class="card-body" >
+                                <div class="card-body" style="overflow-x: scroll;">
                                     <div class="mt-2">
                                         \(-y-2z=6\)
                                     </div>
@@ -134,7 +134,7 @@
                         <div class="card-body">
                             <p>subtitusikan nilai variabel ke persamaan (1) atau persamaan (2) atau peramaan (3)</p>
                             <div class="card" style="background-color: #e3e3e3">
-                                <div class="card-body" >
+                                <div class="card-body" style="overflow-x: scroll;">
                                     <div class="mt-2">
                                         \(x+2y-z=-1\)
                                     </div>
@@ -156,7 +156,7 @@
                                 </div>
                             </div>
                             <div class="card" style="background-color: #e3e3e3">
-                                <div class="card-body" >
+                                <div class="card-body" style="overflow-x: scroll;">
                                     <div class="mt-2">
                                         \(x=1\)
                                     </div>

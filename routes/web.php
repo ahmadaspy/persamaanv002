@@ -49,6 +49,8 @@ Route::prefix('admin')->group(function(){
     Route::middleware(['auth', 'role:admin'])->group(function(){
         Route::get('/dashboard', [AdminController::class, 'dashboard_admin'])->name('dashboard_admin');
         Route::get('/data/user', [AdminController::class, 'daftar_user'])->name('daftar_user');
+        Route::get('/data/tambah', [AdminController::class, 'tambah_user'])->name('tambah_user');
+        Route::post('/data/tambah/post', [AdminController::class, 'tambah_user_post'])->name('tambah_user_post');
         Route::get('/data/user/{id}', [AdminController::class, 'edit_user'])->name('edit_user');
     });
 });

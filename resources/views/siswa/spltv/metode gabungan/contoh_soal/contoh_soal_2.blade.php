@@ -46,7 +46,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h6>
-                            <button type="button" class="btn btn-link" data-toggle="collapse"
+                            <button type="button" class="btn btn-link" data-toggle="collapse" style="white-space: normal"
                                 data-target="#cara_2_satu" id="btn_1_cara_2">1. Eliminasi persamaan awal dari persamaan
                                 (1) dengan (2) dan persamaan (2)
                                 dengan (3) sehingga didapatkan persamaan linear dua variabel</button>
@@ -190,7 +190,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h6>
-                            <button type="button" class="btn btn-link" data-toggle="collapse" disabled
+                            <button type="button" class="btn btn-link" data-toggle="collapse" disabled style="white-space: normal"
                                 data-target="#cara_2_dua" id="btn_2_cara_2">2. Eliminasi persamaan linear dua variabel
                                 tersebut sehingga mendapatkan
                                 salah satu variabel</button>
@@ -271,7 +271,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h6>
-                            <button type="button" class="btn btn-link" data-toggle="collapse" disabled
+                            <button type="button" class="btn btn-link" data-toggle="collapse" disabled style="white-space: normal"
                                 data-target="#cara_2_tiga" id="btn_2_cara_3">3. Subtitusikan variabel yang didapatkan di
                                 langkah 2 ke dalam persamaan
                                 linear dua variabel</button>
@@ -315,7 +315,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h6>
-                            <button type="button" class="btn btn-link" data-toggle="collapse" disabled
+                            <button type="button" class="btn btn-link" data-toggle="collapse" disabled style="white-space: normal"
                                 data-target="#cara_2_empat" id="btn_4_cara_3">4. Subtitusikan variabel yang didapatkan
                                 di langkah dua dan tiga ke persamaan
                                 semula</button>

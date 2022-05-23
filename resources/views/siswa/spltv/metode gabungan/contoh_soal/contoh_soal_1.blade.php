@@ -47,7 +47,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h6>
-                            <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#satu"
+                            <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#satu" style="white-space: normal"
                                 id="btn_1">1. Pilih persamaan paling sederhana seperti variabel yang mempunyai koefisien
                                 1 dan ubah menjadi \(x=⋯\) atau \(y=⋯\) atau \(z=⋯\)</button>
                         </h6>
@@ -56,19 +56,19 @@
                         <div class="card-body">
                             <div class="row mt-3">
                                 <div class="col">
-                                    <button id="btn-pers1" class="btn btn-outline-primary"
+                                    <button id="btn-pers1" class="btn btn-outline-primary" style="white-space: normal"
                                         onclick="cara_1_step_1_btn()">\(x-2y+3z=2\) persamaan (1)</button>
                                 </div>
                             </div>
                             <div class="row mt-3">
                                 <div class="col">
-                                    <button id="btn-pers2" class="btn btn-outline-primary"
+                                    <button id="btn-pers2" class="btn btn-outline-primary" style="white-space: normal"
                                         onclick="cara_1_step_1_btn()">\(x-y+z=2\) persamaan (2)</button>
                                 </div>
                             </div>
                             <div class="row mt-3">
                                 <div class="col">
-                                    <button id="btn-pers3" class="btn btn-outline-primary"
+                                    <button id="btn-pers3" class="btn btn-outline-primary" style="white-space: normal"
                                         onclick="cara_1_step_1_btn()">\(2x+y-z=1\) persamaan (3)</button>
                                 </div>
                             </div>
@@ -91,7 +91,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h6>
-                            <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#dua" disabled
+                            <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#dua" disabled style="white-space: normal"
                                 id="btn_2">2. Subtitusikan langkah satu ke persamaan lainnya sehingga mendapatkan
                                 persamaan linear dua variabel</button>
                         </h6>
@@ -106,7 +106,7 @@
                                     <div class="mt-2">
                                         \((\)
                                         <input type="text" onchange="cara_1_step_2_input_1()" id="step_2_input_1"
-                                            style=" border-radius: 6px; border: 1px solid #ccc;  width: 10%">
+                                            style=" border-radius: 6px; border: 1px solid #ccc;  width: 80px">
                                         \()-2y+3z=2\)
                                     </div>
                                     <div class="mt-2" style="visibility: hidden" id="step_2_input_2">
@@ -131,7 +131,7 @@
                                     <div class="mt-2">
                                         \(2(\)
                                         <input type="text" onchange="cara_1_step_2_input_3()" id="step_2_input_3"
-                                            style=" border-radius: 6px; border: 1px solid #ccc;  width: 10%">
+                                            style=" border-radius: 6px; border: 1px solid #ccc;  width: 80px">
                                         \()+y-z=1\)
                                     </div>
                                     <div class="mt-2" style="visibility: hidden" id="step_2_input_4">
@@ -168,7 +168,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h6>
-                            <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#tiga" disabled
+                            <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#tiga" disabled style="white-space: normal"
                                 id="btn_3">3. Eliminasi persamaan linear dua variabel yang didapatkan dari langkah
                                 dua</button>
                         </h6>
@@ -242,7 +242,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h6>
-                            <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#empat" disabled
+                            <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#empat" disabled style="white-space: normal"
                                 id="btn_4">4. Subtitusikan variabel yang didapatkan dari langkah tiga</button>
                         </h6>
                     </div>
@@ -287,7 +287,7 @@
                 <div class="card">
                     <div class="card-header">
                         <h6>
-                            <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#lima" disabled
+                            <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#lima" disabled style="white-space: normal"
                                 id="btn_5">5. Subtitusikan variabel yang didapatkan di langkah ke tiga dan ke empat ke
                                 persamaan
                                 semula</button>

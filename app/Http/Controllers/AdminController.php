@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\KodeKelas;
 use App\Models\User;
+use App\Models\KodeKelas;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class AdminController extends Controller
 {
@@ -51,5 +54,46 @@ class AdminController extends Controller
             $data_user = $data->paginate(10);
         }
         return view('admin.daftar_user', compact('data_user'));
+    }
+    public function tambah_user(){
+        $kode_kelas = KodeKelas::all();
+        return view('admin.tambah_akun', compact('kode_kelas'));
+    }
+    public function tambah_user_post(Request $request){
+        $request->validate([
+            'nama' => 'required',
+            'email' => 'required',
+            'kode_kelas' => 'required',
+            'role' => 'required',
+        ]);
+        if(Auth::user()->hasRole('admin')){
+            $data = new User();
+            $data->name = $request->nama;
+            $data->email = $request->email;
+            $data->password = Hash::make($request->email);
+            if($request->kode_kelas == 'kosong'){
+                $data->kode_kelas_id = null;
+            }elseif($request->kode_kelas == 'kode_baru'){
+                $data->kode_kelas_id = rand(1, 9999);
+            }
+            else{
+                $id = KodeKelas::where('kode_kelas', $request->kode_kelas)->first();
+                $data->kode_kelas_id = $id->id;
+            }
+
+            $data->save();
+            if ($request->role == 'admin') {
+                $data->attachRole('admin');
+            } elseif ($request->role == 'guru') {
+                $data->attachRole('guru');
+            } elseif ($request->role == 'siswa') {
+                $data->attachRole('siswa');
+            }
+            Alert::success('Sukses', 'Data berhasil dimasukan');
+            return redirect()->route('daftar_user');
+        }else{
+            Auth::logout();
+            return redirect()->route('login');
+        }
     }
 }

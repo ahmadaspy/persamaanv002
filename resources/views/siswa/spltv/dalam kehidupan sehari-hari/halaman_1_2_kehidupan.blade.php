@@ -1,9 +1,6 @@
 @extends('siswa.template.main')
 @section('content')
-    <div class="card">
-        <div class="card-body">
-            @include('siswa.spltv.metode gabungan.contoh_soal.contoh_soal_2')
-        </div>
-    </div>
+    @include('siswa.spltv.dalam kehidupan sehari-hari.contoh konten.contoh_2')
+    @include('siswa.spltv.dalam kehidupan sehari-hari.halaman_footer_kehidupan')
 
 @endsection

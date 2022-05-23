@@ -20,11 +20,11 @@
                     </li>
                     <li
                         class="page-item
-                    @if (Request()->routeIs('spltv_kehidupan_1_2'))
+                    @if (Request()->routeIs('spltv_kehidupuan_1_2'))
                         active
                     @endif
                     ">
-                        <a class="page-link" href="{{ route('spltv_kehidupan_1_2') }}">2</a>
+                        <a class="page-link" href="{{ route('spltv_kehidupuan_1_2') }}">2</a>
                     </li>
                     @php
                         use App\Models\MariMencobaSpltvKehidupan;

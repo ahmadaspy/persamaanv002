@@ -29,7 +29,7 @@
                                         <p>semisal dengan persamaan (1) \(x+3y-6z=-23\), persamaan (2) \(x+y-3z=-10\), dan persamaan (3) \(3x-2z+7=28\). kita akan eliminasi ketiga persamaan tersebut</p>
                                         <p>tips : pilihlah dua persamaan yang mempunyai koefisien 1 seperti persamaan (1) dan persamaan (2), variabel \(x\) mempunyai koefisien 1</p>
                                         <div class="card">
-                                            <div class="card-body" style="background-color: #e3e3e3">
+                                            <div class="card-body" style="background-color: #e3e3e3; overflow-x: scroll;" >
                                                 <p>eliminasi persamaan (1) dengan persamaan (2) dengan menghilangkan \(x\)</p>
                                                 <p>
                                                     $$\begin{matrix} x+3y-6z=-23 & |\times 1| & x+3y-6z=-23 & \\ x+y-3z=-10 & |\times 1| & \underline{x+y-3z=-10} & - \end{matrix}$$
@@ -57,7 +57,7 @@
                                     <div class="col">
                                         <p>dengan didapatkannya persamaan dua variabel yaitu persamaan (4) dan persamaan (5) maka kita akan eliminasi persamaan tersebut</p>
                                         <div class="card">
-                                            <div class="card-body" style="background-color: #e3e3e3">
+                                            <div class="card-body" style="background-color: #e3e3e3; overflow-x: scroll;">
                                                 <p>kita akan eliminasi variabel \(y\)</p>
                                                 $$\begin{matrix} 2y-3z=-13 & |\times 5| & 10y-15z=-65 & \\ 5y-16z=-58 & |\times 2| & \underline{10y-32z=-116} & - \end{matrix}$$
                                                 $$ 17z=51 $$
@@ -66,7 +66,7 @@
                                             </div>
                                         </div>
                                         <div class="card">
-                                            <div class="card-body" style="background-color: #e3e3e3">
+                                            <div class="card-body" style="background-color: #e3e3e3 ; overflow-x: scroll;">
                                                 <p>kita akan eliminasi variabel \(z\)</p>
                                                 $$\begin{matrix} 2y-3z=-13 & |\times 16| & 32y-48z=-208 & \\ 5y-16z=-58 & |\times 3| & \underline{15y-48z=-174} & - \end{matrix}$$
                                                 $$ 17y = -34 $$
@@ -89,7 +89,7 @@
                                     <div class="col">
                                         <p>dengan didapatkan variabel \(y\) dan \(z\) maka kita dapat subtitusikan ke persamaan (1) atau persamaan (2) atau persamaan (3)</p>
                                         <div class="card">
-                                            <div class="card-body" style="background-color: #e3e3e3">
+                                            <div class="card-body" style="background-color: #e3e3e3; overflow-x: scroll;" >
                                                 $$ x+3y-6z=-23 \ persamaan \ (1) $$
                                                 $$ x+3(-2)-6(3)=-23 $$
                                                 $$ x-6-18=-23 $$

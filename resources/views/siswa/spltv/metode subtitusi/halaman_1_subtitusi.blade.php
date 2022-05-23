@@ -99,7 +99,7 @@
                                         <div class="card" style="background-color: #e3e3e3">
                                             <div class="card-body">
                                                 <div class="card">
-                                                    <div class="card-body">
+                                                    <div class="card-body" style="overflow-x: scroll;">
                                                         persamaan (a) \(x=6y-2z-5\) dapat kita subtitusikan ke persamaan
                                                         (b) \(2x+2y-3z=-3\) <br>
                                                         maka dihasilkan : <br>
@@ -113,7 +113,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="card">
-                                                    <div class="card-body">
+                                                    <div class="card-body" style="overflow-x: scroll;">
                                                         setelah itu kita bisa subtitusikan lagi persamaan (a) \(x=6y-2z-5\)
                                                         dengan persamaan (c) \(4x-y+2z=8\) <br>
                                                         maka dihasilkan : <br>
@@ -193,7 +193,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="card">
-                                                    <div class="card-body">
+                                                    <div class="card-body" style="overflow-x: scroll;">
                                                         <p>
                                                             subtitusikan persamaan (4) ke persamaan (5) <br>
                                                             \(23y-6z=28\) <br>
@@ -207,7 +207,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="card">
-                                                    <div class="card-body">
+                                                    <div class="card-body" style="overflow-x: scroll;">
                                                         <p>
                                                             subtitusikan nilai variabel yang didapatkan di atas <br>
                                                             \(14y-7z=7\) <br>
@@ -249,7 +249,7 @@
                                                     <br>
                                                 </p>
                                                 <div class="card">
-                                                    <div class="card-body">
+                                                    <div class="card-body" style="overflow-x: scroll;">
                                                         <p>
                                                             \(x-6y+2z=-5\) <br>
                                                             \(x-6(2)+2(3)=-5\) <br>
@@ -329,7 +329,7 @@
                             <div class="card">
                                 <div class="card-header">
                                     <h6>
-                                        <button type="button" class="btn btn-link" data-toggle="collapse"
+                                        <button type="button" class="btn btn-link" data-toggle="collapse" style="white-space: normal"
                                             data-target="#satu" id="btn_1">1. Memilih
                                             persamaan yang sederhana</button>
                                     </h6>
@@ -341,19 +341,19 @@
                                         manakah persamaan yang paling sederhana dari 3 persamaan di atas ?<br>
                                         <div class="row mt-3">
                                             <div class="col">
-                                                <button id="btn-pers1" class="btn btn-outline-primary"
+                                                <button id="btn-pers1" class="btn btn-outline-primary" style="white-space: normal"
                                                     onclick="persFunct()">\(x-3y+2z=9\) persamaan (1)</button>
                                             </div>
                                         </div>
                                         <div class="row mt-3">
                                             <div class="col">
-                                                <button id="btn-pers2" class="btn btn-outline-primary"
+                                                <button id="btn-pers2" class="btn btn-outline-primary" style="white-space: normal"
                                                     onclick="persFunct()">\(2x+4y-3z=-9\) persamaan (2)</button>
                                             </div>
                                         </div>
                                         <div class="row mt-3">
                                             <div class="col">
-                                                <button id="btn-pers3" class="btn btn-outline-primary"
+                                                <button id="btn-pers3" class="btn btn-outline-primary" style="white-space: normal"
                                                     onclick="persFunct()">\(3x-2y+5z=12\) persamaan (3)</button>
                                             </div>
                                         </div>
@@ -377,7 +377,7 @@
                             <div class="card">
                                 <div class="card-header">
                                     <h6>
-                                        <button class="btn btn-link" data-toggle="collapse" data-target="#dua" disabled id="btn_2">2.
+                                        <button class="btn btn-link" data-toggle="collapse" data-target="#dua" disabled id="btn_2" style="white-space: normal">2.
                                             Subtitusikan variabel yang diperoleh pada langkah pertama pada
                                             persamaan lainnya sehingga
                                             diperoleh
@@ -469,7 +469,7 @@
                             <div class="card">
                                 <div class="card-header">
                                     <h6>
-                                        <button class="btn btn-link" data-toggle="collapse" data-target="#tiga" disabled id="btn_3">3.
+                                        <button class="btn btn-link" data-toggle="collapse" data-target="#tiga" disabled id="btn_3" style="white-space: normal">3.
                                             Selesaikan persamaan linear dua variabel yang diperoleh</button>
                                     </h6>
                                 </div>
@@ -577,7 +577,7 @@
                             <div class="card">
                                 <div class="card-header">
                                     <h6>
-                                        <button class="btn btn-link" data-toggle="collapse" data-target="#empat" disabled id="btn_4">
+                                        <button class="btn btn-link" data-toggle="collapse" data-target="#empat" disabled id="btn_4" style="white-space: normal">
                                             4. Subtitusikan dua nilai variabel yang diperoleh di langkah ketiga
                                             ke persamaan tiga variabel yang
                                             semula.</button>

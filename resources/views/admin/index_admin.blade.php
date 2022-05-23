@@ -140,7 +140,7 @@
         <div class="col">
             <div class="card shadow">
                 <div class="card-body">
-                    <button type="button" class="btn btn-primary btn-lg btn-block">Tambah Akun</button>
+                    <a href="{{route('tambah_user')}}" class="btn btn-primary btn-lg btn-block">Tambah Akun</a>
                 </div>
             </div>
         </div>
