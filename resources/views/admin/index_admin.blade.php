@@ -71,76 +71,82 @@
         </div>
     </div>
     <div class="row">
-        @foreach ($guru->random(3) as $gurus)
-            <div class="col">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="text-center">
-                            @if (!$gurus->photo_profile)
-                                <img src="{{ asset('profile_image/default.png') }}" class="rounded"
-                                    alt="Gambar Guru" style="width: 40%;">
-                            @else
-                                <img src="{{ asset($gurus->photo_profile) }}" class="rounded" alt="Gambar Guru"
-                                    style="width: 40%;">
-                            @endif
+        @if ($guru->count() >= 3)
+            @foreach ($guru->random(3) as $gurus)
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="text-center">
+                                @if (!$gurus->photo_profile)
+                                    <img src="{{ asset('profile_image/default.png') }}" class="rounded"
+                                        alt="Gambar Guru" style="width: 40%;">
+                                @else
+                                    <img src="{{ asset($gurus->photo_profile) }}" class="rounded" alt="Gambar Guru"
+                                        style="width: 40%;">
+                                @endif
 
-                        </div>
-                        <div>
-                            <h6>Nama</h6>
-                            <p>{{ $gurus->name }}</p>
-                            <hr>
-                            <h6>Kedudukan</h6>
-                            <p>{{ $gurus->roles[0]->name}}</p>
-                            <hr>
-                            <h6>Email</h6>
-                            <p>{{ $gurus->email }}</p>
-                            <hr>
-                            <h6>Kode Kelas</h6>
-                            <p>{{ $gurus->kode_kelas->kode_kelas }}</p>
+                            </div>
+                            <div>
+                                <h6>Nama</h6>
+                                <p>{{ $gurus->name }}</p>
+                                <hr>
+                                <h6>Kedudukan</h6>
+                                <p>{{ $gurus->roles[0]->name }}</p>
+                                <hr>
+                                <h6>Email</h6>
+                                <p>{{ $gurus->email }}</p>
+                                <hr>
+                                <h6>Kode Kelas</h6>
+                                <p>{{ $gurus->kode_kelas->kode_kelas }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        @endforeach
+            @endforeach
+        @endif
+
     </div>
     <div class="row">
-        @foreach ($siswa->random(3) as $siswas)
-            <div class="col">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="text-center">
-                            @if (!$siswas->photo_profile)
-                                <img src="{{ asset('profile_image/default.png') }}" class="rounded"
-                                    alt="Gambar Guru" style="width: 40%;">
-                            @else
-                                <img src="{{ asset($siswas->photo_profile) }}" class="rounded" alt="Gambar Guru"
-                                    style="width: 40%;">
-                            @endif
+        @if ($siswa->count() >= 3)
+            @foreach ($siswa->random(3) as $siswas)
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="text-center">
+                                @if (!$siswas->photo_profile)
+                                    <img src="{{ asset('profile_image/default.png') }}" class="rounded"
+                                        alt="Gambar Guru" style="width: 40%;">
+                                @else
+                                    <img src="{{ asset($siswas->photo_profile) }}" class="rounded"
+                                        alt="Gambar Guru" style="width: 40%;">
+                                @endif
 
-                        </div>
-                        <div>
-                            <h6>Nama</h6>
-                            <p>{{ $siswas->name }}</p>
-                            <hr>
-                            <h6>Kedudukan</h6>
-                            <p>{{ $siswas->roles[0]->name}}</p>
-                            <hr>
-                            <h6>Email</h6>
-                            <p>{{ $siswas->email }}</p>
-                            <hr>
-                            <h6>Kode Kelas</h6>
-                            <p>{{ $siswas->kode_kelas->kode_kelas }}</p>
+                            </div>
+                            <div>
+                                <h6>Nama</h6>
+                                <p>{{ $siswas->name }}</p>
+                                <hr>
+                                <h6>Kedudukan</h6>
+                                <p>{{ $siswas->roles[0]->name }}</p>
+                                <hr>
+                                <h6>Email</h6>
+                                <p>{{ $siswas->email }}</p>
+                                <hr>
+                                <h6>Kode Kelas</h6>
+                                <p>{{ $siswas->kode_kelas->kode_kelas }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        @endforeach
+            @endforeach
+        @endif
+
     </div>
     <div class="row">
         <div class="col">
             <div class="card shadow">
                 <div class="card-body">
-                    <a href="{{route('tambah_user')}}" class="btn btn-primary btn-lg btn-block">Tambah Akun</a>
+                    <a href="{{ route('tambah_user') }}" class="btn btn-primary btn-lg btn-block">Tambah Akun</a>
                 </div>
             </div>
         </div>

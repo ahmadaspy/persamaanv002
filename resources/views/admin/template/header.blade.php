@@ -31,14 +31,14 @@
                                     <span>{{ Auth::user()->name }}</span>
                                 </li>
                                 <li>
-                                    <a href="#"><i class="icon-user"></i> {{-- edit --}}
+                                    <a href="{{route('admin_profile')}}"><i class="icon-user"></i> {{-- edit --}}
                                         <span>Profile</span></a>
                                 </li>
 
 
                                 <hr class="my-2">
 
-                                <li><a href="#"><i class="icon-key"></i> {{-- edit --}}
+                                <li><a href="{{route('logout') }}"><i class="icon-key"></i> {{-- edit --}}
                                         <span>Logout</span></a></li>
                             </ul>
                         </div>

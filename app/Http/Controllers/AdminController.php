@@ -5,13 +5,16 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\KodeKelas;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use RealRashid\SweetAlert\Facades\Alert;
+use Intervention\Image\Facades\Image;
 
 class AdminController extends Controller
 {
-    public function dashboard_admin(){
+    public function dashboard_admin()
+    {
         $user = User::all();
         $admin = User::whereRoleIs('admin')->get();
         $siswa = User::whereRoleIs('siswa')->get();
@@ -26,7 +29,7 @@ class AdminController extends Controller
                 [
                     'backgroundColor' => ['#4B7BE5', '#6FDFDF', '#5534A5'],
                     'hoverBackgroundColor' => ['#A85CF9', '#A85CF9', '#A85CF9'],
-                    'data' => [count($admin),count($guru) , count($siswa)]
+                    'data' => [count($admin), count($guru), count($siswa)]
                 ]
             ])
             ->options([]);
@@ -37,7 +40,7 @@ class AdminController extends Controller
             ->labels(['Akun Terverifikasi', 'Akun Belum Terverifikasi'])
             ->datasets([
                 [
-                    "label" => "My First dataset",
+                    "label" => "Akun terverifikasi",
                     'backgroundColor' => ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)'],
                     'data' => [count($user->whereNOTNULL('email_verified_at')), count($user->whereNULL('email_verified_at'))]
                 ],
@@ -46,37 +49,39 @@ class AdminController extends Controller
             ->options([]);
         return view('admin.index_admin', compact('siswa', 'guru', 'kelas', 'chartpie', 'chartbar'));
     }
-    public function daftar_user(){
+    public function daftar_user()
+    {
         $data = User::latest();
-        if(request('cari')){
-            $data_user = $data->where('name', 'like', '%'.request('cari').'%')->orWhere('email', 'like', '%'.request('cari').'%')->paginate(10);
-        }else{
+        if (request('cari')) {
+            $data_user = $data->where('name', 'like', '%' . request('cari') . '%')->orWhere('email', 'like', '%' . request('cari') . '%')->paginate(10);
+        } else {
             $data_user = $data->paginate(10);
         }
         return view('admin.daftar_user', compact('data_user'));
     }
-    public function tambah_user(){
+    public function tambah_user()
+    {
         $kode_kelas = KodeKelas::all();
         return view('admin.tambah_akun', compact('kode_kelas'));
     }
-    public function tambah_user_post(Request $request){
+    public function tambah_user_post(Request $request)
+    {
         $request->validate([
             'nama' => 'required',
             'email' => 'required',
             'kode_kelas' => 'required',
             'role' => 'required',
         ]);
-        if(Auth::user()->hasRole('admin')){
+        if (Auth::user()->hasRole('admin')) {
             $data = new User();
             $data->name = $request->nama;
             $data->email = $request->email;
             $data->password = Hash::make($request->email);
-            if($request->kode_kelas == 'kosong'){
+            if ($request->kode_kelas == 'kosong') {
                 $data->kode_kelas_id = null;
-            }elseif($request->kode_kelas == 'kode_baru'){
+            } elseif ($request->kode_kelas == 'kode_baru') {
                 $data->kode_kelas_id = rand(1, 9999);
-            }
-            else{
+            } else {
                 $id = KodeKelas::where('kode_kelas', $request->kode_kelas)->first();
                 $data->kode_kelas_id = $id->id;
             }
@@ -91,9 +96,107 @@ class AdminController extends Controller
             }
             Alert::success('Sukses', 'Data berhasil dimasukan');
             return redirect()->route('daftar_user');
-        }else{
+        } else {
             Auth::logout();
             return redirect()->route('login');
         }
+    }
+    public function akun_verifikasi(Request $request)
+    {
+        if (Auth::user()->hasRole('admin')) {
+            User::find($request->id)->update([
+                'email_verified_at' => Carbon::now(),
+            ]);
+            Alert::success('Sukses', 'Data terverifikasi');
+            return redirect()->back();
+        } else {
+            return redirect()->route('login');
+        }
+    }
+    public function admin_profile()
+    {
+        if (Auth::user()) {
+            return view('admin.profile_admin');
+        }
+    }
+    public function admin_profile_post(Request $request)
+    {
+        $request->validate([
+            'nama' => 'required',
+            'email' => 'required',
+            'image' => 'mimes:png,jpg,jpeg',
+        ]);
+        if (Auth::user()) {
+            if ($request->file('image')) {
+                if (Auth::user()->photo_profile) {
+                    unlink(Auth::user()->photo_profile);
+                }
+                $image = $request->file('image');
+                $name_gen = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
+                Image::make($image)->resize(null, 400, function ($constraint) {
+                    $constraint->aspectRatio();
+                })->save('profile_image/' . $name_gen);
+                if (Auth::user()->email != $request->email) {
+                    User::find(Auth::user()->id)->update([
+                        'name' => $request->nama,
+                        'email' => $request->email,
+                        'email_verified_at' => null,
+                        'photo_profile' => 'profile_image/' . $name_gen,
+                    ]);
+                } else {
+                    User::find(Auth::user()->id)->update([
+                        'name' => $request->nama,
+                        'photo_profile' => 'profile_image/' . $name_gen,
+                    ]);
+                }
+                Alert::success('Sukses', 'data telah di perbarui');
+                return redirect()->route('admin_profile');
+            } else {
+                if (Auth::user()->email != $request->email) {
+                    User::find(Auth::user()->id)->update([
+                        'name' => $request->nama,
+                        'email' => $request->email,
+                        'email_verified_at' => null,
+                    ]);
+                } else {
+                    User::find(Auth::user()->id)->update([
+                        'name' => $request->nama,
+                    ]);
+                }
+                Alert::success('Sukses', 'data telah di perbarui');
+                return redirect()->route('admin_profile');
+            }
+        }
+    }
+    public function admin_profile_post_pass(Request $request)
+    {
+        $request->validate([
+            'kata_sandi' => 'required',
+            'password' => 'required|confirmed',
+        ]);
+        if (Hash::check($request->kata_sandi, Auth::user()->password)) {
+            $user = User::find(Auth::user()->id);
+            $user->password = Hash::make($request->password);
+            $user->save();
+            Auth::logout();
+            Alert::success('Sukses', 'data telah di perbarui');
+            return redirect()->route('admin_profile');
+        } else {
+            toast('kata sandi anda tidak cocok', 'error');
+            return redirect()->route('admin_profile');
+        }
+    }
+    public function delete_acount(Request $request){
+        if (Auth::user()->hasRole('admin')) {
+            User::find($request->id)->delete();
+            Alert::success('Sukses', 'Data terhapus');
+            return redirect()->back();
+        } else {
+            return redirect()->route('login');
+        }
+    }
+    public function edit_user($id){
+        $data_user = User::find($id);
+        return view('admin.edit_user', compact('data_user'));
     }
 }

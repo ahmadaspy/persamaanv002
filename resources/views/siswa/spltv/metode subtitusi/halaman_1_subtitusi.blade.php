@@ -13,10 +13,10 @@
                         <ul class="list-group">
                             <li class="list-group-item">
                                 <div class="row">
-                                    <div class="col-1">
+                                    <div class="col-1 text-primary">
                                         1.
                                     </div>
-                                    <div class="col">
+                                    <div class="col text-primary">
                                         Memilih persamaan yang sederhana yang memiliki koefisien 1 atau 0, seperti
                                         \(x=y+z+d\) atau
                                         \(y=x+z+d\) atau \(z=x+y+d\)
@@ -73,10 +73,10 @@
                             </li>
                             <li class="list-group-item">
                                 <div class="row">
-                                    <div class="col-1">
+                                    <div class="col-1 text-primary">
                                         2.
                                     </div>
-                                    <div class="col">
+                                    <div class="col text-primary">
                                         Subtitusikan variabel yang diperoleh pada langkah pertama pada
                                         persamaan lainnya sehingga
                                         diperoleh
@@ -133,10 +133,10 @@
                             </li>
                             <li class="list-group-item">
                                 <div class="row">
-                                    <div class="col-1">
+                                    <div class="col-1 text-primary">
                                         3.
                                     </div>
-                                    <div class="col">
+                                    <div class="col text-primary">
                                         Selesaikan persamaan linear dua variabel yang diperoleh
                                     </div>
                                 </div>
@@ -227,10 +227,10 @@
                             </li>
                             <li class="list-group-item">
                                 <div class="row">
-                                    <div class="col-1">
+                                    <div class="col-1 text-primary">
                                         4.
                                     </div>
-                                    <div class="col">
+                                    <div class="col text-primary">
                                         Subtitusikan dua nilai variabel yang diperoleh di langkah ketiga
                                         ke persamaan tiga variabel yang
                                         semula.

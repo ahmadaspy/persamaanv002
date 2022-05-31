@@ -15,9 +15,27 @@ function nanya(ev) {
         .then((willDelete) => {
             // redirect with javascript here as per your logic after showing the alert using the urlToRedirect value
             if (willDelete.isConfirmed ) {
-                window.location.href = urlToRedirect;
+                // window.location.href = urlToRedirect;
+                form.submit();
             }
         });
+}
+function submission(form) {
+    Swal.fire({
+        title: 'Apa anda yakin ?',
+        text: "Akun akan di hapus dan tidak bisa di pulihkan",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yakin',
+        cancelButtonText: 'Batal'
+    }).then((isOkay) => {
+        if (isOkay.isConfirmed) {
+            form.submit();
+        }
+    });
+    return false;
 }
 window.onload = kode_kelas_option;
 function kode_kelas_option() {

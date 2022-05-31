@@ -16,10 +16,11 @@
                     </form> --}}
                     <div class="basic-form float-right">
 
-                        <form class="form-inline" action="{{route('daftar_user')}}">
-                            <a href="{{route('tambah_user')}}" class="btn btn-primary form-inline mb-2">Tambah Akun</a>
+                        <form class="form-inline" action="{{ route('daftar_user') }}">
+                            <a href="{{ route('tambah_user') }}" class="btn btn-primary form-inline mb-2">Tambah Akun</a>
                             <div class="form-group mx-sm-3 mb-2">
-                                <input type="text" class="form-control" placeholder="Cari .... " name="cari" value="{{request('cari')}}">
+                                <input type="text" class="form-control" placeholder="Cari .... " name="cari"
+                                    value="{{ request('cari') }}">
                             </div>
                             <button type="submit" class="btn btn-primary mb-2"><i class="fa fa-search"></i></button>
                         </form>
@@ -69,9 +70,35 @@
                                     @endif
                                 </td>
                                 <td>
+                                    <div class="row">
+                                        <div class="col">
+                                            <form action="{{route('akun_verifikasi')}}" method="POST">
+                                                @csrf
+                                                <input type="hidden" value="{{ $users->id }}" name="id">
+                                                <button type="submit" class="btn btn-success">Verifikasi</button>
+                                            </form>
+                                        </div>
+                                        <div class="col">
+                                            <a href="{{ route('edit_user', $users->id) }}"
+                                                class="btn btn-primary">Edit</a>
+                                        </div>
+                                        <div class="col">
+                                            {{-- <a href="{{ route('delete_acount') }}" onclick="nanya(event)"
+                                                class="btn btn-danger">Hapus</a> --}}
+                                            <form action="{{route('delete_acount')}}" method="POST" onsubmit="return submission(this)">
+                                                @csrf
+                                                <input type="hidden" value="{{ $users->id }}" name="id">
+                                                <button type="submit" class="btn btn-danger">Hapus</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    {{-- <form action="">
+                                        <input type="hidden" value="{{$users->id}}">
+                                        <button type="submit" class="btn btn-success">Verifikasi</button>
+                                    </form>
                                     <a href="{{ route('edit_user', $users->id) }}" class="btn btn-primary">Edit</a>
                                     <a href="{{ route('dashboard_admin') }}" onclick="nanya(event)"
-                                        class="btn btn-danger">Hapus</a>
+                                        class="btn btn-danger">Hapus</a> --}}
                                 </td>
                             </tr>
                         @endforeach

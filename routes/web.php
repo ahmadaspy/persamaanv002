@@ -52,6 +52,11 @@ Route::prefix('admin')->group(function(){
         Route::get('/data/tambah', [AdminController::class, 'tambah_user'])->name('tambah_user');
         Route::post('/data/tambah/post', [AdminController::class, 'tambah_user_post'])->name('tambah_user_post');
         Route::get('/data/user/{id}', [AdminController::class, 'edit_user'])->name('edit_user');
+        Route::post('/data/verifikasi',[AdminController::class, 'akun_verifikasi'])->name('akun_verifikasi');
+        Route::get('/profile', [AdminController::class, 'admin_profile'])->name('admin_profile');
+        Route::post('/profile/post', [AdminController::class, 'admin_profile_post'])->name('admin_profile_post');
+        Route::post('/profile/pass/post', [AdminController::class, 'admin_profile_post_pass'])->name('admin_profile_post_pass');
+        Route::post('/delete', [AdminController::class, 'delete_acount'])->name('delete_acount');
     });
 });
 

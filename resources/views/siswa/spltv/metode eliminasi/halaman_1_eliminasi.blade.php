@@ -16,10 +16,10 @@
                         <ul class="list-group">
                             <li class="list-group-item">
                                 <div class="row">
-                                    <div class="col-1">
+                                    <div class="col-1 text-primary">
                                         1.
                                     </div>
-                                    <div class="col">
+                                    <div class="col text-primary">
                                         Eliminasi salah satu dari variabel x atau y atau z yang akan menghasilkan persamaan linear dua variabel
                                     </div>
                                 </div>
@@ -47,8 +47,8 @@
                             </li>
                             <li class="list-group-item">
                                 <div class="row">
-                                    <div class="col-1">2.</div>
-                                    <div class="col">
+                                    <div class="col-1 text-primary">2.</div>
+                                    <div class="col text-primary">
                                         Selesaikan persamaan linear dua variabel pada langkah 1 yang akan menghasilkan nilai variabel x dan y, atau y dan z, atau x dan y.
                                     </div>
                                 </div>
@@ -79,8 +79,8 @@
                             </li>
                             <li class="list-group-item">
                                 <div class="row">
-                                    <div class="col-1">3.</div>
-                                    <div class="col">
+                                    <div class="col-1 text-primary">3.</div>
+                                    <div class="col text-primary">
                                         Subtitusikan nilai yang di dapat pada langkah 2 ke salah satu persamaan semula untuk mendapatkan nilai yang tersisa.
                                     </div>
                                 </div>
