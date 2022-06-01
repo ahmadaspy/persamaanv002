@@ -186,7 +186,8 @@ class AdminController extends Controller
             return redirect()->route('admin_profile');
         }
     }
-    public function delete_acount(Request $request){
+    public function delete_acount(Request $request)
+    {
         if (Auth::user()->hasRole('admin')) {
             User::find($request->id)->delete();
             Alert::success('Sukses', 'Data terhapus');
@@ -195,8 +196,36 @@ class AdminController extends Controller
             return redirect()->route('login');
         }
     }
-    public function edit_user($id){
+    public function edit_user($id)
+    {
         $data_user = User::find($id);
         return view('admin.edit_user', compact('data_user'));
+    }
+    public function reset_account(Request $request)
+    {
+        if (Auth::user()->hasRole('admin')) {
+            $data_user = User::find($request->id);
+            $data_user->update([
+                'password' => Hash::make($data_user->email),
+            ]);
+            alert::success('Sukses', 'Password akun berhasil di reset');
+            return redirect()->back();
+        }else{
+            return redirect()->route('login');
+        }
+    }
+    public function edit_account_post(Request $request){
+        if (Auth::user()->hasRole('admin')) {
+            $data_user = User::find($request->id);
+            $data_user->update([
+                'name' => $request->name,
+                'email' => $request->email,
+                'update_at' => Carbon::now(),
+            ]);
+            alert::success('Sukses', 'Data berhasil di perbarui');
+            return redirect()->back();
+        }else{
+            return redirect()->route('login');
+        }
     }
 }

@@ -52,6 +52,18 @@ class KuisKeduaSeeder extends Seeder
                 '35000',
                 '13',
             ],
+            'placeholder_jawaban_1' => [
+                'Nilai x+y', 
+                'Harga game Far Cry 5',
+                'Total Harga Motor',
+                'Uang jajan Subhan',
+                'Total Harga',
+                'Umur Ayah',
+                'Tali biru',
+                'Mobil roda empat',
+                'Tiket',
+                'Sisi miring segitia',
+            ],
             'jawaban_2' => [
                 null,
                 '125999',
@@ -62,6 +74,18 @@ class KuisKeduaSeeder extends Seeder
                 '20',
                 '3',
                 '10000',
+                null,
+            ],
+            'placeholder_jawaban_2' => [
+                null, 
+                'Harga game Horizon Zero Dawn',
+                null,
+                'Uang jajan Malik',
+                null,
+                'Umur Ibu',
+                'Tali merah',
+                'Motor roda tiga',
+                'Minuman',
                 null,
             ],
             'jawaban_3' => [
@@ -76,7 +100,18 @@ class KuisKeduaSeeder extends Seeder
                 '50000',
                 null,
             ],
-
+            'placeholder_jawaban_3' => [
+                null,
+                'Harga game Red Dead Redemption 2',
+                null,
+                'Uang jajan Zainal',
+                null,
+                'Umur Kakak',
+                'Tali kuning',
+                'Motor roda dua',
+                'Popcorn',
+                null,
+            ],
         ]);
         $i = 0;
         while ($i < 10) {
@@ -84,8 +119,11 @@ class KuisKeduaSeeder extends Seeder
                 'soal_1' => $soal_colect['soal_1'][$i],
                 'pertanyaan_soal' => $soal_colect['pertanyaan_soal'][$i],
                 'jawaban_1' => $soal_colect['jawaban_1'][$i],
+                'placeholder_jawaban_1' => $soal_colect['placeholder_jawaban_1'][$i],
                 'jawaban_2' => $soal_colect['jawaban_2'][$i],
+                'placeholder_jawaban_2' => $soal_colect['placeholder_jawaban_2'][$i],
                 'jawaban_3' => $soal_colect['jawaban_3'][$i],
+                'placeholder_jawaban_3' => $soal_colect['placeholder_jawaban_3'][$i],
             ]);
             $i++;
         }

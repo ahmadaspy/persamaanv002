@@ -20,8 +20,11 @@ class KuisPertamaSeeder extends Seeder
             'soal_3' => ['4x-2y-3z=-11', '3x+2y-6z=-5', 'x+y-5z=22', '3x-2y+3z=5', '2x+y=4', 'x+2y+3z=12', 'a-2b+3c=-3', 'x+2y+8z=-6', '4x+2y+z=10', '3x+4y+5z=12'],
             'pertanyaan_soal' => ['berapakan nilai 2y-z', 'Berapakah nilai x, y dan z', 'Berapakah nilai dari z+y', 'Berapakah nilai x-z', 'Berapakah nilai x+y+z', 'Berapkah nilai 2x-z', 'Berapakah nilai dari a-b+c', 'Berapakah nilai dari y-2x', 'Berapakah nilai dari x,y dan z', 'Berapakah nilai dari x,y dan z'],
             'jawaban_1' => ['7', '1', '3', '-5', '6', '2', '4', '3', '2', '2'],
+            'placeholder_jawaban_1' => ['Nilai 2y-z', 'Nilai x', 'Nilai z+y', 'Nilai x-z', 'Nilai x+y+z', 'Nilai 2x-z', 'Nilai a-b+c', 'Nilai y-2x', 'Nilai x', 'Nilai x'],
             'jawaban_2' => [null, '2', null, null, null, null, null, null, '-1', '-1'],
+            'placeholder_jawaban_2' => [null, 'Nilai y', null, null, null, null, null, null, 'Nilai y', 'Nilai y'],
             'jawaban_3' => [null, '2', null, null, null, null, null, null, '4', '2'],
+            'placeholder_jawaban_3' => [null, 'Nilai z', null, null, null, null, null, null, 'Nilai z', 'Nilai z'],
 
         ]);
         $i=0;
@@ -32,8 +35,11 @@ class KuisPertamaSeeder extends Seeder
                 'soal_3' => $soal_colect['soal_3'][$i],
                 'pertanyaan_soal' => $soal_colect['pertanyaan_soal'][$i],
                 'jawaban_1' => $soal_colect['jawaban_1'][$i],
+                'placeholder_jawaban_1' => $soal_colect['placeholder_jawaban_1'][$i],
                 'jawaban_2' => $soal_colect['jawaban_2'][$i],
+                'placeholder_jawaban_2' => $soal_colect['placeholder_jawaban_2'][$i],
                 'jawaban_3' => $soal_colect['jawaban_3'][$i],
+                'placeholder_jawaban_3' => $soal_colect['placeholder_jawaban_3'][$i],
             ]);
             $i++;
         }

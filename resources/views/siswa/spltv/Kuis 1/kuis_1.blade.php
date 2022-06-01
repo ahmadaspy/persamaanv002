@@ -50,7 +50,7 @@
                                                             @if ($content_kuis->jawaban_1 != null)
                                                                 <tr>
                                                                     <td id="jawaban_1">
-                                                                        <input type="number" step="0.01"
+                                                                        <input type="number" step="0.01" placeholder="{{ $content_kuis->placeholder_jawaban_1 }}"
                                                                             name="{{ $content_kuis->id }}[jawaban_1]"
                                                                             class="form-control input-default">
                                                                     </td>
@@ -59,7 +59,7 @@
                                                             @if ($content_kuis->jawaban_2 != null)
                                                                 <tr>
                                                                     <td id="jawaban_2">
-                                                                        <input type="number" step="0.01"
+                                                                        <input type="number" step="0.01" placeholder="{{ $content_kuis->placeholder_jawaban_2 }}"
                                                                             name="{{ $content_kuis->id }}[jawaban_2]"
                                                                             class="form-control input-default">
                                                                     </td>
@@ -68,7 +68,7 @@
                                                             @if ($content_kuis->jawaban_3 != null)
                                                                 <tr>
                                                                     <td id="jawaban_3">
-                                                                        <input type="number" step="0.01"
+                                                                        <input type="number" step="0.01" placeholder="{{ $content_kuis->placeholder_jawaban_3 }}"
                                                                             name="{{ $content_kuis->id }}[jawaban_3]"
                                                                             class="form-control input-default">
                                                                     </td>

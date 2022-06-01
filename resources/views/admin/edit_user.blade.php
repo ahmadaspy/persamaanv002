@@ -5,7 +5,9 @@
             <h6 class="text-primary font-weight-bold">Edit data {{ $data_user->name }}</h6>
         </div>
         <div class="card-body">
-            <form action="" method="POST">
+            <form action="{{ route('edit_account_post') }}" method="POST">
+                @csrf
+                <input type="hidden" value="{{ $data_user->id }}" name="id">
                 <div class="form-group row">
                     <label for="name" class="col-sm-2 col-form-label">Nama</label>
                     <div class="col-sm-10">
@@ -33,8 +35,9 @@
             <h6 class="text-primary font-weight-bold">Reset Password</h6>
         </div>
         <div class="card-body">
-            <form action="" method="POST">
-                <input type="hidden" value="{{ $data_user->id }}">
+            <form action="{{ route('reset_account') }}" method="POST">
+                @csrf
+                <input type="hidden" name="id" value="{{ $data_user->id }}">
                 <div class="form-group">
                     <span class="form-text text-muted">Akun {{ $data_user->name }} akan di reset <span
                             class="font-italic ">(<span class="text-primary">password</span> akan disamakan dengan <span
