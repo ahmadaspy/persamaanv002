@@ -18,6 +18,9 @@ class MariMencobaSPLTVSubtitusiSeeder extends Seeder
             'soal_1' => ['x + 2y + z = 3', 'x - 3y + z = 8', 'x + z = 2y'],
             'soal_2' => ['2x + y + z = 16', '2x + 3y - z = 1', 'x + y + z = 6'],
             'soal_3' => ['x + y + 2z = 9', '3x - 2y - 2z = 7', 'x - y + 2z =5'],
+            'placeholder_jawaban_1' => [''], // i left here
+            'placeholder_jawaban_2' => [''],
+            'placeholder_jawaban_2' => [''],
             'ditanyakan' => ['Carilah nilai x,y dan z ', 'Berapakah nilai x+y+z ', 'Berapakah nilai x'],
             'jawaban_1' => ['9', '4', '1'],
             'jawaban_2' => ['-4', null, null],
