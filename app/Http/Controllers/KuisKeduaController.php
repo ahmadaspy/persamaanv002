@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\kuis_1_nilai;
+use App\Models\kkm;
 use App\Models\KuisKedua;
+use App\Models\kuis_1_nilai;
 use App\Models\kuis_2_nilai;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -67,11 +68,12 @@ class KuisKeduaController extends Controller
             $insert->nilai = $nilai;
             $insert->save();
         }
-        if(count(array_keys($jawaban_siswa, 'benar')) >= 3){
-            return redirect()->route('kuis_2_hasil')->with(compact('jawaban_siswa'));
-        }else{
-            return redirect()->route('kuis_2_hasil')->with(compact('jawaban_siswa'));
-        }
+        return redirect()->route('kuis_2_hasil')->with(compact('jawaban_siswa'));
+        // if(count(array_keys($jawaban_siswa, 'benar')) >= 3){
+        //     return redirect()->route('kuis_2_hasil')->with(compact('jawaban_siswa'));
+        // }else{
+        //     return redirect()->route('kuis_2_hasil')->with(compact('jawaban_siswa'));
+        // }
 
         // dd(count(array_keys($jawaban_siswa, 'benar')));
     }
@@ -79,14 +81,16 @@ class KuisKeduaController extends Controller
         if (session('jawaban_siswa')) {
             $jawaban_siswa = session()->get('jawaban_siswa');
             $nilai = kuis_2_nilai::where('user_id', Auth::user()->id)->first();
-            return view('siswa.spltv.Kuis 2.hasil_kuis', compact('jawaban_siswa', 'nilai'));
+            $kkm = Auth::user()->kode_kelas->kkm;
+            return view('siswa.spltv.Kuis 2.hasil_kuis', compact('jawaban_siswa', 'nilai', 'kkm'));
         }else{
             $jawaban_siswa = session()->get('jawaban_siswa');
             $nilai = kuis_2_nilai::where('user_id', Auth::user()->id)->first();
+            $kkm = Auth::user()->kode_kelas->kkm;
             if (!$nilai) {
                 return redirect()->route('kuis_index2_page');
             }
-            return view('siswa.spltv.Kuis 2.hasil_kuis', compact('jawaban_siswa', 'nilai'));
+            return view('siswa.spltv.Kuis 2.hasil_kuis', compact('jawaban_siswa', 'nilai', 'kkm'));
         }
     }
 }

@@ -12,4 +12,7 @@ class KodeKelas extends Model
     {
         return $this->belongsTo(User::class, 'id', 'kode_kelas_id');
     }
+    public function kkm(){
+        return $this->belongsTo(kkm::class, 'id', 'kode_kelas_id');
+    }
 }

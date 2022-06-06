@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\kkm;
 use ReflectionClass;
 use App\Models\EvaluasiA;
 use App\Models\EvaluasiB;
@@ -61,25 +62,28 @@ class EvaluasiController extends Controller
             }
             $insert->save();
         }
-        if (count(array_keys($jawaban_siswa, 'benar')) >= 7) {
-            return redirect()->route('evaluasi_hasil')->with(compact('jawaban_siswa'));
-        } else {
-            return redirect()->route('evaluasi_hasil')->with(compact('jawaban_siswa'));
-        }
+        // if (count(array_keys($jawaban_siswa, 'benar')) >= 7) {
+        //     return redirect()->route('evaluasi_hasil')->with(compact('jawaban_siswa'));
+        // } else {
+        //     return redirect()->route('evaluasi_hasil')->with(compact('jawaban_siswa'));
+        // }
+        return redirect()->route('evaluasi_hasil')->with(compact('jawaban_siswa'));
     }
     public function evaluasi_hasil()
     {
         if (session('jawaban_siswa')) {
             $jawaban_siswa = session()->get('jawaban_siswa');
             $nilai = EvaluasiNilai::where('user_id', Auth::user()->id)->first();
-            return view('siswa.spltv.evaluasi.hasil_evaluasi', compact('jawaban_siswa', 'nilai'));
+            $kkm = kkm::find(1);
+            return view('siswa.spltv.evaluasi.hasil_evaluasi', compact('jawaban_siswa', 'nilai', 'kkm'));
         } else {
             $jawaban_siswa = session()->get('jawaban_siswa');
             $nilai = EvaluasiNilai::where('user_id', Auth::user()->id)->first();
+            $kkm = kkm::find(1);
             if (!$nilai) {
                 return redirect()->route('evaluasi_index');
             } else {
-                return view('siswa.spltv.evaluasi.hasil_evaluasi', compact('jawaban_siswa', 'nilai'));
+                return view('siswa.spltv.evaluasi.hasil_evaluasi', compact('jawaban_siswa', 'nilai', 'kkm'));
             }
         }
     }

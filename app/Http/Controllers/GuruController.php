@@ -354,7 +354,9 @@ class GuruController extends Controller
         }
     }
     public function pengaturan_KKM(){
-        $kkm = kkm::find(1);
+        // $kkm = kkm::find(Auth::user()->kode_kelas->);
+        // dd(Auth::user()->kode_kelas->kkm);
+        $kkm = Auth::user()->kode_kelas->kkm;
         return view('guru.pengaturan_kkm', compact('kkm'));
     }
     public function kuis_post(Request $request){

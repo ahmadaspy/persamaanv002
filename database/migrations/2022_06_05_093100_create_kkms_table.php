@@ -15,6 +15,8 @@ class CreateKkmsTable extends Migration
     {
         Schema::create('kkms', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('kode_kelas_id');
+            $table->foreign('kode_kelas_id')->references('id')->on('kode_kelas');
             $table->string('kuis_1_kkm');
             $table->string('kuis_2_kkm');
             $table->string('evaluasi_kkm');

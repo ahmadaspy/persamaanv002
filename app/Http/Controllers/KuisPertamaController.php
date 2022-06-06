@@ -129,12 +129,12 @@ class KuisPertamaController extends Controller
         if (session('jawaban_siswa')) {
             $jawaban_siswa = session()->get('jawaban_siswa');
             $nilai = kuis_1_nilai::where('user_id', Auth::user()->id)->first();
-            $kkm = kkm::find(1);
+            $kkm = Auth::user()->kode_kelas->kkm;
             return view('siswa.spltv.Kuis 1.hasil_kuis', compact('jawaban_siswa', 'nilai', 'kkm'));
         } else {
             $jawaban_siswa = session()->get('jawaban_siswa');
             $nilai = kuis_1_nilai::where('user_id', Auth::user()->id)->first();
-            $kkm = kkm::find(1);
+            $kkm = Auth::user()->kode_kelas->kkm;
             if (!$nilai) {
                 return redirect()->route('kuis_index_page');
             } else {

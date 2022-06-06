@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\kkm;
+use App\Models\KodeKelas;
 use Illuminate\Database\Seeder;
 
 class KkmSeeder extends Seeder
@@ -14,10 +15,16 @@ class KkmSeeder extends Seeder
      */
     public function run()
     {
-        kkm::insert([
-            'kuis_1_kkm' => '80',
-            'kuis_2_kkm' => '80',
-            'evaluasi_kkm' => '80',
-        ]);
+        $kode_kelas = KodeKelas::all();
+        $i = 1;
+        foreach($kode_kelas as $kelas){
+            kkm::insert([
+                'kode_kelas_id' => $kelas->id,
+                'kuis_1_kkm' => '80',
+                'kuis_2_kkm' => '80',
+                'evaluasi_kkm' => '80',
+            ]);
+        }
+        
     }
 }
