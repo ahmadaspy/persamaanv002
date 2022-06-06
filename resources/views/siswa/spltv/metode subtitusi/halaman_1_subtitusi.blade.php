@@ -7,8 +7,86 @@
         <div class="card-body">
             <p>Ada beberapa langkah dalam menyelesaikan sistem persamaan linear tiga variabel dengan metode subtitusi yaitu
             </p>
+            <div class="card">
+                <div class="card-body">
+                    <div class="list-group">
+                        <li class="list-group-item">
+                            1. Memilih persamaan yang sederhana yang memiliki koefisien 1 atau 0, seperti
+                            \(x=y+z+d\) atau
+                            \(y=x+z+d\) atau \(z=x+y+d\)
+                        </li>
+                        <li class="list-group-item">
+                            2. Subtitusikan variabel yang diperoleh pada langkah pertama pada
+                            persamaan lainnya sehingga
+                            diperoleh
+                            persamaan linear dua variabel
+                        </li>
+                        <li class="list-group-item">
+                            3. Selesaikan persamaan linear dua variabel yang diperoleh
+                        </li>
+                        <li class="list-group-item">
+                            4. Subtitusikan dua nilai variabel yang diperoleh di langkah ketiga
+                            ke persamaan tiga variabel yang
+                            semula.
+                        </li>
+
+                    </div>
+                </div>
+            </div>
             <div class="card" style="background-color: #e3e3e3">
                 <div class="card-body">
+                    <div class="card">
+                        <div class="card-header">
+                            <h6>Contoh</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-1">1</div>
+                                <div class="col">
+                                    <ul>
+                                        <li>
+                                            <div class="row">
+                                                <div class="col-sm-3 col-lg-2">
+                                                   \(x-6y+2z=-5\)
+                                                </div>
+                                                <div class="col-sm-3 col-lg-2">
+                                                    persamaan (a)
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="row">
+                                                <div class="col-sm-3 col-lg-2">
+                                                    \(2x+2y-3z=-3\)
+                                                </div>
+                                                <div class="col-sm-3 col-lg-2">
+                                                    persamaan (b)
+                                                </div>
+                                            </div>
+
+                                        </li>
+                                        <li>
+                                            <div class="row">
+                                                <div class="col-sm-3 col-lg-2">
+                                                    \(4x-y+2z=8\)
+                                                </div>
+                                                <div class="col-sm-3 col-lg-2">
+                                                    persamaan (c)
+                                                </div>
+                                            </div>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col">
+                                    <p>Carilah Nilai dari \(x\), \(y\), dan \(z\)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="basic-list-group">
                         <ul class="list-group">
                             <li class="list-group-item">
@@ -104,7 +182,7 @@
                                                         (b) \(2x+2y-3z=-3\) <br>
                                                         maka dihasilkan : <br>
                                                         <p class="mt-2">
-                                                            \(2x+2y-3z=-3\)) <br>
+                                                            \(2x+2y-3z=-3\) <br>
                                                             \(2(6y-2z-5)+3y-3z=-3\) <br>
                                                             \(12y+3y-4z-3z-10=-3\) <br>
                                                             \(14y-7z=-3+10\) <br>
@@ -325,12 +403,18 @@
                         </div>
                     </div>
                     <div class="row">
+                        <div class="col-1"></div>
+                        <div class="col">
+                            <p>Carilah Nilai dari \(x\), \(y\), dan \(z\)</p>
+                        </div>
+                    </div>
+                    <div class="row">
                         <div class="col">
                             <div class="card">
                                 <div class="card-header">
                                     <h6>
-                                        <button type="button" class="btn btn-link" data-toggle="collapse" style="white-space: normal"
-                                            data-target="#satu" id="btn_1">1. Memilih
+                                        <button type="button" class="btn btn-link" data-toggle="collapse"
+                                            style="white-space: normal" data-target="#satu" id="btn_1">1. Memilih
                                             persamaan yang sederhana</button>
                                     </h6>
                                 </div>
@@ -341,20 +425,23 @@
                                         manakah persamaan yang paling sederhana dari 3 persamaan di atas ?<br>
                                         <div class="row mt-3">
                                             <div class="col">
-                                                <button id="btn-pers1" class="btn btn-outline-primary" style="white-space: normal"
-                                                    onclick="persFunct()">\(x-3y+2z=9\) persamaan (1)</button>
+                                                <button id="btn-pers1" class="btn btn-outline-primary"
+                                                    style="white-space: normal" onclick="persFunct()">\(x-3y+2z=9\)
+                                                    persamaan (1)</button>
                                             </div>
                                         </div>
                                         <div class="row mt-3">
                                             <div class="col">
-                                                <button id="btn-pers2" class="btn btn-outline-primary" style="white-space: normal"
-                                                    onclick="persFunct()">\(2x+4y-3z=-9\) persamaan (2)</button>
+                                                <button id="btn-pers2" class="btn btn-outline-primary"
+                                                    style="white-space: normal" onclick="persFunct()">\(2x+4y-3z=-9\)
+                                                    persamaan (2)</button>
                                             </div>
                                         </div>
                                         <div class="row mt-3">
                                             <div class="col">
-                                                <button id="btn-pers3" class="btn btn-outline-primary" style="white-space: normal"
-                                                    onclick="persFunct()">\(3x-2y+5z=12\) persamaan (3)</button>
+                                                <button id="btn-pers3" class="btn btn-outline-primary"
+                                                    style="white-space: normal" onclick="persFunct()">\(3x-2y+5z=12\)
+                                                    persamaan (3)</button>
                                             </div>
                                         </div>
                                         <p id="penjelasan_1" style="visibility: hidden">
@@ -377,7 +464,8 @@
                             <div class="card">
                                 <div class="card-header">
                                     <h6>
-                                        <button class="btn btn-link" data-toggle="collapse" data-target="#dua" disabled id="btn_2" style="white-space: normal">2.
+                                        <button class="btn btn-link" data-toggle="collapse" data-target="#dua" disabled
+                                            id="btn_2" style="white-space: normal">2.
                                             Subtitusikan variabel yang diperoleh pada langkah pertama pada
                                             persamaan lainnya sehingga
                                             diperoleh
@@ -469,7 +557,8 @@
                             <div class="card">
                                 <div class="card-header">
                                     <h6>
-                                        <button class="btn btn-link" data-toggle="collapse" data-target="#tiga" disabled id="btn_3" style="white-space: normal">3.
+                                        <button class="btn btn-link" data-toggle="collapse" data-target="#tiga" disabled
+                                            id="btn_3" style="white-space: normal">3.
                                             Selesaikan persamaan linear dua variabel yang diperoleh</button>
                                     </h6>
                                 </div>
@@ -493,28 +582,31 @@
                                         <div class="card mt-2" style="visibility: hidden"
                                             id="penjelasan_persamaan4dan5">
                                             <div class="card-body" style="background-color: #e3e3e3">
-                                                    Karena kita sudah mendapatkan persamaan dua variabel, kita akan mengubah
-                                                    persamaan yang paling sederhana yaitu persamaan (5). <br>
-                                                    \(7y-z=-15\) <br>
-                                                    \(-z=-7y-15\) <br>
-                                                    \(z=7y+15\) persamaan (5)
+                                                Karena kita sudah mendapatkan persamaan dua variabel, kita akan mengubah
+                                                persamaan yang paling sederhana yaitu persamaan (5). <br>
+                                                \(7y-z=-15\) <br>
+                                                \(-z=-7y-15\) <br>
+                                                \(z=7y+15\) persamaan (5)
                                             </div>
                                         </div>
                                         <div class="card mt-2" style="visibility: hidden" id="Cat_3_step2">
                                             <div class="card-body" style="background-color: #e3e3e3">
                                                 <p>
-                                                    untuk mendapatkan \(y\) kita akan mensubtitusikan persamaan (5) ke persamaan (4)
+                                                    untuk mendapatkan \(y\) kita akan mensubtitusikan persamaan (5) ke
+                                                    persamaan (4)
                                                 </p>
                                                 <div class="mt-1" id="step_1_persamaan(4)">
                                                     \(10y-7z=-27\)
                                                 </div>
                                                 <div class="mt-1" id="step_2_persamaan(4)">
                                                     \(10y-7(\) <input id="step_2_persamaan(4)_input"
-                                                    style=" border-radius: 6px; border: 1px solid #ccc;" type="text"
-                                                    name="step_2_persamaan(4)_input" placeholder="" onchange="step_2_persamaan_4(this.value)">
+                                                        style=" border-radius: 6px; border: 1px solid #ccc;" type="text"
+                                                        name="step_2_persamaan(4)_input" placeholder=""
+                                                        onchange="step_2_persamaan_4(this.value)">
                                                     \()=-27\) <i id="icon_1" class="ml-4 fa fa-question text-primary"></i>
                                                 </div>
-                                                <div class="mt-1" id="step_3_persamaan(4)" style="visibility: hidden">
+                                                <div class="mt-1" id="step_3_persamaan(4)"
+                                                    style="visibility: hidden">
                                                     \(10y-\) <input id="step_3_persamaan(4)_1"
                                                         style=" border-radius: 6px; border: 1px solid #ccc; width: 40px;"
                                                         type="text" onchange="step_3_persamaan_4()">
@@ -523,47 +615,59 @@
                                                         type="text" onchange="step_3_persamaan_4()">
                                                     \(=-27\) <i id="icon_1" class="ml-4 fa fa-question text-primary"></i>
                                                 </div>
-                                                <div class="mt-1" id="step_4_persamaan(4)" style="visibility: hidden">
+                                                <div class="mt-1" id="step_4_persamaan(4)"
+                                                    style="visibility: hidden">
                                                     \(10y-49y=105-27\)
                                                 </div>
-                                                <div class="mt-1" id="step_5_persamaan(4)" style="visibility: hidden">
+                                                <div class="mt-1" id="step_5_persamaan(4)"
+                                                    style="visibility: hidden">
                                                     \(-\) <input id="step_5_persamaan(4)_1"
                                                         style=" border-radius: 6px; border: 1px solid #ccc; width: 40px;"
                                                         type="text" onchange="step_5_persamaan_4()">
                                                     \(y=\) <input id="step_5_persamaan(4)_2"
                                                         style=" border-radius: 6px; border: 1px solid #ccc; width: 40px;"
-                                                        type="text" onchange="step_5_persamaan_4()"> <i id="icon_1" class="ml-4 fa fa-question text-primary"></i>
+                                                        type="text" onchange="step_5_persamaan_4()"> <i id="icon_1"
+                                                        class="ml-4 fa fa-question text-primary"></i>
                                                 </div>
-                                                <div class="mt-1" id="step_6_persamaan(4)" style="visibility: hidden">
+                                                <div class="mt-1" id="step_6_persamaan(4)"
+                                                    style="visibility: hidden">
                                                     \(y={78 \over -39}\)
                                                 </div>
-                                                <div class="mt-1" id="step_7_persamaan(4)" style="visibility: hidden">
+                                                <div class="mt-1" id="step_7_persamaan(4)"
+                                                    style="visibility: hidden">
                                                     \(y=-\) <input id="step_7_persamaan(4)_1"
                                                         style=" border-radius: 6px; border: 1px solid #ccc; width: 40px;"
-                                                        type="text" onchange="step_7_persamaan_4()"> <i id="icon_1" class="ml-4 fa fa-question text-primary"></i>
+                                                        type="text" onchange="step_7_persamaan_4()"> <i id="icon_1"
+                                                        class="ml-4 fa fa-question text-primary"></i>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="card mt-2" style="visibility: hidden" id="Cat_3_step3">
                                             <div class="card-body" style="background-color: #e3e3e3">
-                                                <p>dengan kita mendapatkan nilai \(y\) maka kita bisa subtitusikan ke persamaan (4) atau (5)</p>
+                                                <p>dengan kita mendapatkan nilai \(y\) maka kita bisa subtitusikan ke
+                                                    persamaan (4) atau (5)</p>
                                                 <div id="step_1_persamaan_5" class="mt-1">
                                                     \(z=7y+15\) persamaan (5)
                                                 </div>
                                                 <div id="step_2_persamaan_5" class="mt-1">
                                                     \(z=7(\) <input id="step_2_persamaan_5_1"
                                                         style=" border-radius: 6px; border: 1px solid #ccc; width: 40px;"
-                                                        type="text" onchange="step_2_persamaan_5_1()">\()+15\) <i id="icon_1" class="ml-4 fa fa-question text-primary"></i>
+                                                        type="text" onchange="step_2_persamaan_5_1()">\()+15\) <i
+                                                        id="icon_1" class="ml-4 fa fa-question text-primary"></i>
                                                 </div>
-                                                <div id="step_3_persamaan_5" class="mt-1" style="visibility: hidden">
+                                                <div id="step_3_persamaan_5" class="mt-1"
+                                                    style="visibility: hidden">
                                                     \(z=-\) <input id="step_3_persamaan_5_1"
                                                         style=" border-radius: 6px; border: 1px solid #ccc; width: 40px;"
-                                                        type="text" onchange="step_3_persamaan_5_1()"> \(+15\) <i id="icon_1" class="ml-4 fa fa-question text-primary"></i>
+                                                        type="text" onchange="step_3_persamaan_5_1()"> \(+15\) <i
+                                                        id="icon_1" class="ml-4 fa fa-question text-primary"></i>
                                                 </div>
-                                                <div id="step_4_persamaan_5" class="mt-1" style="visibility: hidden">
+                                                <div id="step_4_persamaan_5" class="mt-1"
+                                                    style="visibility: hidden">
                                                     \(z=\) <input id="step_4_persamaan_5_1"
                                                         style=" border-radius: 6px; border: 1px solid #ccc; width: 40px;"
-                                                        type="text" onchange="step_4_persamaan_5_1()"> <i id="icon_1" class="ml-4 fa fa-question text-primary"></i>
+                                                        type="text" onchange="step_4_persamaan_5_1()"> <i id="icon_1"
+                                                        class="ml-4 fa fa-question text-primary"></i>
                                                 </div>
                                             </div>
                                         </div>
@@ -577,7 +681,8 @@
                             <div class="card">
                                 <div class="card-header">
                                     <h6>
-                                        <button class="btn btn-link" data-toggle="collapse" data-target="#empat" disabled id="btn_4" style="white-space: normal">
+                                        <button class="btn btn-link" data-toggle="collapse" data-target="#empat" disabled
+                                            id="btn_4" style="white-space: normal">
                                             4. Subtitusikan dua nilai variabel yang diperoleh di langkah ketiga
                                             ke persamaan tiga variabel yang
                                             semula.</button>
@@ -600,7 +705,7 @@
                                                         style=" border-radius: 6px; border: 1px solid #ccc; width: 40px;"
                                                         type="text" onchange="cat_4_step_2_input_1()">
                                                     \()=9\)
-                                                        <i id="icon_1" class="ml-4 fa fa-question text-primary"></i>
+                                                    <i id="icon_1" class="ml-4 fa fa-question text-primary"></i>
                                                 </div>
                                                 <div id="cat_4_step_3" class="mt-1" style="visibility: hidden">
                                                     \(x+\) <input id="cat_4_step_3_input_1"
@@ -610,7 +715,7 @@
                                                         style=" border-radius: 6px; border: 1px solid #ccc; width: 40px;"
                                                         type="text" onchange="cat_4_step_3_input_1()">
                                                     \(=9\)
-                                                        <i id="icon_1" class="ml-4 fa fa-question text-primary"></i>
+                                                    <i id="icon_1" class="ml-4 fa fa-question text-primary"></i>
                                                 </div>
                                                 <div id="cat_4_step_4" class="mt-1" style="visibility: hidden">
                                                     \(x+\) <input id="cat_4_step_4_input_1"
@@ -624,12 +729,13 @@
                                                 <div id="cat_4_step_6" class="mt-1" style="visibility: hidden">
                                                     \(x=\) <input id="cat_4_step_6_input_1"
                                                         style=" border-radius: 6px; border: 1px solid #ccc; width: 40px;"
-                                                        type="text" onchange="cat_4_step_6_input_1()"> <i id="icon_1" class="ml-4 fa fa-question text-primary"></i>
+                                                        type="text" onchange="cat_4_step_6_input_1()"> <i id="icon_1"
+                                                        class="ml-4 fa fa-question text-primary"></i>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="card" id="cat_4_card_2" style="visibility: hidden;">
-                                            <div class="card-body" style="background-color: #e3e3e3" >
+                                            <div class="card-body" style="background-color: #e3e3e3">
                                                 <p>jadi nilai dari ketiga variabel \(x\), \(y\) dan \(z\) adalah</p>
                                                 <div class="table-responsive">
                                                     <table class="table">
@@ -659,7 +765,5 @@
             </div>
         </div>
     </div>
-    @include(
-        'siswa.spltv.metode subtitusi.halaman_footer_subtitusi'
-    )
+    @include('siswa.spltv.metode subtitusi.halaman_footer_subtitusi')
 @endsection

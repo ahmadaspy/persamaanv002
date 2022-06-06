@@ -25,11 +25,13 @@
                     </li>
                     @php
                         use App\Models\kuis_1_nilai;
+                        use App\Models\kkm;
+                        $kkm = kkm::find(1);
                         $kuis_1 = kuis_1_nilai::where('user_id', Auth::user()->id)
-                            ->where('nilai', '>=', 60)
+                            ->where('nilai', '>=', $kkm->kuis_1_kkm)
                             ->first();
                         $kuis_1_trash = kuis_1_nilai::where('user_id', Auth::user()->id)
-                            ->where('nilai', '>=', 60)
+                            ->where('nilai', '>=', $kkm->kuis_1_kkm)
                             ->onlyTrashed()
                             ->first();
                     @endphp
@@ -55,11 +57,13 @@
                     </li>
                     @php
                         use App\Models\kuis_2_nilai;
+                        use App\Models\kkm;
+                        $kkm = kkm::find(1);
                         $kuis_2 = kuis_2_nilai::where('user_id', Auth::user()->id)
-                            ->where('nilai', '>=', 60)
+                            ->where('nilai', '>=', $kkm->kuis_2_kkm)
                             ->first();
                         $kuis_2_trash = kuis_2_nilai::where('user_id', Auth::user()->id)
-                            ->where('nilai', '>=', 60)
+                            ->where('nilai', '>=', $kkm->kuis_2_kkm)
                             ->onlyTrashed()
                             ->first();
                     @endphp

@@ -58,7 +58,7 @@
                             <tr>
                                 <td id="jawaban_1">
                                     <input type="number" step="0.01" name="jawaban_1" class="form-control input-default"
-                                        value="{{ old('jawaban_1') }}">
+                                        value="{{ old('jawaban_1') }}" placeholder="{{$soal->placeholder_jawaban_1}}">
                                 </td>
                             </tr>
                         @endif
@@ -66,7 +66,7 @@
                             <tr>
                                 <td id="jawaban_2">
                                     <input type="number" step="0.01" name="jawaban_2" class="form-control input-default"
-                                        value="{{ old('jawaban_2') }}">
+                                        value="{{ old('jawaban_2') }}" placeholder="{{$soal->placeholder_jawaban_2}}">
                                 </td>
                             </tr>
                         @endif
@@ -74,7 +74,7 @@
                             <tr>
                                 <td id="jawaban_3">
                                     <input type="number" step="0.01" name="jawaban_3" class="form-control input-default"
-                                        value="{{ old('jawaban_3') }}">
+                                        value="{{ old('jawaban_3') }}" placeholder="{{$soal->placeholder_jawaban_3}}">
                                 </td>
                             </tr>
                         @endif

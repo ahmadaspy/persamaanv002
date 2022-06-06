@@ -40,7 +40,7 @@
                 @endif
                 <div class="card text-center">
                     <div class="card-body">
-                        @if ($nilai->nilai >= 60)
+                        @if ($nilai->nilai >= $kkm->kuis_1_kkm)
                             <h5 class="card-title" style="color: rgb(71, 255, 71)">Selamat</h5>
                             <p class="card-text">Nilai Kamu : {{ $nilai->nilai }}</p>
                             <a href="{{ route('kuis_index_page') }}" class="btn btn-danger">Ulang kuis</a>

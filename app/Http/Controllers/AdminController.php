@@ -80,7 +80,18 @@ class AdminController extends Controller
             if ($request->kode_kelas == 'kosong') {
                 $data->kode_kelas_id = null;
             } elseif ($request->kode_kelas == 'kode_baru') {
-                $data->kode_kelas_id = rand(1, 9999);
+                // $data->kode_kelas_id = rand(1, 9999);
+                // $kelas = KodeKelas::insert([
+                //     'kode_kelas' => rand(0,9999),
+                //     'created_at' => Carbon::now(),
+                //     'updated_at' => Carbon::now(),
+                // ]);
+                $kelas = new KodeKelas();
+                $kelas->kode_kelas = rand(0,9999);
+                $kelas->created_at = Carbon::now();
+                $kelas->updated_at = Carbon::now();
+                $kelas->save();
+                $data->kode_kelas_id = $kelas->id;
             } else {
                 $id = KodeKelas::where('kode_kelas', $request->kode_kelas)->first();
                 $data->kode_kelas_id = $id->id;

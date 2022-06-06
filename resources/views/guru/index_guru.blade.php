@@ -18,8 +18,9 @@
                 <div class="card-body">
                     <h3 class="card-title text-white">Jumlah Siswa Terdaftar</h3>
                     <div class="d-inline-block">
-                        <h2 class="text-white">{{ $siswa->count() }}</h2>
-                        <p class="text-white mb-0">{{ $siswa->last()->created_at->diffForhumans() }}</p>
+                        <h2 class="text-white">{{ $siswa->count() ?? 0 }}</h2>
+                        <p class="text-white mb-0">
+                            {{ $siswa->count() ? $siswa->last()->created_at->diffForhumans() : 'Kosong' }}</p>
                     </div>
                     <span class="float-right display-5 opacity-5"><i class="fa fa-registered"></i></span>
                 </div>
@@ -30,8 +31,13 @@
                 <div class="card-body">
                     <h3 class="card-title text-white">Nama siswa terakhir mendaftar</h3>
                     <div class="d-inline-block">
-                        <h2 class="text-white">{{ $siswa->last()->name }}</h2>
-                        <p class="text-white mb-0">{{ $siswa->last()->created_at->diffForhumans() }}</p>
+                        @if ($siswa->count() != null)
+                            <h2 class="text-white">{{ $siswa->last()->name }}</h2>
+                            <p class="text-white mb-0">{{ $siswa->last()->created_at->diffForhumans() }}</p>
+                        @else
+                            <h2 class="text-white">Kosong</h2>
+                        @endif
+
                     </div>
                     <span class="float-right display-5 opacity-5"><i class="fa fa-user"></i></span>
                 </div>
@@ -42,9 +48,12 @@
                 <div class="card-body">
                     <h3 class="card-title text-white">Data Kuis 1</h3>
                     <div class="d-inline-block">
-                        <h2 class="text-white">lulus : {{ count(array_keys($siswa_kuis1, 'lulus')) }}</h2>
-
-                        <p class="text-white mb-0">Siswa {{ $siswa->count() }}</p>
+                        @if ($siswa->count() != null)
+                            <h2 class="text-white">lulus : {{ count(array_keys($siswa_kuis1, 'lulus')) }}</h2>
+                            <p class="text-white mb-0">Siswa {{ $siswa->count() }}</p>
+                        @else
+                            <h2 class="text-white">lulus : Kosong</h2>
+                        @endif
                     </div>
                     <span class="float-right display-5 opacity-5"><i class="fa fa-star"></i></span>
                 </div>
@@ -58,8 +67,12 @@
                 <div class="card-body">
                     <h3 class="card-title text-white">Data Kuis 2</h3>
                     <div class="d-inline-block">
-                        <h2 class="text-white">Lulus : {{ count(array_keys($siswa_kuis2, 'lulus')) }}</h2>
-                        <p class="text-white mb-0">Siswa {{ $siswa->count() }}</p>
+                        @if ($siswa->count() != null)
+                            <h2 class="text-white">Lulus : {{ count(array_keys($siswa_kuis2, 'lulus')) }}</h2>
+                            <p class="text-white mb-0">Siswa {{ $siswa->count() }}</p>
+                        @else
+                            <h2 class="text-white">Lulus : Kosong</h2>
+                        @endif
                     </div>
                     <span class="float-right display-5 opacity-5"><i class="fa fa-star"></i></span>
                 </div>
@@ -70,8 +83,12 @@
                 <div class="card-body">
                     <h3 class="card-title text-white">Data Evaluasi</h3>
                     <div class="d-inline-block">
-                        <h2 class="text-white">Lulus : {{ count(array_keys($siswa_evaluasi, 'lulus')) }}</h2>
-                        <p class="text-white mb-0">Siswa {{ $siswa->count() }}</p>
+                        @if ($siswa->count() != null)
+                            <h2 class="text-white">Lulus : {{ count(array_keys($siswa_evaluasi, 'lulus')) }}</h2>
+                            <p class="text-white mb-0">Siswa {{ $siswa->count() }}</p>
+                        @else
+                            <h2 class="text-white">Lulus : Kosong</h2>
+                        @endif
                     </div>
                     <span class="float-right display-5 opacity-5"><i class="fa fa-star"></i></span>
                 </div>
@@ -108,10 +125,17 @@
                 </div>
                 <div class="card-body">
                     <div class="text-center">
-                        <img alt="" class="rounded-circle mt-3" src="{{asset($siswa[array_search(max($avg_nilai), $avg_nilai)]->photo_profile)}}">
-                        <h4 class="card-widget__title text-dark mt-3">{{$siswa[array_search(max($avg_nilai), $avg_nilai)]->name}}</h4>
-                        {{-- <p class="text-muted">Detail</p> --}}
-                        <a class="btn gradient-4 btn-lg border-0 btn-rounded px-5" href="{{route('halaman_siswa_detail', $siswa[array_search(max($avg_nilai), $avg_nilai)]->id)}}">Detail</a>
+                        @if ($siswa->count() != null)
+                            <img alt="" class="rounded-circle mt-3"
+                                src="{{ asset($siswa[array_search(max($avg_nilai), $avg_nilai)]->photo_profile) }}">
+                            <h4 class="card-widget__title text-dark mt-3">
+                                {{ $siswa[array_search(max($avg_nilai), $avg_nilai)]->name }}</h4>
+                            {{-- <p class="text-muted">Detail</p> --}}
+                            <a class="btn gradient-4 btn-lg border-0 btn-rounded px-5"
+                                href="{{ route('halaman_siswa_detail', $siswa[array_search(max($avg_nilai), $avg_nilai)]->id) }}">Detail</a>
+                        @else
+                            <h4>Kosong</h4>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -123,10 +147,17 @@
                 </div>
                 <div class="card-body">
                     <div class="text-center">
-                        <img alt="" class="rounded-circle mt-4" src="{{asset($siswa[array_search(min($avg_nilai), $avg_nilai)]->photo_profile)}}">
-                        <h4 class="card-widget__title text-dark mt-3">{{$siswa[array_search(min($avg_nilai), $avg_nilai)]->name}}</h4>
-                        {{-- <p class="text-muted">Detail</p> --}}
-                        <a class="btn gradient-4 btn-lg border-0 btn-rounded px-5" href="{{route('halaman_siswa_detail', $siswa[array_search(min($avg_nilai), $avg_nilai)]->id)}}">Detail</a>
+                        @if ($siswa->count() != null)
+                            <img alt="" class="rounded-circle mt-4"
+                                src="{{ asset($siswa[array_search(min($avg_nilai), $avg_nilai)]->photo_profile) }}">
+                            <h4 class="card-widget__title text-dark mt-3">
+                                {{ $siswa[array_search(min($avg_nilai), $avg_nilai)]->name }}</h4>
+                            {{-- <p class="text-muted">Detail</p> --}}
+                            <a class="btn gradient-4 btn-lg border-0 btn-rounded px-5"
+                                href="{{ route('halaman_siswa_detail', $siswa[array_search(min($avg_nilai), $avg_nilai)]->id) }}">Detail</a>
+                        @else
+                            <h4>Kosong</h4>
+                        @endif
                     </div>
                 </div>
             </div>

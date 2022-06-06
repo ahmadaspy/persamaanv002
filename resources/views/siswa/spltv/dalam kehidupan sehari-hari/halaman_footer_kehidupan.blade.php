@@ -36,14 +36,14 @@
                     @endif">
                         <a class="page-link" href="{{ route('spltv_kehidupan_2', [$mari_mencoba->id, 1]) }}">3</a>
                     </li>
-                    {{-- @if (Request()->routeIs('spltv_eliminasi_2'))
+                    @if (Request()->routeIs('spltv_kehidupan_2'))
                         <li class="page-item">
-                            <a class="page-link" href="{{route('spltv_gabungan_1')}}" aria-label="Next">
-                                <span aria-hidden="true">Metode Gabungan</span>
+                            <a class="page-link" href="{{route('kuis_index2_page')}}" aria-label="Next">
+                                <span aria-hidden="true">Kuis</span>
 
                             </a>
                         </li>
-                    @endif --}}
+                    @endif
                 </ul>
             </nav>
         </div>

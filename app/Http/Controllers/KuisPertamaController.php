@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\kkm;
 use App\Models\Kuis1Acak;
 use App\Models\KuisPertama;
 use App\Models\kuis_1_nilai;
@@ -114,11 +115,12 @@ class KuisPertamaController extends Controller
             $insert->nilai = $nilai;
             $insert->save();
         }
-        if (count(array_keys($jawaban_siswa, 'benar')) >= 3) {
-            return redirect()->route('kuis_1_hasil')->with(compact('jawaban_siswa'));
-        } else {
-            return redirect()->route('kuis_1_hasil')->with(compact('jawaban_siswa'));
-        }
+        return redirect()->route('kuis_1_hasil')->with(compact('jawaban_siswa'));
+        // if (count(array_keys($jawaban_siswa, 'benar')) >= 3) {
+        //     return redirect()->route('kuis_1_hasil')->with(compact('jawaban_siswa'));
+        // } else {
+        //     return redirect()->route('kuis_1_hasil')->with(compact('jawaban_siswa'));
+        // }
 
         // dd(count(array_keys($jawaban_siswa, 'benar')));
     }
@@ -127,14 +129,16 @@ class KuisPertamaController extends Controller
         if (session('jawaban_siswa')) {
             $jawaban_siswa = session()->get('jawaban_siswa');
             $nilai = kuis_1_nilai::where('user_id', Auth::user()->id)->first();
-            return view('siswa.spltv.Kuis 1.hasil_kuis', compact('jawaban_siswa', 'nilai'));
+            $kkm = kkm::find(1);
+            return view('siswa.spltv.Kuis 1.hasil_kuis', compact('jawaban_siswa', 'nilai', 'kkm'));
         } else {
             $jawaban_siswa = session()->get('jawaban_siswa');
             $nilai = kuis_1_nilai::where('user_id', Auth::user()->id)->first();
+            $kkm = kkm::find(1);
             if (!$nilai) {
                 return redirect()->route('kuis_index_page');
             } else {
-                return view('siswa.spltv.Kuis 1.hasil_kuis', compact('jawaban_siswa', 'nilai'));
+                return view('siswa.spltv.Kuis 1.hasil_kuis', compact('jawaban_siswa', 'nilai', 'kkm'));
             }
         }
     }

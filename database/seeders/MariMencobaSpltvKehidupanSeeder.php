@@ -17,6 +17,9 @@ class MariMencobaSpltvKehidupanSeeder extends Seeder
         MariMencobaSpltvKehidupan::insert([
             'soal_1' => 'Bambang the masculin adalah seorang turis dari australia yang berkunjung ke banjarmasin dengan dua temannya salem shady dan stewart dickinson. Mereka dalam 3 hari berturut memakai transportasi klotok. Hari pertama dari dermaga mereka berangkat ke pasar apung lalu mereka ke musemum wasaka dan balik ke pasar apung lagi dengan pengeluaran tiket transportasi sebesar Rp. 75.000. hari kedua mereka berangkat lagi dari dermaga ke pulau bekantan dan ke pasar apung dengan pengeluaran tiket transportasi sebesar Rp.80.000. hari terakhir mereka mengunjungi semua dari pasar apung, pulau bekantan dan museum wasaka dengan total pengeluaran transportasi sebesar Rp.95.000. berapakah harga tiket transportasi klotok dari masing – masing destinasi ?',
             'pertanyaan_soal' => 'berapakah harga tiket transportasi klotok dari masing – masing destinasi ?',
+            'placeholder_1' => 'Pasar Apung',
+            'placeholder_2' => 'Museum Wasaka',
+            'placeholder_3' => 'Pulau Bekantan',
             'jawaban_1' => '30000',
             'jawaban_2' => '15000',
             'jawaban_3' => '50000',

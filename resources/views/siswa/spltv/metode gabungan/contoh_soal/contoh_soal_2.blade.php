@@ -42,6 +42,10 @@
             </div>
         </div>
         <div class="row">
+            <div class="col-1"></div>
+            <div class="col"><p>Carilah Nilai dari \(x\), \(y\), dan \(z\)</p></div>
+        </div>
+        <div class="row">
             <div class="col">
                 <div class="card">
                     <div class="card-header">

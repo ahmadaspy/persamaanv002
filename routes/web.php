@@ -59,7 +59,7 @@ Route::prefix('admin')->group(function(){
         Route::post('/profile/post', [AdminController::class, 'admin_profile_post'])->name('admin_profile_post');
         Route::post('/profile/pass/post', [AdminController::class, 'admin_profile_post_pass'])->name('admin_profile_post_pass');
         Route::post('/delete', [AdminController::class, 'delete_acount'])->name('delete_acount');
-        
+
     });
 });
 
@@ -72,6 +72,8 @@ Route::prefix('guru')->group(function(){
         Route::get('/profile', [GuruController::class, 'profile_guru'])->name('profile_guru');
         Route::post('/profile/post', [GuruController::class, 'profile_guru_post'])->name('profile_guru_post');
         Route::post('/profile/pass/post', [GuruController::class, 'profile_guru_pass'])->name('profile_guru_pass');
+        Route::get('/kkm', [GuruController::class, 'pengaturan_KKM'])->name('pengaturan_KKM');
+        Route::post('/kkm/kuis', [GuruController::class, 'kuis_post'])->name('kuis_post');
     });
 });
 

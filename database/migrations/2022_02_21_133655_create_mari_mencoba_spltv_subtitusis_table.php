@@ -18,6 +18,9 @@ class CreateMariMencobaSpltvSubtitusisTable extends Migration
             $table->string('soal_1');
             $table->string('soal_2');
             $table->string('soal_3');
+            $table->string('placeholder_jawaban_1');
+            $table->string('placeholder_jawaban_2')->nullable();
+            $table->string('placeholder_jawaban_3')->nullable();
             $table->string('ditanyakan');
             $table->string('jawaban_1');
             $table->string('jawaban_2')->nullable();

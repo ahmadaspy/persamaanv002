@@ -14,7 +14,12 @@
                             <i class="icon-layers menu-icon"></i><span class="nav-text">Daftar Siswa</span>
                         </a>
                     </li>
-                    
+                    <li>
+                        <a href="{{ route('pengaturan_KKM') }}" aria-expanded="false">
+                            <i class="icon-cup menu-icon"></i><span class="nav-text">Pengaturan KKM</span>
+                        </a>
+                    </li>
+
 
                 </ul>
             </div>

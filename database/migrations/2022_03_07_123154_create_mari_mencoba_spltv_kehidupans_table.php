@@ -17,6 +17,9 @@ class CreateMariMencobaSpltvKehidupansTable extends Migration
             $table->id();
             $table->text('soal_1');
             $table->text('pertanyaan_soal');
+            $table->string('placeholder_1');
+            $table->string('placeholder_2');
+            $table->string('placeholder_3');
             $table->string('jawaban_1');
             $table->string('jawaban_2')->nullable();
             $table->string('jawaban_3')->nullable();

@@ -10,8 +10,79 @@
         <div class="card-body">
             <p>Sama seperti penyelesaian persamaan linear dua variabel. Kita bisa juga menggunakan metode eliminasi yaitu dengan menghilangkan salah satu variabel pada persamaan linear tiga variabel. Metode eliminasi ditentukan melalui langkah – langkah di bawah ini.
             </p>
+            <div class="card">
+                <div class="card-body">
+                    <div class="basic-list-group">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                1. Eliminasi salah satu dari variabel x atau y atau z yang akan menghasilkan persamaan linear dua variabel
+                            </li>
+                            <li class="list-group-item">
+                                2. Selesaikan persamaan linear dua variabel pada langkah 1 yang akan menghasilkan nilai variabel x dan y, atau y dan z, atau x dan y.
+                            </li>
+                            <li class="list-group-item">
+                                3. Subtitusikan nilai yang di dapat pada langkah 2 ke salah satu persamaan semula untuk mendapatkan nilai yang tersisa.
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <div class="card" style="background-color: #e3e3e3">
                 <div class="card-body">
+                    <div class="card">
+                        <div class="card-header">
+                            <h6>Contoh</h6>
+                        </div>
+                        <div class="card-body">
+                             <div class="row">
+                                <div class="col-1">1</div>
+                                <div class="col">
+                                    <ul>
+                                        <li>
+                                            <div class="row">
+                                                <div class="col-sm-3 col-lg-2">
+                                                   \(x+3y-6z=-23\)
+                                                </div>
+                                                <div class="col-sm-3 col-lg-2">
+                                                    persamaan (1)
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="row">
+                                                <div class="col-sm-3 col-lg-2">
+                                                    \(x+y-3z=-10\)
+                                                </div>
+                                                <div class="col-sm-3 col-lg-2">
+                                                    persamaan (2)
+                                                </div>
+                                            </div>
+
+                                        </li>
+                                        <li>
+                                            <div class="row">
+                                                <div class="col-sm-3 col-lg-2">
+                                                    \(3x-2z+7=28\)
+                                                </div>
+                                                <div class="col-sm-3 col-lg-2">
+                                                    persamaan (3)
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-1">
+
+                                </div>
+                                <div class="col">
+                                    <p>Carilah Nilai dari \(x\), \(y\), dan \(z\)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="basic-list-group">
                         <ul class="list-group">
                             <li class="list-group-item">
