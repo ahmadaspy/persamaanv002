@@ -2,7 +2,7 @@
 @section('content')
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Metode Gabungan SPLTV</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Metode Gabungan Sistem Persamaan Linear Tiga Variabel</h6>
         </div>
         <div class="card-body">
             <p>Dalam metode gabungan kalian hanya perlu mencampur antara metode subtitusi dan eliminasi. Untuk langkah –

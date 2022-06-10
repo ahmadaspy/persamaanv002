@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\kkm;
 use App\Models\User;
 use App\Models\KodeKelas;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use RealRashid\SweetAlert\Facades\Alert;
 use Intervention\Image\Facades\Image;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class AdminController extends Controller
 {
@@ -91,6 +92,12 @@ class AdminController extends Controller
                 $kelas->created_at = Carbon::now();
                 $kelas->updated_at = Carbon::now();
                 $kelas->save();
+                $kkm = new kkm();
+                $kkm->kode_kelas_id = $kelas->id;
+                $kkm->kuis_1_kkm = 80;
+                $kkm->kuis_2_kkm = 80;
+                $kkm->evaluasi_kkm = 80;
+                $kkm->save();
                 $data->kode_kelas_id = $kelas->id;
             } else {
                 $id = KodeKelas::where('kode_kelas', $request->kode_kelas)->first();

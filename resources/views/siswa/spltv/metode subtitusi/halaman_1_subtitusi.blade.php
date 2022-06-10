@@ -2,7 +2,7 @@
 @section('content')
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Metode Subtitusi SPLTV</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Metode Subtitusi Sistem Persamaan Linear Tiga Variabel</h6>
         </div>
         <div class="card-body">
             <p>Ada beberapa langkah dalam menyelesaikan sistem persamaan linear tiga variabel dengan metode subtitusi yaitu
@@ -186,7 +186,7 @@
                                                             \(2(6y-2z-5)+3y-3z=-3\) <br>
                                                             \(12y+3y-4z-3z-10=-3\) <br>
                                                             \(14y-7z=-3+10\) <br>
-                                                            \(14y-7z=7\) persamaan (4)
+                                                            \(14y-7z=7\) persamaan (d)
                                                         </p>
                                                     </div>
                                                 </div>
@@ -200,7 +200,7 @@
                                                             \(4(6y-2z-5)-y+2z=8\) <br>
                                                             \(24y-y-8z+2z-20=8\) <br>
                                                             \(23y-6z=8+20\) <br>
-                                                            \(23y-6z=28\) persamaan (5)
+                                                            \(23y-6z=28\) persamaan (e)
                                                         </p>
                                                     </div>
                                                 </div>
@@ -235,7 +235,7 @@
                                             <div class="card-body">
                                                 <div class="card">
                                                     <div class="card-body">
-                                                        Pilih persamaan dua variabel dari persamaan (4) atau (5) yang paling
+                                                        Pilih persamaan dua variabel dari persamaan (d) atau (e) yang paling
                                                         sederhana, dan subtitusikan persamaan
                                                         tersebut ke persamaan dua variabel lainnya.
                                                     </div>
@@ -245,7 +245,7 @@
                                                         <div class="row">
                                                             <div class="col">
                                                                 <p>
-                                                                    persamaan (4) <br>
+                                                                    persamaan (d) <br>
                                                                     \(14y-7z=7\) <br>
                                                                     \(-7z=-14y+7\) <br>
                                                                     \(z={-14 \over -7}y+{7 \over -7}\) <br>
@@ -254,7 +254,7 @@
                                                             </div>
                                                             <div class="col">
                                                                 <p>
-                                                                    persamaan (5) <br>
+                                                                    persamaan (e) <br>
                                                                     \(23y-6z=28\) <br>
                                                                     \(-6z=-23y+28\) <br>
                                                                     \(z={-23 \over -6}+{28 \over -6}\) <br>
@@ -264,8 +264,8 @@
                                                         </div>
                                                         <div class="row">
                                                             <p>
-                                                                persamaan (4) lebih sederhana maka kita akan subtitusikan ke
-                                                                dalam persamaan (5)
+                                                                persamaan (d) lebih sederhana maka kita akan subtitusikan ke
+                                                                dalam persamaan (e)
                                                             </p>
                                                         </div>
                                                     </div>
@@ -273,7 +273,7 @@
                                                 <div class="card">
                                                     <div class="card-body" style="overflow-x: scroll;">
                                                         <p>
-                                                            subtitusikan persamaan (4) ke persamaan (5) <br>
+                                                            subtitusikan persamaan (d) ke persamaan (e) <br>
                                                             \(23y-6z=28\) <br>
                                                             \(23y-6(2y-1)=28\) <br>
                                                             \(23y-12y+6=28\) <br>
@@ -323,7 +323,7 @@
                                             <div class="card-body">
                                                 <p>
                                                     dengan di dapatkannya dua variabel di langkah ke-3 maka kita bisa
-                                                    subtitusikan ke persamaan semula yaitu persamaan (1) atau (2) atau (3)
+                                                    subtitusikan ke persamaan semula yaitu persamaan (a) atau (b) atau (c)
                                                     <br>
                                                 </p>
                                                 <div class="card">

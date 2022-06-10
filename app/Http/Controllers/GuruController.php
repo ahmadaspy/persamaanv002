@@ -66,10 +66,11 @@ class GuruController extends Controller
         } else {
             // dd($siswa[0]->nilaikuis1->onlyTrashed()->where('user_id', $siswa[0]->id)->get());
             $siswa_kuis1 = array();
+            $kkm = Auth::user()->kode_kelas->kkm;
             foreach ($siswa as $key => $siswas) {
-                if (kuis_1_nilai::where('user_id', $siswas->id)->where('nilai', '>=', 60)->first()) {
+                if (kuis_1_nilai::where('user_id', $siswas->id)->where('nilai', '>=', $kkm->kuis_1_kkm)->first()) {
                     $siswa_kuis1[$key] = 'lulus';
-                } elseif (kuis_1_nilai::where('user_id', $siswas->id)->where('nilai', '>=', 60)->onlyTrashed()->first()) {
+                } elseif (kuis_1_nilai::where('user_id', $siswas->id)->where('nilai', '>=', $kkm->kuis_1_kkm)->onlyTrashed()->first()) {
                     $siswa_kuis1[$key] = 'lulus';
                 } else {
                     $siswa_kuis1[$key] = 'gagal';
@@ -77,9 +78,9 @@ class GuruController extends Controller
             }
             $siswa_kuis2 = array();
             foreach ($siswa as $key => $siswas) {
-                if (kuis_2_nilai::where('user_id', $siswas->id)->where('nilai', '>=', 60)->first()) {
+                if (kuis_2_nilai::where('user_id', $siswas->id)->where('nilai', '>=', $kkm->kuis_2_kkm)->first()) {
                     $siswa_kuis2[$key] = 'lulus';
-                } elseif (kuis_2_nilai::where('user_id', $siswas->id)->where('nilai', '>=', 60)->onlyTrashed()->first()) {
+                } elseif (kuis_2_nilai::where('user_id', $siswas->id)->where('nilai', '>=', $kkm->kuis_2_kkm)->onlyTrashed()->first()) {
                     $siswa_kuis2[$key] = 'lulus';
                 } else {
                     $siswa_kuis2[$key] = 'gagal';
@@ -87,9 +88,9 @@ class GuruController extends Controller
             }
             $siswa_evaluasi = array();
             foreach ($siswa as $key => $siswas) {
-                if (EvaluasiNilai::where('user_id', $siswas->id)->where('nilai', '>=', 70)->first()) {
+                if (EvaluasiNilai::where('user_id', $siswas->id)->where('nilai', '>=', $kkm->evaluasi_kkm)->first()) {
                     $siswa_evaluasi[$key] = 'lulus';
-                } elseif (EvaluasiNilai::where('user_id', $siswas->id)->where('nilai', '>=', 70)->onlyTrashed()->first()) {
+                } elseif (EvaluasiNilai::where('user_id', $siswas->id)->where('nilai', '>=', $kkm->evaluasi_kkm)->onlyTrashed()->first()) {
                     $siswa_evaluasi[$key] = 'lulus';
                 } else {
                     $siswa_evaluasi[$key] = 'gagal';
@@ -267,7 +268,7 @@ class GuruController extends Controller
             ->labels($data_created_at_evaluasi)
             ->datasets([
                 [
-                    "label" => "Nilai Kuis",
+                    "label" => "Nilai Evaluasi",
                     "lineTension" => "0.4",
                     'backgroundColor' => "rgba(38, 185, 154, 0.31)",
                     'borderColor' => "rgba(38, 185, 154, 0.7)",

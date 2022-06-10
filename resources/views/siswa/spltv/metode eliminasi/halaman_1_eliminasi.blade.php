@@ -5,7 +5,7 @@
 @section('content')
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Metode Eliminasi SPLTV</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Metode Eliminasi Sistem Persamaan Linear Tiga Variabel</h6>
         </div>
         <div class="card-body">
             <p>Sama seperti penyelesaian persamaan linear dua variabel. Kita bisa juga menggunakan metode eliminasi yaitu dengan menghilangkan salah satu variabel pada persamaan linear tiga variabel. Metode eliminasi ditentukan melalui langkah – langkah di bawah ini.
