@@ -19,8 +19,9 @@ class EvaluasiController extends Controller
         if (kuis_2_nilai::where('user_id', Auth::user()->id)->get()->isEmpty()) {
             return redirect()->route('kuis_index2_page');
         } else {
-            $acak = array(EvaluasiA::inRandomOrder()->get(), EvaluasiB::inRandomOrder()->get());
-            $soal_evaluasi = $acak[rand(0, count($acak) - 1)];
+            // $acak = array(EvaluasiA::inRandomOrder()->get(), EvaluasiB::inRandomOrder()->get());
+            // $soal_evaluasi = $acak[rand(0, count($acak) - 1)];
+            $soal_evaluasi = EvaluasiA::inRandomOrder()->get();
             Session::put('soal_evaluasi', $soal_evaluasi);
             return view('siswa.spltv.evaluasi.evaluasi_index', compact('soal_evaluasi'));
         }

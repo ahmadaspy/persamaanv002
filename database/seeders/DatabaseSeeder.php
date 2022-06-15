@@ -32,7 +32,7 @@ class DatabaseSeeder extends Seeder
         $this->call(AdminSeeder::class);
         $this->call(UserSeeder::class);
         $this->call(EvaluasiASeeder::class);
-        $this->call(EvaluasiBSeeder::class);
+        // $this->call(EvaluasiBSeeder::class);
         $this->call(KkmSeeder::class);
         // \App\Models\User::factory(10)->create();
     }

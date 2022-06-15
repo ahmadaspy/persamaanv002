@@ -10,7 +10,7 @@
                 <ul>
                     <li>
                         <div class="row">
-                            <div class="col-sm-3 col-lg-2">
+                            <div class="col-sm-4 col-lg-2">
                                 \(x-2y+3z=2\)
                             </div>
                             <div class="col-sm-3 col-lg-2">
@@ -20,7 +20,7 @@
                     </li>
                     <li>
                         <div class="row mt-2">
-                            <div class="col-sm-3 col-lg-2">
+                            <div class="col-sm-4 col-lg-2">
                                 \(x-y+z=2\)
                             </div>
                             <div class="col-sm-3 col-lg-2">
@@ -31,7 +31,7 @@
                     </li>
                     <li>
                         <div class="row mt-2">
-                            <div class="col-sm-3 col-lg-2">
+                            <div class="col-sm-4 col-lg-2">
                                 \(2x+y-z=1\)
                             </div>
                             <div class="col-sm-3 col-lg-2">
