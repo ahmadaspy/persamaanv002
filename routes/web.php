@@ -36,7 +36,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home_page.welcome');
 })->name('home');
 
 Route::get('/logout', [Controller::class, 'logout'])->name('logout_user');

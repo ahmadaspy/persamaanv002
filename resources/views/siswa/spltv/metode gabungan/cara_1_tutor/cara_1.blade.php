@@ -82,7 +82,7 @@
                             <p>persamaan (4) dan persamaan (5) akan kita lakukan eliminasi salah satu variabel</p>
                             <div class="card"style="background-color: #e3e3e3">
                                 <div class="card-body" style="overflow-x: scroll;">
-                                    $$\begin{matrix} 7y+7z=0 & |\times 1| & -7y+7z=0 & \\ -y-2z=6 & |\times 7| & \underline{-7y-14z=42} & - \end{matrix}$$
+                                    $$\begin{matrix} -7y+7z=0 & |\times 1| & -7y+7z=0 & \\ -y-2z=6 & |\times 7| & \underline{-7y-14z=42} & - \end{matrix}$$
                                     $$ 21z=-42 $$
                                     $$ z={-42 \over 21} $$
                                     $$ z=-2 $$
