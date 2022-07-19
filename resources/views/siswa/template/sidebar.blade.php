@@ -9,23 +9,42 @@
                             <i class="icon-directions menu-icon"></i><span class="nav-text">Petunjuk</span>
                         </a>
                     </li>
+
                     <li>
                         <a href="{{ route('kikd') }}" aria-expanded="false">
                             <i class="icon-notebook menu-icon"></i><span class="nav-text">KI | KD</span>
                         </a>
                     </li>
                     <li class="nav-label">Materi :</li>
-                    <li>
+                    {{-- <li>
                         <a href="{{ route('spltv_index') }}" aria-expanded="false">
 
                             <i class="icon-speedometer menu-icon"></i>
                             <span class="nav-text">Sistem Persamaan Linear Tiga Variabel</span>
 
                         </a>
+                    </li> --}}
+                    <li class="mega-menu mega-menu-sm">
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-speedometer menu-icon"></i>
+                            <span class="nav-text">1. Mengenal sistem persamaan linear tiga variabel</span>
+                            {{-- <div class="row">
+                                <i class="icon-music-tone menu-icon col-1"></i>
+                                <span class="col-1 nav-text">1</span>
+                                <span class="col-8 nav-text">Menyelesaikan sistem persamaan linear tiga variabel</span>
+                            </div> --}}
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="{{route('pengertian_spltv')}}">Pengertian SPLTV</a></li>
+                            <li><a href="{{route('pengertian_spltv')}}">Bentuk SPLTV</a></li>
+                            <li><a href="{{route('pengertian_spltv')}}">Bentuk Kontekstual SPLTV</a></li>
+                            <li><a href="{{route('pengertian_spltv')}}">Kuis</a></li>
+
+                        </ul>
                     </li>
                     @php
                         use App\Models\kuis_1_nilai;
-                        
+
                         $kkm = Auth::user()->kode_kelas->kkm;
                         $kuis_1 = kuis_1_nilai::where('user_id', Auth::user()->id)
                             ->where('nilai', '>=', $kkm->kuis_1_kkm)
@@ -38,7 +57,7 @@
                     <li class="mega-menu mega-menu-sm">
                         <a class="has-arrow" href="javascript:void()" aria-expanded="false">
                             <i class="icon-music-tone menu-icon"></i>
-                            <span class="nav-text">1. Menyelesaikan sistem persamaan linear tiga variabel</span>
+                            <span class="nav-text">2. Menyelesaikan sistem persamaan linear tiga variabel</span>
                             {{-- <div class="row">
                                 <i class="icon-music-tone menu-icon col-1"></i>
                                 <span class="col-1 nav-text">1</span>
@@ -73,7 +92,7 @@
                             @else
                                 <i class="icon-lock menu-icon"></i>
                             @endif
-                            <span class="nav-text">2. Masalah yangmelibatkan persamaan linear tiga variabel</span>
+                            <span class="nav-text">3. Masalah yangmelibatkan persamaan linear tiga variabel</span>
                             {{-- <div class="row">
                                 <i class="icon-music-tone-alt menu-icon col-1"></i>
                                 <span class="col-1 nav-text">2</span>

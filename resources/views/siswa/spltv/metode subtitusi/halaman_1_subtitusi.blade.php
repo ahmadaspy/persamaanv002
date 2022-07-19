@@ -483,7 +483,7 @@
                                                 \(2( \) <input id="jawaban_x_1"
                                                     style=" border-radius: 6px; border: 1px solid #ccc;" type="text"
                                                     name="jawaban_x_1" placeholder=""
-                                                    onchange="jawaban_x_1_tahap_2(this.value)"> \()-2y+5z=12\) <i
+                                                    onchange="jawaban_x_1_tahap_2(this.value)"> \()+4y-3z=-9\) <i
                                                     id="icon_1" class="ml-4 fa fa-question text-primary"></i> <br>
                                                 <div id="step_3" style="visibility: hidden">
                                                     <input id="jawaban_3_1"
@@ -519,7 +519,7 @@
                                                 \(3( \) <input id="jawaban_2_1"
                                                     style=" border-radius: 6px; border: 1px solid #ccc;" type="text"
                                                     name="jawaban_2_1" placeholder="" onchange="jawaban_2_1(this.value)">
-                                                \()+4y-3z=-9\) <i id="icon_1" class="ml-4 fa fa-question text-primary"></i>
+                                                \()-2y+5z=12\) <i id="icon_1" class="ml-4 fa fa-question text-primary"></i>
                                                 <br>
                                                 <div id="jawaban_2_step_3" style="visibility: hidden">
                                                     <input id="jawaban_2_2"
