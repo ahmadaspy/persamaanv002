@@ -85,7 +85,7 @@ Route::prefix('siswa')->group(function () {
         Route::post('/profile/edit/datadiri', [ProfileSiswaController::class, 'edit_profile'])->middleware('verified')->name('edit_profile');
         Route::post('/profile/edit/katasandi', [ProfileSiswaController::class, 'edit_password'])->middleware('verified')->name('edit_password');
         Route::get('/kikd', [KikdController::class, 'index'])->name('kikd');
-        Route::get('/pengertian-spltv', [mengenal_spltv::class, 'pengertian'])->name('pengertian_spltv');
+
         // route materi spldv
         // Route::prefix('spldv')->group(function () {
         //     Route::get('/metodegrafik/1', [SpldvMetodegrafikController::class, 'halaman_1'])->name('spldv_grafik_1');
@@ -114,6 +114,9 @@ Route::prefix('siswa')->group(function () {
         // route mater spltv
         Route::prefix('spltv')->group(function () {
             Route::get('/menyelesaikanspltv', [spltv::class, 'index'])->name('spltv_index');
+            Route::get('/pengertian-spltv', [mengenal_spltv::class, 'pengertian'])->name('pengertian_spltv');
+            Route::get('/bentuk-spltv', [mengenal_spltv::class, 'bentuk'])->name('bentuk_spltv');
+            Route::get('/bentuk-spltv/kontekstual', [mengenal_spltv::class, 'keontekstual'])->name('bentuk_spltv_kontekstual');
             Route::prefix('/metodesubtitusi')->group(function () {
                 Route::get('/1', [SpltvSubtitusi::class, 'spltv_subtitusi_1'])->name('spltv_subtitusi_1');
                 Route::get('/2/{id}/{nomor}', [SpltvSubtitusi::class, 'spltv_subtitusi_2'])->name('spltv_subtitusi_2');

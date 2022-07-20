@@ -36,8 +36,8 @@
                         </a>
                         <ul aria-expanded="false">
                             <li><a href="{{route('pengertian_spltv')}}">Pengertian SPLTV</a></li>
-                            <li><a href="{{route('pengertian_spltv')}}">Bentuk SPLTV</a></li>
-                            <li><a href="{{route('pengertian_spltv')}}">Bentuk Kontekstual SPLTV</a></li>
+                            <li><a href="{{route('bentuk_spltv')}}">Bentuk SPLTV</a></li>
+                            <li><a href="{{route('bentuk_spltv_kontekstual')}}">Bentuk Kontekstual SPLTV</a></li>
                             <li><a href="{{route('pengertian_spltv')}}">Kuis</a></li>
 
                         </ul>

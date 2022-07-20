@@ -15,7 +15,7 @@
                 </div>
                 <div class="card-body">
                     <ol>
-                        <li>1. Siswa mampu menjelaskan pengertian Sistem persamaan linear tiga variabel</li>
+                        <li>1. Siswa dapat memahami pengertian Sistem persamaan linear tiga variabel</li>
                     </ol>
                 </div>
             </div>
@@ -94,4 +94,5 @@
             </div>
         </div>
     </div>
+    @include('siswa.spltv.mengenal spltv.pengertian.halaman_footer')
 @endsection
