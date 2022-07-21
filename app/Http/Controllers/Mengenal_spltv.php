@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\KuisMengenal;
 use Illuminate\Http\Request;
 
 class Mengenal_spltv extends Controller
@@ -14,5 +15,9 @@ class Mengenal_spltv extends Controller
     }
     public function keontekstual(){
         return view('siswa.spltv.mengenal spltv.bentuk kontekstual.bentuk_konteks');
+    }
+    public function kuis(){
+        $soal_kuis_mengenal = KuisMengenal::inRandomOrder()->get();
+        return view('siswa.spltv.mengenal spltv.kuis.kuis', compact('soal_kuis_mengenal'));
     }
 }

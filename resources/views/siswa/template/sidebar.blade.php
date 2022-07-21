@@ -38,7 +38,7 @@
                             <li><a href="{{route('pengertian_spltv')}}">Pengertian SPLTV</a></li>
                             <li><a href="{{route('bentuk_spltv')}}">Bentuk SPLTV</a></li>
                             <li><a href="{{route('bentuk_spltv_kontekstual')}}">Bentuk Kontekstual SPLTV</a></li>
-                            <li><a href="{{route('pengertian_spltv')}}">Kuis</a></li>
+                            <li><a href="{{route('kuis_mengenal')}}">Kuis</a></li>
 
                         </ul>
                     </li>

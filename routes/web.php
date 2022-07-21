@@ -114,9 +114,12 @@ Route::prefix('siswa')->group(function () {
         // route mater spltv
         Route::prefix('spltv')->group(function () {
             Route::get('/menyelesaikanspltv', [spltv::class, 'index'])->name('spltv_index');
-            Route::get('/pengertian-spltv', [mengenal_spltv::class, 'pengertian'])->name('pengertian_spltv');
-            Route::get('/bentuk-spltv', [mengenal_spltv::class, 'bentuk'])->name('bentuk_spltv');
-            Route::get('/bentuk-spltv/kontekstual', [mengenal_spltv::class, 'keontekstual'])->name('bentuk_spltv_kontekstual');
+            Route::prefix('/mengenal')->group(function () {
+                Route::get('/pengertian-spltv', [mengenal_spltv::class, 'pengertian'])->name('pengertian_spltv');
+                Route::get('/bentuk-spltv', [mengenal_spltv::class, 'bentuk'])->name('bentuk_spltv');
+                Route::get('/bentuk-spltv/kontekstual', [mengenal_spltv::class, 'keontekstual'])->name('bentuk_spltv_kontekstual');
+                Route::get('/kuis', [mengenal_spltv::class, 'kuis'])->name('kuis_mengenal');
+            });
             Route::prefix('/metodesubtitusi')->group(function () {
                 Route::get('/1', [SpltvSubtitusi::class, 'spltv_subtitusi_1'])->name('spltv_subtitusi_1');
                 Route::get('/2/{id}/{nomor}', [SpltvSubtitusi::class, 'spltv_subtitusi_2'])->name('spltv_subtitusi_2');

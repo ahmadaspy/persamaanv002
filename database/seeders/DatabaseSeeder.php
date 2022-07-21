@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-
+use App\Models\KuisMengenal;
 use Illuminate\Database\Seeder;
+use Database\Seeders\KuisMengenalSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -25,6 +26,7 @@ class DatabaseSeeder extends Seeder
         // \App\Models\MariMencobaSpltvEliminasi::factory(5)->create();
         $this->call(MariMencobaSPLTVEliminasiSeeder::class);
         \App\Models\KodeKelas::factory(5)->create();
+        $this->call(KuisMengenalSeeder::class);
         $this->call(KuisPertamaSeeder::class);
         $this->call(KuisKeduaSeeder::class);
         $this->call(MariMencobaSpltvKehidupanSeeder::class);
