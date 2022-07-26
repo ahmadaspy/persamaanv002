@@ -20,6 +20,7 @@ class Mengenal_spltv extends Controller
         return view('siswa.spltv.mengenal spltv.bentuk kontekstual.bentuk_konteks');
     }
     public function kuis(){
+
         $soal_kuis_mengenal = KuisMengenal::inRandomOrder()->get();
         Session::put('soal_kuis_mengenal', $soal_kuis_mengenal);
         return view('siswa.spltv.mengenal spltv.kuis.kuis', compact('soal_kuis_mengenal'));
