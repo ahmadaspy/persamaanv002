@@ -17,7 +17,7 @@
                         </li>
                     @endforeach
                 </ul>
-                <form action="{{ route('evaluasi_post') }}" method="post" onsubmit="return validateForm()" name="myForm"
+                <form action="{{ route('kuis_mengenal_post') }}" method="post" onsubmit="return validateForm()" name="myForm"
                     id="form">
                     @csrf
                     <div class="tab-content">
@@ -53,6 +53,7 @@
                                         @endif
 
                                         <div class="row">
+
                                             <div class="col">
                                                 <div class="form-group">
                                                     <div class="radio mb-3">
@@ -60,7 +61,7 @@
                                                         <input type="radio" name="{{ $content_kuis->id }}[jawaban]"
                                                             value="a" id="{{ $content_kuis->id }}[jawaban_a]"><label
                                                             for="{{ $content_kuis->id }}[jawaban_a]"
-                                                            class="ml-3">A. {{ $content_kuis->pilihan_a }}
+                                                            class="ml-3">A. {{$content_kuis->pilihan_a}}
                                                              </label>
 
                                                     </div>

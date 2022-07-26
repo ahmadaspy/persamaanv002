@@ -35,61 +35,83 @@ class KuisMengenalSeeder extends Seeder
                     5y+2x & = & z+12 \\\\
                     4x-z & = & 6 \\\\
                 \end{matrix}',
-                null,
-                null,
-                null,
-                null,
+                'Sistem persamaan linear tiga variabel merupakan persempitan dari sistem persamaan linear dua variabel',
+                'Pensil = 1 buah |
+                    Pulpen = 1 buah |
+                    Buku = 1 buah',
+                'Samsul membeli 2 buah hp samsudin, sekalian membeli 5 buah micro sd 64 gb, ditambah dengan 4 buah soft case hp samsudin',
+                '\begin{matrix}
+                    3q+3r+3s & = & Rp. 10,500 \\\\
+                    4r & = & Rp. 16,000 \\\\
+                    q+2r & = & Rp. 12,500 \\\\
+                \end{matrix}',
             ],
             'pilihan_b' => [
                 '\begin{matrix}
-                    2x+3y+4z & = & 18 \\
-                    5y+2x & = & z+12 \\
-                    4x-z & = & 6 \\
+                    2r-s & = & 2 \\\\
+                    2r+s & = & 6 \\\\
+                    3r+s & = & 6+t \\\\
                 \end{matrix}',
-                null,
-                null,
-                null,
-                null,
+                'Hanya boleh terdiri dari variabel x, y, dan z',
+                '1 buah pensil = x | 1 buah pulpen = y | 1 buah buku = z',
+                'Ujang membeli 5 buah roti, lalu membeli 4 buah snack, lalu membeli lagi 2 buah snack',
+                '\begin{matrix}
+                    a+2b & = & Rp. 10,500 \\\\
+                    4b & = & Rp. 16,000 \\\\
+                    a+b+b & = & Rp. 12,500 \\\\
+                \end{matrix}',
             ],
             'pilihan_c' => [
                 '\begin{matrix}
-                    2x+3y+4z & = & 18 \\
-                    5y+2x & = & z+12 \\
-                    4x-z & = & 6 \\
+                    4a & = & 10+b \\\\
+                    a+b & = & 5 \\\\
+                    3a & = & 2b+b+3 \\\\
                 \end{matrix}',
-                null,
-                null,
-                null,
-                null,
+                'Terdapat tiga variabel dan dua persamaan',
+                'Pensil = Rp | Pulpen = Rp | Buku = RP',
+                'Bambang membeli 5 sepatu air jordan, 4 buah kaos kaki, dan 2 buah tali sepatu tambahan',
+                '\begin{matrix}
+                    q+2r & = & Rp. 10,500+s \\\\
+                    4r & = & Rp. 16,000 \\\\
+                    q+r+s & = & Rp. 12,500 \\\\
+                \end{matrix}',
             ],
             'pilihan_d' => [
                 '\begin{matrix}
-                    2x+3y+4z & = & 18 \\
-                    5y+2x & = & z+12 \\
-                    4x-z & = & 6 \\
+                    2x+3y+z & = & 8 \\\\
+                    x+y+2z & = & 5 \\\\
+                    2x-y-4z & = & -1 \\\\
                 \end{matrix}',
-                null,
-                null,
-                null,
-                null,
+                'Terdapat tiga variabel dan tiga persamaan',
+                '1 buah pensil = a | 2 buah puplen = b | 1 buah buku = c',
+                'Ujang membeli 4 buah roti, sedangkan Burhan membeli 5 buah roti, dan Samsul membeli 2 buah roti',
+                '\begin{matrix}
+                    q+2r & = & Rp. 10,500 \\\\
+                    4r & = & Rp. 16,000 \\\\
+                    q+r+s & = & Rp. 12,500 \\\\
+                \end{matrix}',
             ],
             'pilihan_e' => [
                 '\begin{matrix}
-                    2x+3y+4z & = & 18 \\
-                    5y+2x & = & z+12 \\
-                    4x-z & = & 6 \\
+                    2x+z & = & 8-3y \\\\
+                    y+2z & = & 5-x \\\\
+                    2x & = & y+4z-1 \\\\
                 \end{matrix}',
-                null,
-                null,
-                null,
-                null,
+                'Pasangan berurutan x dan y disebut penyelesaian dari sistem persamaan',
+                '1 buah pensil = Rp. 10,500 | 1 buah pulpen = Rp. 16,000 | 1 buah buku = Rp. 12,500',
+                'Bambang membeli 4 sepatu air jordan, 5 kaos kaki, dan 2 buah tali sepatu tambahan',
+                '\begin{matrix}
+                    q+2r & = & Rp. 10,500 \\\\
+                    4r & = & Rp. 16,000 \\\\
+                    3q+3r+3s & = & Rp. 12,500 \\\\
+                \end{matrix}',
             ],
             'jawaban' => [
-                'a',
-                'a',
-                'a',
-                'a',
-                'a',
+                'c',
+                'd',
+                'b',
+                'e',
+                'd',
             ]
          ]);
         $i = 0;

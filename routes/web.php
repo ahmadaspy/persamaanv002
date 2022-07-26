@@ -119,6 +119,8 @@ Route::prefix('siswa')->group(function () {
                 Route::get('/bentuk-spltv', [mengenal_spltv::class, 'bentuk'])->name('bentuk_spltv');
                 Route::get('/bentuk-spltv/kontekstual', [mengenal_spltv::class, 'keontekstual'])->name('bentuk_spltv_kontekstual');
                 Route::get('/kuis', [mengenal_spltv::class, 'kuis'])->name('kuis_mengenal');
+                Route::post('/kuis-post', [mengenal_spltv::class, 'kuis_mengenal_post'])->name('kuis_mengenal_post');
+                Route::get('/hasil-kuis', [mengenal_spltv::class, 'kuis_mengenal_hasil'])->name('kuis_mengenal_hasil');
             });
             Route::prefix('/metodesubtitusi')->group(function () {
                 Route::get('/1', [SpltvSubtitusi::class, 'spltv_subtitusi_1'])->name('spltv_subtitusi_1');
