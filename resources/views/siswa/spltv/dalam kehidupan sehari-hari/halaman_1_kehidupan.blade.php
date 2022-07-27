@@ -5,6 +5,16 @@
             <h6 class="m-0 font-weight-bold text-primary">Dalam Kehidupan sehari - hari</h6>
         </div>
         <div class="card-body">
+            <div class="card shadow">
+                <div class="card-header">
+                    <h6 class="text-primary">
+                        Tujuan Pembelajaran
+                    </h6>
+                </div>
+                <div class="card-body">
+                    <p>1. Siswa dapat menyelesaikan sistem persamaan linear tiga variabel dalam bentuk kontekstual</p>
+                </div>
+            </div>
             <p>
                 Dalam kehidupan sehari – hari sering kali kita melihat suatu permasalahan bisa di atasi dengan perhitungan
                 matematika. Tidak jarang permasalahan tersebut bisa di selesaikan dengan perhitungan persamaan linear tiga

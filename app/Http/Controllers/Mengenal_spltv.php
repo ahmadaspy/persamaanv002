@@ -56,6 +56,8 @@ class Mengenal_spltv extends Controller
     }
     public function kuis_mengenal_hasil()
     {
+
+
         if (session('jawaban_siswa')) {
             $jawaban_siswa = session()->get('jawaban_siswa');
             $nilai = KuisMengenalNilai::where('user_id', Auth::user()->id)->first();

@@ -5,6 +5,16 @@
             <h6 class="m-0 font-weight-bold text-primary">Metode Subtitusi Sistem Persamaan Linear Tiga Variabel</h6>
         </div>
         <div class="card-body">
+            <div class="card shadow">
+                <div class="card-header">
+                    <h6 class="text-primary">
+                        Tujuan Pembelajaran
+                    </h6>
+                </div>
+                <div class="card-body">
+                    <p>1. Siswa dapat menyelesaikan sistem persamaan linear tiga variabel dengan metode subtitusi</p>
+                </div>
+            </div>
             <p>Ada beberapa langkah dalam menyelesaikan sistem persamaan linear tiga variabel dengan metode subtitusi yaitu
             </p>
             <div class="card">
@@ -353,6 +363,15 @@
                                         </div>
                                     </div>
                                 </div>
+                            </li>
+                            <li class="list-group-item">
+
+                                    <div class="embed-responsive embed-responsive-16by9 ">
+                                        <iframe class="embed-responsive-item" scrolling="no" title="Contoh test 1" src="https://www.geogebra.org/material/iframe/id/puzhe3be/width/700/height/500/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false"  style="border:0px;"> </iframe>
+                                    </div>
+
+
+
                             </li>
                         </ul>
                     </div>

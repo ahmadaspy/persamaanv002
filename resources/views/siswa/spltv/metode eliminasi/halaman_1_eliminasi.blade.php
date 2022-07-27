@@ -8,6 +8,16 @@
             <h6 class="m-0 font-weight-bold text-primary">Metode Eliminasi Sistem Persamaan Linear Tiga Variabel</h6>
         </div>
         <div class="card-body">
+            <div class="card shadow">
+                <div class="card-header">
+                    <h6 class="text-primary">
+                        Tujuan Pembelajaran
+                    </h6>
+                </div>
+                <div class="card-body">
+                    <p>1. Siswa dapat menyelesaikan sistem persamaan linear tiga variabel dengan metode eliminasi</p>
+                </div>
+            </div>
             <p>Sama seperti penyelesaian persamaan linear dua variabel. Kita bisa juga menggunakan metode eliminasi yaitu dengan menghilangkan salah satu variabel pada persamaan linear tiga variabel. Metode eliminasi ditentukan melalui langkah – langkah di bawah ini.
             </p>
             <div class="card">

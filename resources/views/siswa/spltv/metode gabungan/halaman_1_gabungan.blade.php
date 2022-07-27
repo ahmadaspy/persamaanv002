@@ -5,6 +5,16 @@
             <h6 class="m-0 font-weight-bold text-primary">Metode Gabungan Sistem Persamaan Linear Tiga Variabel</h6>
         </div>
         <div class="card-body">
+            <div class="card shadow">
+                <div class="card-header">
+                    <h6 class="text-primary">
+                        Tujuan Pembelajaran
+                    </h6>
+                </div>
+                <div class="card-body">
+                    <p>1. Siswa dapat menyelesaikan sistem persamaan linear tiga variabel dengan metode gabungan</p>
+                </div>
+            </div>
             <p>Dalam metode gabungan kalian hanya perlu mencampur antara metode subtitusi dan eliminasi. Untuk langkah –
                 langkah penyelesaian metode gabungan sebenarnya tidak ada, dengan kata lain kalian bisa mengkreasikan
                 sendiri bagaimana menyelesaikan persamaan dengan metode gabungan. Beberapa langkah menyelesaikan dengan

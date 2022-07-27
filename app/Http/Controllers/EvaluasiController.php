@@ -44,12 +44,12 @@ class EvaluasiController extends Controller
                 }
             }
         }
-        $nilai = count(array_keys($jawaban_siswa, 'benar')) * 10;
+        $nilai = count(array_keys($jawaban_siswa, 'benar')) * 5;
         if (EvaluasiNilai::where('user_id', Auth::user()->id)->get()->isEmpty()) {
             $insert = new EvaluasiNilai();
             $insert->user_id = Auth::user()->id;
             $insert->nilai = $nilai;
-            if ($nilai >= 70) {
+            if ($nilai >= Auth::user()->kode_kelas->kkm->evaluasi_kkm) {
                 $insert->keterangan = 'lulus';
             }
             $insert->save();
@@ -59,6 +59,8 @@ class EvaluasiController extends Controller
             $insert->user_id = Auth::user()->id;
             $insert->nilai = $nilai;
             if (EvaluasiNilai::where('user_id', Auth::user()->id)->where('keterangan', 'lulus')->onlyTrashed()->first()) {
+                $insert->keterangan = 'lulus';
+            }elseif($nilai >= Auth::user()->kode_kelas->kkm->evaluasi_kkm){
                 $insert->keterangan = 'lulus';
             }
             $insert->save();
@@ -75,12 +77,12 @@ class EvaluasiController extends Controller
         if (session('jawaban_siswa')) {
             $jawaban_siswa = session()->get('jawaban_siswa');
             $nilai = EvaluasiNilai::where('user_id', Auth::user()->id)->first();
-            $kkm = kkm::find(1);
+            $kkm = Auth::user()->kode_kelas->kkm;
             return view('siswa.spltv.evaluasi.hasil_evaluasi', compact('jawaban_siswa', 'nilai', 'kkm'));
         } else {
             $jawaban_siswa = session()->get('jawaban_siswa');
             $nilai = EvaluasiNilai::where('user_id', Auth::user()->id)->first();
-            $kkm = kkm::find(1);
+            $kkm = Auth::user()->kode_kelas->kkm;
             if (!$nilai) {
                 return redirect()->route('evaluasi_index');
             } else {
