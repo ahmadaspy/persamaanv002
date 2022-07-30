@@ -548,7 +548,7 @@
                                                     <input id="jawaban_2_3"
                                                         style=" border-radius: 6px; border: 1px solid #ccc; width: 40px;"
                                                         type="text" onchange="jawaban_2_2()">
-                                                    \(+5z+\)
+                                                    \(z+5z+\)
                                                     <input id="jawaban_2_4"
                                                         style=" border-radius: 6px; border: 1px solid #ccc; width: 40px;"
                                                         type="text" onchange="jawaban_2_2()">
@@ -772,6 +772,13 @@
                                                         </tr>
                                                     </table>
                                                 </div>
+                                            </div>
+                                        </div>
+                                        <div class="card" id="cat_4_card_2_2" style="visibility: hidden;">
+                                            <div class="card-body" style="background-color: #e3e3e3">
+                                                <div class="embed-responsive embed-responsive-16by9 ">
+                                                    <iframe class="embed-responsive-item" scrolling="no" title="Contoh test 1" src="https://www.geogebra.org/material/iframe/id/bjdqwysp/width/1366/height/625/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false"  style="border:0px;"> </iframe>
+                                                 </div>
                                             </div>
                                         </div>
 

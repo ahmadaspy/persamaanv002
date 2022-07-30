@@ -506,5 +506,6 @@ function cat_4_step_6_input_1() {
     }
     if (jawaban_1 === '1') {
         document.getElementById('cat_4_card_2').style.visibility = 'visible';
+        document.getElementById('cat_4_card_2_2').style.visibility = 'visible';
     }
 }
