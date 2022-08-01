@@ -66,7 +66,7 @@
                     <b class="logo-abbr"><img src="{{ asset('image/logo/icon_1.png') }}" alt=""> </b>
                     <span class="logo-compact"><img src="{{ asset('image/logo/icon_1.png') }}" alt=""></span>
                     <span class="brand-title">
-                        <img src="{{ asset('image/logo/icon_1.2.png') }}" style="width: 50%" alt="">
+                        <img src="{{ asset('image/logo/icon_1.2.png') }}" style="width: 60%" alt="">
                     </span>
                 </a>
             </div>

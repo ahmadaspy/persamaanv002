@@ -31,7 +31,7 @@
                     <li>
                         <div class="row">
                             <div class="col-sm-3 col-lg-2">
-                                \(3x-2-7z=0\)
+                                \(3x-2y-7z=0\)
                             </div>
                             <div class="col-sm-3 col-lg-2">
                                 persamaan (3)
@@ -336,6 +336,13 @@
                                     </div>
                                     <div class="mt-1">
                                         \(z=1\)
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card" id="step_3_hasil_2" style="visibility: hidden">
+                                <div class="card-body" style="background-color: #e3e3e3">
+                                    <div class="embed-responsive embed-responsive-16by9 ">
+                                        <iframe class="embed-responsive-item" scrolling="no" title="Contoh test 1"  src="https://www.geogebra.org/material/iframe/id/mhhnc2sc/width/700/height/500/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false"  style="border:0px;"> </iframe>
                                     </div>
                                 </div>
                             </div>

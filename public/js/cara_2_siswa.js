@@ -345,6 +345,7 @@ function cara_2_step_4_input_4() {
     if (jawaban_1.value === '1') {
         jawaban_1.style.border = '1px solid green';
         document.getElementById('card_penjelasan').style.visibility = 'visible';
+        document.getElementById('card_penjelasan_2').style.visibility = 'visible';
     } else {
         jawaban_1.style.border = '1px solid red';
     }

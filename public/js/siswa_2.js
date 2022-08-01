@@ -447,6 +447,7 @@ function step_3_input_4() {
          input = document.getElementById('step_3_input_4');
          input.style.border = '1px solid green';
          document.getElementById('step_3_hasil').style.visibility = 'visible';
+         document.getElementById('step_3_hasil_2').style.visibility = 'visible';
      } else {
          input = document.getElementById('step_3_input_4');
          input.style.border = '1px solid red';
