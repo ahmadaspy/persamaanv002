@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Models\KuisMengenalNilai;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use App\Models\kuis_1_nilai;
+
 
 class Mengenal_spltv extends Controller
 {

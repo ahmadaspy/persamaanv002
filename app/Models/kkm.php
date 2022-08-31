@@ -11,6 +11,7 @@ class kkm extends Model
     use HasFactory;
     protected $fillable = [
         'kode_kelas_id',
+        'kuis_mengenal_kkm',
         'kuis_1_kkm',
         'kuis_2_kkm',
         'evaluasi_kkm',

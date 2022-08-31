@@ -20,10 +20,10 @@ class KkmSeeder extends Seeder
         foreach($kode_kelas as $kelas){
             kkm::insert([
                 'kode_kelas_id' => $kelas->id,
-                'kuis_mengenal_kkm' => '80',
-                'kuis_1_kkm' => '80',
-                'kuis_2_kkm' => '80',
-                'evaluasi_kkm' => '80',
+                'kuis_mengenal_kkm' => 80,
+                'kuis_1_kkm' => 80,
+                'kuis_2_kkm' => 80,
+                'evaluasi_kkm' => 80,
             ]);
         }
 

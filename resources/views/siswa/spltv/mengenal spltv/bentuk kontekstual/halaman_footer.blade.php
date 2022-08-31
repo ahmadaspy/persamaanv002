@@ -13,8 +13,8 @@
                     </li>
                     @if (Request()->routeIs('bentuk_spltv_kontekstual'))
                         <li class="page-item">
-                            <a class="page-link" href="{{route('bentuk_spltv_kontekstual')}}" aria-label="Next">
-                                <span aria-hidden="true">Bentuk kontekstual SPLTV</span>
+                            <a class="page-link" href="{{route('kuis_mengenal')}}" aria-label="Next">
+                                <span aria-hidden="true">Kuis</span>
 
                             </a>
                         </li>
