@@ -84,7 +84,11 @@
                 <table class="table table-xs mb-0">
                     <tbody>
                         <tr>
-                            <td>\(2b+5z=16\)</td>
+                            <td>
+                                \(2b+5z=16\)
+                                <br>
+                                \(-3b+z=16\)
+                            </td>
                             <td>
                                 <button class="btn btn-primary" id="bentuk_soal_1_termasuk"
                                     onclick="bentuk_1()">Termasuk</button>
@@ -93,7 +97,13 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>\(5a+6b-8c=9\)</td>
+                            <td>
+                                \(5a+6b-8c=9\)
+                                <br>
+                                \(2a+2b+c=7\)
+                                <br>
+                                \(3a+3b+2c=11\)
+                            </td>
                             <td>
                                 <button class="btn btn-primary" id="bentuk_soal_2_termasuk"
                                     onclick="bentuk_2()">Termasuk</button>
@@ -103,7 +113,13 @@
                         </tr>
 
                         <tr>
-                            <td>\(9r+8b+2q=8\)</td>
+                            <td>
+                                \(9r+8b+2q=8\)
+                                <br>
+                                \(r-2b+q=3\)
+                                <br>
+                                \(6r+2q=10\)
+                            </td>
                             <td>
                                 <button class="btn btn-primary" id="bentuk_soal_3_termasuk"
                                     onclick="bentuk_3()">Termasuk</button>
@@ -112,7 +128,11 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>\(8a+4a-6c=8\)</td>
+                            <td>
+                                \(8a+4a-6c=8\)
+                                <br>
+                                \(2c-c=4\)
+                            </td>
                             <td>
                                 <button class="btn btn-primary" id="bentuk_soal_4_termasuk"
                                     onclick="bentuk_4()">Termasuk</button>

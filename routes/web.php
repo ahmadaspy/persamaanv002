@@ -39,6 +39,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home_page.welcome');
 })->name('home');
+Route::get('/test', function(){
+    return view('siswa.spltv.mengenal spltv.test');
+});
+Route::get('/geogebra', function(){
+    return view('siswa.prototype.geogebra');
+});
 
 Route::get('/logout', [Controller::class, 'logout'])->name('logout_user');
 
@@ -85,6 +91,7 @@ Route::prefix('siswa')->group(function () {
         Route::post('/profile/edit/datadiri', [ProfileSiswaController::class, 'edit_profile'])->middleware('verified')->name('edit_profile');
         Route::post('/profile/edit/katasandi', [ProfileSiswaController::class, 'edit_password'])->middleware('verified')->name('edit_password');
         Route::get('/kikd', [KikdController::class, 'index'])->name('kikd');
+
 
         // route materi spldv
         // Route::prefix('spldv')->group(function () {
