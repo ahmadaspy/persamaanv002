@@ -43,34 +43,37 @@
     </div>
     <!-- Image and text -->
     <nav class="navbar navbar-expand-lg navbar-light bg-primary">
-        <a class="navbar-brand" href="#">
-            <img src="{{ asset('image/logo/icon_1.png') }}" width="30" height="30"
-                class="d-inline-block align-top" alt="">
-            <span class="text-white">SPLTV</span>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <div class="container">
+            <a class="navbar-brand" href="{{route('home')}}">
+                <img src="{{ asset('image/logo/icon_1.png') }}" width="30" height="30"
+                    class="d-inline-block align-top" alt="">
+                <span class="text-white">SPLTV</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
 
-            </ul>
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ route('landing_page') }}" class="btn btn-light">Dashboard</a>
-                    @else
-                        <a href="{{ route('login') }}" class="btn btn-light">Log in</a>
+                </ul>
+                @if (Route::has('login'))
+                    <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                        @auth
+                            <a href="{{ route('landing_page') }}" class="btn btn-light">Dashboard</a>
+                        @else
+                            <a href="{{ route('login') }}" class="btn btn-light">Log in</a>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="btn btn-info">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
+                            @if (Route::has('register'))
+                                <a href="{{ route('register') }}" class="btn btn-info">Register</a>
+                            @endif
+                        @endauth
+                    </div>
+                @endif
+            </div>
         </div>
+
     </nav>
     <section id="banner_1">
         <div class="container">
@@ -109,7 +112,7 @@
             </div>
 
         </div>
-        <img src="{{asset('image/logo/wave1.png')}}" class="bottom-img">
+        <img src="{{ asset('image/logo/wave1.png') }}" class="bottom-img">
     </section>
     <div class="container" id="container_2">
         <div id="isi2" class="row text-center">
@@ -124,22 +127,24 @@
         </div>
         <div class="row text-center">
             <div class="col">
-                <a href="{{route('register')}}" class="btn mb-1 btn-rounded btn-outline-primary" id="button">Register</a>
+                <a href="{{ route('register') }}" class="btn mb-1 btn-rounded btn-outline-primary"
+                    id="button">Register</a>
             </div>
             <div class="col">
-                <a href="{{route('login')}}" class="btn mb-1 btn-rounded btn-outline-primary" id="button">Login</a>
+                <a href="{{ route('login') }}" class="btn mb-1 btn-rounded btn-outline-primary"
+                    id="button">Login</a>
             </div>
         </div>
     </div>
     <section id="footer">
-        <img src="{{asset('image/logo/wave2.png')}}" class="footer-img">
+        <img src="{{ asset('image/logo/wave2.png') }}" class="footer-img">
         <div id="find-me"class="row text-center">
             <p>Find me on social media</p>
         </div>
         <div id="social-media" class="text-center">
-            <a href=""><img src="{{asset('image/logo/instagram.png')}}" alt="instagram"></a>
-            <a href=""><img src="{{asset('image/logo/twitter.png')}}" alt="twitter"></a>
-            <a href=""><img src="{{asset('image/logo/Youtube.png')}}" alt="youtube"></a>
+            <a href=""><img src="{{ asset('image/logo/instagram.png') }}" alt="instagram"></a>
+            <a href=""><img src="{{ asset('image/logo/twitter.png') }}" alt="twitter"></a>
+            <a href=""><img src="{{ asset('image/logo/Youtube.png') }}" alt="youtube"></a>
         </div>
         <div id="copyright" class="row text-center">
             <span>Copyright &copy; Ahmad Aspiannoor</span>

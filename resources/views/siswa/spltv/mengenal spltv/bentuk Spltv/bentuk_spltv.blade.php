@@ -1,7 +1,5 @@
 @extends('siswa.template.main')
-@section('script_atas')
-    <script src="{{ asset('js/siswa_bentuk.js') }}"></script>
-@endsection
+
 @section('content')
     <div class="card shadow">
         <div class="card-header">
@@ -41,7 +39,7 @@
                     }$$
                 </div>
             </div>
-            <div class="card">
+            {{-- <div class="card">
                 <div class="card-body">
                     <p>sistem persamaan linear tiga variabel hanya dapat dilihat dari bentuk 3 dimensi karena sistem persamaan linear terdiri dari 3 titik yaitu x, y, dan z.
                         maka dari pada itu salah satu persamaan memiliki bidang datar pada penggambaran 3 dimensi. <br>
@@ -51,7 +49,6 @@
                 <div class="card">
                     <div class="card-body">
                         <p>salah satu persamaan di dalam sistem persamaan linear membentuk seperti dibawah :</p>
-                        {{-- <iframe scrolling="no" title="Pengenalan SPLTV" src="https://www.geogebra.org/material/iframe/id/qpnusv7m/width/900/height/500/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false" width="900px" height="500px" style="border:0px;" allowfullscreen> </iframe> --}}
                         <div class="d-none d-sm-block d-md-none">
                             <span class="font-italic">miringkan hp anda</span>
                         </div>
@@ -143,7 +140,7 @@
                     </tbody>
 
                 </table>
-            </div>
+            </div> --}}
         </div>
     </div>
     @include('siswa.spltv.mengenal spltv.bentuk Spltv.halaman_footer')

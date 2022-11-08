@@ -18,17 +18,25 @@
                     ">
                         <a class="page-link" href="{{ route('spltv_subtitusi_1') }}">1</a>
                     </li>
+                    <li
+                        class="page-item
+                    @if (Request()->routeIs('spltv_subtitusi_2'))
+                        active
+                    @endif
+                    ">
+                        <a class="page-link" href="{{ route('spltv_subtitusi_2') }}">2</a>
+                    </li>
                     @php
                         use App\Models\MariMencobaSpltvSubtitusi;
                         $mari_mencoba = MariMencobaSpltvSubtitusi::first();
                     @endphp
                     <li class="page-item
-                    @if (Request()->routeIs('spltv_subtitusi_2'))
+                    @if (Request()->routeIs('spltv_subtitusi_3'))
                         active
                     @endif">
-                        <a class="page-link" href="{{ route('spltv_subtitusi_2', [$mari_mencoba->id, 1]) }}">2</a>
+                        <a class="page-link" href="{{ route('spltv_subtitusi_3', [$mari_mencoba->id, 1]) }}">3</a>
                     </li>
-                    @if (Request()->routeIs('spltv_subtitusi_2'))
+                    @if (Request()->routeIs('spltv_subtitusi_3'))
                         <li class="page-item">
                             <a class="page-link" href="{{route('spltv_eliminasi_1')}}" aria-label="Next">
                                 <span aria-hidden="true">Metode Eliminasi</span>

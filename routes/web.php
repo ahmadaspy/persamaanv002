@@ -123,7 +123,12 @@ Route::prefix('siswa')->group(function () {
             Route::get('/menyelesaikanspltv', [spltv::class, 'index'])->name('spltv_index');
             Route::prefix('/mengenal')->group(function () {
                 Route::get('/pengertian-spltv', [mengenal_spltv::class, 'pengertian'])->name('pengertian_spltv');
-                Route::get('/bentuk-spltv', [mengenal_spltv::class, 'bentuk'])->name('bentuk_spltv');
+                Route::prefix('/bentukspltv')->group(function(){
+                    Route::get('/1', [mengenal_spltv::class, 'bentuk'])->name('bentuk_spltv');
+                    Route::get('/2', [mengenal_spltv::class, 'bentuk_2'])->name('bentuk_spltv_2');
+                    Route::get('/3', [mengenal_spltv::class, 'bentuk_3'])->name('bentuk_spltv_3');
+                    Route::get('/4', [mengenal_spltv::class, 'bentuk_4'])->name('bentuk_spltv_4');
+                });
                 Route::get('/bentuk-spltv/kontekstual', [mengenal_spltv::class, 'keontekstual'])->name('bentuk_spltv_kontekstual');
                 Route::get('/kuis', [mengenal_spltv::class, 'kuis'])->name('kuis_mengenal');
                 Route::post('/kuis-post', [mengenal_spltv::class, 'kuis_mengenal_post'])->name('kuis_mengenal_post');
@@ -131,9 +136,10 @@ Route::prefix('siswa')->group(function () {
             });
             Route::prefix('/metodesubtitusi')->group(function () {
                 Route::get('/1', [SpltvSubtitusi::class, 'spltv_subtitusi_1'])->name('spltv_subtitusi_1');
-                Route::get('/2/{id}/{nomor}', [SpltvSubtitusi::class, 'spltv_subtitusi_2'])->name('spltv_subtitusi_2');
-                Route::post('/2/pembahasan', [SpltvSubtitusi::class, 'spltv_subtitusi_2_pembahasan'])->name('spltv_subtitusi_2_pembahasan');
-                Route::post('/2/{nomor}', [SpltvSubtitusi::class, 'spltv_subtitusi_2_post'])->name('spltv_subtitusi_2_post');
+                Route::get('/2', [SpltvSubtitusi::class, 'spltv_subtitusi_2'])->name('spltv_subtitusi_2');
+                Route::get('/3/{id}/{nomor}', [SpltvSubtitusi::class, 'spltv_subtitusi_3'])->name('spltv_subtitusi_3');
+                Route::post('/3/pembahasan', [SpltvSubtitusi::class, 'spltv_subtitusi_3_pembahasan'])->name('spltv_subtitusi_3_pembahasan');
+                Route::post('/3/{nomor}', [SpltvSubtitusi::class, 'spltv_subtitusi_3_post'])->name('spltv_subtitusi_3_post');
             });
             Route::prefix('/metodeeliminasi')->group(function () {
                 Route::get('/1', [SpltvEliminasiController::class, 'spltv_eliminasi_1'])->name('spltv_eliminasi_1');

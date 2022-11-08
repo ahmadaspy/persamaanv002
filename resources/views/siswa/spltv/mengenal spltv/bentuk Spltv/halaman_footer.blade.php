@@ -11,14 +11,38 @@
                     ">
                         <a class="page-link" href="{{ route('bentuk_spltv') }}">1</a>
                     </li>
-                    @if (Request()->routeIs('bentuk_spltv'))
+                    <li
+                        class="page-item
+                    @if (Request()->routeIs('bentuk_spltv_2'))
+                        active
+                    @endif
+                    ">
+                        <a class="page-link" href="{{ route('bentuk_spltv_2') }}">2</a>
+                    </li>
+                    <li
+                        class="page-item
+                    @if (Request()->routeIs('bentuk_spltv_3'))
+                        active
+                    @endif
+                    ">
+                        <a class="page-link" href="{{ route('bentuk_spltv_3') }}">3</a>
+                    </li>
+                    <li
+                        class="page-item
+                    @if (Request()->routeIs('bentuk_spltv_4'))
+                        active
+                    @endif
+                    ">
+                        <a class="page-link" href="{{ route('bentuk_spltv_4') }}">4</a>
+                    </li>
+                    {{-- @if (Request()->routeIs('bentuk_spltv_2'))
                         <li class="page-item">
                             <a class="page-link" href="{{route('bentuk_spltv_kontekstual')}}" aria-label="Next">
                                 <span aria-hidden="true">Bentuk kontekstual SPLTV</span>
 
                             </a>
                         </li>
-                    @endif
+                    @endif --}}
                 </ul>
             </nav>
         </div>

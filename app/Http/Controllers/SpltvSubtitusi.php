@@ -12,18 +12,22 @@ class SpltvSubtitusi extends Controller
     {
         return view('siswa.spltv.metode subtitusi.halaman_1_subtitusi');
     }
-    public function spltv_subtitusi_2($id, $nomor)
+    public function spltv_subtitusi_2()
+    {
+        return view('siswa.spltv.metode subtitusi.halaman_2_subtitusi');
+    }
+    public function spltv_subtitusi_3($id, $nomor)
     {
         $soal = MariMencobaSpltvSubtitusi::find($id);
         $soal_all = MariMencobaSpltvSubtitusi::all();
         if (session('jawaban_siswa')) {
             $jawaban_siswa = session()->get('jawaban_siswa');
             $percobaan = session()->get('percobaan');
-            return view('siswa.spltv.metode subtitusi.halaman_2_subtitusi', compact('soal', 'soal_all', 'nomor', 'jawaban_siswa', 'percobaan'));
+            return view('siswa.spltv.metode subtitusi.halaman_3_subtitusi', compact('soal', 'soal_all', 'nomor', 'jawaban_siswa', 'percobaan'));
         } else {
             $percobaan = 0;
             $jawaban_siswa = null;
-            return view('siswa.spltv.metode subtitusi.halaman_2_subtitusi', compact('soal', 'soal_all', 'nomor', 'jawaban_siswa', 'percobaan'));
+            return view('siswa.spltv.metode subtitusi.halaman_3_subtitusi', compact('soal', 'soal_all', 'nomor', 'jawaban_siswa', 'percobaan'));
         }
     }
     public function spltv_subtitusi_2_post(Request $request, $nomor)
