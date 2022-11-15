@@ -29,6 +29,10 @@ class Mengenal_spltv extends Controller
     {
         return view('siswa.spltv.mengenal spltv.bentuk Spltv.bentuk_spltv_4');
     }
+    public function bentuk_5()
+    {
+        return view('siswa.spltv.mengenal spltv.bentuk Spltv.bentuk_spltv_5');
+    }
     public function keontekstual(){
         return view('siswa.spltv.mengenal spltv.bentuk kontekstual.bentuk_konteks');
     }

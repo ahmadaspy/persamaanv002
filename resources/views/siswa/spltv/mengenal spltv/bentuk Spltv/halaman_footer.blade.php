@@ -35,6 +35,14 @@
                     ">
                         <a class="page-link" href="{{ route('bentuk_spltv_4') }}">4</a>
                     </li>
+                    <li
+                        class="page-item
+                    @if (Request()->routeIs('bentuk_spltv_5'))
+                        active
+                    @endif
+                    ">
+                        <a class="page-link" href="{{ route('bentuk_spltv_5') }}">5</a>
+                    </li>
                     {{-- @if (Request()->routeIs('bentuk_spltv_2'))
                         <li class="page-item">
                             <a class="page-link" href="{{route('bentuk_spltv_kontekstual')}}" aria-label="Next">

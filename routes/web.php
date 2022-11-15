@@ -128,6 +128,7 @@ Route::prefix('siswa')->group(function () {
                     Route::get('/2', [mengenal_spltv::class, 'bentuk_2'])->name('bentuk_spltv_2');
                     Route::get('/3', [mengenal_spltv::class, 'bentuk_3'])->name('bentuk_spltv_3');
                     Route::get('/4', [mengenal_spltv::class, 'bentuk_4'])->name('bentuk_spltv_4');
+                    Route::get('/5', [mengenal_spltv::class, 'bentuk_5'])->name('bentuk_spltv_5');
                 });
                 Route::get('/bentuk-spltv/kontekstual', [mengenal_spltv::class, 'keontekstual'])->name('bentuk_spltv_kontekstual');
                 Route::get('/kuis', [mengenal_spltv::class, 'kuis'])->name('kuis_mengenal');
