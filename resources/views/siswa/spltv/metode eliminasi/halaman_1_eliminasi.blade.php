@@ -1,6 +1,7 @@
 @extends('siswa.template.main')
 @section('script_atas')
     <script src="{{ asset('js/siswa_2.js') }}"></script>
+    <script src="{{asset('js/halaman_1_siswa_eliminasi.js')}}"></script>
 @endsection
 @section('content')
     <div class="card shadow mb-4">
@@ -125,8 +126,11 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="row float-right">
+                                    <button class="btn btn-primary" id="btn-lanjut-1" onclick="lanjut(2)">Lanjut</button>
+                                </div>
                             </li>
-                            <li class="list-group-item">
+                            <li class="list-group-item" id="list-2" style="visibility: hidden">
                                 <div class="row">
                                     <div class="col-1 text-primary">2.</div>
                                     <div class="col text-primary">
@@ -157,8 +161,11 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="row float-right">
+                                    <button class="btn btn-primary" id="btn-lanjut-2" onclick="lanjut(3)">Lanjut</button>
+                                </div>
                             </li>
-                            <li class="list-group-item">
+                            <li class="list-group-item" id="list-3" style="visibility: hidden">
                                 <div class="row">
                                     <div class="col-1 text-primary">3.</div>
                                     <div class="col text-primary">
@@ -206,7 +213,7 @@
                     </div>
                 </div>
             </div>
-            @include('siswa.spltv.metode eliminasi.contoh_soal')
+
         </div>
     </div>
     @include('siswa.spltv.metode eliminasi.halaman_footer_eliminasi')

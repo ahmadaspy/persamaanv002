@@ -144,9 +144,10 @@ Route::prefix('siswa')->group(function () {
             });
             Route::prefix('/metodeeliminasi')->group(function () {
                 Route::get('/1', [SpltvEliminasiController::class, 'spltv_eliminasi_1'])->name('spltv_eliminasi_1');
-                Route::get('/2/{id}/{nomor}', [SpltvEliminasiController::class, 'spltv_eliminasi_2'])->name('spltv_eliminasi_2');
-                Route::post('/2/pembahasan', [SpltvEliminasiController::class, 'spltv_eliminasi_2_pembahasan'])->name('spltv_eliminasi_2_pembahasan');
-                Route::post('/2/{nomor}', [SpltvEliminasiController::class, 'spltv_eliminasi_2_post'])->name('spltv_eliminasi_2_post');
+                Route::get('/2', [SpltvEliminasiController::class, 'spltv_eliminasi_2'])->name('spltv_eliminasi_2');
+                Route::get('/3/{id}/{nomor}', [SpltvEliminasiController::class, 'spltv_eliminasi_3'])->name('spltv_eliminasi_3');
+                Route::post('/3/pembahasan', [SpltvEliminasiController::class, 'spltv_eliminasi_3_pembahasan'])->name('spltv_eliminasi_3_pembahasan');
+                Route::post('/3/{nomor}', [SpltvEliminasiController::class, 'spltv_eliminasi_3_post'])->name('spltv_eliminasi_3_post');
             });
             Route::prefix('/metodegabungan')->group(function () {
                 Route::get('/1', [SpltvGabunganController::class, 'spltv_gabungan_1'])->name('spltv_gabungan_1');

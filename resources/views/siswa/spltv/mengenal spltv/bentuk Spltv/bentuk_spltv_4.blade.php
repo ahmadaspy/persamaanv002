@@ -182,7 +182,8 @@
 
                                             </div>
                                         </div>
-                                        <div class="card" id="card_4" style="background-color: #e3e3e3; visibility: hidden ">
+                                        <div class="card" id="card_4"
+                                            style="background-color: #e3e3e3; visibility: hidden ">
                                             <div class="card-header">
                                                 <h6>4. Menentukan bidang di dalam 3 dimensi</h6>
                                             </div>
@@ -192,10 +193,15 @@
                                                         <div class="card">
                                                             <div class="card-body">
                                                                 <p>
-                                                                    Buatlah sebuah bidang dari persamaan \(4x+2y+z=8\) dengan titik yang kita dapatkan di atas menggunakan geogebra. <br>
-                                                                    Titik A merupkan titik yang berada di sumbu \(x\) yang dilalui persamaan. <br>
-                                                                    Titik B merupkan titik yang berada di sumbu \(y\) yang dilalui persamaan. <br>
-                                                                    Titik C merupkan titik yang berada di sumbu \(z\) yang dilalui persamaan. <br>
+                                                                    Buatlah sebuah bidang dari persamaan \(4x+2y+z=8\)
+                                                                    dengan titik yang kita dapatkan di atas menggunakan
+                                                                    geogebra. <br>
+                                                                    Titik A merupkan titik yang berada di sumbu \(x\) yang
+                                                                    dilalui persamaan. <br>
+                                                                    Titik B merupkan titik yang berada di sumbu \(y\) yang
+                                                                    dilalui persamaan. <br>
+                                                                    Titik C merupkan titik yang berada di sumbu \(z\) yang
+                                                                    dilalui persamaan. <br>
                                                                 </p>
                                                             </div>
                                                         </div>
@@ -223,24 +229,35 @@
                                                                     </div>
                                                                     <div class="modal-body">
                                                                         <ol>
-                                                                            <li>1. memakai icon cusor atau move untuk memindahkan titik atau interaksi lainnya
-                                                                                <img src="{{asset('image/gif/1.gif')}}" alt="" class="img-fluid">
+                                                                            <li>1. memakai icon cusor atau move untuk
+                                                                                memindahkan titik atau interaksi lainnya
+                                                                                <img src="{{ asset('image/gif/1.gif') }}"
+                                                                                    alt="" class="img-fluid">
                                                                             </li>
-                                                                            <li>2. Rotate 3D Graphic view untuk memutar tampilan
-                                                                                <img src="{{asset('image/gif/2.gif')}}" alt="" class="img-fluid">
+                                                                            <li>2. Rotate 3D Graphic view untuk memutar
+                                                                                tampilan
+                                                                                <img src="{{ asset('image/gif/2.gif') }}"
+                                                                                    alt="" class="img-fluid">
                                                                             </li>
-                                                                            <li>3. Move Graphic View untuk memindahkan tampilan grafik atau memanjang pendekan sumbu x,y atau z
-                                                                                <img src="{{asset('image/gif/3.gif')}}" alt="" class="img-fluid">
+                                                                            <li>3. Move Graphic View untuk memindahkan
+                                                                                tampilan grafik atau memanjang pendekan
+                                                                                sumbu x,y atau z
+                                                                                <img src="{{ asset('image/gif/3.gif') }}"
+                                                                                    alt="" class="img-fluid">
                                                                             </li>
                                                                             <li>4. Zoom in untuk memperbesar tampilan
-                                                                                <img src="{{asset('image/gif/4.gif')}}" alt="" class="img-fluid">
+                                                                                <img src="{{ asset('image/gif/4.gif') }}"
+                                                                                    alt="" class="img-fluid">
                                                                             </li>
                                                                             <li>5. Zoom out untuk memperkecil tampilan
-                                                                                <img src="{{asset('image/gif/5.gif')}}" alt="" class="img-fluid">
+                                                                                <img src="{{ asset('image/gif/5.gif') }}"
+                                                                                    alt="" class="img-fluid">
                                                                             </li>
                                                                             <li>
-                                                                                6. Plane through 3 point untuk membuat sebuah bidang dalam 3 titik
-                                                                                <img src="{{asset('image/gif/6.gif')}}" alt="" class="img-fluid">
+                                                                                6. Plane through 3 point untuk membuat
+                                                                                sebuah bidang dalam 3 titik
+                                                                                <img src="{{ asset('image/gif/6.gif') }}"
+                                                                                    alt="" class="img-fluid">
                                                                             </li>
                                                                         </ol>
                                                                     </div>
@@ -257,6 +274,9 @@
 
                                                 <div class="row mt-3">
                                                     <div class="col">
+                                                        <div class="d-none d-sm-block d-md-none">
+                                                            <span class="font-italic">miringkan hp anda</span>
+                                                        </div>
                                                         <div class="embed-responsive embed-responsive-16by9">
                                                             <iframe class="embed-responsive-item"
                                                                 src="https://www.geogebra.org/material/iframe/id/mm4agmax/width/854/height/480/border/888888/sfsb/true/smb/false/stb/true/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false"
@@ -268,23 +288,28 @@
                                                     <div class="col">
                                                         <div class="row float-right">
                                                             <div class="col">
-                                                                <button class="btn btn-primary" onclick="kesimpulan()">Kesimpulan</button>
+                                                                <button class="btn btn-primary"
+                                                                    onclick="kesimpulan()">Kesimpulan</button>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="card" id="card_5" style="background-color: #e3e3e3; visibility: hidden;">
+                                        <div class="card" id="card_5"
+                                            style="background-color: #e3e3e3; visibility: hidden;">
                                             <div class="card-header">
                                                 <h6>Kesimpulan</h6>
                                             </div>
                                             <div class="card-body">
                                                 <p>
-                                                    persamaan \(4x+2y+z=8\) membuat sebuah bidang dalam ruang 3 dimensi, hal itu karena persamaan tersebut mempunyai tiga variabel.
-                                                    apabila kalian masukan angka variabel apapun ke dalam persamaan tersebut, maka titik tersebut akan berada
+                                                    persamaan \(4x+2y+z=8\) membuat sebuah bidang dalam ruang 3 dimensi, hal
+                                                    itu karena persamaan tersebut mempunyai tiga variabel.
+                                                    apabila kalian masukan angka variabel apapun ke dalam persamaan
+                                                    tersebut, maka titik tersebut akan berada
                                                     dalam bidang yang dibentuk oleh persamaan tersebut. <br>
-                                                    salah satu cara untuk menentukan bidang yang memenuhi persamaan adalah membuat tiga titik yang berada pada masing - masing sumbu yaitu sumbu
+                                                    salah satu cara untuk menentukan bidang yang memenuhi persamaan adalah
+                                                    membuat tiga titik yang berada pada masing - masing sumbu yaitu sumbu
                                                     \(x\), \(y\), dan \(z\), yang dilalui oleh bidang persamaan tersebut.
                                                 </p>
                                             </div>

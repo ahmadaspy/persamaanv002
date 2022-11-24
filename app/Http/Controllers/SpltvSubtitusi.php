@@ -30,7 +30,7 @@ class SpltvSubtitusi extends Controller
             return view('siswa.spltv.metode subtitusi.halaman_3_subtitusi', compact('soal', 'soal_all', 'nomor', 'jawaban_siswa', 'percobaan'));
         }
     }
-    public function spltv_subtitusi_2_post(Request $request, $nomor)
+    public function spltv_subtitusi_3_post(Request $request, $nomor)
     {
         $jawaban = MariMencobaSpltvSubtitusi::find($request->id);
         if ($jawaban->jawaban_3 != null) {

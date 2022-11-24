@@ -12,7 +12,11 @@ class SpltvEliminasiController extends Controller
     {
         return view('siswa.spltv.metode eliminasi.halaman_1_eliminasi');
     }
-    public function spltv_eliminasi_2($id, $nomor)
+    public function spltv_eliminasi_2()
+    {
+        return view('siswa.spltv.metode eliminasi.halaman_2_eliminasi');
+    }
+    public function spltv_eliminasi_3($id, $nomor)
     {
         $soal = MariMencobaSpltvEliminasi::find($id);
         $soal_all = MariMencobaSpltvEliminasi::all();
@@ -26,7 +30,7 @@ class SpltvEliminasiController extends Controller
             return view('siswa.spltv.metode eliminasi.halaman_2_eliminasi', compact('soal', 'soal_all', 'nomor', 'jawaban_siswa', 'percobaan'));
         }
     }
-    public function spltv_eliminasi_2_post(Request $request, $nomor)
+    public function spltv_eliminasi_3_post(Request $request, $nomor)
     {
         $jawaban = MariMencobaSpltvEliminasi::find($request->id);
         if ($jawaban->jawaban_3 != null) {

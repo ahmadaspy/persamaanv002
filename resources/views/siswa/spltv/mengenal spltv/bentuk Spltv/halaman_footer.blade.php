@@ -43,14 +43,14 @@
                     ">
                         <a class="page-link" href="{{ route('bentuk_spltv_5') }}">5</a>
                     </li>
-                    {{-- @if (Request()->routeIs('bentuk_spltv_2'))
+                    @if (Request()->routeIs('bentuk_spltv_5'))
                         <li class="page-item">
                             <a class="page-link" href="{{route('bentuk_spltv_kontekstual')}}" aria-label="Next">
                                 <span aria-hidden="true">Bentuk kontekstual SPLTV</span>
 
                             </a>
                         </li>
-                    @endif --}}
+                    @endif
                 </ul>
             </nav>
         </div>

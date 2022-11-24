@@ -26,9 +26,15 @@
                     @if (Request()->routeIs('spltv_eliminasi_2'))
                         active
                     @endif">
-                        <a class="page-link" href="{{ route('spltv_eliminasi_2', [$mari_mencoba->id, 1]) }}">2</a>
+                        <a class="page-link" href="{{ route('spltv_eliminasi_2')}}">2</a>
                     </li>
-                    @if (Request()->routeIs('spltv_eliminasi_2'))
+                    <li class="page-item
+                    @if (Request()->routeIs('spltv_eliminasi_3'))
+                        active
+                    @endif">
+                        <a class="page-link" href="{{ route('spltv_eliminasi_3', [$mari_mencoba->id, 1]) }}">3</a>
+                    </li>
+                    @if (Request()->routeIs('spltv_eliminasi_3'))
                         <li class="page-item">
                             <a class="page-link" href="{{route('spltv_gabungan_1')}}" aria-label="Next">
                                 <span aria-hidden="true">Metode Gabungan</span>
