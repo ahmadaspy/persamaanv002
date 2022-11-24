@@ -382,7 +382,7 @@
                             <li class="list-group-item" id="list-5" style="visibility: hidden">
 
                                     <div class="embed-responsive embed-responsive-16by9 ">
-                                        <iframe class="embed-responsive-item" scrolling="no" title="Contoh test 1" src="https://www.geogebra.org/material/iframe/id/puzhe3be/width/700/height/500/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false"  style="border:0px;" allowfullscreen> </iframe>
+                                        <iframe class="embed-responsive-item" scrolling="no" title="Contoh test 1" src="https://www.geogebra.org/material/iframe/id/wyabs7eq/width/854/height/480/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false"  style="border:0px;" allowfullscreen> </iframe>
                                     </div>
 
 
