@@ -200,7 +200,7 @@
                                         <div class="card l">
                                             <div class="card-body" style="background-color: #e3e3e3">
                                                 <div class="embed-responsive embed-responsive-16by9">
-                                                    <iframe class="embed-responsive-item" scrolling="no" title="Contoh test 1" src="https://www.geogebra.org/material/iframe/id/z26zca6c/width/700/height/500/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false"  style="border:0px;" frameborder="0" allowfullscreen="" webkitallowfullscreen="true" mozallowfullscreen="true" oallowfullscreen="true" msallowfullscreen="true"> </iframe>
+                                                    <iframe class="embed-responsive-item" scrolling="no" title="Contoh test 1" src="https://www.geogebra.org/material/iframe/id/dkpy7aqc/width/854/height/480/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false"  style="border:0px;" frameborder="0" allowfullscreen="" webkitallowfullscreen="true" mozallowfullscreen="true" oallowfullscreen="true" msallowfullscreen="true"> </iframe>
                                                 </div>
 
                                             </div>

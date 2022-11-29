@@ -151,9 +151,10 @@ Route::prefix('siswa')->group(function () {
             });
             Route::prefix('/metodegabungan')->group(function () {
                 Route::get('/1', [SpltvGabunganController::class, 'spltv_gabungan_1'])->name('spltv_gabungan_1');
-                Route::get('/2/{id}/{nomor}', [SpltvGabunganController::class, 'spltv_gabungan_2'])->name('spltv_gabungan_2');
-                Route::post('/2/pembahasan', [SpltvGabunganController::class, 'spltv_gabungan_2_pembahasan'])->name('spltv_gabungan_2_pembahasan');
-                Route::post('/2/{nomor}', [SpltvGabunganController::class, 'spltv_gabungan_2_post'])->name('spltv_gabungan_2_post');
+                Route::get('/2', [SpltvGabunganController::class, 'spltv_gabungan_2'])->name('spltv_gabungan_2');
+                Route::get('/3/{id}/{nomor}', [SpltvGabunganController::class, 'spltv_gabungan_3'])->name('spltv_gabungan_3');
+                Route::post('/3/pembahasan', [SpltvGabunganController::class, 'spltv_gabungan_3_pembahasan'])->name('spltv_gabungan_3_pembahasan');
+                Route::post('/3/{nomor}', [SpltvGabunganController::class, 'spltv_gabungan_3_post'])->name('spltv_gabungan_3_post');
             });
             Route::prefix('/kuis')->group(function () {
                 Route::get('/pertama', [KuisPertamaController::class, 'kuis_index_page'])->name('kuis_index_page');

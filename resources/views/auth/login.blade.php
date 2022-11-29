@@ -40,7 +40,7 @@
         <div class="container h-100">
             <div class="row justify-content-center h-100">
                 <div class="col-xl-6">
-                    <div class="form-input-content">
+                    <div class="form-input-content p-3">
                         <div class="card login-form mb-0">
                             <div class="card-body pt-5">
                                 {{-- <a class="text-center" href="index.html"> <h4>Rosella</h4></a> --}}

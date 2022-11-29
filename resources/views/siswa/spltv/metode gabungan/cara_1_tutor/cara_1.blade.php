@@ -5,11 +5,15 @@
     <div class="card-body">
         <div class="basic-list-group">
             <ul class="list-group">
-                <li class="list-group-item"> <div class="text-primary">1. Pilih persamaan paling sederhana seperti variabel yang mempunyai koefisien 1 dan ubah menjadi \(x=⋯\) atau \(y=⋯\) atau \(z=⋯\)</div>
+                <li class="list-group-item">
+                    <div class="text-primary">1. Pilih persamaan paling sederhana seperti variabel yang mempunyai
+                        koefisien 1 dan ubah menjadi \(x=⋯\) atau \(y=⋯\) atau \(z=⋯\)</div>
 
                     <div class="card">
                         <div class="card-body">
-                            <p>semisal ada persamaan (1) \(x+2y-z=-1\), persamaan (2) \(x-5y+6z=-1\), persamaan (3) \(2x+3y-4z=4\) maka pilihlah persamaan yang mempunyai variabel koefisien 1 seperti persamaan (1) atau persamaan (2)</p>
+                            <p>semisal ada persamaan (1) \(x+2y-z=-1\), persamaan (2) \(x-5y+6z=-1\), persamaan (3)
+                                \(2x+3y-4z=4\) maka pilihlah persamaan yang mempunyai variabel koefisien 1 seperti
+                                persamaan (1) atau persamaan (2)</p>
                             <div class="card" style="background-color: #e3e3e3">
                                 <div class="card-body" style="overflow-x: scroll;">
                                     <div class="mt-2">
@@ -82,7 +86,8 @@
                             <p>persamaan (4) dan persamaan (5) akan kita lakukan eliminasi salah satu variabel</p>
                             <div class="card"style="background-color: #e3e3e3">
                                 <div class="card-body" style="overflow-x: scroll;">
-                                    $$\begin{matrix} -7y+7z=0 & |\times 1| & -7y+7z=0 & \\ -y-2z=6 & |\times 7| & \underline{-7y-14z=42} & - \end{matrix}$$
+                                    $$\begin{matrix} -7y+7z=0 & |\times 1| & -7y+7z=0 & \\ -y-2z=6 & |\times 7| &
+                                    \underline{-7y-14z=42} & - \end{matrix}$$
                                     $$ 21z=-42 $$
                                     $$ z={-42 \over 21} $$
                                     $$ z=-2 $$
@@ -97,8 +102,9 @@
                     </div>
 
                     <div class="card">
-                        <div class="card-body" >
-                            <p>dengan didapatkannya variabel z maka kita bisa subtitusikan ke persamaan (4) atau persamaan (5)</p>
+                        <div class="card-body">
+                            <p>dengan didapatkannya variabel z maka kita bisa subtitusikan ke persamaan (4) atau
+                                persamaan (5)</p>
                             <div class="card" style="background-color: #e3e3e3">
                                 <div class="card-body" style="overflow-x: scroll;">
                                     <div class="mt-2">
@@ -171,7 +177,11 @@
                             <div class="card" style="background-color: #e3e3e3">
                                 <div class="card-body" style="overflow-x: scroll;">
                                     <div class="embed-responsive embed-responsive-16by9">
-                                        <iframe class="embed-responsive-item" scrolling="no" title="Contoh test 1" src="https://www.geogebra.org/material/iframe/id/sf69bwfm/width/800/height/600/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false"  style="border:0px;" frameborder="0" allowfullscreen="" webkitallowfullscreen="true" mozallowfullscreen="true" oallowfullscreen="true" msallowfullscreen="true"> </iframe>
+                                        <iframe class="embed-responsive-item" scrolling="no" title="Contoh test 1"
+                                            src="https://www.geogebra.org/material/iframe/id/uqwwa4a8/width/854/height/480/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false"
+                                            style="border:0px;" frameborder="0" allowfullscreen=""
+                                            webkitallowfullscreen="true" mozallowfullscreen="true"
+                                            oallowfullscreen="true" msallowfullscreen="true"> </iframe>
                                     </div>
                                 </div>
                             </div>

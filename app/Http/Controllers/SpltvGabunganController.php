@@ -12,21 +12,25 @@ class SpltvGabunganController extends Controller
     {
         return view('siswa.spltv.metode gabungan.halaman_1_gabungan');
     }
-    public function spltv_gabungan_2($id, $nomor)
+    public function spltv_gabungan_2()
+    {
+        return view('siswa.spltv.metode gabungan.halaman_2_gabungan');
+    }
+    public function spltv_gabungan_3($id, $nomor)
     {
         $soal = MariMencobaSpltvGabungan::find($id);
         $soal_all = MariMencobaSpltvGabungan::all();
         if (session('jawaban_siswa')) {
             $jawaban_siswa = session()->get('jawaban_siswa');
             $percobaan = session()->get('percobaan');
-            return view('siswa.spltv.metode gabungan.halaman_2_gabungan', compact('soal', 'soal_all', 'nomor', 'jawaban_siswa', 'percobaan'));
+            return view('siswa.spltv.metode gabungan.halaman_3_gabungan', compact('soal', 'soal_all', 'nomor', 'jawaban_siswa', 'percobaan'));
         } else {
             $percobaan = 0;
             $jawaban_siswa = null;
-            return view('siswa.spltv.metode gabungan.halaman_2_gabungan', compact('soal', 'soal_all', 'nomor', 'jawaban_siswa', 'percobaan'));
+            return view('siswa.spltv.metode gabungan.halaman_3_gabungan', compact('soal', 'soal_all', 'nomor', 'jawaban_siswa', 'percobaan'));
         }
     }
-    public function spltv_gabungan_2_post(Request $request, $nomor)
+    public function spltv_gabungan_3_post(Request $request, $nomor)
     {
         $jawaban = MariMencobaSpltvGabungan::find($request->id);
         if ($jawaban->jawaban_3 != null) {
@@ -68,7 +72,7 @@ class SpltvGabunganController extends Controller
             return redirect()->back()->with(compact('jawaban', 'soal_all', 'nomor', 'jawaban_siswa', 'percobaan'))->withInput()->with('benar', 'kamu berhasil');
         }
     }
-    public function spltv_gabungan_2_pembahasan(Request $request)
+    public function spltv_gabungan_3_pembahasan(Request $request)
     {
         $pembahasan_soal = MariMencobaSpltvGabungan::find($request->id);
         $nomor = $request->nomor;

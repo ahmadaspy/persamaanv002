@@ -18,17 +18,25 @@
                     ">
                         <a class="page-link" href="{{ route('spltv_gabungan_1') }}">1</a>
                     </li>
+                    <li
+                        class="page-item
+                    @if (Request()->routeIs('spltv_gabungan_2'))
+                        active
+                    @endif
+                    ">
+                        <a class="page-link" href="{{ route('spltv_gabungan_2') }}">2</a>
+                    </li>
                     @php
                         use App\Models\MariMencobaSpltvGabungan;
                         $mari_mencoba = MariMencobaSpltvGabungan::first();
                     @endphp
                     <li class="page-item
-                    @if (Request()->routeIs('spltv_gabungan_2'))
+                    @if (Request()->routeIs('spltv_gabungan_3'))
                         active
                     @endif">
-                        <a class="page-link" href="{{ route('spltv_gabungan_2', [$mari_mencoba->id, 1]) }}">2</a>
+                        <a class="page-link" href="{{ route('spltv_gabungan_3', [$mari_mencoba->id, 1]) }}">3</a>
                     </li>
-                    @if (Request()->routeIs('spltv_gabungan_2'))
+                    @if (Request()->routeIs('spltv_gabungan_3'))
                         <li class="page-item">
                             <a class="page-link" href="{{route('kuis_index_page')}}" aria-label="Next">
                                 <span aria-hidden="true">Kuis</span>
