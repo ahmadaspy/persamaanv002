@@ -17,6 +17,7 @@ function lanjut_1() {
         }
     })
 }
+
 function lanjut_2() {
     Swal.fire({
         title: 'Selesai bacanya ?',
@@ -36,6 +37,7 @@ function lanjut_2() {
         }
     })
 }
+
 function lanjut_3() {
     Swal.fire({
         title: 'Selesai bacanya ?',
@@ -55,6 +57,7 @@ function lanjut_3() {
         }
     })
 }
+
 function lanjut_4() {
     Swal.fire({
         title: 'Selesai bacanya ?',
@@ -66,7 +69,7 @@ function lanjut_4() {
     }).then((result) => {
         if (result.isConfirmed) {
             document.getElementById('list-4').style.visibility = "visible";
-            document.getElementById('btn-lanjut-3').style.visibility = "hidden";
+            document.getElementById('btn-lanjut-4').style.visibility = "hidden";
             Swal.fire('Ayo Lanjut!', '', 'success')
 
         } else if (result.isDenied) {
@@ -74,6 +77,7 @@ function lanjut_4() {
         }
     })
 }
+
 function lanjut_5() {
     Swal.fire({
         title: 'Selesai bacanya ?',
@@ -85,7 +89,8 @@ function lanjut_5() {
     }).then((result) => {
         if (result.isConfirmed) {
             document.getElementById('list-5').style.visibility = "visible";
-            document.getElementById('btn-lanjut-4').style.visibility = "hidden";
+            document.getElementById('btn-lanjut-5').style.visibility = "hidden";
+
             Swal.fire('Ayo Lanjut!', '', 'success')
 
         } else if (result.isDenied) {
@@ -93,4 +98,3 @@ function lanjut_5() {
         }
     })
 }
-
