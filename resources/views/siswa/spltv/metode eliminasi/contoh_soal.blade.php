@@ -31,7 +31,7 @@
                     <li>
                         <div class="row">
                             <div class="col-sm-3 col-lg-2">
-                                \(3x-2y-7z=0\)
+                                \(3x-2y+4z=11\)
                             </div>
                             <div class="col-sm-3 col-lg-2">
                                 persamaan (3)
@@ -128,7 +128,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>\(3x-2y-7z=0\)</td>
+                                                <td>\(3x-2y+4z=11\)</td>
                                                 <td class="text-center">\(| \times \) <input type="text"
                                                         onchange="step_1_input_8()" id="step_1_input_8"
                                                         style=" border-radius: 6px; border: 1px solid #ccc;  width: 40px">
@@ -145,7 +145,7 @@
                                                 <td>
                                                     <input type="text" onchange="step_1_input_10()"
                                                         id="step_1_input_10_1" disabled
-                                                        style=" border-radius: 6px; border: 1px solid #ccc; width: 40px">\(y+\)
+                                                        style=" border-radius: 6px; border: 1px solid #ccc; width: 40px">\(y-\)
                                                     <input type="text" onchange="step_1_input_10()"
                                                         id="step_1_input_10_2" disabled
                                                         style=" border-radius: 6px; border: 1px solid #ccc; width: 40px">\(z=-\)
@@ -194,7 +194,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>\(14y+10z=-18\)</td>
+                                                <td>\(14y-z=-29\)</td>
                                                 <td class="text-center">\(| \times \) <input type="text"
                                                         onchange="step_2_input_3()" id="step_2_input_3"
                                                         style=" border-radius: 6px; border: 1px solid #ccc;  width: 40px">
@@ -244,7 +244,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td>\(14y+10z=-18\)</td>
+                                                <td>\(14y-z=-29\)</td>
                                                 <td class="text-center">\(| \times \) <input type="text"
                                                         onchange="step_2_input_9()" id="step_2_input_9"
                                                         style=" border-radius: 6px; border: 1px solid #ccc;  width: 40px">
