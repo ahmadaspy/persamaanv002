@@ -390,11 +390,76 @@
                                 </div>
                                 <div class="card" id="cat_4_card_2_2" style="visibility: hidden;">
                                     <div class="card-body" style="background-color: #e3e3e3">
-                                        <div class="embed-responsive embed-responsive-16by9 ">
-                                            <iframe class="embed-responsive-item" scrolling="no" title="Contoh test 1"
-                                                src="https://www.geogebra.org/material/iframe/id/xphapr3f/width/1280/height/720/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false"
-                                                style="border:0px;" allowfullscreen> </iframe>
+                                        <div class="row">
+                                            <div class="col">
+                                                {{-- button modal --}}
+                                                <button type="button" class="btn btn-primary" data-toggle="modal"
+                                                    data-target="#petunjukModal">
+                                                    Petunjuk Klik Disini
+                                                </button>
+                                                {{-- the Modal --}}
+                                                <div class="modal fade" id="petunjukModal" tabindex="-1"
+                                                    aria-labelledby="petunjukModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h5 class="modal-title" id="petunjukModalLabel">
+                                                                    Petunjuk</h5>
+                                                                <button type="button" class="close"
+                                                                    data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <ol>
+                                                                    <li>
+                                                                        1. Buatlah bidang seperti pelajaran sebelumnya, <a href="{{route('bentuk_spltv_4')}}"></a> klik disini
+                                                                    </li>
+                                                                    <li>2. Isilah kotak sehingga kotak  berwarna hijau yang artinya benar, dan buatlah bidang dari persamaan tersebut
+                                                                        <img src="{{ asset('image/gif/contoh soal geogebra gif/1.gif') }}"
+                                                                            alt="" class="img-fluid">
+                                                                    </li>
+                                                                    <li>3. Move Graphic View untuk memindahkan
+                                                                        tampilan grafik atau memanjang pendekan
+                                                                        sumbu x,y atau z
+                                                                        <img src="{{ asset('image/gif/3.gif') }}"
+                                                                            alt="" class="img-fluid">
+                                                                    </li>
+                                                                    <li>4. Zoom in untuk memperbesar tampilan
+                                                                        <img src="{{ asset('image/gif/4.gif') }}"
+                                                                            alt="" class="img-fluid">
+                                                                    </li>
+                                                                    <li>5. Zoom out untuk memperkecil tampilan
+                                                                        <img src="{{ asset('image/gif/5.gif') }}"
+                                                                            alt="" class="img-fluid">
+                                                                    </li>
+                                                                    <li>
+                                                                        6. Plane through 3 point untuk membuat
+                                                                        sebuah bidang dalam 3 titik
+                                                                        <img src="{{ asset('image/gif/6.gif') }}"
+                                                                            alt="" class="img-fluid">
+                                                                    </li>
+                                                                </ol>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary"
+                                                                    data-dismiss="modal">Close</button>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="embed-responsive embed-responsive-16by9 ">
+                                                    <iframe class="embed-responsive-item" scrolling="no"
+                                                        title="Contoh test 1"
+                                                        src="https://www.geogebra.org/material/iframe/id/xphapr3f/width/1280/height/720/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false"
+                                                        style="border:0px;" allowfullscreen> </iframe>
+                                                </div>
+                                            </div>
                                         </div>
+
                                     </div>
                                 </div>
 
