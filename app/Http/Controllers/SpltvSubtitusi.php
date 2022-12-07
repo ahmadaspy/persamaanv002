@@ -72,7 +72,7 @@ class SpltvSubtitusi extends Controller
             return redirect()->back()->with(compact('jawaban', 'soal_all', 'nomor', 'jawaban_siswa', 'percobaan'))->withInput()->with('benar', 'kamu berhasil');
         }
     }
-    public function spltv_subtitusi_2_pembahasan(Request $request)
+    public function spltv_subtitusi_3_pembahasan(Request $request)
     {
         $pembahasan_soal = MariMencobaSpltvSubtitusi::find($request->id);
         $nomor = $request->nomor;

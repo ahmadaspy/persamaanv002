@@ -24,7 +24,7 @@
                 <div class="card-body">
                     <div class="list-group">
                         <li class="list-group-item">
-                            1. Memilih persamaan yang sederhana yang memiliki koefisien 1 atau 0, seperti
+                            1. Memilih persamaan yang sederhana, seperti
                             \(x=y+z+d\) atau
                             \(y=x+z+d\) atau \(z=x+y+d\)
                         </li>
@@ -108,7 +108,7 @@
                                         1.
                                     </div>
                                     <div class="col text-primary">
-                                        Memilih persamaan yang sederhana yang memiliki koefisien 1 atau 0, seperti
+                                        Memilih persamaan yang sederhana, seperti
                                         \(x=y+z+d\) atau
                                         \(y=x+z+d\) atau \(z=x+y+d\)
                                     </div>

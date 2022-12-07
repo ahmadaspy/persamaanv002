@@ -242,7 +242,7 @@ function step_2_input_3() {
 
 function step_2_input_4() {
     let jawaban_1 = document.getElementById('step_2_input_4').value;
-    if (jawaban_1 === '14y+10z=-18') {
+    if (jawaban_1 === '14y-z=-29') {
         input = document.getElementById('step_2_input_4');
         input.style.border = '1px solid green';
     } else {
@@ -258,49 +258,41 @@ function step_2_input_4() {
 
 function step_2_input_5() {
     let jawaban_1 = document.getElementById('step_2_input_5_1').value;
-    let jawaban_2 = document.getElementById('step_2_input_5_2').value;
-    if (jawaban_1 !== '') {
-        if (jawaban_1 === '12') {
-            input = document.getElementById('step_2_input_5_1');
-            input.style.border = '1px solid green';
-        } else {
-            input = document.getElementById('step_2_input_5_1');
-            input.style.border = '1px solid red';
-        }
-    }
-    if (jawaban_2 !== '') {
-        if (jawaban_2 === '12') {
-            input = document.getElementById('step_2_input_5_2');
-            input.style.border = '1px solid green';
-        } else {
-            input = document.getElementById('step_2_input_5_2');
-            input.style.border = '1px solid red';
-        }
-    }
-    if ((jawaban_1 !== '') && (jawaban_2 !== '')) {
-        document.getElementById("step_2_input_6").disabled = false;
-    }
-}
-
-function step_2_input_6() {
-    let jawaban_1 = document.getElementById('step_2_input_6').value;
     let jawaban_2 = document.getElementById('step_2_input_12').value;
-    if (jawaban_1 === '1') {
-        input = document.getElementById('step_2_input_6');
-        input.style.border = '1px solid green';
-    } else {
-        input = document.getElementById('step_2_input_6');
-        input.style.border = '1px solid red';
+    if (jawaban_1 !== '') {
+        if (jawaban_1 === '1') {
+            input = document.getElementById('step_2_input_5_1');
+            input.style.border = '1px solid green';
+        } else {
+            input = document.getElementById('step_2_input_5_1');
+            input.style.border = '1px solid red';
+        }
     }
+
     if ((jawaban_1 === '1') && (jawaban_2 === '2')) {
         document.getElementById("btn_3").disabled = false;
     }
 }
 
+// function step_2_input_6() {
+//     let jawaban_1 = document.getElementById('step_2_input_6').value;
+//     let jawaban_2 = document.getElementById('step_2_input_12').value;
+//     if (jawaban_1 === '1') {
+//         input = document.getElementById('step_2_input_6');
+//         input.style.border = '1px solid green';
+//     } else {
+//         input = document.getElementById('step_2_input_6');
+//         input.style.border = '1px solid red';
+//     }
+//     if ((jawaban_1 === '1') && (jawaban_2 === '2')) {
+//         document.getElementById("btn_3").disabled = false;
+//     }
+// }
+
 // step_2 variabel y
 function step_2_input_7() {
     let jawaban_1 = document.getElementById('step_2_input_7').value;
-    if (jawaban_1 === '10') {
+    if (jawaban_1 === '1') {
         input = document.getElementById('step_2_input_7');
         input.style.border = '1px solid green';
         document.getElementById("step_2_input_8").disabled = false;
@@ -312,7 +304,7 @@ function step_2_input_7() {
 
 function step_2_input_8() {
     let jawaban_1 = document.getElementById('step_2_input_8').value;
-    if (jawaban_1 === '-70y+10z=150') {
+    if (jawaban_1 === '-7y+z=15') {
         input = document.getElementById('step_2_input_8');
         input.style.border = '1px solid green';
     } else {
@@ -340,7 +332,7 @@ function step_2_input_9() {
 
 function step_2_input_10() {
     let jawaban_1 = document.getElementById('step_2_input_10').value;
-    if (jawaban_1 === '14y+10z=-18') {
+    if (jawaban_1 === '14y-z=-29') {
         input = document.getElementById('step_2_input_10');
         input.style.border = '1px solid green';
     } else {
@@ -358,7 +350,7 @@ function step_2_input_11() {
     let jawaban_1 = document.getElementById('step_2_input_11_1').value;
     let jawaban_2 = document.getElementById('step_2_input_11_2').value;
     if (jawaban_1 !== '') {
-        if (jawaban_1 === '84') {
+        if (jawaban_1 === '7') {
             input = document.getElementById('step_2_input_11_1');
             input.style.border = '1px solid green';
         } else {
@@ -367,7 +359,7 @@ function step_2_input_11() {
         }
     }
     if (jawaban_2 !== '') {
-        if (jawaban_2 === '168') {
+        if (jawaban_2 === '14') {
             input = document.getElementById('step_2_input_11_2');
             input.style.border = '1px solid green';
         } else {
@@ -382,7 +374,7 @@ function step_2_input_11() {
 
 function step_2_input_12() {
     let jawaban_1 = document.getElementById('step_2_input_12').value;
-    let jawaban_2 = document.getElementById('step_2_input_6').value;
+    let jawaban_2 = document.getElementById('step_2_input_5_1').value
     if (jawaban_1 === '2') {
         input = document.getElementById('step_2_input_12');
         input.style.border = '1px solid green';

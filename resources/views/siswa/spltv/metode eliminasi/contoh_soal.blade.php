@@ -210,20 +210,18 @@
                                                 <td></td>
                                                 <td>
                                                     <div>
+                                                        \(z=\)
                                                         <input type="text" onchange="step_2_input_5()"
                                                             id="step_2_input_5_1" disabled
-                                                            style=" border-radius: 6px; border: 1px solid #ccc; width: 40px">\(z=\)
-                                                        <input type="text" onchange="step_2_input_5()"
-                                                            id="step_2_input_5_2" disabled
                                                             style=" border-radius: 6px; border: 1px solid #ccc; width: 40px">
 
                                                     </div>
-                                                    <div class="mt-1">
+                                                    {{-- <div class="mt-1">
                                                         \(z=\)
                                                         <input type="text" onchange="step_2_input_6()"
                                                             id="step_2_input_6" disabled
                                                             style=" border-radius: 6px; border: 1px solid #ccc; width: 40px">
-                                                    </div>
+                                                    </div> --}}
                                                 </td>
                                             </tr>
                                         </table>
@@ -253,17 +251,17 @@
                                                         id="step_2_input_10" disabled
                                                         style=" border-radius: 6px; border: 1px solid #ccc; width: 100%">
                                                 </td>
-                                                <td>\(-\)</td>
+                                                <td>\(+\)</td>
                                             </tr>
                                             <tr>
                                                 <td></td>
                                                 <td></td>
                                                 <td>
                                                     <div>
-                                                        \(-\)
+
                                                         <input type="text" onchange="step_2_input_11()"
                                                             id="step_2_input_11_1" disabled
-                                                            style=" border-radius: 6px; border: 1px solid #ccc; width: 40px">\(y=\)
+                                                            style=" border-radius: 6px; border: 1px solid #ccc; width: 40px">\(y=-\)
                                                         <input type="text" onchange="step_2_input_11()"
                                                             id="step_2_input_11_2" disabled
                                                             style=" border-radius: 6px; border: 1px solid #ccc; width: 40px">

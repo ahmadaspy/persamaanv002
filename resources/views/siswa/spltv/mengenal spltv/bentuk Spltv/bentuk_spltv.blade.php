@@ -26,7 +26,7 @@
             </div>
             <p>Dengan \(a, b , c\) dan \(d\) adalah konstanta dan \(a, b\) dan \(c\) tidak nol bisa disebut dengan persamaan
                 linear dalam tiga variabel. Himpunan yang memenuhi persamaan tersebut yaitu \(x,y,z | ax+ by+cz=d\) adalah
-                suatu bidang data dalam sumbu ortogonal \(x, y\) dan \(z\).
+                suatu bidang datar dalam sumbu ortogonal \(x, y\) dan \(z\).
             </p>
             <div class="card" style="background-color: #e3e3e3">
                 <div class="card-body">
