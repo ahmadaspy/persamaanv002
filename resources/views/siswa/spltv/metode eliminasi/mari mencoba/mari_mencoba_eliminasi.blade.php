@@ -3,7 +3,7 @@
         @if (session('benar'))
             <div class="alert alert-dismissible fade show alert-success" role="alert">
                 <form method="POST" target="_blank" rel="noreferrer noopener"
-                    action="{{ route('spltv_eliminasi_2_pembahasan') }}">
+                    action="{{ route('spltv_eliminasi_3_pembahasan') }}">
                     @csrf
                     <input type="hidden" name="id" value="{{ $soal->id }}">
                     <input type="hidden" name="nomor" value="{{ $nomor }}">
@@ -40,7 +40,7 @@
         </div>
     </div>
 </div>
-<form action="{{ route('spltv_eliminasi_2_post', $nomor) }}" method="POST">
+<form action="{{ route('spltv_eliminasi_3_post', $nomor) }}" method="POST">
     @csrf
     <input type="hidden" name="id" value="{{ $soal->id }}">
     <input type="hidden" name="percobaan" value="{{ $percobaan }}">
@@ -87,7 +87,7 @@
                 <div class="col">
                     <button type="submit" class="btn btn-success float-right m-4">Cek Jawaban</button>
                     {{-- <button class="btn btn-success float-right m-4"></button> --}}
-                    <a href="{{ route('spltv_eliminasi_2', [$soal->id, $nomor]) }}"
+                    <a href="{{ route('spltv_eliminasi_3', [$soal->id, $nomor]) }}"
                         class="btn btn-success float-right m-4">Ulang</a>
                 </div>
             </div>
@@ -98,7 +98,7 @@
                         $no = 1;
                     @endphp
                     @foreach ($soal_all as $all)
-                        <a href="{{ route('spltv_eliminasi_2', [$all->id, $no]) }}"
+                        <a href="{{ route('spltv_eliminasi_3', [$all->id, $no]) }}"
                             class="btn btn-light mt-1
                             @if ($all->id === $soal->id) active @endif
                             ">{{ $no++ }}</a>
@@ -125,7 +125,7 @@
                 </div>
                 <div class="modal-footer">
                     {{-- <button type="button" class="btn btn-primary">Save changes</button> --}}
-                    <form method="POST" target="_blank" rel="noreferrer noopener" action="{{route('spltv_eliminasi_2_pembahasan')}}">
+                    <form method="POST" target="_blank" rel="noreferrer noopener" action="{{route('spltv_eliminasi_3_pembahasan')}}">
                         @csrf
                         <input type="hidden" name="id" value="{{ $soal->id }}">
                         <input type="hidden" name="nomor" value="{{ $nomor }}">

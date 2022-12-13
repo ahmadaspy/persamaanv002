@@ -413,32 +413,33 @@
                                                             <div class="modal-body">
                                                                 <ol>
                                                                     <li>
-                                                                        1. Buatlah bidang seperti pelajaran sebelumnya, <a href="{{route('bentuk_spltv_4')}}"></a> klik disini
+                                                                        1. Buatlah bidang seperti pelajaran sebelumnya, <a
+                                                                            href="{{ route('bentuk_spltv_4') }}" class="text-primary" target="_blank" rel="noreferrer noopener">klik
+                                                                        disini</a>
                                                                     </li>
-                                                                    <li>2. Isilah kotak sehingga kotak  berwarna hijau yang artinya benar, dan buatlah bidang dari persamaan tersebut
+                                                                    <li>2. Isilah kotak sehingga kotak berwarna hijau yang
+                                                                        artinya benar, dan buatlah bidang dari persamaan
+                                                                        tersebut
                                                                         <img src="{{ asset('image/gif/contoh soal geogebra gif/1.gif') }}"
                                                                             alt="" class="img-fluid">
                                                                     </li>
-                                                                    <li>3. Move Graphic View untuk memindahkan
-                                                                        tampilan grafik atau memanjang pendekan
-                                                                        sumbu x,y atau z
-                                                                        <img src="{{ asset('image/gif/3.gif') }}"
+                                                                    <li>3. Isi dengan angka pecahan seperti \(\frac{7}{6}\) atau isi
+                                                                        sesuai dengan hasil pecahan tersebut seperti
+                                                                        1.166666666666667, pecahan jangan memakai koma (,)
+                                                                        tapi titik (.)
+                                                                        <img src="{{ asset('image/gif/contoh soal geogebra gif/2.gif') }}"
                                                                             alt="" class="img-fluid">
                                                                     </li>
-                                                                    <li>4. Zoom in untuk memperbesar tampilan
-                                                                        <img src="{{ asset('image/gif/4.gif') }}"
+                                                                    <li>4. Buat bidang dari masing - masing persamaan
+                                                                        <img src="{{ asset('image/gif/contoh soal geogebra gif/3.gif') }}"
                                                                             alt="" class="img-fluid">
                                                                     </li>
-                                                                    <li>5. Zoom out untuk memperkecil tampilan
-                                                                        <img src="{{ asset('image/gif/5.gif') }}"
+                                                                    <li>5. Isilah titik solusi dari hasil pengerjaan kalian
+                                                                        di atas
+                                                                        <img src="{{ asset('image/gif/contoh soal geogebra gif/4.gif') }}"
                                                                             alt="" class="img-fluid">
                                                                     </li>
-                                                                    <li>
-                                                                        6. Plane through 3 point untuk membuat
-                                                                        sebuah bidang dalam 3 titik
-                                                                        <img src="{{ asset('image/gif/6.gif') }}"
-                                                                            alt="" class="img-fluid">
-                                                                    </li>
+
                                                                 </ol>
                                                             </div>
                                                             <div class="modal-footer">
@@ -450,6 +451,9 @@
                                                     </div>
                                                 </div>
                                             </div>
+
+                                        </div>
+                                        <div class="row mt-2">
                                             <div class="col">
                                                 <div class="embed-responsive embed-responsive-16by9 ">
                                                     <iframe class="embed-responsive-item" scrolling="no"
@@ -459,7 +463,6 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
 

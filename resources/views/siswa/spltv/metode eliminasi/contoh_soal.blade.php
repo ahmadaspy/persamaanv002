@@ -71,11 +71,11 @@
                                             <tr>
                                                 <td>\(x-3y+2z=9\)</td>
                                                 <td class="text-center d-block">
-                                                        \(| \times \)
-                                                        <input type="text" onchange="step_1_input_1()"
-                                                            id="step_1_input_1"
-                                                            style=" border-radius: 6px; border: 1px solid #ccc;  width: 40px">
-                                                        \(|\)
+                                                    \(| \times \)
+                                                    <input type="text" onchange="step_1_input_1()"
+                                                        id="step_1_input_1"
+                                                        style=" border-radius: 6px; border: 1px solid #ccc;  width: 40px">
+                                                    \(|\)
                                                 </td>
                                                 <td><input type="text" onchange="step_1_input_2()"
                                                         id="step_1_input_2" disabled
@@ -183,9 +183,8 @@
                                         <table class="table table-bordered ">
                                             <tr>
                                                 <td>\(-7y+z=15\)</td>
-                                                <td class="text-center d-block">\(| \times \) <input
-                                                        type="text" onchange="step_2_input_1()"
-                                                        id="step_2_input_1"
+                                                <td class="text-center d-block">\(| \times \) <input type="text"
+                                                        onchange="step_2_input_1()" id="step_2_input_1"
                                                         style=" border-radius: 6px; border: 1px solid #ccc;  width: 40px">
                                                     \(|\)</td>
                                                 <td><input type="text" onchange="step_2_input_2()"
@@ -231,9 +230,8 @@
                                         <table class="table table-bordered ">
                                             <tr>
                                                 <td>\(-7y+z=15\)</td>
-                                                <td class="text-center d-block">\(| \times \) <input
-                                                        type="text" onchange="step_2_input_7()"
-                                                        id="step_2_input_7"
+                                                <td class="text-center d-block">\(| \times \) <input type="text"
+                                                        onchange="step_2_input_7()" id="step_2_input_7"
                                                         style=" border-radius: 6px; border: 1px solid #ccc;  width: 40px">
                                                     \(|\)</td>
                                                 <td><input type="text" onchange="step_2_input_8()"
@@ -348,11 +346,82 @@
                             </div>
                             <div class="card" id="step_3_hasil_2" style="visibility: hidden">
                                 <div class="card-body" style="background-color: #e3e3e3">
-                                    <div class="embed-responsive embed-responsive-16by9 ">
-                                        <iframe class="embed-responsive-item" scrolling="no" title="Contoh test 1"
-                                            src="https://www.geogebra.org/material/iframe/id/whm8cvun/width/1280/height/720/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false"
-                                            style="border:0px;"> </iframe>
+                                    <div class="row">
+                                        <div class="col">
+                                            {{-- button modal --}}
+                                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                                data-target="#petunjukModal">
+                                                Petunjuk Klik Disini
+                                            </button>
+                                            {{-- the Modal --}}
+                                            <div class="modal fade" id="petunjukModal" tabindex="-1"
+                                                aria-labelledby="petunjukModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="petunjukModalLabel">
+                                                                Petunjuk</h5>
+                                                            <button type="button" class="close"
+                                                                data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <ol>
+                                                                <li>
+                                                                    1. Buatlah bidang seperti pelajaran sebelumnya, <a
+                                                                        href="{{ route('bentuk_spltv_4') }}"
+                                                                        class="text-primary" target="_blank"
+                                                                        rel="noreferrer noopener">klik
+                                                                        disini</a>
+                                                                </li>
+                                                                <li>2. Isilah kotak sehingga kotak berwarna hijau yang
+                                                                    artinya benar, dan buatlah bidang dari persamaan
+                                                                    tersebut
+                                                                    <img src="{{ asset('image/gif/contoh soal geogebra gif/1.gif') }}"
+                                                                        alt="" class="img-fluid">
+                                                                </li>
+                                                                <li>3. Isi dengan angka pecahan seperti \(\frac{7}{6}\)
+                                                                    atau isi
+                                                                    sesuai dengan hasil pecahan tersebut seperti
+                                                                    1.166666666666667, pecahan jangan memakai koma (,)
+                                                                    tapi titik (.)
+                                                                    <img src="{{ asset('image/gif/contoh soal geogebra gif/2.gif') }}"
+                                                                        alt="" class="img-fluid">
+                                                                </li>
+                                                                <li>4. Buat bidang dari masing - masing persamaan
+                                                                    <img src="{{ asset('image/gif/contoh soal geogebra gif/3.gif') }}"
+                                                                        alt="" class="img-fluid">
+                                                                </li>
+                                                                <li>5. Isilah titik solusi dari hasil pengerjaan kalian
+                                                                    di atas
+                                                                    <img src="{{ asset('image/gif/contoh soal geogebra gif/4.gif') }}"
+                                                                        alt="" class="img-fluid">
+                                                                </li>
+
+                                                            </ol>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
+                                    <div class="row mt-2">
+                                        <div class="col">
+                                            <div class="embed-responsive embed-responsive-16by9 ">
+                                                <iframe class="embed-responsive-item" scrolling="no"
+                                                    title="Contoh test 1"
+                                                    src="https://www.geogebra.org/material/iframe/id/whm8cvun/width/1280/height/720/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false"
+                                                    style="border:0px;"> </iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                         </div>

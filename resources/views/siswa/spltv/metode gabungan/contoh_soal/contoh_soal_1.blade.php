@@ -353,7 +353,9 @@
                             <div class="card" style="background-color: #e3e3e3; visibility: hidden" id="step_5_hasil_2">
                                 <div class="card-body">
                                     <div class="embed-responsive embed-responsive-16by9">
-                                        <iframe class="embed-responsive-item" scrolling="no" title="Contoh test 1" src="https://www.geogebra.org/material/iframe/id/rtnxxs8n/width/800/height/600/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false"  style="border:0px;" frameborder="0" allowfullscreen="" webkitallowfullscreen="true" mozallowfullscreen="true" oallowfullscreen="true" msallowfullscreen="true"> </iframe>
+                                        <iframe class="embed-responsive-item" scrolling="no" title="Contoh test 1"
+                                        src="https://www.geogebra.org/material/iframe/id/gffn2hvn/width/1280/height/720/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false"
+                                        style="border:0px;" frameborder="0" allowfullscreen="" webkitallowfullscreen="true" mozallowfullscreen="true" oallowfullscreen="true" msallowfullscreen="true"> </iframe>
                                     </div>
                                 </div>
                             </div>

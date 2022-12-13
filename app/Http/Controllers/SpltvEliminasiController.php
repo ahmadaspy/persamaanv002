@@ -23,11 +23,11 @@ class SpltvEliminasiController extends Controller
         if (session('jawaban_siswa')) {
             $jawaban_siswa = session()->get('jawaban_siswa');
             $percobaan = session()->get('percobaan');
-            return view('siswa.spltv.metode eliminasi.halaman_2_eliminasi', compact('soal', 'soal_all', 'nomor', 'jawaban_siswa', 'percobaan'));
+            return view('siswa.spltv.metode eliminasi.halaman_3_eliminasi', compact('soal', 'soal_all', 'nomor', 'jawaban_siswa', 'percobaan'));
         } else {
             $percobaan = 0;
             $jawaban_siswa = null;
-            return view('siswa.spltv.metode eliminasi.halaman_2_eliminasi', compact('soal', 'soal_all', 'nomor', 'jawaban_siswa', 'percobaan'));
+            return view('siswa.spltv.metode eliminasi.halaman_3_eliminasi', compact('soal', 'soal_all', 'nomor', 'jawaban_siswa', 'percobaan'));
         }
     }
     public function spltv_eliminasi_3_post(Request $request, $nomor)
