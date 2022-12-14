@@ -1,3 +1,6 @@
+@section('script_atas')
+    <script src="{{asset('js/gabungan/cara_1_contoh_gabungan.js')}}"></script>
+@endsection
 <div class="card" style="background-color: #e3e3e3">
     <div class="card-header">
         <h6>Cara 1</h6>
@@ -7,13 +10,15 @@
             <ul class="list-group">
                 <li class="list-group-item">
                     <div class="text-primary">1. Pilih persamaan paling sederhana seperti variabel yang mempunyai
-                        koefisien 1 dan ubah menjadi \(x=⋯\) atau \(y=⋯\) atau \(z=⋯\)</div>
+                        koefisien 1 dan ubah menjadi \(x=⋯\) atau \(y=⋯\) atau \(z=⋯\)
+                    </div>
 
                     <div class="card">
                         <div class="card-body">
                             <p>semisal ada persamaan (1) \(x+2y-z=-1\), persamaan (2) \(x-5y+6z=-1\), persamaan (3)
                                 \(2x+3y-4z=4\) maka pilihlah persamaan yang mempunyai variabel koefisien 1 seperti
-                                persamaan (1) atau persamaan (2)</p>
+                                persamaan (1) atau persamaan (2)
+                            </p>
                             <div class="card" style="background-color: #e3e3e3">
                                 <div class="card-body" style="overflow-x: scroll;">
                                     <div class="mt-2">
@@ -23,6 +28,9 @@
                                         \(x=-2y+z-1\) persamaan (1) yang sederhana
                                     </div>
                                 </div>
+                            </div>
+                            <div class="row float-right">
+                                <button class="btn btn-primary" id="lanjut_1_tab_1" onclick="lanjut_1_tab_1()">Lanjut</button>
                             </div>
 
                         </div>
@@ -75,6 +83,9 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row float-right">
+                        <button class="btn btn-primary" id="lanjut_2_tab_1" onclick="lanjut_2_tab_1()">Lanjut</button>
+                    </div>
                 </li>
                 <li class="list-group-item">
                     <div class="text-primary">
@@ -94,6 +105,9 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="row float-right">
+                        <button class="btn btn-primary" id="lanjut_3_tab_1" onclick="lanjut_3_tab_1()">Lanjut</button>
                     </div>
                 </li>
                 <li class="list-group-item">
@@ -128,6 +142,9 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="row float-right">
+                        <button class="btn btn-primary" id="lanjut_4_tab_1" onclick="lanjut_4_tab_1()">Lanjut</button>
                     </div>
                 </li>
                 <li class="list-group-item">
@@ -187,6 +204,7 @@
                             </div>
                         </div>
                     </div>
+
                 </li>
             </ul>
         </div>

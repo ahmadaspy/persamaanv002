@@ -28,10 +28,12 @@
                     <div class="basic-list-group">
                         <ul class="list-group">
                             <li class="list-group-item">
-                                1. Pilih persamaan paling sederhana seperti variabel yang mempunyai koefisien 1 dan ubah menjadi \(x=⋯\) atau \(y=⋯\) atau \(z=⋯\)
+                                1. Pilih persamaan paling sederhana seperti variabel yang mempunyai koefisien 1 dan ubah
+                                menjadi \(x=⋯\) atau \(y=⋯\) atau \(z=⋯\)
                             </li>
                             <li class="list-group-item">
-                                2. Subtitusikan langkah satu ke persamaan lainnya sehingga mendapatkan persamaan linear dua variabel
+                                2. Subtitusikan langkah satu ke persamaan lainnya sehingga mendapatkan persamaan linear dua
+                                variabel
                             </li>
                             <li class="list-group-item">
                                 3. Eliminasi persamaan linear dua variabel yang didapatkan dari langkah dua
@@ -54,7 +56,8 @@
                     <div class="basic-list-group">
                         <ul class="list-group">
                             <li class="list-group-item">
-                               1. Eliminasi persamaan awal dari persamaan (1) dengan (2) dan persamaan (2) dengan (3) sehingga didapatkan persamaan linear dua variabel
+                                1. Eliminasi persamaan awal dari persamaan (1) dengan (2) dan persamaan (2) dengan (3)
+                                sehingga didapatkan persamaan linear dua variabel
                             </li>
                             <li class="list-group-item">
                                 2. Eliminasi persamaan linear dua variabel tersebut sehingga mendapatkan salah satu variabel
@@ -85,14 +88,14 @@
                             <h6>Contoh</h6>
                         </div>
                         <div class="card-body">
-                             <div class="row">
+                            <div class="row">
                                 <div class="col-1">1</div>
                                 <div class="col">
                                     <ul>
                                         <li>
                                             <div class="row">
                                                 <div class="col-sm-3 col-lg-2">
-                                                   \(x+2y-z=-1\)
+                                                    \(x+2y-z=-1\)
                                                 </div>
                                                 <div class="col-sm-3 col-lg-2">
                                                     persamaan (1)
@@ -135,16 +138,12 @@
                     </div>
                     <div class="tab-pane fade show active" id="cara_1" role="tabpanel">
                         <div class="p-t-15">
-                            @include(
-                                'siswa.spltv.metode gabungan.cara_1_tutor.cara_1'
-                            )
+                            @include('siswa.spltv.metode gabungan.cara_1_tutor.cara_1')
                         </div>
                     </div>
                     <div class="tab-pane fade" id="cara_2">
                         <div class="p-t-15">
-                            @include(
-                                'siswa.spltv.metode gabungan.cara_2_tutor.cara_2'
-                            )
+                            @include('siswa.spltv.metode gabungan.cara_2_tutor.cara_2')
                         </div>
                     </div>
                 </div>
@@ -154,7 +153,5 @@
 
         </div>
     </div>
-    @include(
-        'siswa.spltv.metode gabungan.halaman_footer_gabungan'
-    )
+    @include('siswa.spltv.metode gabungan.halaman_footer_gabungan')
 @endsection
