@@ -20,8 +20,8 @@
                                     <h6 class="text-center">
                                         $$\displaylines{
                                         \left\{\begin{matrix}
-                                        a_{1}x + b_{1}y + = c_{1} \\
-                                        a_{2}x + b_{2}y + = c_{2} \\
+                                        a_{1}x + b_{1}y = c_{1} \\
+                                        a_{2}x + b_{2}y = c_{2} \\
                                         \end{matrix}\right.
                                         }$$
                                     </h6>

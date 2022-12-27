@@ -8,7 +8,7 @@
     <div class="card-body">
         <div class="basic-list-group">
             <ul class="list-group">
-                <li class="list-group-item">
+                <li class="list-group-item" id="list-1-2">
                     <div class="text-primary">
                         1. Eliminasi persamaan awal dari persamaan (1) dengan (2) dan persamaan (2)
                         dengan (3) sehingga didapatkan persamaan linear dua variabel
@@ -37,10 +37,10 @@
                         </div>
                     </div>
                     <div class="row float-right">
-                        <button class="btn btn-primary" id="lanjut_1_tab_2" onclick="lanjut_1_tab_2()">Lanjut</button>
+                        <button class="btn btn-primary" id="lanjut_1_tab_2" onclick="lanjut_tab_2(1)">Lanjut</button>
                     </div>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item" id="list-2-2" style="visibility: hidden">
                     <div class="text-primary">
                         2. Eliminasi persamaan linear dua variabel tersebut sehingga mendapatkan
                         salah satu variabel
@@ -60,10 +60,10 @@
                         </div>
                     </div>
                     <div class="row float-right">
-                        <button class="btn btn-primary" id="lanjut_2_tab_2" onclick="lanjut_2_tab_2()">Lanjut</button>
+                        <button class="btn btn-primary" id="lanjut_2_tab_2" onclick="lanjut_tab_2(2)">Lanjut</button>
                     </div>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item" id="list-3-2" style="visibility: hidden">
                     <div class="text-primary">
                         3. Subtitusikan variabel yang didapatkan di langkah 2 ke dalam persamaan
                         linear dua variabel
@@ -96,10 +96,10 @@
                         </div>
                     </div>
                     <div class="row float-right">
-                        <button class="btn btn-primary" id="lanjut_3_tab_2" onclick="lanjut_3_tab_2()">Lanjut</button>
+                        <button class="btn btn-primary" id="lanjut_3_tab_2" onclick="lanjut_tab_2(3)">Lanjut</button>
                     </div>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item" id="list-4-2" style="visibility: hidden">
                     <div class="text-primary">
                         4. Subtitusikan variabel yang didapatkan di langkah dua dan tiga ke persamaan
                         semula

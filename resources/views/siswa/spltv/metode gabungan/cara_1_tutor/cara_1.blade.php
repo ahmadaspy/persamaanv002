@@ -7,8 +7,8 @@
     </div>
     <div class="card-body">
         <div class="basic-list-group">
-            <ul class="list-group">
-                <li class="list-group-item">
+            <ul class="list-group" >
+                <li class="list-group-item" id="list-1">
                     <div class="text-primary">1. Pilih persamaan paling sederhana seperti variabel yang mempunyai
                         koefisien 1 dan ubah menjadi \(x=⋯\) atau \(y=⋯\) atau \(z=⋯\)
                     </div>
@@ -30,14 +30,14 @@
                                 </div>
                             </div>
                             <div class="row float-right">
-                                <button class="btn btn-primary" id="lanjut_1_tab_1" onclick="lanjut_1_tab_1()">Lanjut</button>
+                                <button class="btn btn-primary" id="lanjut_1_tab_1" onclick="lanjut_tab_1(1)">Lanjut</button>
                             </div>
 
                         </div>
                     </div>
                 </li>
 
-                <li class="list-group-item">
+                <li class="list-group-item" id="list-2" style="visibility: hidden">
                     <div class="text-primary">
                         2. Subtitusikan langkah satu ke persamaan lainnya sehingga mendapatkan
                         persamaan linear dua variabel
@@ -84,10 +84,10 @@
                         </div>
                     </div>
                     <div class="row float-right">
-                        <button class="btn btn-primary" id="lanjut_2_tab_1" onclick="lanjut_2_tab_1()">Lanjut</button>
+                        <button class="btn btn-primary" id="lanjut_2_tab_1" onclick="lanjut_tab_1(2)">Lanjut</button>
                     </div>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item" id="list-3" style="visibility: hidden">
                     <div class="text-primary">
                         3. Eliminasi persamaan linear dua variabel yang didapatkan dari langkah dua
                     </div>
@@ -107,10 +107,10 @@
                         </div>
                     </div>
                     <div class="row float-right">
-                        <button class="btn btn-primary" id="lanjut_3_tab_1" onclick="lanjut_3_tab_1()">Lanjut</button>
+                        <button class="btn btn-primary" id="lanjut_3_tab_1" onclick="lanjut_tab_1(3)">Lanjut</button>
                     </div>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item" id="list-4" style="visibility: hidden">
                     <div class="text-primary">
                         4. Subtitusikan variabel yang didapatkan dari langkah tiga
                     </div>
@@ -144,10 +144,10 @@
                         </div>
                     </div>
                     <div class="row float-right">
-                        <button class="btn btn-primary" id="lanjut_4_tab_1" onclick="lanjut_4_tab_1()">Lanjut</button>
+                        <button class="btn btn-primary" id="lanjut_4_tab_1" onclick="lanjut_tab_1(4)">Lanjut</button>
                     </div>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item" id="list-5" style="visibility: hidden">
                     <div class="text-primary">
                         5. Subtitusikan variabel yang didapatkan di langkah ke tiga dan ke empat ke persamaan
                         semula

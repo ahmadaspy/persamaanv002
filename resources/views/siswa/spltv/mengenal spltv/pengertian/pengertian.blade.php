@@ -40,11 +40,11 @@
             <div class="card" style="background-color: #e3e3e3">
                 <div class="card-body">
                     <p>persamaan tiga variabel :</p>
-                    \(x+3y=4z=-3\) <br>
+                    \(x+3y-4z=-3\) <br>
                     \(2x+y+z=7\) <br>
                     \(2x+3y+2z=11\) <br>
                     <p>
-                        di atas merupakan sistem persamaan dua variabel dengan ditandai :
+                        di atas merupakan sistem persamaan tiga variabel dengan ditandai :
                     <ol>
                         <li>1. adanya tiga variabel</li>
                         <li>2. terdapat tiga persamaan</li>

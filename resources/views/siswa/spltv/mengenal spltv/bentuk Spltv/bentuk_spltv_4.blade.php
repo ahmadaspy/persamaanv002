@@ -161,7 +161,7 @@
                                                     <div class="card-body">
                                                         <p>
                                                             memisalkan \(x = 0\) dan \(y = 0\) maka kita mendapatkan
-                                                            titik di sumbu \(y\) yang dilalui oleh persamaan
+                                                            titik di sumbu \(z\) yang dilalui oleh persamaan
                                                             \(4x+2y+z=8\)
                                                         </p>
                                                     </div>
