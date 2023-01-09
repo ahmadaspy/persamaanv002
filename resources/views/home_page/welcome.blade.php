@@ -131,7 +131,7 @@
                     id="button">Register</a>
             </div>
             <div class="col">
-                <a href="{{ route('login') }}" class="btn mb-1 btn-rounded btn-outline-primary"
+                <a href="{{ route('Login_menu') }}" class="btn mb-1 btn-rounded btn-outline-primary"
                     id="button">Login</a>
             </div>
         </div>

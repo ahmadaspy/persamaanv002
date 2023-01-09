@@ -8,6 +8,7 @@ use App\Http\Controllers\GuruController;
 use App\Http\Controllers\KikdController;
 use App\Http\Controllers\KuisKeduaController;
 use App\Http\Controllers\KuisPertamaController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\mengenal_spltv;
 use App\Http\Controllers\ProfileSiswaController;
 use App\Http\Controllers\SpldvMetodeEliminasiController;
@@ -49,6 +50,9 @@ Route::get('/geogebra', function(){
 Route::get('/logout', [Controller::class, 'logout'])->name('logout_user');
 
 Route::get('/landingpage', [DashController::class, 'landingpage'])->middleware(['auth'])->name('landing_page');
+
+
+Route::get('/login/menu', [LoginController::class, 'menu'])->name('Login_menu');
 
 // route admin
 
