@@ -12,7 +12,7 @@
     <link href="{{ asset('template_asset/css/style.css') }}" rel="stylesheet">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel="stylesheet" href="{{asset('css/login_menu.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/login_menu.css') }}">
 
 </head>
 
@@ -38,13 +38,14 @@
         <div class="row justify-content-center h-100 align-items-center align-content-center three-item">
 
             <div class="col-sm-block col-md">
-                <a href="">
+                <a href="{{ route('login_admin') }}">
                     <div class="card shadow" style="background-color: #C780FA">
                         <div class="card-body text-center">
-                            <img src="{{ asset('image/logo/admin.png') }}" alt="" class="img-thumbnail img-fluid d-none d-sm-none d-md-block">
+                            <img src="{{ asset('image/logo/admin.png') }}" alt=""
+                                class="img-thumbnail img-fluid d-none d-sm-none d-md-block">
                             <div class="text-white">
                                 <h4 class="mt-1 text-white">Admin</h6>
-                                <p>Login sebagai Admin</p>
+                                    <p>Login sebagai Admin</p>
                             </div>
 
                         </div>
@@ -54,7 +55,8 @@
             <div class="col-sm-block col-md">
                 <div class="card shadow" style="background-color: #C780FA">
                     <div class="card-body text-center">
-                        <img src="{{ asset('image/logo/Guru.png') }}" alt="" class="img-thumbnail img-fluid d-none d-sm-none d-md-block">
+                        <img src="{{ asset('image/logo/Guru.png') }}" alt=""
+                            class="img-thumbnail img-fluid d-none d-sm-none d-md-block">
                         <h4 class="text-white">Guru</h4>
                         <p class="text-white">Login sebagai Guru</p>
                     </div>
@@ -64,7 +66,8 @@
             <div class="col-sm-block col-md">
                 <div class="card shadow" style="background-color:#C780FA">
                     <div class="card-body text-center">
-                        <img src="{{ asset('image/logo/Siswa.png') }}" alt="" class="img-thumbnail img-fluid d-none d-sm-none d-md-block">
+                        <img src="{{ asset('image/logo/Siswa.png') }}" alt=""
+                            class="img-thumbnail img-fluid d-none d-sm-none d-md-block">
                         <h4 class="text-white">Siswa</h4>
                         <p class="text-white">Login sebagai Siswa</p>
                     </div>

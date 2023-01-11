@@ -1,0 +1,12 @@
+.kartu-1 {
+    background-color: #F56EB3;
+}
+
+.kartu-1 .isi-2-bawah .card {
+    background-color: #f0459d;
+}
+
+.kartu-1 .isi-2-bawah .card .img {
+    width: 200px;
+    height: auto;
+}
