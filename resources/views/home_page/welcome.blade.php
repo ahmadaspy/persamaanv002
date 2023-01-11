@@ -58,7 +58,10 @@
                 <ul class="navbar-nav mr-auto">
 
                 </ul>
-                @if (Route::has('login'))
+                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                    <a href="{{ route('Login_menu') }}" class="btn btn-light">Log in disini</a>
+                </div>
+                {{-- @if (Route::has('login'))
                     <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                         @auth
                             <a href="{{ route('landing_page') }}" class="btn btn-light">Dashboard</a>
@@ -70,7 +73,7 @@
                             @endif
                         @endauth
                     </div>
-                @endif
+                @endif --}}
             </div>
         </div>
 
