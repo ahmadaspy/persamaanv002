@@ -56,6 +56,7 @@ Route::get('/landingpage', [DashController::class, 'landingpage'])->middleware([
 Route::prefix('login')->group(function(){
     Route::get('/menu', [LoginController::class, 'menu'])->name('Login_menu');
     Route::get('/admin', [LoginController::class, 'admin_menu'])->name('login_admin');
+    Route::post('/admin', [LoginController::class, 'admin_form_post'])->name('login_post');
     Route::get('/guru', [LoginController::class, 'guru_menu'])->name('login_guru');
     Route::get('/siswa', [LoginController::class, 'siswa_menu'])->name('login_siswa');
 });

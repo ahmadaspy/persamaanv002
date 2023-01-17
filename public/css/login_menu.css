@@ -1,3 +1,6 @@
 .three-item .card:hover{
     background-color: #daaefa !important;
 }
+.three-item .card:active {
+    background-color: #bd6cf7 !important;
+}

@@ -35,18 +35,6 @@
     ********************-->
 
     <div class="container h-100">
-        <div class="row">
-            @if (count($errors) > 0)
-                @foreach ($errors->all() as $message)
-                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                        {{ $message }}
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                @endforeach
-            @endif
-        </div>
         <div class="row justify-content-center h-100 align-items-center align-content-center three-item">
             <div class="col">
                 <div class="card shadow h-100">
@@ -60,7 +48,7 @@
                                                 <h6>Sistem Persamaan Linear Tiga Variabel</h6>
                                             </div>
                                             <div class="isi">
-                                                <h3>Login sebagai admin</h3>
+                                                <h3>Login sebagai Siswa</h3>
 
                                             </div>
                                         </div>
@@ -71,12 +59,12 @@
                                                     <div class="row no-gutters align-items-center">
                                                         <div class="col-3">
 
-                                                            <img src="{{ asset('image/logo/admin.png') }}"
+                                                            <img src="{{ asset('image/logo/Siswa.png') }}"
                                                                 class="img-responsive" alt="">
                                                         </div>
                                                         <div class="col">
                                                             <div class="card-body">
-                                                                <p>Anda mengatur semua akun yang terdaftar !</p>
+                                                                <p>Ayo Belajar ! anda sebagai siswa harus semangat !</p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -90,23 +78,20 @@
                                 <div class="row h-100 align-items-center">
                                     <div class="col">
                                         <h5>Halo, silahkan masukan informasi di bawah</h5>
-
-                                        <form class="form" method="POST" action="{{ route('login_post') }}">
-                                            @csrf
+                                        <form class="form">
                                             <div class="d-block d-md-none">
-                                                <h4>Login Sebagai Admin</h4>
+                                                <h4>Login Sebagai Siswa</h4>
                                             </div>
                                             <div class="form-group">
-                                                <label for="email-admin">Alamat Email</label>
-                                                <input type="email" class="form-control" id="email-admin"
-                                                    aria-describedby="email-desk" name="email">
+                                                <label for="email-siswa">Alamat Email</label>
+                                                <input type="email" class="form-control" id="email-siswa"
+                                                    aria-describedby="email-desk">
                                                 <small id="email-desk" class="form-text text-muted">Masukan email
                                                     kalian</small>
                                             </div>
                                             <div class="form-group">
-                                                <label for="password-admin">Password</label>
-                                                <input type="password" class="form-control" id="password-admin"
-                                                    name="password">
+                                                <label for="password-siswa">Password</label>
+                                                <input type="password" class="form-control" id="password-siswa">
                                             </div>
                                             <button type="submit" class="btn">Login</button>
                                         </form>

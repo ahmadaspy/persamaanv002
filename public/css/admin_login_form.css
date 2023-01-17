@@ -1,12 +1,47 @@
 .kartu-1 {
-    background-color: #F56EB3;
+    background-color: #E3ACF9;
+}
+.kartu-1 .isi-1 h6{
+    color: white;
+}
+.kartu-1 .isi-1 h3 {
+    color: white;
 }
 
 .kartu-1 .isi-2-bawah .card {
-    background-color: #f0459d;
+    background-color: #fcf5ff;
 }
 
 .kartu-1 .isi-2-bawah .card .img {
     width: 200px;
     height: auto;
+}
+.kartu-1 .isi-2-bawah .card .card-body{
+    color: rgb(88, 88, 88);
+}
+
+.isi{
+    margin-top: 200px;
+}
+.isi-2-bawah{
+    margin-top: 20px;
+
+}
+
+
+.form{
+    margin-top: 20%;
+}
+.form .btn{
+    border: none;
+    color: white;
+    background-color: #E3ACF9;
+}
+.form .btn:hover {
+    border: none;
+    background-color: #e6bdf7;
+}
+.form .btn:active {
+    border: none;
+    background-color: #cc6af7;
 }

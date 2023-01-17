@@ -53,26 +53,30 @@
                 </a>
             </div>
             <div class="col-sm-block col-md">
-                <div class="card shadow" style="background-color: #C780FA">
-                    <div class="card-body text-center">
-                        <img src="{{ asset('image/logo/Guru.png') }}" alt=""
-                            class="img-thumbnail img-fluid d-none d-sm-none d-md-block">
-                        <h4 class="text-white">Guru</h4>
-                        <p class="text-white">Login sebagai Guru</p>
-                    </div>
+                <a href="{{ route('login_guru') }}">
+                    <div class="card shadow" style="background-color: #C780FA">
+                        <div class="card-body text-center">
+                            <img src="{{ asset('image/logo/Guru.png') }}" alt=""
+                                class="img-thumbnail img-fluid d-none d-sm-none d-md-block">
+                            <h4 class="text-white">Guru</h4>
+                            <p class="text-white">Login sebagai Guru</p>
+                        </div>
 
-                </div>
+                    </div>
+                </a>
             </div>
             <div class="col-sm-block col-md">
-                <div class="card shadow" style="background-color:#C780FA">
-                    <div class="card-body text-center">
-                        <img src="{{ asset('image/logo/Siswa.png') }}" alt=""
-                            class="img-thumbnail img-fluid d-none d-sm-none d-md-block">
-                        <h4 class="text-white">Siswa</h4>
-                        <p class="text-white">Login sebagai Siswa</p>
-                    </div>
+                <a href="{{ route('login_siswa') }}">
+                    <div class="card shadow" style="background-color:#C780FA">
+                        <div class="card-body text-center">
+                            <img src="{{ asset('image/logo/Siswa.png') }}" alt=""
+                                class="img-thumbnail img-fluid d-none d-sm-none d-md-block">
+                            <h4 class="text-white">Siswa</h4>
+                            <p class="text-white">Login sebagai Siswa</p>
+                        </div>
 
-                </div>
+                    </div>
+                </a>
             </div>
         </div>
 
