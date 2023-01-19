@@ -52,16 +52,20 @@ Route::get('/logout', [Controller::class, 'logout'])->name('logout_user');
 Route::get('/landingpage', [DashController::class, 'landingpage'])->middleware(['auth'])->name('landing_page');
 
 
-// Route::get('/login/menu', [LoginController::class, 'menu'])->name('Login_menu');
+//route login
 Route::prefix('login')->group(function(){
     Route::get('/menu', [LoginController::class, 'menu'])->name('Login_menu');
     Route::get('/admin', [LoginController::class, 'admin_menu'])->name('login_admin');
-    Route::post('/admin', [LoginController::class, 'admin_form_post'])->name('login_post');
+    Route::post('/admin', [LoginController::class, 'admin_form_post'])->name('admin_login_post');
     Route::get('/guru', [LoginController::class, 'guru_menu'])->name('login_guru');
+    Route::post('/guru', [LoginController::class, 'guru_form_post'])->name('guru_login_post');
     Route::get('/siswa', [LoginController::class, 'siswa_menu'])->name('login_siswa');
-});
-// route admin
+    Route::post('/siswa', [LoginController::class, 'siswa_form_post'])->name('siswa_login_post');
 
+});
+
+
+// route admin
 Route::prefix('admin')->group(function(){
     Route::middleware(['auth', 'role:admin'])->group(function(){
         Route::get('/dashboard', [AdminController::class, 'dashboard_admin'])->name('dashboard_admin');

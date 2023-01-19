@@ -34,49 +34,62 @@
         Preloader end
     ********************-->
 
-    <div class="container h-100">
-        <div class="row">
-            @if (count($errors) > 0)
-                @foreach ($errors->all() as $message)
-                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                        {{ $message }}
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                @endforeach
-            @endif
-        </div>
-        <div class="row justify-content-center h-100 align-items-center align-content-center three-item">
+    <div class="container h-100 ">
+
+
+
+
+        <div class="row justify-content-center h-100 align-items-center align-content-center ">
             <div class="col">
-                <div class="card shadow h-100">
-                    <div class="card-body">
+                @if (count($errors) > 0)
+                    @foreach ($errors->all() as $message)
                         <div class="row">
-                            <div class="d-none d-md-block col-md-6">
-                                <div class="card kartu-1">
-                                    <div class="card-body">
-                                        <div class="isi-1">
-                                            <div class="judul">
-                                                <h6>Sistem Persamaan Linear Tiga Variabel</h6>
-                                            </div>
-                                            <div class="isi">
-                                                <h3>Login sebagai admin</h3>
+                            <div class="col">
+                                <div class="alert alert-danger alert-dismissible fade show " role="alert">
 
-                                            </div>
-                                        </div>
+                                    {{ $message }}
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            </div>
 
-                                        <div class="isi-2-bawah">
-                                            <div class="card shadow">
-                                                <div class="card-body">
-                                                    <div class="row no-gutters align-items-center">
-                                                        <div class="col-3">
+                        </div>
+                    @endforeach
+                @endif
 
-                                                            <img src="{{ asset('image/logo/admin.png') }}"
-                                                                class="img-responsive" alt="">
-                                                        </div>
-                                                        <div class="col">
-                                                            <div class="card-body">
-                                                                <p>Anda mengatur semua akun yang terdaftar !</p>
+                <div class="row">
+                    <div class="col">
+                        <div class="card shadow ">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="d-none d-md-block col-md-6">
+                                        <div class="card kartu-1">
+                                            <div class="card-body">
+                                                <div class="isi-1">
+                                                    <div class="judul">
+                                                        <h6>Sistem Persamaan Linear Tiga Variabel</h6>
+                                                    </div>
+                                                    <div class="isi">
+                                                        <h3>Login sebagai admin</h3>
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="isi-2-bawah">
+                                                    <div class="card shadow">
+                                                        <div class="card-body">
+                                                            <div class="row no-gutters align-items-center">
+                                                                <div class="col-3">
+
+                                                                    <img src="{{ asset('image/logo/admin.png') }}"
+                                                                        class="img-responsive" alt="">
+                                                                </div>
+                                                                <div class="col">
+                                                                    <div class="card-body">
+                                                                        <p>Anda mengatur semua akun yang terdaftar !</p>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -84,42 +97,45 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-sm col-md-6">
-                                <div class="row h-100 align-items-center">
-                                    <div class="col">
-                                        <h5>Halo, silahkan masukan informasi di bawah</h5>
+                                    <div class="col-sm col-md-6">
+                                        <div class="row h-100 align-items-center">
+                                            <div class="col">
+                                                <h5>Halo, silahkan masukan informasi di bawah</h5>
 
-                                        <form class="form" method="POST" action="{{ route('login_post') }}">
-                                            @csrf
-                                            <div class="d-block d-md-none">
-                                                <h4>Login Sebagai Admin</h4>
+                                                <form class="form" method="POST" action="{{ route('admin_login_post') }}">
+                                                    @csrf
+                                                    <div class="d-block d-md-none">
+                                                        <h4>Login Sebagai Admin</h4>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="email-admin">Alamat Email</label>
+                                                        <input type="email" class="form-control" id="email-admin"
+                                                            aria-describedby="email-desk" name="email" value="{{old('email')}}">
+                                                        <small id="email-desk" class="form-text text-muted">Masukan
+                                                            email
+                                                            kalian</small>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="password-admin">Password</label>
+                                                        <input type="password" class="form-control" id="password-admin"
+                                                            name="password">
+                                                    </div>
+                                                    <button type="submit" class="btn">Login</button>
+                                                </form>
                                             </div>
-                                            <div class="form-group">
-                                                <label for="email-admin">Alamat Email</label>
-                                                <input type="email" class="form-control" id="email-admin"
-                                                    aria-describedby="email-desk" name="email">
-                                                <small id="email-desk" class="form-text text-muted">Masukan email
-                                                    kalian</small>
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="password-admin">Password</label>
-                                                <input type="password" class="form-control" id="password-admin"
-                                                    name="password">
-                                            </div>
-                                            <button type="submit" class="btn">Login</button>
-                                        </form>
+
+                                        </div>
+
                                     </div>
-
                                 </div>
 
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
+
+
         </div>
     </div>
 

@@ -44,7 +44,7 @@
     <!-- Image and text -->
     <nav class="navbar navbar-expand-lg navbar-light bg-primary">
         <div class="container">
-            <a class="navbar-brand" href="{{route('home')}}">
+            <a class="navbar-brand" href="{{ route('home') }}">
                 <img src="{{ asset('image/logo/icon_1.png') }}" width="30" height="30"
                     class="d-inline-block align-top" alt="">
                 <span class="text-white">SPLTV</span>
@@ -59,7 +59,12 @@
 
                 </ul>
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    <a href="{{ route('Login_menu') }}" class="btn btn-light">Log in disini</a>
+                    @auth
+                        <a href="{{ route('landing_page') }}" class="btn btn-light">Dashboard</a>
+                    @else
+                        <a href="{{ route('Login_menu') }}" class="btn btn-light">Login disini</a>
+                    @endauth
+
                 </div>
                 {{-- @if (Route::has('login'))
                     <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
@@ -119,20 +124,20 @@
     </section>
     <div class="container" id="container_2">
         <div id="isi2" class="row text-center">
-            <div class="col">
+            {{-- <div class="col">
                 <p>Daftarkan diri kalian siswa !</p>
 
-            </div>
+            </div> --}}
             <div class="col">
                 <p>Kalian sudah mempunyai akun ? Login disini</p>
 
             </div>
         </div>
         <div class="row text-center">
-            <div class="col">
+            {{-- <div class="col">
                 <a href="{{ route('register') }}" class="btn mb-1 btn-rounded btn-outline-primary"
                     id="button">Register</a>
-            </div>
+            </div> --}}
             <div class="col">
                 <a href="{{ route('Login_menu') }}" class="btn mb-1 btn-rounded btn-outline-primary"
                     id="button">Login</a>
