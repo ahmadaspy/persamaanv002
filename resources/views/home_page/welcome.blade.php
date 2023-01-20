@@ -49,23 +49,23 @@
                     class="d-inline-block align-top" alt="">
                 <span class="text-white">SPLTV</span>
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            {{-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>
+            </button> --}}
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
 
                 </ul>
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
+                {{-- <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
                         <a href="{{ route('landing_page') }}" class="btn btn-light">Dashboard</a>
                     @else
                         <a href="{{ route('Login_menu') }}" class="btn btn-light">Login disini</a>
                     @endauth
 
-                </div>
+                </div> --}}
                 {{-- @if (Route::has('login'))
                     <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                         @auth
@@ -88,9 +88,14 @@
             <div class="row">
                 <div class="col-md-6">
                     <p class="promo-title text-white">Sistem Persamaan Linear Tiga Variabel</p>
-                    <p class="text-white">
-                        Belajar matematika bisa menyenangkan kapanpun dan dimanapun
+                    <p class="text-white p-text">
+                        Media Pembelajaran Interaktif yang berisi tentang Materi Sistem Persamaan Linear Tiga Variabel pada Mata Pelajaran Matematika Semester Ganjil
                     </p>
+                    <a href="{{route('Login_menu')}}">
+                        <button class="btn-mulai">Mulai Belajar</button>
+
+                    </a>
+
                 </div>
                 <div class="col-md-6">
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -122,29 +127,23 @@
         </div>
         <img src="{{ asset('image/logo/wave1.png') }}" class="bottom-img">
     </section>
-    <div class="container" id="container_2">
+    {{-- <div class="container" id="container_2">
         <div id="isi2" class="row text-center">
-            {{-- <div class="col">
-                <p>Daftarkan diri kalian siswa !</p>
 
-            </div> --}}
             <div class="col">
                 <p>Kalian sudah mempunyai akun ? Login disini</p>
 
             </div>
         </div>
         <div class="row text-center">
-            {{-- <div class="col">
-                <a href="{{ route('register') }}" class="btn mb-1 btn-rounded btn-outline-primary"
-                    id="button">Register</a>
-            </div> --}}
+
             <div class="col">
                 <a href="{{ route('Login_menu') }}" class="btn mb-1 btn-rounded btn-outline-primary"
                     id="button">Login</a>
             </div>
         </div>
-    </div>
-    <section id="footer">
+    </div> --}}
+    {{-- <section id="footer">
         <img src="{{ asset('image/logo/wave2.png') }}" class="footer-img">
         <div id="find-me"class="row text-center">
             <p>Find me on social media</p>
@@ -157,7 +156,7 @@
         <div id="copyright" class="row text-center">
             <span>Copyright &copy; Ahmad Aspiannoor</span>
         </div>
-    </section>
+    </section> --}}
 </body>
 <script src="{{ asset('template_asset/plugins/common/common.min.js') }}"></script>
 <script src="{{ asset('template_asset/js/custom.min.js') }}"></script>

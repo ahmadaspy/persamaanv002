@@ -1,35 +1,43 @@
-#banner_1{
+#banner_1 {
     background-color: #7571f9;
 }
+
 .fill img {
     object-fit: cover;
-    width: 50px;
-    height: 500px;
+    width: 30px;
+    height: 400px;
 }
+
 .promo-title {
     font-size: 40px;
-    font-weight: 600;
+    font-weight: bolder;
     margin-top: 100px;
 }
+
 #banner p {
     color: white;
 }
+
 #isi2 p {
     font-size: 30px;
 }
-#container_2{
+
+#container_2 {
     margin-top: 50px;
 }
+
 .bottom-img {
     width: 100%;
-
 }
+
 #footer {
     background-color: #7571f9;
 }
+
 .footer-img {
     width: 100%;
 }
+
 #social-media img {
     width: 60px;
     transition: 0.5s;
@@ -37,4 +45,25 @@
 
 #social-media a:hover img {
     transform: translateY(-10px);
+}
+
+.p-text {
+    font-size: 23px;
+    text-align: justify;
+}
+
+.btn-mulai {
+    margin-top: 20px;
+    color: black;
+    background-color: white;
+    font-size: 18px;
+    border: 0px solid white;
+    border-radius: 8px;
+    padding: 20px 40px;
+    cursor: pointer;
+}
+
+.btn-mulai:hover {
+    color: black;
+    background-color: #d0d0d6;
 }
