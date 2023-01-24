@@ -35,7 +35,7 @@
     ********************-->
 
     <div class="container h-100">
-        <div class="row justify-content-center h-100 align-items-center align-content-center three-item">
+        <div class="row h-100 flex-row align-items-center">
             <div class="col">
 
                 @if (count($errors) > 0)
