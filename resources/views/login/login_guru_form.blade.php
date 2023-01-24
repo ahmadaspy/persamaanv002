@@ -35,7 +35,7 @@
     ********************-->
 
     <div class="container h-100">
-        <div class="row h-100 flex-row align-items-center">
+        <div class="row h-100 flex-row align-items-center mt-3">
             <div class="col">
 
                 @if (count($errors) > 0)
@@ -96,7 +96,8 @@
                                         <div class="row h-100 align-items-center">
                                             <div class="col">
                                                 <h5>Halo, silahkan masukan informasi di bawah</h5>
-                                                <form class="form" method="POST" action="{{route('guru_login_post')}}">
+                                                <form class="form" method="POST"
+                                                    action="{{ route('guru_login_post') }}">
                                                     @csrf
                                                     <div class="d-block d-md-none">
                                                         <h4>Login Sebagai Guru</h4>
@@ -104,14 +105,30 @@
                                                     <div class="form-group">
                                                         <label for="email-guru">Alamat Email</label>
                                                         <input type="email" class="form-control" id="email-guru"
-                                                            aria-describedby="email-desk" name="email" value="{{old('email')}}">
+                                                            aria-describedby="email-desk" name="email"
+                                                            value="{{ old('email') }}">
                                                         <small id="email-desk" class="form-text text-muted">Masukan
                                                             email
                                                             kalian</small>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="password-guru">Password</label>
-                                                        <input type="password" class="form-control" id="password-guru" name="password">
+                                                        <label for="password-siswa">Password</label>
+                                                        <div class="input-group">
+                                                            <input type="password" class="form-control"
+                                                                id="password-siswa" name="password">
+                                                            <div class="input-group-append">
+                                                                <span class="input-group-text"
+                                                                    onclick="password_show_hide();">
+                                                                    <i class="fa fa-eye" id="show_eye"></i>
+                                                                    <i class="fa fa-eye-slash d-none"
+                                                                        id="hide_eye"></i>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+
+
+
+
                                                     </div>
                                                     <button type="submit" class="btn">Login</button>
                                                 </form>
@@ -142,6 +159,22 @@
 <script src="{{ asset('template_asset/js/settings.js') }}"></script>
 <script src="{{ asset('template_asset/js/gleek.js') }}"></script>
 <script src="{{ asset('template_asset/js/styleSwitcher.js') }}"></script>
-
+<script>
+    function password_show_hide() {
+        var x = document.getElementById("password-siswa");
+        var show_eye = document.getElementById("show_eye");
+        var hide_eye = document.getElementById("hide_eye");
+        hide_eye.classList.remove("d-none");
+        if (x.type === "password") {
+            x.type = "text";
+            show_eye.style.display = "none";
+            hide_eye.style.display = "block";
+        } else {
+            x.type = "password";
+            show_eye.style.display = "block";
+            hide_eye.style.display = "none";
+        }
+    }
+</script>
 
 </html>

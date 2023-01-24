@@ -58,6 +58,8 @@
                 <ul class="navbar-nav mr-auto">
 
                 </ul>
+                <a href="#" class="btn btn-light mr-2">Petunjuk</a>
+                <a href="#" class="btn btn-light">KI | KD</a>
                 {{-- <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
                         <a href="{{ route('landing_page') }}" class="btn btn-light">Dashboard</a>
@@ -89,9 +91,10 @@
                 <div class="col-md-6">
                     <p class="promo-title text-white">Sistem Persamaan Linear Tiga Variabel</p>
                     <p class="text-white p-text">
-                        Media Pembelajaran Interaktif yang berisi tentang Materi Sistem Persamaan Linear Tiga Variabel pada Mata Pelajaran Matematika Semester Ganjil
+                        Media Pembelajaran Interaktif yang berisi tentang Materi Sistem Persamaan Linear Tiga Variabel
+                        pada Mata Pelajaran Matematika Semester Ganjil
                     </p>
-                    <a href="{{route('Login_menu')}}">
+                    <a href="{{ route('Login_menu') }}">
                         <button class="btn-mulai">Mulai Belajar</button>
 
                     </a>
