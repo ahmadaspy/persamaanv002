@@ -4,7 +4,7 @@
         <div class="nk-sidebar">
             <div class="nk-nav-scroll">
                 <ul class="metismenu" id="menu">
-                    <li>
+                    {{-- <li>
                         <a href="{{ route('landing_page') }}" aria-expanded="false">
                             <i class="icon-directions menu-icon"></i><span class="nav-text">Petunjuk</span>
                         </a>
@@ -14,7 +14,7 @@
                         <a href="{{ route('kikd') }}" aria-expanded="false">
                             <i class="icon-notebook menu-icon"></i><span class="nav-text">KI | KD</span>
                         </a>
-                    </li>
+                    </li> --}}
                     <li class="nav-label">Materi :</li>
                     {{-- <li>
                         <a href="{{ route('spltv_index') }}" aria-expanded="false">

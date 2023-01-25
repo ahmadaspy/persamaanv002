@@ -17,8 +17,9 @@
                         </li>
                     @endforeach
                 </ul>
+                {{-- form butuh perbaikan check jawaban agar semua data terisi sebelum di kumpulkan --}}
                 <form action="{{ route('kuis_mengenal_post') }}" method="post" onsubmit="return validateForm()" name="myForm"
-                    id="form">
+                    >
                     @csrf
                     <div class="tab-content">
                         @foreach ($soal_kuis_mengenal as $key => $content_kuis)
@@ -34,12 +35,12 @@
                                                 <p>
                                                 <ul>
                                                     <li>{{ $content_kuis->soal_1 }}</li>
-                                                    @if ($content_kuis->soal_2)
+                                                    {{-- @if ($content_kuis->soal_2)
                                                         <li>{{ $content_kuis->soal_2 }}</li>
                                                     @endif
                                                     @if ($content_kuis->soal_3)
                                                         <li>{{ $content_kuis->soal_3 }}</li>
-                                                    @endif
+                                                    @endif --}}
                                                 </ul>
                                                 </p>
                                             </div>
@@ -62,7 +63,7 @@
                                                             value="a" id="{{ $content_kuis->id }}[jawaban_a]"><label
                                                             for="{{ $content_kuis->id }}[jawaban_a]"
                                                             class="ml-3">A. {{$content_kuis->pilihan_a}}
-                                                             </label>
+                                                            </label>
 
                                                     </div>
                                                     <div class="radio mb-3">
@@ -111,7 +112,7 @@
                     </div>
                     <div class="card shadow">
                         <div class="card-body">
-                            <button type="submit" class="btn btn-success float-right m-4 text-white">Kumpulkan</button>
+                            <button type="submit" class="btn btn-success float-right m-4 text-white">Cek Jawaban</button>
                         </div>
                     </div>
                 </form>

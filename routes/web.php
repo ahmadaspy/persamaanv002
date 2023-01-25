@@ -46,7 +46,7 @@ Route::get('/petunjuk', function(){
 Route::get('/KIKD', function () {
     return view('home_page.KIKD');
 })->name('kikd');
-Route::get('/tentang_kita', function () {
+Route::get('/tentangkita', function () {
     return view('home_page.tentang_kita');
 })->name('tentang_kita');
 

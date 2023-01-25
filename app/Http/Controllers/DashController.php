@@ -17,7 +17,7 @@ class DashController extends Controller
             return redirect()->route('dashboard_guru');
         } elseif (Auth::user()->hasRole('siswa')) {
             // dd(Auth::user()->nilaikuis1);
-            return view('siswa.petunjuk.petunjuk');
+            return redirect()->route('pengertian_spltv');
         }
     }
     public function testinput()

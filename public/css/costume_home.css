@@ -67,9 +67,11 @@
     color: white;
     background-color: #d0d0d6;
 }
+
 .navbar-light .navbar-toggler {
     background-color: white;
 }
 
-
-
+#footer-2 {
+    background-color: #7571f9;
+}
