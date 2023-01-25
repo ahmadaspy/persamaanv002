@@ -5,7 +5,7 @@
 .fill img {
     object-fit: cover;
     width: 30px;
-    height: 400px;
+    height: 500px;
 }
 
 .promo-title {
@@ -64,6 +64,12 @@
 }
 
 .btn-mulai:hover {
-    color: black;
+    color: white;
     background-color: #d0d0d6;
 }
+.navbar-light .navbar-toggler {
+    background-color: white;
+}
+
+
+
