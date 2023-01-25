@@ -14,7 +14,7 @@
                     @if (Request()->routeIs('pengertian_spltv'))
                         <li class="page-item">
                             <a class="page-link" href="{{route('bentuk_spltv')}}" aria-label="Next">
-                                <span aria-hidden="true">Bentuk SPLTV</span>
+                                <span aria-hidden="true">Selanjutnya</span>
 
                             </a>
                         </li>

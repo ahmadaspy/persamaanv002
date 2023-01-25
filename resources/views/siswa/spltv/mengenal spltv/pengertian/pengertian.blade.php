@@ -66,27 +66,27 @@
                             <td>1. Ciri dari SPLTV merupakan variabel yang terdiri dari 3 variabel</td>
                             <td>
                                 <button class="btn btn-primary" id="pengertian_soal_1_benar"
-                                    onclick="pengertian_1()">Benar</button>
+                                    onclick="pengertian_1(1)">Benar</button>
                                 <button class="btn btn-primary"id="pengertian_soal_1_salah"
-                                    onclick="pengertian_1()">Salah</button>
+                                    onclick="pengertian_1(0)">Salah</button>
                             </td>
                         </tr>
                         <tr>
                             <td>2. Variabel permisalan hanya boleh x, y dan z</td>
                             <td>
                                 <button class="btn btn-primary" id="pengertian_soal_2_benar"
-                                    onclick="pengertian_2()">Benar</button>
+                                    onclick="pengertian_2(0)">Benar</button>
                                 <button class="btn btn-primary" id="pengertian_soal_2_salah"
-                                    onclick="pengertian_2()">Salah</button>
+                                    onclick="pengertian_2(1)">Salah</button>
                             </td>
                         </tr>
                         <tr>
                             <td>3. SPLTV merupakan sebuah perluasan dari SPLDV</td>
                             <td>
                                 <button class="btn btn-primary" id="pengertian_soal_3_benar"
-                                    onclick="pengertian_3()">Benar</button>
+                                    onclick="pengertian_3(1)">Benar</button>
                                 <button class="btn btn-primary" id="pengertian_soal_3_salah"
-                                    onclick="pengertian_3()">Salah</button>
+                                    onclick="pengertian_3(0)">Salah</button>
                             </td>
                         </tr>
                     </tbody>

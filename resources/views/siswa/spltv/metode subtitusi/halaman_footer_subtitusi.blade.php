@@ -3,13 +3,13 @@
         <div class="d-flex justify-content-center">
             <nav aria-label="Page navigation example">
                 <ul class="pagination">
-                    @if (Request()->routeIs('spltv_subtitusi_1'))
+                    {{-- @if (Request()->routeIs('spltv_subtitusi_1'))
                         <li class="page-item">
                             <a class="page-link" href="{{ route('spltv_index') }}" aria-label="Previous">
                                 <span aria-hidden="true">Sistem Persamaan Linear Tiga Variabel</span>
                             </a>
                         </li>
-                    @endif
+                    @endif --}}
                     <li
                         class="page-item
                     @if (Request()->routeIs('spltv_subtitusi_1'))

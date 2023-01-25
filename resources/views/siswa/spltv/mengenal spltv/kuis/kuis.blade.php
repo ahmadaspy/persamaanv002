@@ -129,7 +129,7 @@
     </script> --}}
     <script>
         function validateForm() {
-            let x = document.forms["myForm"]["{{ $content_kuis->id }}[jawaban_1]"].value;
+            let x = document.forms["myForm"]["{{ $content_kuis->id }}[jawaban]"].value;
             if (x == "") {
                 // alert("Name must be filled out");
                 Swal.fire(
@@ -138,32 +138,25 @@
                     'warning'
                 );
                 return false;
+            } else {
+                Swal.fire({
+                    title: 'Apa anda yakin ?',
+                    text: "Pastikan jawaban sudah terisi semua",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yakin',
+                    cancelButtonText: 'Batal'
+                }).then((isOkay) => {
+                    if (isOkay.isConfirmed) {
+                        let form = document.getElementById("form");
+                        form.submit();
+                    }
+                });
+                return false;
             };
-            if (document.forms["myForm"]["{{ $content_kuis->id }}[jawaban_2]"]) {
-                let y = document.forms["myForm"]["{{ $content_kuis->id }}[jawaban_2]"].value;
-                if (y == "") {
-                    // alert("Name must be filled out");
-                    Swal.fire(
-                        'Waduh !',
-                        'Kalian belum mengisi semua jawaban',
-                        'warning'
-                    );
-                    return false;
-                };
-            };
-            if (document.forms["myForm"]["{{ $content_kuis->id }}[jawaban_3]"]) {
-                let z = document.forms["myForm"]["{{ $content_kuis->id }}[jawaban_3]"].value;
-                if (z == "") {
-                    // alert("Name must be filled out");
-                    Swal.fire(
-                        'Waduh !',
-                        'Kalian belum mengisi semua jawaban',
-                        'warning'
-                    );
-                    return false;
-                };
 
-            };
         }
     </script>
     <script type="text/javascript">

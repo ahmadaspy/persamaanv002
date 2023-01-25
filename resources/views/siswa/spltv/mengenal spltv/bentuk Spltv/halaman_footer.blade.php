@@ -3,6 +3,14 @@
         <div class="d-flex justify-content-center">
             <nav aria-label="Page navigation example">
                 <ul class="pagination">
+                    @if (Request()->routeIs('bentuk_spltv'))
+                        <li class="page-item">
+                            <a class="page-link" href="{{route('pengertian_spltv')}}" aria-label="Next">
+                                <span aria-hidden="true">Sebelumnya</span>
+
+                            </a>
+                        </li>
+                    @endif
                     <li
                         class="page-item
                     @if (Request()->routeIs('bentuk_spltv'))
@@ -46,7 +54,7 @@
                     @if (Request()->routeIs('bentuk_spltv_5'))
                         <li class="page-item">
                             <a class="page-link" href="{{route('bentuk_spltv_kontekstual')}}" aria-label="Next">
-                                <span aria-hidden="true">Bentuk kontekstual SPLTV</span>
+                                <span aria-hidden="true">Selanjutnya</span>
 
                             </a>
                         </li>
