@@ -5,7 +5,7 @@
 @section('content')
     <div class="card shadow">
         <div class="card-header">
-            <h6 class="m-0 font-weight-bold text-primary">Pengertian sistem persamaan linear tiga variabel</h6>
+            <h4 class="m-0 font-weight-bold text-primary">Pengertian sistem persamaan linear tiga variabel</h4>
         </div>
 
         <div class="card-body">
@@ -59,7 +59,12 @@
             </p>
             <p>Dalami pemahaman kalian dengan menjawab soal dibawah ini :
             </p>
-            <div class="table-responsive">
+            <div class="card shadown">
+                <div class="card-header">
+                    <h4>Latihan</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
                 <table class="table table-xs mb-0">
                     <tbody>
                         <tr>
@@ -92,6 +97,9 @@
                     </tbody>
                 </table>
             </div>
+                </div>
+            </div>
+
         </div>
     </div>
     @include('siswa.spltv.mengenal spltv.pengertian.halaman_footer')

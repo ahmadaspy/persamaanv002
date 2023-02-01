@@ -4,14 +4,14 @@ function pengertian_1(i) {
     if (i > 0) {
 
         Swal.fire({
-            title: 'Jawaban Benar',
+            title: 'Jawaban Anda Benar',
             text: 'karena setiap sistem persamaan linear tiga variabel selalu mempunyai tiga variabel',
             icon: 'info',
         })
     } else {
 
         Swal.fire({
-            title: 'Jawaban Salah',
+            title: 'Jawaban Anda Salah',
             text: 'karena setiap sistem persamaan linear tiga variabel selalu mempunyai tiga variabel',
             icon: 'warning',
         })
@@ -25,13 +25,13 @@ function pengertian_2(i) {
     if (i > 0) {
 
         Swal.fire({
-            title: 'Jawaban Benar',
+            title: 'Jawaban Anda Benar',
             text: 'karena setiap variabel permisalan bisa saja berbeda dari yang umum seperti x, y, dan z. Bisa saja kita misalkan seperti a, b, dan c.',
             icon: 'info',
         })
     } else {
         Swal.fire({
-            title: 'Jawaban Salah',
+            title: 'Jawaban Anda Salah',
             text: 'karena setiap variabel permisalan bisa saja berbeda dari yang umum seperti x, y, dan z. Bisa saja kita misalkan seperti a, b, dan c.',
             icon: 'warning',
         })
@@ -39,18 +39,18 @@ function pengertian_2(i) {
 
 }
 
-function pengertian_3() {
+function pengertian_3(i) {
     document.getElementById("pengertian_soal_3_benar").className = "btn btn-success";
     document.getElementById("pengertian_soal_3_salah").className = "btn btn-danger";
     if (i > 0) {
         Swal.fire({
-            title: 'Jawaban Benar',
+            title: 'Jawaban Anda Benar',
             text: 'Karena perluasan dari SPLD adalah SPLTV yaitu pemecahan masalah yang menggunakan tiga variabel.',
             icon: 'info',
         })
     } else {
         Swal.fire({
-            title: 'Jawaban Salah',
+            title: 'Jawaban Anda Salah',
             text: 'Karena perluasan dari SPLD adalah SPLTV yaitu pemecahan masalah yang menggunakan tiga variabel.',
             icon: 'warning',
         })
