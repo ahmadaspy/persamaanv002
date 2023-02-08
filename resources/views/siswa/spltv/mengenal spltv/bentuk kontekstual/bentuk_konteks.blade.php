@@ -5,9 +5,9 @@
 @section('content')
     <div class="card shadow">
         <div class="card-header">
-            <h6 class="m-0 font-weight-bold text-primary">
+            <h4 class="m-0 font-weight-bold text-primary">
                 Bentuk kontekstual Sistem Persamaan Linear Tiga Variabel
-            </h6>
+            </h4>
         </div>
         <div class="card-body">
             <div class="card shadow">

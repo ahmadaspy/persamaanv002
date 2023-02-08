@@ -28,6 +28,7 @@
                 linear dalam tiga variabel. Himpunan yang memenuhi persamaan tersebut yaitu \(x,y,z | ax+ by+cz=d\) adalah
                 suatu bidang datar dalam sumbu ortogonal \(x, y\) dan \(z\).
             </p>
+            <p>Bentuk dari sistem persamaan linear tiga variabel maka akan dituliskan sebagai berikut :</p>
             <div class="card" style="background-color: #e3e3e3">
                 <div class="card-body">
                     $$\displaylines{

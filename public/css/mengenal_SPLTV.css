@@ -1,0 +1,35 @@
+.table-halaman-2 img{
+    height: auto;
+    width: 450px;
+    max-width: 100%;
+}
+.table-halaman-2 p{
+    text-align: justify;
+}
+.table-halaman-3 img {
+    height: auto;
+    width: 450px;
+    max-width: 100%;
+}
+.table-halaman-3 p {
+    text-align: justify;
+}
+.table-halaman-4 img {
+    height: auto;
+    width: 450px;
+    max-width: 100%;
+}
+
+.table-halaman-4 p {
+    text-align: justify;
+}
+
+.table-halaman-pengertian img {
+    height: auto;
+    width: 450px;
+    max-width: 100%;
+}
+
+.table-halaman-pengertian p {
+    text-align: justify;
+}

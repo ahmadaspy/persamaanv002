@@ -1,6 +1,7 @@
 @extends('siswa.template.main')
 @section('script_atas')
     <script src="{{ asset('js/siswa_pengertian.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('css/mengenal_SPLTV.css') }}">
 @endsection
 @section('content')
     <div class="card shadow">
@@ -59,44 +60,86 @@
             </p>
             <p>Dalami pemahaman kalian dengan menjawab soal dibawah ini :
             </p>
-            <div class="card shadown">
+            <div class="card shadow" style="background-color: #e3e3e3">
                 <div class="card-header">
                     <h4>Latihan</h4>
                 </div>
                 <div class="card-body">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>Petunjuk</h5>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-halaman-pengertian">
+                                <tr>
+                                    <td>
+                                        <img src="{{ asset('image/petunjuk/pengertian SPLTV/Jawaban benar.jpg') }}"
+                                            alt="petunjuk 1" class="img-fluid">
+                                        <img src="{{ asset('image/petunjuk/pengertian SPLTV/Jawaban benar 2.jpg') }}"
+                                            alt="petunjuk 1" class="img-fluid">
+                                    </td>
+
+                                    <td>
+                                        <p>Pada tombol benar salah akan berwarna hijau atau merah yang menandakan</p>
+                                        <p>Hijau : Jawban Anda Benar</p>
+                                        <p>Merah : Jawaban Anda Salah</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="{{ asset('image/petunjuk/pengertian SPLTV/Jawaban Benar notif.jpg') }}"
+                                            alt="petunjuk 1" class="img-fluid">
+                                    </td>
+                                    <td>
+                                        <p>Apabila Jawaban Anda Benar Maka Ada Pemberitahuan Seperti Gambar</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="{{ asset('image/petunjuk/pengertian SPLTV/Jawaban Salah notif.jpg') }}"
+                                            alt="petunjuk 1" class="img-fluid">
+                                    </td>
+                                    <td>
+                                        <p>Apabila Jawaban Anda Salah Maka Ada Pemberitahuan Seperti Gambar</p>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
                     <div class="table-responsive">
-                <table class="table table-xs mb-0">
-                    <tbody>
-                        <tr>
-                            <td>1. Ciri dari SPLTV merupakan variabel yang terdiri dari 3 variabel</td>
-                            <td>
-                                <button class="btn btn-primary" id="pengertian_soal_1_benar"
-                                    onclick="pengertian_1(1)">Benar</button>
-                                <button class="btn btn-primary"id="pengertian_soal_1_salah"
-                                    onclick="pengertian_1(0)">Salah</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2. Variabel permisalan hanya boleh x, y dan z</td>
-                            <td>
-                                <button class="btn btn-primary" id="pengertian_soal_2_benar"
-                                    onclick="pengertian_2(0)">Benar</button>
-                                <button class="btn btn-primary" id="pengertian_soal_2_salah"
-                                    onclick="pengertian_2(1)">Salah</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3. SPLTV merupakan sebuah perluasan dari SPLDV</td>
-                            <td>
-                                <button class="btn btn-primary" id="pengertian_soal_3_benar"
-                                    onclick="pengertian_3(1)">Benar</button>
-                                <button class="btn btn-primary" id="pengertian_soal_3_salah"
-                                    onclick="pengertian_3(0)">Salah</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                        <table class="table table-xs mb-0">
+                            <tbody>
+                                <tr>
+                                    <td>1. Ciri dari SPLTV merupakan variabel yang terdiri dari 3 variabel</td>
+                                    <td>
+                                        <button class="btn btn-primary mt-2" id="pengertian_soal_1_benar"
+                                            onclick="pengertian_1(1)">Benar</button>
+                                        <button class="btn btn-primary mt-2" id="pengertian_soal_1_salah"
+                                            onclick="pengertian_1(0)">Salah</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2. Variabel permisalan hanya boleh x, y dan z</td>
+                                    <td>
+                                        <button class="btn btn-primary mt-2" id="pengertian_soal_2_benar"
+                                            onclick="pengertian_2(0)">Benar</button>
+                                        <button class="btn btn-primary mt-2" id="pengertian_soal_2_salah"
+                                            onclick="pengertian_2(1)">Salah</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3. SPLTV merupakan sebuah perluasan dari SPLDV</td>
+                                    <td>
+                                        <button class="btn btn-primary mt-2" id="pengertian_soal_3_benar"
+                                            onclick="pengertian_3(1)">Benar</button>
+                                        <button class="btn btn-primary mt-2" id="pengertian_soal_3_salah"
+                                            onclick="pengertian_3(0)">Salah</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
