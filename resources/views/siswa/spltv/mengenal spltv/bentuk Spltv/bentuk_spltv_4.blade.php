@@ -120,7 +120,7 @@
                                                     </p>
                                                 </div>
                                             </div>
-                                            <div class="card">
+                                            <div class="card" style="background-color: #e3e3e3">
                                                 <div class="card-header">
                                                     <h6>1. Menentukan titik di sumbu \(x\) yang dilalui persamaan</h6>
                                                 </div>
@@ -135,27 +135,16 @@
                                                             </p>
                                                         </div>
                                                     </div>
+                                                    \(5x+4y-z-20\)<br>
+                                                    \(5x+4(0)-(0)=20\) <br>
+                                                    \(5x+0-0=20\) <br>
+                                                    \(5x=20\) <br>
+                                                    \(x = {20 \over 5}\) <br>
+                                                    \(x=4\)
 
-                                                    \(4x+2y+z=8\) <br>
-                                                    \(4x+\) <input type="number" name="" id="step_1_1_0"
-                                                        onchange="step_1_1(0)"
-                                                        style=" border-radius: 6px; border: 1px solid #ccc; width: 40px; text-align: center;">
-                                                    + <input type="number" name="" id="step_1_1_1"
-                                                        onchange="step_1_1(1)"
-                                                        style=" border-radius: 6px; border: 1px solid #ccc; width: 40px; text-align: center;">
-                                                    = \(8\)
-                                                    <div class="vis_2" id="vis_2" style="visibility: hidden">
-                                                        \(4x=8\) <br>
-                                                        \(x =\) <input type="number" name="" id="step_1_1_2"
-                                                            onchange="step_1_1(2)"
-                                                            style=" border-radius: 6px; border: 1px solid #ccc; width: 40px; text-align: center;">
-                                                    </div>
-                                                    <div class="vis_3" id="vis_3" style="visibility: hidden">
-                                                        titik yang berada di sumbu \(x\) adalah \((2,0,0)\)
-                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="card">
+                                            <div class="card" style="background-color: #e3e3e3">
                                                 <div class="card-header">
                                                     <h6>2. Menentukan titik di sumbu \(y\) yang dilalui persamaan</h6>
                                                 </div>
@@ -165,32 +154,20 @@
                                                             <p>
                                                                 memisalkan \(x = 0\) dan \(z = 0\) maka kita mendapatkan
                                                                 titik di sumbu \(y\) yang dilalui oleh persamaan
-                                                                \(4x+2y+z=8\)
+                                                                \(5x+4y-z=20\)
                                                             </p>
                                                         </div>
                                                     </div>
 
-                                                    \(4x+2y+z=8\) <br>
-                                                    <input type="number" name="" id="step_1_1_3"
-                                                        onchange="step_1_1(3)"
-                                                        style=" border-radius: 6px; border: 1px solid #ccc; width: 40px; text-align: center;">
-                                                    \(+2y+\) <input type="number" name="" id="step_1_1_4"
-                                                        onchange="step_1_1(4)"
-                                                        style=" border-radius: 6px; border: 1px solid #ccc; width: 40px; text-align: center;">
-                                                    = \(8\) <br>
-                                                    <div class="vis_5" id="vis_5" style="visibility: hidden">
-                                                        \(2y=8\) <br>
-                                                        \(y =\) <input type="number" name="" id="step_1_1_5"
-                                                            onchange="step_1_1(5)"
-                                                            style=" border-radius: 6px; border: 1px solid #ccc; width: 40px; text-align: center;">
-                                                        <br>
-                                                    </div>
-                                                    <div class="vis_6" id="vis_6" style="visibility: hidden">
-                                                        titik yang berada di sumbu \(y\) adalah \((0,4,0)\)
-                                                    </div>
+                                                    \(5x+4y-z=20\) <br>
+                                                    \(5(0)+4y-(0)=20\) <br>
+                                                    \(0+4y-0=20\) <br>
+                                                    \(4y=20\) <br>
+                                                    \(y = {20 \over 4}\) <br>
+                                                    \(y=5\)
                                                 </div>
                                             </div>
-                                            <div class="card">
+                                            <div class="card" style="background-color: #e3e3e3">
                                                 <div class="card-header">
                                                     <h6>3. Menentukan titik di sumbu \(z\) yang dilalui persamaan</h6>
                                                 </div>
@@ -200,29 +177,21 @@
                                                             <p>
                                                                 memisalkan \(x = 0\) dan \(y = 0\) maka kita mendapatkan
                                                                 titik di sumbu \(z\) yang dilalui oleh persamaan
-                                                                \(4x+2y+z=8\)
+                                                                \(5x+4y-z=20\)
                                                             </p>
                                                         </div>
                                                     </div>
 
-                                                    \(4x+2y+z=8\) <br>
-                                                    <input type="number" name="" id="step_1_1_6"
-                                                        onchange="step_1_1(6)"
-                                                        style=" border-radius: 6px; border: 1px solid #ccc; width: 40px; text-align: center;">
-                                                    \(+\) <input type="number" name="" id="step_1_1_7"
-                                                        onchange="step_1_1(7)"
-                                                        style=" border-radius: 6px; border: 1px solid #ccc; width: 40px; text-align: center;">
-
-                                                    \(+z\) = \(8\) <br>
-                                                    <div class="vis_8" id="vis_8" style="visibility: hidden">
-                                                        \(z=8\) <br>
-                                                        titik yang berada di sumbu \(z\) adalah \((0,0,8)\)
-                                                    </div>
-
+                                                    \(5x+4y-z=20\) <br>
+                                                    \(5(0)+4(0)-z=20\) <br>
+                                                    \(0+0-z=20\) <br>
+                                                    \(-z=20\) <br>
+                                                    \(z = -{20 \over 1}\) <br>
+                                                    \(z=-20\)
                                                 </div>
                                             </div>
 
-                                            <div class="card">
+                                            <div class="card"  style="background-color: #e3e3e3">
                                                 <div class="card-header">
                                                     <h6>4. Menentukan bidang di dalam 3 dimensi</h6>
                                                 </div>
@@ -232,7 +201,7 @@
                                                             <div class="card">
                                                                 <div class="card-body">
                                                                     <p>
-                                                                        Buatlah sebuah bidang dari persamaan \(4x+2y+z=8\)
+                                                                        Buatlah sebuah bidang dari persamaan \(5x+4y-z=20\)
                                                                         dengan titik yang kita dapatkan di atas menggunakan
                                                                         geogebra. <br>
                                                                         Titik A merupkan titik yang berada di sumbu \(x\)
@@ -262,8 +231,7 @@
                                                                 <div class="modal-dialog">
                                                                     <div class="modal-content">
                                                                         <div class="modal-header">
-                                                                            <h5 class="modal-title"
-                                                                                id="petunjukModalLabel">
+                                                                            <h5 class="modal-title" id="petunjukModalLabel">
                                                                                 Petunjuk</h5>
                                                                             <button type="button" class="close"
                                                                                 data-dismiss="modal" aria-label="Close">
