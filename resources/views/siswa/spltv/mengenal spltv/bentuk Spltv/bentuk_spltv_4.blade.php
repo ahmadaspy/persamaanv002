@@ -291,21 +291,12 @@
                                                             </div>
                                                             <div class="embed-responsive embed-responsive-16by9">
                                                                 <iframe class="embed-responsive-item"
-                                                                    src="https://www.geogebra.org/material/iframe/id/mm4agmax/width/854/height/480/border/888888/sfsb/true/smb/false/stb/true/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false"
+                                                                    src="https://www.geogebra.org/material/iframe/id/n558uthp/width/854/height/480/border/888888/sfsb/true/smb/false/stb/true/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false"
                                                                     allowfullscreen></iframe>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="row mt-3">
-                                                        <div class="col">
-                                                            <div class="row float-right">
-                                                                <div class="col">
-                                                                    <button class="btn btn-primary"
-                                                                        onclick="kesimpulan()">Kesimpulan</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+
                                                 </div>
                                             </div>
                                             <div class="card">
@@ -314,18 +305,10 @@
                                                 </div>
                                                 <div class="card-body">
                                                     <p>
-                                                        persamaan \(4x+2y+z=8\) membuat sebuah bidang dalam ruang 3 dimensi,
-                                                        hal
-                                                        itu karena persamaan tersebut mempunyai tiga variabel.
-                                                        apabila kalian masukan angka variabel apapun ke dalam persamaan
-                                                        tersebut, maka titik tersebut akan berada
-                                                        dalam bidang yang dibentuk oleh persamaan tersebut. <br>
-                                                        salah satu cara untuk menentukan bidang yang memenuhi persamaan
-                                                        adalah
-                                                        membuat tiga titik yang berada pada masing - masing sumbu yaitu
-                                                        sumbu
-                                                        \(x\), \(y\), dan \(z\), yang dilalui oleh bidang persamaan
-                                                        tersebut.
+                                                        persamaan \(5x+4y-z=20\) membuat sebuah bidang dalam ruang 3 dimensi,
+                                                        cara yang paling sederhana dalam menentukan bentuk dari persamaan tersebut adalah dengan cara
+                                                        mencari titik yang di lalui oleh bidang pada persamaan tersebut yaitu pada sumbu \(x\), \(y\) dan \(z\) seperti di atas. <br>
+                                                        cara ini juga hanya berfungsi pada aplikasi geogebra.
                                                     </p>
                                                 </div>
                                             </div>
@@ -580,18 +563,17 @@
                                                 </div>
                                                 <div class="card-body">
                                                     <p>
-                                                        persamaan \(4x+2y+z=8\) membuat sebuah bidang dalam ruang 3 dimensi,
-                                                        hal
-                                                        itu karena persamaan tersebut mempunyai tiga variabel.
-                                                        apabila kalian masukan angka variabel apapun ke dalam persamaan
-                                                        tersebut, maka titik tersebut akan berada
-                                                        dalam bidang yang dibentuk oleh persamaan tersebut. <br>
+                                                        persamaan \(4x+2y+z=8\) membuat sebuah bidang dalam ruang 3 dimensi,<br>
+
                                                         salah satu cara untuk menentukan bidang yang memenuhi persamaan
                                                         adalah
                                                         membuat tiga titik yang berada pada masing - masing sumbu yaitu
                                                         sumbu
                                                         \(x\), \(y\), dan \(z\), yang dilalui oleh bidang persamaan
-                                                        tersebut.
+                                                        tersebut. <br>
+                                                        karena sistem persamaan linear tiga variabel harus mempunyai 3 persamaan maka, lakukan kepada ketiga persamaan yang ditanyakan
+                                                        <br>
+                                                        maka kalian akan mendapatkan solusi dari sistem persamaan tersebut.
                                                     </p>
                                                 </div>
                                             </div>

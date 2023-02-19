@@ -14,7 +14,7 @@
                 <div class="card-body">
                     <div class="card shadow" style="background-color: #e3e3e3">
                         <div class="card-header">
-                            <h6>Tipe Sistem Persamaan Linear Tiga Variabel yang terbentuk</h6>
+                            <h5>Tipe Sistem Persamaan Linear Tiga Variabel yang terbentuk</h5>
                         </div>
                         <div class="card-body">
                             <p>
@@ -31,7 +31,7 @@
 
                     <div class="card shadow">
                         <div class="card-header">
-                            <h6>Tipe yang mempunyai solusi</h6>
+                            <h5>Tipe yang mempunyai solusi</h5>
                         </div>
                         <div class="card-body">
                             <p>
@@ -63,7 +63,7 @@
 
                     <div class="card shadow">
                         <div class="card-header">
-                            <h6>Tipe yang mempunyai solusi tak terbatas</h6>
+                            <h5>Tipe yang mempunyai solusi tak terbatas</h5>
                         </div>
                         <div class="card-body">
                             <p>
@@ -132,7 +132,7 @@
 
                     <div class="card shadow">
                         <div class="card-header">
-                            <h6>Tipe yang tidak mempunyai solusi</h6>
+                            <h5>Tipe yang tidak mempunyai solusi</h5>
                         </div>
                         <div class="card-body">
                             <p>
@@ -193,75 +193,129 @@
                         </div>
                     </div>
 
-                    <p>Untuk lebih jelasnya cobalah bedakan persamaan linear sederhana di bawah apakah persamaan
-                        tersebut
-                        termasuk
-                        persamaan linear tiga variabel atau bukan.
-                    </p>
-                    <div class="table-responsive">
-                        <table class="table table-xs mb-0">
-                            <tbody>
+                    <div class="card" style="background-color: #e3e3e3">
+                        <div class="card-header">
+                            <h5>Latihan</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>Untuk lebih jelasnya cobalah bedakan persamaan linear sederhana di bawah apakah persamaan
+                                tersebut
+                                termasuk
+                                persamaan linear tiga variabel atau bukan.
+                            </p>
+                            <div class="card">
+                        <div class="card-header">
+                            <h5>Petunjuk</h5>
+                        </div>
+                        <div class="card-body">
+                            <table class="table table-halaman-pengertian">
                                 <tr>
                                     <td>
-                                        \(2b+5z=16\)
-                                        <br>
-                                        \(-3b+z=16\)
+                                        <img src="{{ asset('image/petunjuk/pengertian SPLTV/Jawaban benar.jpg') }}"
+                                            alt="petunjuk 1" class="img-fluid">
+                                        <img src="{{ asset('image/petunjuk/pengertian SPLTV/Jawaban benar 2.jpg') }}"
+                                            alt="petunjuk 1" class="img-fluid">
                                     </td>
+
                                     <td>
-                                        <button class="btn btn-primary" id="bentuk_soal_1_termasuk"
-                                            onclick="bentuk_1()">Termasuk</button>
-                                        <button class="btn btn-primary"id="bentuk_soal_1_tidak" onclick="bentuk_1()">Tidak
-                                            Termasuk</button>
+                                        <p>Pada tombol benar salah akan berwarna hijau atau merah yang menandakan</p>
+                                        <p>Hijau : Jawban Anda Benar</p>
+                                        <p>Merah : Jawaban Anda Salah</p>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        \(5a+6b-8c=9\)
-                                        <br>
-                                        \(2a+2b+c=7\)
-                                        <br>
-                                        \(3a+3b+2c=11\)
+                                        <img src="{{ asset('image/petunjuk/pengertian SPLTV/Jawaban Benar notif.jpg') }}"
+                                            alt="petunjuk 1" class="img-fluid">
                                     </td>
                                     <td>
-                                        <button class="btn btn-primary" id="bentuk_soal_2_termasuk"
-                                            onclick="bentuk_2()">Termasuk</button>
-                                        <button class="btn btn-primary"id="bentuk_soal_2_tidak" onclick="bentuk_2()">Tidak
-                                            Termasuk</button>
+                                        <p>Apabila Jawaban Anda Benar Maka Ada Pemberitahuan Seperti Gambar</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="{{ asset('image/petunjuk/pengertian SPLTV/Jawaban Salah notif.jpg') }}"
+                                            alt="petunjuk 1" class="img-fluid">
+                                    </td>
+                                    <td>
+                                        <p>Apabila Jawaban Anda Salah Maka Ada Pemberitahuan Seperti Gambar</p>
                                     </td>
                                 </tr>
 
-                                <tr>
-                                    <td>
-                                        \(9r+8b+2q=8\)
-                                        <br>
-                                        \(r-2b+q=3\)
-                                        <br>
-                                        \(6r+2q=10\)
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-primary" id="bentuk_soal_3_termasuk"
-                                            onclick="bentuk_3()">Termasuk</button>
-                                        <button class="btn btn-primary"id="bentuk_soal_3_tidak" onclick="bentuk_3()">Tidak
-                                            Termasuk</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        \(8a+4a-6c=8\)
-                                        <br>
-                                        \(2c-c=4\)
-                                    </td>
-                                    <td>
-                                        <button class="btn btn-primary" id="bentuk_soal_4_termasuk"
-                                            onclick="bentuk_4()">Termasuk</button>
-                                        <button class="btn btn-primary"id="bentuk_soal_4_tidak" onclick="bentuk_4()">Tidak
-                                            Termasuk</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-
-                        </table>
+                            </table>
+                        </div>
                     </div>
+                            <div class="table-responsive">
+                                <table class="table table-xs mb-0">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                \(2b+5z=16\)
+                                                <br>
+                                                \(-3b+z=16\)
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-primary" id="bentuk_soal_1_termasuk"
+                                                    onclick="bentuk_1(0)">Termasuk</button>
+                                                <button class="btn btn-primary"id="bentuk_soal_1_tidak"
+                                                    onclick="bentuk_1(1)">Tidak
+                                                    Termasuk</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                \(5a+6b-8c=9\)
+                                                <br>
+                                                \(2a+2b+c=7\)
+                                                <br>
+                                                \(3a+3b+2c=11\)
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-primary" id="bentuk_soal_2_termasuk"
+                                                    onclick="bentuk_2(1)">Termasuk</button>
+                                                <button class="btn btn-primary"id="bentuk_soal_2_tidak"
+                                                    onclick="bentuk_2(0)">Tidak
+                                                    Termasuk</button>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                \(9r+8b+2q=8\)
+                                                <br>
+                                                \(r-2b+q=3\)
+                                                <br>
+                                                \(6r+2q=10\)
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-primary" id="bentuk_soal_3_termasuk"
+                                                    onclick="bentuk_3(1)">Termasuk</button>
+                                                <button class="btn btn-primary"id="bentuk_soal_3_tidak"
+                                                    onclick="bentuk_3(0)">Tidak
+                                                    Termasuk</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                \(8a+4a-6c=8\)
+                                                <br>
+                                                \(2c-c=4\)
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-primary" id="bentuk_soal_4_termasuk"
+                                                    onclick="bentuk_4(0)">Termasuk</button>
+                                                <button class="btn btn-primary"id="bentuk_soal_4_tidak"
+                                                    onclick="bentuk_4(1)">Tidak
+                                                    Termasuk</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
