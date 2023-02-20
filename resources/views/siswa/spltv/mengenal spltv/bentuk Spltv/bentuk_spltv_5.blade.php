@@ -49,6 +49,48 @@
                             <p>
                                 untuk lebih jelas lihat contoh di bawah
                             </p>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h5>Petunjuk</h5>
+                                </div>
+                                <div class="card-body">
+                                    <table class="table table-halaman-4">
+                                        <tr>
+                                            <td>
+                                                <img src="{{ asset('image/petunjuk/Sistem persamaan linear tiga variabel/persamaan baru solusi.jpg') }}"
+                                                    alt="petunjuk 1" class="img-fluid">
+                                            </td>
+                                            <td>
+                                                <p>Klik <span>Persamaan Baru</span> untuk mengubah persamaan
+                                                    pada salah satu sistem persamaan linear tiga variabel
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src="{{ asset('image/petunjuk/Sistem persamaan linear tiga variabel/Lihat dan sembunyikan.jpg') }}"
+                                                    alt="petunjuk 2" class="img-fluid">
+                                            </td>
+                                            <td>
+                                                <p>Klik Lihat atau Sembunyikan untuk melihat dan menyembunyikan bidang yang
+                                                    di buat oleh persamaan</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src="{{ asset('image/petunjuk/Sistem persamaan linear tiga variabel/Solusi lihat.jpg') }}"
+                                                    alt="petunjuk 3" class="img-fluid">
+                                            </td>
+                                            <td>
+                                                <p>Klik Solusi untuk melihat solusi yang terbentuk dari sistem persamaan
+                                                    linear tiga variabel</p>
+                                            </td>
+                                        </tr>
+
+
+                                    </table>
+                                </div>
+                            </div>
                             <div class="d-none d-sm-block d-md-none">
                                 <span class="font-italic">miringkan hp anda</span>
                             </div>
@@ -204,47 +246,48 @@
                                 persamaan linear tiga variabel atau bukan.
                             </p>
                             <div class="card">
-                        <div class="card-header">
-                            <h5>Petunjuk</h5>
-                        </div>
-                        <div class="card-body">
-                            <table class="table table-halaman-pengertian">
-                                <tr>
-                                    <td>
-                                        <img src="{{ asset('image/petunjuk/pengertian SPLTV/Jawaban benar.jpg') }}"
-                                            alt="petunjuk 1" class="img-fluid">
-                                        <img src="{{ asset('image/petunjuk/pengertian SPLTV/Jawaban benar 2.jpg') }}"
-                                            alt="petunjuk 1" class="img-fluid">
-                                    </td>
+                                <div class="card-header">
+                                    <h5>Petunjuk</h5>
+                                </div>
+                                <div class="card-body">
+                                    <table class="table table-halaman-pengertian">
+                                        <tr>
+                                            <td>
+                                                <img src="{{ asset('image/petunjuk/pengertian SPLTV/Jawaban benar.jpg') }}"
+                                                    alt="petunjuk 1" class="img-fluid">
+                                                <img src="{{ asset('image/petunjuk/pengertian SPLTV/Jawaban benar 2.jpg') }}"
+                                                    alt="petunjuk 1" class="img-fluid">
+                                            </td>
 
-                                    <td>
-                                        <p>Pada tombol benar salah akan berwarna hijau atau merah yang menandakan</p>
-                                        <p>Hijau : Jawban Anda Benar</p>
-                                        <p>Merah : Jawaban Anda Salah</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <img src="{{ asset('image/petunjuk/pengertian SPLTV/Jawaban Benar notif.jpg') }}"
-                                            alt="petunjuk 1" class="img-fluid">
-                                    </td>
-                                    <td>
-                                        <p>Apabila Jawaban Anda Benar Maka Ada Pemberitahuan Seperti Gambar</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <img src="{{ asset('image/petunjuk/pengertian SPLTV/Jawaban Salah notif.jpg') }}"
-                                            alt="petunjuk 1" class="img-fluid">
-                                    </td>
-                                    <td>
-                                        <p>Apabila Jawaban Anda Salah Maka Ada Pemberitahuan Seperti Gambar</p>
-                                    </td>
-                                </tr>
+                                            <td>
+                                                <p>Pada tombol benar salah akan berwarna hijau atau merah yang menandakan
+                                                </p>
+                                                <p>Hijau : Jawban Anda Benar</p>
+                                                <p>Merah : Jawaban Anda Salah</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src="{{ asset('image/petunjuk/pengertian SPLTV/Jawaban Benar notif.jpg') }}"
+                                                    alt="petunjuk 1" class="img-fluid">
+                                            </td>
+                                            <td>
+                                                <p>Apabila Jawaban Anda Benar Maka Ada Pemberitahuan Seperti Gambar</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src="{{ asset('image/petunjuk/pengertian SPLTV/Jawaban Salah notif.jpg') }}"
+                                                    alt="petunjuk 1" class="img-fluid">
+                                            </td>
+                                            <td>
+                                                <p>Apabila Jawaban Anda Salah Maka Ada Pemberitahuan Seperti Gambar</p>
+                                            </td>
+                                        </tr>
 
-                            </table>
-                        </div>
-                    </div>
+                                    </table>
+                                </div>
+                            </div>
                             <div class="table-responsive">
                                 <table class="table table-xs mb-0">
                                     <tbody>

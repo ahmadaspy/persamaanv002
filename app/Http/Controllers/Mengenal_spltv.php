@@ -56,7 +56,7 @@ class Mengenal_spltv extends Controller
                 }
             }
         }
-        $nilai = count(array_keys($jawaban_siswa, 'benar')) * 20;
+        $nilai = count(array_keys($jawaban_siswa, 'benar')) * 10;
         if (KuisMengenalNilai::where('user_id', Auth::user()->id)->get()->isEmpty()) {
             $insert = new KuisMengenalNilai();
             $insert->user_id = Auth::user()->id;

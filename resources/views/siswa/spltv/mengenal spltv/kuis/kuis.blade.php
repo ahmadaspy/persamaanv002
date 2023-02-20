@@ -17,8 +17,8 @@
                         </li>
                     @endforeach
                 </ul>
-                {{-- form butuh perbaikan check jawaban agar semua data terisi sebelum di kumpulkan --}}
-                <form action="{{ route('kuis_mengenal_post') }}" method="post" onsubmit="return validateForm()" name="myForm"
+
+                <form action="{{ route('kuis_mengenal_post') }}" method="post" onsubmit="return validateForm()" name="myForm" id="form"
                     >
                     @csrf
                     <div class="tab-content">
@@ -120,13 +120,39 @@
             </div>
         </div>
     </div>
+    <div class="bootstrap-modal">
+        <!-- Modal -->
+        <div class="modal fade" id="myModal">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title font-weight-bold text-primary">Perhatian</h5>
+                        <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h5>setiap halaman di muat, maka soal juga akan di acak kembali</h5>
+                        <hr>
+                        <h5>Pastikan kalian mengisi semua jawaban yang ada</h5>
+                        <hr>
+
+                        <p>klik tombol <button class="btn btn-success text-white">Cek Jawaban</button> apabila kalian sudah
+                            mengisi semua jawaban</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
 @section('script_bawah')
-    {{-- <script>
+    <script>
         window.onload = function() {
             $("#myModal").modal('show');
         }
-    </script> --}}
+    </script>
     <script>
         function validateForm() {
             let x = document.forms["myForm"]["{{ $content_kuis->id }}[jawaban]"].value;
@@ -162,7 +188,8 @@
     <script type="text/javascript">
         $(document).ready(function() {
             $('#smartwizard').smartWizard({
-                theme: 'progress',
+                selected: 0,
+                theme: 'dots',
                 transition: {
                     animation: 'fade',
                     speed: '400',
@@ -171,8 +198,9 @@
                     next: 'Selanjutnya',
                     previous: 'Kembali'
                 },
-                anchorSettings: {
+                anchor: {
                     enableAllAnchors: true,
+                    enableDoneStateNavigation: true,
                 },
 
             });

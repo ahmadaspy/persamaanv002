@@ -2,7 +2,7 @@
 @section('content')
     <div class="card shadow">
         <div class="card-header">
-            <h6 class="font-weight-bold text-primary">Kuis 1</h6>
+            <h6 class="font-weight-bold text-primary">Kuis 2</h6>
         </div>
         <div class="card-body">
             <div id="smartwizard">
@@ -174,7 +174,7 @@
     <script type="text/javascript">
         $(document).ready(function() {
             $('#smartwizard').smartWizard({
-                theme: 'progress',
+                theme: 'dots',
                 transition: {
                     animation: 'fade',
                     speed: '400',
@@ -183,8 +183,9 @@
                     next: 'Selanjutnya',
                     previous: 'Kembali'
                 },
-                anchorSettings: {
+                anchor: {
                     enableAllAnchors: true,
+                    enableDoneStateNavigation: true,
                 },
 
             });

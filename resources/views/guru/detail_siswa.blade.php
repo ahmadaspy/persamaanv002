@@ -75,6 +75,90 @@
                                             <tbody>
                                                 <tr>
                                                     <td>1</td>
+                                                    <td>{{ $data_siswa->nilaikuismengenal->user->name ?? 'Data Kosong' }}</td>
+                                                    <td>{{ $data_siswa->nilaikuismengenal->nilai ?? 'Data Kosong' }}</td>
+                                                    {{-- @if ($data_siswa->nilaikuismengenal->created_at == null)
+                                                <td>Data Kosong</td>
+                                            @else
+                                                <td>{{$data_siswa->nilaikuismengenal->created_at->diffForhumans()}}</td>
+                                            @endif --}}
+                                                    <td>{{ $data_siswa->nilaikuismengenal ? $data_siswa->nilaikuismengenal->created_at->diffForhumans() : 'Data Kosong' }}
+                                                        ({{ $data_siswa->nilaikuismengenal ? $data_siswa->nilaikuismengenal->created_at->format('H:i') : '' }})
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <h6>Nilai kuis terdahulu</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>Nama</th>
+                                                    <th>Nilai</th>
+                                                    <th>Melakukan</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach ($data_siswa->nilaikuismengenal_trash as $key => $kuismengenal_trash)
+                                                    <tr>
+                                                        <th scope="row">{{ $key++ + 1 }}</th>
+                                                        <td>{{ $kuismengenal_trash->user->name ?? 'Data Kosong' }}</td>
+                                                        <td>{{ $kuismengenal_trash->nilai ?? 'Data Kosong' }}</td>
+                                                        <td>{{ $kuismengenal_trash ? $kuismengenal_trash->created_at->diffForhumans() : 'Data Kosong' }}
+                                                            ({{ $kuismengenal_trash ? $kuismengenal_trash->created_at->format('H:i') : '' }})
+                                                        </td>
+                                                    </tr>
+                                                @endforeach
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <h6>Grafik Kuis 1</h6>
+                                </div>
+                                <div class="card-body">
+                                    {!! $chart_kuis_mengenal->render() !!}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="card shadow">
+                        <div class="card-header">
+                            <h6 class="text-primary">Nilai Kuis 2</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="card shadow">
+                                <div class="card-header">
+                                    <h6>Nilai kuis terbaru</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>Nama</th>
+                                                    <th>Nilai</th>
+                                                    <th>Melakukan</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
                                                     <td>{{ $data_siswa->nilaikuis1->user->name ?? 'Data Kosong' }}</td>
                                                     <td>{{ $data_siswa->nilaikuis1->nilai ?? 'Data Kosong' }}</td>
                                                     {{-- @if ($data_siswa->nilaikuis1->created_at == null)
@@ -124,7 +208,7 @@
                             </div>
                             <div class="card shadow">
                                 <div class="card-header">
-                                    <h6>Grafik Kuis 1</h6>
+                                    <h6>Grafik Kuis 2</h6>
                                 </div>
                                 <div class="card-body">
                                     {!! $chart_kuis_1->render() !!}
@@ -138,7 +222,7 @@
                 <div class="col">
                     <div class="card shadow">
                         <div class="card-header">
-                            <h6 class="text-primary">Nilai Kuis 2</h6>
+                            <h6 class="text-primary">Nilai Kuis 3</h6>
                         </div>
                         <div class="card-body">
                             <div class="card shadow">
@@ -208,7 +292,7 @@
                             </div>
                             <div class="card shadow">
                                 <div class="card-header">
-                                    <h6>Grafik Kuis 2</h6>
+                                    <h6>Grafik Kuis 3</h6>
                                 </div>
                                 <div class="card-body">
                                     {!! $chart_kuis_2->render() !!}

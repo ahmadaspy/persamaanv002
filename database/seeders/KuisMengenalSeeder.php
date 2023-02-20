@@ -21,6 +21,11 @@ class KuisMengenalSeeder extends Seeder
                 'Sebuah toko menjual alat kantor dengan 1 buah pensil, 2 buah pulpen seharga Rp. 10,500 , sedangkan apabila 4 buah pulpen seharga Rp. 16,000 , dan apabila harga dari ketiga item yaitu 1 buah pensil, 1 buah pulen dan 1 buah buku ditotalkan seharga Rp. 12,500. ',
                 'Diketahui persamaan \(4a+5b+2c=20\).',
                 'Sebuah toko menjual alat kantor dengan 1 buah pensil, 2 buah pulpen seharga Rp. 10,500 , sedangkan apabila 4 buah pulpen seharga Rp. 16,000 , dan apabila harga dari ketiga item yaitu 1 buah pensil, 1 buah pulen dan 1 buah buku ditotalkan seharga Rp. 12,500.',
+                'Pengertian dari sistem persamaan linear tiga variabel adalah:',
+                'Bentuk umum dari sistem persamaan linear tiga variabel yang terdiri dari tiga persamaan dan tiga variabel adalah sebagai berikut:',
+                'Jika sistem persamaan linear tiga variabel memiliki tiga persamaan dan empat variabel, apakah solusi dari sistem persamaan tersebut selalu ada ?',
+                'Dalam sistem persamaan linear tiga variabel, apabila ketiga persamaannya sejajar, maka solusi dari sistem persamaan tersebut :',
+                'Berapa banyak variabel yang terdapat pada sistem persamaan linear tiga variabel ?',
             ],
             'pertanyaan' => [
                 null,
@@ -28,6 +33,11 @@ class KuisMengenalSeeder extends Seeder
                 'Permisalan yang tepat dari masalah di atas adalah',
                 'Bentuk kalimat yang tepat untuk menggambarkan dari persemaan tersebut adalah',
                 'Bentuk model matematika yang tepat adalah',
+                null,
+                null,
+                null,
+                null,
+                null,
             ],
             'pilihan_a' => [
                 '\begin{matrix}
@@ -45,6 +55,11 @@ class KuisMengenalSeeder extends Seeder
                     4r & = & Rp. 16,000 \\\\
                     q+2r & = & Rp. 12,500 \\\\
                 \end{matrix}',
+                'Himpunan dua persamaan linear yang terdiri dari dua variabel',
+                '\(ax + by + cz = d\)',
+                'Ya, selalu ada solusi',
+                'Tidak ada',
+                'Satu variabel',
             ],
             'pilihan_b' => [
                 '\begin{matrix}
@@ -60,6 +75,11 @@ class KuisMengenalSeeder extends Seeder
                     4b & = & Rp. 16,000 \\\\
                     a+b+b & = & Rp. 12,500 \\\\
                 \end{matrix}',
+                'Himpunan tiga persamaan linear yang terdiri dari tiga variabel',
+                '\(x + y + z = 3\)',
+                'Tidak, tidak ada solusi',
+                'Banyak tak hingga',
+                'Dua variabel',
             ],
             'pilihan_c' => [
                 '\begin{matrix}
@@ -75,6 +95,11 @@ class KuisMengenalSeeder extends Seeder
                     4r & = & Rp. 16,000 \\\\
                     q+r+s & = & Rp. 12,500 \\\\
                 \end{matrix}',
+                'Himpunan empat persamaan linear yang terdiri dari tiga variabel',
+                '\(x + 2y + 3z = 7\)',
+                'Terdapat banyak solusi yang mungkin',
+                'Ada satu',
+                'Tiga variabel'
             ],
             'pilihan_d' => [
                 '\begin{matrix}
@@ -90,6 +115,11 @@ class KuisMengenalSeeder extends Seeder
                     4r & = & Rp. 16,000 \\\\
                     q+r+s & = & Rp. 12,500 \\\\
                 \end{matrix}',
+                'Himpunan tiga persamaan linear yang terdiri dari dua variabel',
+                '\(2x - y + 3z = 6\)',
+                ' Solusi hanya ada jika koefisien matriks konsisten',
+                'Tergantung pada nilai koefisien matriks',
+                'Empat variabel'
             ],
             'pilihan_e' => [
                 '\begin{matrix}
@@ -105,6 +135,11 @@ class KuisMengenalSeeder extends Seeder
                     4r & = & Rp. 16,000 \\\\
                     3q+3r+3s & = & Rp. 12,500 \\\\
                 \end{matrix}',
+                'Himpunan empat persamaan linear yang terdiri dari empat variabel',
+                '\(x + y + z + t = 4\)',
+                'Solusi hanya ada jika koefisien matriks tidak konsisten',
+                'Tergantung pada bentuk persamaan',
+                'Lima variabel',
             ],
             'jawaban' => [
                 'c',
@@ -112,10 +147,15 @@ class KuisMengenalSeeder extends Seeder
                 'b',
                 'e',
                 'd',
+                'b',
+                'a',
+                'b',
+                'a',
+                'c',
             ]
          ]);
         $i = 0;
-        while ($i < 5) {
+        while ($i < 10) {
             KuisMengenal::insert([
                 'soal_1' => $soal_colect['soal_1'][$i],
                 'pertanyaan' => $soal_colect['pertanyaan'][$i],

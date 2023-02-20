@@ -193,6 +193,40 @@ class GuruController extends Controller
     {
         $data_siswa = User::find($id);
         $data_guru = $data_siswa->whereRoleIs('guru')->where('kode_kelas_id', $data_siswa->kode_kelas->id)->get();
+
+        $data_mengenal_array = array();
+        $data_mengenal_array_created_at = array();
+        foreach ($data_siswa->nilaikuismengenal_trash as $key => $trash) {
+            // array_push($data_array, $trash->nilai);
+            $data_mengenal_array[$key] = $trash->nilai;
+            $data_mengenal_array_created_at[$key] = $trash->created_at->format('d M Y H:i');
+        }
+
+        ($data_siswa->nilaikuismengenal) ? array_push($data_mengenal_array, $data_siswa->nilaikuismengenal->nilai) : '';
+        ($data_siswa->nilaikuismengenal) ? array_push($data_mengenal_array_created_at, $data_siswa->nilaikuismengenal->created_at->format('d M Y H:m')) : '';
+        // array_push($data_array, $data_siswa->nilaikuis1->nilai);
+
+        $chart_kuis_mengenal = app()->chartjs
+            ->name('chart_kuis_mengenal')
+            ->type('line')
+            ->size(['width' => 400, 'height' => 200])
+            ->labels($data_mengenal_array_created_at)
+            ->datasets([
+                [
+                    "label" => "Nilai Kuis",
+                    "lineTension" => "0.4",
+                    'backgroundColor' => "rgba(38, 185, 154, 0.31)",
+                    'borderColor' => "rgba(38, 185, 154, 0.7)",
+                    "pointBorderColor" => "rgba(38, 185, 154, 0.7)",
+                    "pointBackgroundColor" => "rgba(38, 185, 154, 0.7)",
+                    "pointHoverBackgroundColor" => "#fff",
+                    "pointHoverBorderColor" => "rgba(220,220,220,1)",
+                    'data' =>
+                $data_mengenal_array,
+                ],
+            ])
+            ->options([]);
+
         $data_array = array();
         $data_created_at = array();
         foreach ($data_siswa->nilaikuis1_trash as $key => $trash) {
@@ -203,6 +237,7 @@ class GuruController extends Controller
         ($data_siswa->nilaikuis1) ? array_push($data_array, $data_siswa->nilaikuis1->nilai) : '';
         ($data_siswa->nilaikuis1) ? array_push($data_created_at, $data_siswa->nilaikuis1->created_at->format('d M Y H:m')) : '';
         // array_push($data_array, $data_siswa->nilaikuis1->nilai);
+
         $chart_kuis_1 = app()->chartjs
             ->name('chart_kuis_1')
             ->type('line')
@@ -281,7 +316,7 @@ class GuruController extends Controller
                 ],
             ])
             ->options([]);
-        return view('guru.detail_siswa', compact('data_siswa', 'data_guru', 'chart_kuis_1', 'chart_kuis_2', 'chart_evaluasi'));
+        return view('guru.detail_siswa', compact('data_siswa', 'data_guru', 'chart_kuis_mengenal' ,'chart_kuis_1', 'chart_kuis_2', 'chart_evaluasi'));
     }
     public function profile_guru()
     {

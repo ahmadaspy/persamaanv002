@@ -42,13 +42,13 @@
                     <div class="card-body">
                         @if ($nilai->nilai >= $kkm->kuis_1_kkm)
                             <h5 class="card-title" style="color: rgb(71, 255, 71)">Selamat</h5>
-                            <p class="card-text">Nilai Kamu : {{ $nilai->nilai }}</p>
+                            <p class="card-text text-center">Nilai Kamu : {{ $nilai->nilai }}</p>
                             <a href="{{ route('kuis_index_page') }}" class="btn btn-danger">Ulang kuis</a>
                             <a href="{{ route('spltv_kehidupan_1') }}" class="btn btn-primary">Materi selanjutnya</a>
                         @else
                             <h5 class="card-title" style="color: rgb(255, 0, 0)">Jangan menyerah</h5>
-                            <p class="card-text">Nilai Kamu : {{ $nilai->nilai }}</p>
-                            <p class="card-text">Pelajari lagi materi sebelumnya klik <a href="{{route('spltv_subtitusi_1')}}" class="text-warning stretched-link">disini</a></p>
+                            <p class="card-text text-center">Nilai Kamu : {{ $nilai->nilai }}</p>
+                            <p class="card-text text-center">Pelajari lagi materi sebelumnya klik <a href="{{route('spltv_subtitusi_1')}}" class="text-warning stretched-link">disini</a></p>
                             <a href="{{ route('kuis_index_page') }}" class="btn btn-danger">Ulang kuis</a>
                         @endif
                     </div>
