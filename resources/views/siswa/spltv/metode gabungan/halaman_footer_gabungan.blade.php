@@ -6,7 +6,7 @@
                     @if (Request()->routeIs('spltv_gabungan_1'))
                         <li class="page-item">
                             <a class="page-link" href="{{ route('spltv_eliminasi_1') }}" aria-label="Previous">
-                                <span aria-hidden="true">Metode Subtitusi</span>
+                                <span aria-hidden="true">Sebelumnya</span>
                             </a>
                         </li>
                     @endif
@@ -26,7 +26,7 @@
                     ">
                         <a class="page-link" href="{{ route('spltv_gabungan_2') }}">2</a>
                     </li>
-                    @php
+                    {{-- @php
                         use App\Models\MariMencobaSpltvGabungan;
                         $mari_mencoba = MariMencobaSpltvGabungan::first();
                     @endphp
@@ -35,11 +35,11 @@
                         active
                     @endif">
                         <a class="page-link" href="{{ route('spltv_gabungan_3', [$mari_mencoba->id, 1]) }}">3</a>
-                    </li>
-                    @if (Request()->routeIs('spltv_gabungan_3'))
+                    </li> --}}
+                    @if (Request()->routeIs('spltv_gabungan_2'))
                         <li class="page-item">
                             <a class="page-link" href="{{route('kuis_index_page')}}" aria-label="Next">
-                                <span aria-hidden="true">Kuis</span>
+                                <span aria-hidden="true">Selanjutnya</span>
 
                             </a>
                         </li>

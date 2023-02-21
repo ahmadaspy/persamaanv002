@@ -26,7 +26,7 @@
                     ">
                         <a class="page-link" href="{{ route('spltv_subtitusi_2') }}">2</a>
                     </li>
-                    @php
+                    {{-- @php
                         use App\Models\MariMencobaSpltvSubtitusi;
                         $mari_mencoba = MariMencobaSpltvSubtitusi::first();
                     @endphp
@@ -35,11 +35,11 @@
                         active
                     @endif">
                         <a class="page-link" href="{{ route('spltv_subtitusi_3', [$mari_mencoba->id, 1]) }}">3</a>
-                    </li>
-                    @if (Request()->routeIs('spltv_subtitusi_3'))
+                    </li> --}}
+                    @if (Request()->routeIs('spltv_subtitusi_2'))
                         <li class="page-item">
                             <a class="page-link" href="{{route('spltv_eliminasi_1')}}" aria-label="Next">
-                                <span aria-hidden="true">Metode Eliminasi</span>
+                                <span aria-hidden="true">Selanjutnya</span>
 
                             </a>
                         </li>

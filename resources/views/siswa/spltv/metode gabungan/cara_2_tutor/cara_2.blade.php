@@ -3,7 +3,7 @@
 @endsection
 <div class="card" style="background-color: #e3e3e3">
     <div class="card-header">
-        <h6>Cara 2</h6>
+        <h5>Cara 2</h5>
     </div>
     <div class="card-body">
         <div class="basic-list-group">

@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-header">
-        <h6 class="text-primary">Contoh Soal</h6>
+        <h5 class="text-primary">latihan</h5>
     </div>
     <div class="card-body">
         <div class="row">

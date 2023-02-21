@@ -3,13 +3,13 @@
         <div class="d-flex justify-content-center">
             <nav aria-label="Page navigation example">
                 <ul class="pagination">
-                    @if (Request()->routeIs('spltv_kehidupan_1'))
+                    {{-- @if (Request()->routeIs('spltv_kehidupan_1'))
                         <li class="page-item">
                             <a class="page-link" href="{{ route('spltv_gabungan_1') }}" aria-label="Previous">
                                 <span aria-hidden="true">Metode Gabungan</span>
                             </a>
                         </li>
-                    @endif
+                    @endif --}}
                     <li
                         class="page-item
                     @if (Request()->routeIs('spltv_kehidupan_1'))
@@ -39,7 +39,7 @@
                     @if (Request()->routeIs('spltv_kehidupan_2'))
                         <li class="page-item">
                             <a class="page-link" href="{{route('kuis_index2_page')}}" aria-label="Next">
-                                <span aria-hidden="true">Kuis</span>
+                                <span aria-hidden="true">Selanjutnya</span>
 
                             </a>
                         </li>

@@ -2,7 +2,7 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            <h6 class="text-primary">Contoh Soal</h6>
+            <h4 class="text-primary">Latihan</h4>
         </div>
         <div class="card-body">
             <div class="row">

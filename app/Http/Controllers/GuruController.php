@@ -65,6 +65,19 @@ class GuruController extends Controller
             return view('guru.index_guru', compact('siswa', 'chartjs', 'chartjs2'));
         } else {
             // dd($siswa[0]->nilaikuis1->onlyTrashed()->where('user_id', $siswa[0]->id)->get());
+
+            $siswa_mengenal = array();
+            $kkm = Auth::user()->kode_kelas->kkm;
+            foreach ($siswa as $key => $siswas) {
+                if (kuis_1_nilai::where('user_id', $siswas->id)->where('nilai', '>=', $kkm->kuis_mengenal_kkm)->first()) {
+                    $siswa_mengenal[$key] = 'lulus';
+                } elseif (kuis_1_nilai::where('user_id', $siswas->id)->where('nilai', '>=', $kkm->kuis_mengenal_kkm)->onlyTrashed()->first()) {
+                    $siswa_mengenal[$key] = 'lulus';
+                } else {
+                    $siswa_mengenal[$key] = 'gagal';
+                }
+            }
+
             $siswa_kuis1 = array();
             $kkm = Auth::user()->kode_kelas->kkm;
             foreach ($siswa as $key => $siswas) {
@@ -96,6 +109,19 @@ class GuruController extends Controller
                     $siswa_evaluasi[$key] = 'gagal';
                 }
             }
+            $nilai_mengenal_max = array();
+            $nilai_mengenal_min = array();
+            foreach ($siswa as $key => $siswas) {
+                // $nilai_temp = array();
+                // $nilai_temp[0] = kuis_1_nilai::where('user_id', $siswas->id)->withTrashed()->max('nilai');
+                // $nilai_temp[1] = kuis_1_nilai::where('user_id', $siswas->id)->withTrashed()->min('nilai');
+                // $nilai_temp[2] = kuis_1_nilai::where('user_id', $siswas->id)->value('nilai');
+                // $nilai_kuis1_max[$key] = max($nilai_temp);
+                // $nilai_kuis1_min[$key] = min($nilai_temp);
+                $nilai_mengenal_max[$key] = $siswas->nilaikuismengenal_all->max->nilai;
+                $nilai_mengenal_min[$key] = $siswas->nilaikuismengenal_all->min->nilai;
+            }
+
             $nilai_kuis1_max = array();
             $nilai_kuis1_min = array();
             foreach ($siswa as $key => $siswas) {
@@ -141,7 +167,7 @@ class GuruController extends Controller
                 ->name('lineChartTest')
                 ->type('line')
                 ->size(['width' => 400, 'height' => 200])
-                ->labels(['Kuis 1', 'Kuis 2', 'Evaluasi'])
+                ->labels(['Kuis 1', 'Kuis 2', 'Kuis 3', 'Evaluasi'])
                 ->datasets([
                     [
                         "label" => "Nilai maksimum",
@@ -151,7 +177,7 @@ class GuruController extends Controller
                         "pointBackgroundColor" => "rgba(38, 185, 154, 0.7)",
                         "pointHoverBackgroundColor" => "#fff",
                         "pointHoverBorderColor" => "rgba(220,220,220,1)",
-                        'data' => [max($nilai_kuis1_max) ?? 0, max($nilai_kuis2_max) ?? 0, max($nilai_evaluasi_max) ?? 0],
+                        'data' => [max($nilai_mengenal_max) ?? 0, max($nilai_kuis1_max) ?? 0, max($nilai_kuis2_max) ?? 0, max($nilai_evaluasi_max) ?? 0],
                     ],
                     [
                         "label" => "Nilai minimum",
@@ -161,7 +187,7 @@ class GuruController extends Controller
                         "pointBackgroundColor" => "rgb(153, 51, 51)",
                         "pointHoverBackgroundColor" => "#fff",
                         "pointHoverBorderColor" => "rgba(220,220,220,1)",
-                        'data' => [min($nilai_kuis1_min) ?? 0, min($nilai_kuis2_min) ?? 0, min($nilai_evaluasi_min) ?? 0],
+                        'data' => [max($nilai_mengenal_min) ?? 0, min($nilai_kuis1_min) ?? 0, min($nilai_kuis2_min) ?? 0, min($nilai_evaluasi_min) ?? 0],
                     ]
                 ])
                 ->options([]);
@@ -179,13 +205,19 @@ class GuruController extends Controller
                 ])
                 ->options([]);
 
-            return view('guru.index_guru', compact('siswa', 'siswa_kuis1', 'siswa_kuis2', 'siswa_evaluasi', 'chartjs', 'chartjs2', 'avg_nilai'));
+            return view('guru.index_guru', compact('siswa', 'siswa_mengenal', 'siswa_kuis1', 'siswa_kuis2', 'siswa_evaluasi', 'chartjs', 'chartjs2', 'avg_nilai'));
         }
     }
     public function halaman_siswa()
     {
         $kelas_id = Auth::user()->kode_kelas->id;
-        $siswa = User::whereRoleIs('siswa')->where('kode_kelas_id', $kelas_id)->orderBy('name', 'ASC')->paginate();
+        $data = User::whereRoleIs('siswa')->where('kode_kelas_id', $kelas_id);
+        if (request('cari')) {
+            $siswa = $data->where('name', 'like', '%' . request('cari') . '%')->orWhere('email', 'like', '%' . request('cari') . '%')->paginate(10);
+        } else {
+            $siswa = $data->orderBy('name', 'ASC')->paginate(10);
+        }
+        // $siswa = User::whereRoleIs('siswa')->where('kode_kelas_id', $kelas_id)->orderBy('name', 'ASC')->paginate(10);
 
         return view('guru.daftar_siswa', compact('siswa'));
     }
@@ -222,7 +254,7 @@ class GuruController extends Controller
                     "pointHoverBackgroundColor" => "#fff",
                     "pointHoverBorderColor" => "rgba(220,220,220,1)",
                     'data' =>
-                $data_mengenal_array,
+                    $data_mengenal_array,
                 ],
             ])
             ->options([]);
@@ -316,7 +348,7 @@ class GuruController extends Controller
                 ],
             ])
             ->options([]);
-        return view('guru.detail_siswa', compact('data_siswa', 'data_guru', 'chart_kuis_mengenal' ,'chart_kuis_1', 'chart_kuis_2', 'chart_evaluasi'));
+        return view('guru.detail_siswa', compact('data_siswa', 'data_guru', 'chart_kuis_mengenal', 'chart_kuis_1', 'chart_kuis_2', 'chart_evaluasi'));
     }
     public function profile_guru()
     {
@@ -389,15 +421,17 @@ class GuruController extends Controller
             return redirect()->route('profile_guru');
         }
     }
-    public function pengaturan_KKM(){
+    public function pengaturan_KKM()
+    {
         // $kkm = kkm::find(Auth::user()->kode_kelas->);
         // dd(Auth::user()->kode_kelas->kkm);
         $kkm = Auth::user()->kode_kelas->kkm;
         return view('guru.pengaturan_kkm', compact('kkm'));
     }
-    public function kuis_post(Request $request){
+    public function kuis_post(Request $request)
+    {
         $data = kkm::find($request->id);
-        if($request->kkm_1 != null){
+        if ($request->kkm_1 != null) {
             $data->update([
                 'kuis_1_kkm' => $request->kkm_1,
             ]);

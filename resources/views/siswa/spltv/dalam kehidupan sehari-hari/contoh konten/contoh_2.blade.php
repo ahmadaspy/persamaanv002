@@ -3,7 +3,7 @@
 @endsection
 <div class="card shadow">
     <div class="card-header">
-        <h6 class="text-primary font-weight-bold">Contoh 2</h6>
+        <h5 class="text-primary font-weight-bold">Latihan 1</h5>
     </div>
     <div class="card-body">
         <div class="card" style="background-color: #e4e4e4">

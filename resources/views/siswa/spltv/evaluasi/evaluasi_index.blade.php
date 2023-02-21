@@ -108,7 +108,7 @@
                     </div>
                     <div class="card shadow">
                         <div class="card-body">
-                            <button type="submit" class="btn btn-success float-right m-4 text-white">Kumpulkan</button>
+                            <button type="submit" class="btn btn-success float-right m-4 text-white">Selesai</button>
                         </div>
                     </div>
                 </form>
@@ -131,7 +131,7 @@
                         <hr>
                         <h6>Pastikan kalian mengisi semua jawaban yang ada</h6>
                         <hr>
-                        <p>Klik tombol <button class="btn btn-success text-white">Kumpulkan</button> apabila kalian sudah
+                        <p>Klik tombol <button class="btn btn-success text-white">Selesai</button> apabila kalian sudah
                             mengisi semua jawaban</p>
                     </div>
                     <div class="modal-footer">
@@ -184,6 +184,7 @@
     <script type="text/javascript">
         $(document).ready(function() {
             $('#smartwizard').smartWizard({
+                selected: 0,
                 theme: 'dots',
                 transition: {
                     animation: 'fade',
@@ -193,8 +194,9 @@
                     next: 'Selanjutnya',
                     previous: 'Kembali'
                 },
-                anchorSettings: {
+                anchor: {
                     enableAllAnchors: true,
+                    enableDoneStateNavigation: true,
                 },
 
             });

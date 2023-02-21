@@ -85,7 +85,7 @@
                 <div class="tab-content">
                     <div class="card">
                         <div class="card-header">
-                            <h6>Contoh</h6>
+                            <h5>Contoh</h5>
                         </div>
                         <div class="card-body">
                             <div class="row">

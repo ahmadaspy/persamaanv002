@@ -43,10 +43,32 @@
                 </div>
             </div>
         </div>
+
+
+
+    </div>
+    <div class="row">
         <div class="col">
             <div class="card gradient-1">
                 <div class="card-body">
                     <h3 class="card-title text-white">Data Kuis 1</h3>
+                    <div class="d-inline-block">
+                        @if ($siswa->count() != null)
+                            <h2 class="text-white">lulus : {{ count(array_keys($siswa_mengenal, 'lulus')) }}</h2>
+                            <p class="text-white mb-0">Siswa {{ $siswa->count() }}</p>
+                        @else
+                            <h2 class="text-white">lulus : Kosong</h2>
+                        @endif
+                    </div>
+                    <span class="float-right display-5 opacity-5"><i class="fa fa-star"></i></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card gradient-1">
+                <div class="card-body">
+                    <h3 class="card-title text-white">Data Kuis 2</h3>
                     <div class="d-inline-block">
                         @if ($siswa->count() != null)
                             <h2 class="text-white">lulus : {{ count(array_keys($siswa_kuis1, 'lulus')) }}</h2>
@@ -59,13 +81,10 @@
                 </div>
             </div>
         </div>
-
-    </div>
-    <div class="row">
         <div class="col">
             <div class="card gradient-1">
                 <div class="card-body">
-                    <h3 class="card-title text-white">Data Kuis 2</h3>
+                    <h3 class="card-title text-white">Data Kuis 3</h3>
                     <div class="d-inline-block">
                         @if ($siswa->count() != null)
                             <h2 class="text-white">Lulus : {{ count(array_keys($siswa_kuis2, 'lulus')) }}</h2>

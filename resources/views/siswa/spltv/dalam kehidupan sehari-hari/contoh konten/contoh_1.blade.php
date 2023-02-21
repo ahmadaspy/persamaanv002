@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-header">
-        <h6 class="text-primary font-weight-bold">Contoh</h6>
+        <h5 class="text-primary font-weight-bold">Contoh</h5>
     </div>
     <div class="card-body">
         <div class="card" style="background-color: #e4e4e4">

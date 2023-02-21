@@ -174,6 +174,7 @@
     <script type="text/javascript">
         $(document).ready(function() {
             $('#smartwizard').smartWizard({
+                selected: 0,
                 theme: 'dots',
                 transition: {
                     animation: 'fade',
