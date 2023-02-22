@@ -17,7 +17,7 @@
 </head>
 
 <body class="h-100">
-    @include('sweetalert::alert')
+
     <!--*******************
         Preloader start
     ********************-->
@@ -37,7 +37,9 @@
 
         <div class="row justify-content-center h-100 align-items-center align-content-center three-item">
 
+
             <div class="col-sm-block col-md">
+                @include('sweetalert::alert')
                 <a href="{{ route('login_admin') }}">
                     <div class="card shadow" style="background-color: #C780FA">
                         <div class="card-body text-center">

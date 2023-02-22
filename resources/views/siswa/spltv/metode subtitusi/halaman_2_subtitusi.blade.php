@@ -6,6 +6,56 @@
         </div>
         <div class="card-body">
             <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>Petunjuk</h5>
+                        </div>
+                        <div class="card-body">
+                            <table class="table">
+                                <tr>
+                                    <td>
+                                        <p>
+                                            1
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>
+                                            isi dan pilihlah jawaban atau kotak yang kosong pada latihan di bawah
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>
+                                            2
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>
+                                            Apabila kalian benar menjawab latihan di bawah maka langkah selanjutnya akan terbuka
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>
+                                            3
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>
+                                            Apabila kalian salah menjawab latihan di bawah perbaiki jawaban tersebut sehingga menjadi benar
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
                 <div class="col-1">1</div>
                 <div class="col">
                     <ul>

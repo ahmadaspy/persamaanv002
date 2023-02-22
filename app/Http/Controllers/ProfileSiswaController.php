@@ -79,7 +79,7 @@ class ProfileSiswaController extends Controller
             $user->save();
             Auth::logout();
             Alert::success('Sukses', 'data telah di perbarui');
-            return redirect()->route('login');
+            return redirect()->route('Login_menu');
         }else{
             toast('kata sandi anda tidak cocok', 'error');
             return redirect()->route('profile');

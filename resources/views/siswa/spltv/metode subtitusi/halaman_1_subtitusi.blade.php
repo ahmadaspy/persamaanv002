@@ -50,6 +50,39 @@
                 <div class="card-body">
                     <div class="card">
                         <div class="card-header">
+                            <h5>Petunjuk</h5>
+                        </div>
+                        <div class="card-body">
+                            <table class="table">
+                                <tr>
+                                    <td>
+                                        <p>
+                                            1
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>
+                                            perhatian contoh di bawah
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>
+                                            2
+                                        </p>
+                                    </td>
+                                    <td>
+                                        <p>
+                                            setelah kalian selesai membaca klik <button class="btn btn-primary">Lanjut</button> untuk melanjutkan membaca
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
                             <h5>Contoh</h5>
                         </div>
                         <div class="card-body">

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>{{ config('app.name') }}</title>
-    <link href="{{asset('template_asset/plugins/jquery-steps/css/jquery.steps.css')}}" rel="stylesheet">
+    <link href="{{ asset('template_asset/plugins/jquery-steps/css/jquery.steps.css') }}" rel="stylesheet">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('image/logo/icon_1.png') }}">
     <!-- Pignose Calender -->
@@ -20,7 +20,8 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <!-- image -->
-    <link href="https://cdn.jsdelivr.net/npm/smartwizard@5/dist/css/smart_wizard_all.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/smartwizard@5/dist/css/smart_wizard_all.min.css" rel="stylesheet"
+        type="text/css" />
 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -30,7 +31,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     @yield('script_atas')
     <meta name="csrf-token" content="{{ csrf_token() }}" />
-    <link rel="stylesheet" href="{{asset('css/costume_siswa_template.css')}}">
+    <link rel="stylesheet" href="{{ asset('css/costume_siswa_template.css') }}">
 
 
 
@@ -111,8 +112,9 @@
 
         <div class="footer">
             <div class="copyright">
-                <p>Copyright &copy; Ahmad Aspiannoor
-                    2021</p>
+                <p>
+                    &copy; SPLTVNEST
+                </p>
             </div>
         </div>
         <!--**********************************
@@ -131,11 +133,12 @@
     <script src="{{ asset('template_asset/js/settings.js') }}"></script>
     <script src="{{ asset('template_asset/js/gleek.js') }}"></script>
     <script src="{{ asset('template_asset/js/styleSwitcher.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/smartwizard@5/dist/js/jquery.smartWizard.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/smartwizard@5/dist/js/jquery.smartWizard.min.js" type="text/javascript">
+    </script>
 
-    <script src="{{asset('template_asset/plugins/jquery-steps/build/jquery.steps.min.js')}}"></script>
-    <script src="{{asset('template_asset/plugins/jquery-validation/jquery.validate.min.js')}}"></script>
-    <script src="{{asset('template_asset/js/plugins-init/jquery-steps-init.js')}}"></script>
+    <script src="{{ asset('template_asset/plugins/jquery-steps/build/jquery.steps.min.js') }}"></script>
+    <script src="{{ asset('template_asset/plugins/jquery-validation/jquery.validate.min.js') }}"></script>
+    <script src="{{ asset('template_asset/js/plugins-init/jquery-steps-init.js') }}"></script>
     @yield('script_bawah')
 
 </body>

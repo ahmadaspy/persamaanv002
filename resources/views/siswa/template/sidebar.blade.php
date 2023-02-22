@@ -161,11 +161,11 @@
                                     Evaluasi</span></a>
                         </li>
                     @endif
-                    <li>
+                    {{-- <li>
                         <a href="{{ route('landing_page') }}" aria-expanded="false">
                             <i class="icon-info menu-icon"></i><span class="nav-text">Tentang kita</span>
                         </a>
-                    </li>
+                    </li> --}}
 
                 </ul>
             </div>
