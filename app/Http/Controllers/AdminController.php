@@ -94,6 +94,7 @@ class AdminController extends Controller
                 $kelas->save();
                 $kkm = new kkm();
                 $kkm->kode_kelas_id = $kelas->id;
+                $kkm->kuis_mengenal_kkm = 80;
                 $kkm->kuis_1_kkm = 80;
                 $kkm->kuis_2_kkm = 80;
                 $kkm->evaluasi_kkm = 80;

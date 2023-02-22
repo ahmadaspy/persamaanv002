@@ -25,17 +25,17 @@ class DatabaseSeeder extends Seeder
         $this->call(MariMencobaSPLTVSubtitusiSeeder::class);
         // \App\Models\MariMencobaSpltvEliminasi::factory(5)->create();
         $this->call(MariMencobaSPLTVEliminasiSeeder::class);
-        \App\Models\KodeKelas::factory(5)->create();
+        // \App\Models\KodeKelas::factory(5)->create(); //disable
         $this->call(KuisMengenalSeeder::class);
         $this->call(KuisPertamaSeeder::class);
         $this->call(KuisKeduaSeeder::class);
         $this->call(MariMencobaSpltvKehidupanSeeder::class);
         $this->call(LaratrustSeeder::class);
         $this->call(AdminSeeder::class);
-        $this->call(UserSeeder::class);
+        // $this->call(UserSeeder::class); //disable
         $this->call(EvaluasiASeeder::class);
         // $this->call(EvaluasiBSeeder::class);
-        $this->call(KkmSeeder::class);
+        // $this->call(KkmSeeder::class); //disable
         // \App\Models\User::factory(10)->create();
     }
 }
