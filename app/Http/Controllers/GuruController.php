@@ -426,11 +426,17 @@ class GuruController extends Controller
         // $kkm = kkm::find(Auth::user()->kode_kelas->);
         // dd(Auth::user()->kode_kelas->kkm);
         $kkm = Auth::user()->kode_kelas->kkm;
+
         return view('guru.pengaturan_kkm', compact('kkm'));
     }
     public function kuis_post(Request $request)
     {
         $data = kkm::find($request->id);
+        if ($request->kkm_mengenal != null) {
+            $data->update([
+                'kuis_mengenal_kkm' => $request->kkm_mengenal,
+            ]);
+        }
         if ($request->kkm_1 != null) {
             $data->update([
                 'kuis_1_kkm' => $request->kkm_1,

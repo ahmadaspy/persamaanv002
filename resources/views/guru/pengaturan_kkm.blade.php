@@ -9,6 +9,33 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col">
+                            <h1 class="text-success">{{ $kkm->kuis_mengenal_kkm }}</h1>
+                        </div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="col">
+                                    <span class="font-italic">Klik dibawah untuk mengubah KKM</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <button class="btn btn-primary btn-block" data-toggle="modal"
+                                        data-target="#Modal_mengenal">Ubah</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card shadow">
+                <div class="card-header">
+                    <h6 class="text-primary">Kuis 2 KKM</h6>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
                             <h1 class="text-success">{{ $kkm->kuis_1_kkm }}</h1>
                         </div>
                         <div class="col">
@@ -31,7 +58,7 @@
         <div class="col">
             <div class="card shadow">
                 <div class="card-header">
-                    <h6 class="text-primary">Kuis 2 KKM</h6>
+                    <h6 class="text-primary">Kuis 3 KKM</h6>
                 </div>
                 <div class="card-body">
                     <div class="row">
@@ -82,6 +109,33 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    {{-- modal mengenal --}}
+    <div class="modal fade" id="Modal_mengenal" tabindex="-1" role="dialog" aria-labelledby="Modal_mengenalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="Modal_1Label">Kuis 1 KKM</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="{{route('kuis_post')}}" method="POST">
+                        @csrf
+                        <input type="hidden" value="{{$kkm->id}}" name="id">
+                        <div class="form-group">
+                            <input type="number" step="0.1" value="{{ $kkm->kuis_mengenal_kkm }}" name="kkm_mengenal" required class="form-control">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="reset" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                            <button type="submit" class="btn btn-primary">Simpan</button>
+                        </div>
+                    </form>
+                </div>
+
             </div>
         </div>
     </div>
