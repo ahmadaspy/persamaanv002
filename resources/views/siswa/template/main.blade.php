@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>{{ config('app.name') }}</title>
+    <title>{{ config('app.name') }} - @yield('title')</title>
     <link href="{{ asset('template_asset/plugins/jquery-steps/css/jquery.steps.css') }}" rel="stylesheet">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('image/logo/icon_1.png') }}">
