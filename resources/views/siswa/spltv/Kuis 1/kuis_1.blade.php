@@ -5,6 +5,9 @@
             <h6 class="font-weight-bold text-primary">Kuis 2</h6>
         </div>
         <div class="card-body">
+            <div class="mt-5">
+
+            </div>
             <div id="smartwizard">
                 <ul class="nav">
                     @foreach ($soal_kuis as $key => $nav_soal)
