@@ -9,7 +9,7 @@ use App\Http\Controllers\KikdController;
 use App\Http\Controllers\KuisKeduaController;
 use App\Http\Controllers\KuisPertamaController;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\mengenal_spltv;
+use App\Http\Controllers\Mengenal_spltv;
 use App\Http\Controllers\ProfileSiswaController;
 use App\Http\Controllers\SpldvMetodeEliminasiController;
 use App\Http\Controllers\SpldvMetodeGabunganController;
@@ -146,18 +146,18 @@ Route::prefix('siswa')->group(function () {
         Route::prefix('spltv')->group(function () {
             Route::get('/menyelesaikanspltv', [spltv::class, 'index'])->name('spltv_index');
             Route::prefix('/mengenal')->group(function () {
-                Route::get('/pengertian-spltv', [mengenal_spltv::class, 'pengertian'])->name('pengertian_spltv');
+                Route::get('/pengertian-spltv', [Mengenal_spltv::class, 'pengertian'])->name('pengertian_spltv');
                 Route::prefix('/bentukspltv')->group(function(){
-                    Route::get('/1', [mengenal_spltv::class, 'bentuk'])->name('bentuk_spltv');
-                    Route::get('/2', [mengenal_spltv::class, 'bentuk_2'])->name('bentuk_spltv_2');
-                    Route::get('/3', [mengenal_spltv::class, 'bentuk_3'])->name('bentuk_spltv_3');
-                    Route::get('/4', [mengenal_spltv::class, 'bentuk_4'])->name('bentuk_spltv_4');
-                    Route::get('/5', [mengenal_spltv::class, 'bentuk_5'])->name('bentuk_spltv_5');
+                    Route::get('/1', [Mengenal_spltv::class, 'bentuk'])->name('bentuk_spltv');
+                    Route::get('/2', [Mengenal_spltv::class, 'bentuk_2'])->name('bentuk_spltv_2');
+                    Route::get('/3', [Mengenal_spltv::class, 'bentuk_3'])->name('bentuk_spltv_3');
+                    Route::get('/4', [Mengenal_spltv::class, 'bentuk_4'])->name('bentuk_spltv_4');
+                    Route::get('/5', [Mengenal_spltv::class, 'bentuk_5'])->name('bentuk_spltv_5');
                 });
-                Route::get('/bentuk-spltv/kontekstual', [mengenal_spltv::class, 'keontekstual'])->name('bentuk_spltv_kontekstual');
-                Route::get('/kuis', [mengenal_spltv::class, 'kuis'])->name('kuis_mengenal');
-                Route::post('/kuis-post', [mengenal_spltv::class, 'kuis_mengenal_post'])->name('kuis_mengenal_post');
-                Route::get('/hasil-kuis', [mengenal_spltv::class, 'kuis_mengenal_hasil'])->name('kuis_mengenal_hasil');
+                Route::get('/bentuk-spltv/kontekstual', [Mengenal_spltv::class, 'keontekstual'])->name('bentuk_spltv_kontekstual');
+                Route::get('/kuis', [Mengenal_spltv::class, 'kuis'])->name('kuis_mengenal');
+                Route::post('/kuis-post', [Mengenal_spltv::class, 'kuis_mengenal_post'])->name('kuis_mengenal_post');
+                Route::get('/hasil-kuis', [Mengenal_spltv::class, 'kuis_mengenal_hasil'])->name('kuis_mengenal_hasil');
             });
             Route::prefix('/metodesubtitusi')->group(function () {
                 Route::get('/1', [SpltvSubtitusi::class, 'spltv_subtitusi_1'])->name('spltv_subtitusi_1');

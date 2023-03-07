@@ -54,7 +54,7 @@
                                                     class=" rounded-circle mr-3" alt="" style="width: 40px">
                                             @endif
                                         </div>
-                                        <div class="col">
+                                        <div class="col d-flex align-items-center">
                                             {{ $users->name }}
                                         </div>
                                     </div>
