@@ -37,3 +37,11 @@
 .table-halaman-pengertian p {
     text-align: justify;
 }
+
+@media (max-width: 576px) {
+    .table-halaman-pengertian img {
+        height: auto;
+        width: 100vh;
+        max-width: 100%;
+    }
+}

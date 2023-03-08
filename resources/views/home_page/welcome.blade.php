@@ -1,4 +1,7 @@
 @extends('home_page.Template.main')
+@section('title')
+    Home
+@endsection
 @section('content')
     <section id="banner_1">
         <div class="container">
