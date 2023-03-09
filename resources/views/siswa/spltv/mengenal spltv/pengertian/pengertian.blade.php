@@ -66,31 +66,49 @@
                 </div>
                 <div class="card-body">
                     <div class="card">
+                        <div class="card-header">
+                            <h5>Petunjuk</h5>
+                        </div>
                         <div class="card-body">
-                            <div class="row">
+                            <div class="row justify-content-center align-items-center">
                                 <div class="col">
                                     <div class="card">
-                                        <img src="{{ asset('image/petunjuk/pengertian SPLTV/Jawaban benar.jpg') }}" class="card-img-top" alt="...">
+                                        <img src="{{ asset('image/petunjuk/pengertian SPLTV/Jawaban benar.jpg') }}"
+                                            class="card-img-top" alt="...">
+                                        <img src="{{ asset('image/petunjuk/pengertian SPLTV/Jawaban benar.jpg') }}"
+                                            class="card-img-top" alt="...">
                                         <div class="card-body">
-                                            <p class="card-text">Some quick example text to build on the card title and make
-                                                up the bulk of the card's content.</p>
+                                            <p class="card-text">Pada tombol benar salah akan berwarna hijau atau merah yang
+                                                menandakan</p>
+                                            <p class="card-text">Hijau : Jawban Anda Benar</p>
+                                            <p class="card-text">Merah : Jawaban Anda Salah</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col">
                                     <div class="card">
-                                        <img src="..." class="card-img-top" alt="...">
+                                        <img src="{{ asset('image/petunjuk/pengertian SPLTV/Jawaban Benar notif.jpg') }}"
+                                            class="card-img-top" alt="...">
                                         <div class="card-body">
-                                            <p class="card-text">Some quick example text to build on the card title and make
-                                                up the bulk of the card's content.</p>
+                                            <p class="card-text">Apabila Jawaban Anda Benar Maka Ada Pemberitahuan Seperti Gambar</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col"></div>
+
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="{{ asset('image/petunjuk/pengertian SPLTV/Jawaban Salah notif.jpg') }}"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <p class="card-text">Apabila Jawaban Anda Benar Maka Ada Pemberitahuan Seperti Gambar</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+
                         </div>
                     </div>
-                    <div class="card">
+                    {{-- <div class="card">
                         <div class="card-header">
                             <h5>Petunjuk</h5>
                         </div>
@@ -134,7 +152,7 @@
                             </div>
 
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="table-responsive">
                         <table class="table table-xs mb-0">
                             <tbody>

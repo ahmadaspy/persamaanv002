@@ -154,7 +154,7 @@ body {
     font-size: 0.875rem;
     font-weight: 400;
     line-height: 1.5;
-    color: #76838f;
+    color: black;
     text-align: left;
     background-color: #F3F3F9;
 }
@@ -11395,7 +11395,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     -ms-flex-direction: column;
     flex-direction: column;
     position: relative;
-    color: #464a53;
+    color: black;
 }
 
 .nk-sidebar .metismenu>li>a {
@@ -11405,13 +11405,13 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 .nk-sidebar .metismenu>li:hover i,
 .nk-sidebar .metismenu>li:focus i,
 .nk-sidebar .metismenu>li.active i {
-    color: #464a53 !important;
+    color: black !important;
 }
 
 .nk-sidebar .metismenu>li:hover span,
 .nk-sidebar .metismenu>li:focus span,
 .nk-sidebar .metismenu>li.active span {
-    color: #464a53;
+    color: black;
 }
 
 .nk-sidebar .metismenu>li:hover>a {
@@ -11421,11 +11421,11 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
 
 .nk-sidebar .metismenu>li.active>a {
     background: #F3F1FA;
-    color: #464a53;
+    color: black;
 }
 
 .nk-sidebar .metismenu>li.active ul a {
-    color: #464a53;
+    color: black;
 }
 
 .nk-sidebar .metismenu>li a>i {
@@ -11433,7 +11433,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     display: inline-block;
     vertical-align: middle;
     padding: 0 0.4375rem 0 0;
-    color: #464a53;
+    color: black;
 }
 
 .nk-sidebar .metismenu a {
@@ -11442,7 +11442,7 @@ Fixing Order => Base + Typography >> General Layout + Grid >> Page Layout + Comp
     padding: 0.8125rem 1.25rem;
     outline-width: 0;
     transition: all .3s ease-out;
-    color: #464a53;
+    color: black;
 }
 
 .nk-sidebar .metismenu ul a {
@@ -19655,7 +19655,7 @@ html[dir="rtl"] [direction="rtl"][data-sidebar-style="compact"]:not([data-layout
 }
 
 [data-sibebarbg="color_1"] .nk-sidebar .metismenu>li ul a {
-    color: #76838f;
+    color: black;
 }
 
 [data-sibebarbg="color_2"] .nk-sidebar {
