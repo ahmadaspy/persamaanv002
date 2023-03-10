@@ -1,4 +1,7 @@
 @extends('home_page.Template.main')
+@section('title')
+    KI KD
+@endsection
 @section('content')
     <section id="banner_1">
         <img src="{{ asset('image/logo/wave1.png') }}" class="bottom-img">

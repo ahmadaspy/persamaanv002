@@ -7,6 +7,9 @@
             </h6>
         </div>
         <div class="card-body">
+            <div class="mt-5">
+
+            </div>
             <div id="smartwizard">
                 <ul class="nav">
                     @foreach ($soal_kuis_mengenal as $key => $nav_soal)

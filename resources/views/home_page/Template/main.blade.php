@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ config('app.name') }} - @yield('title')</title>
     <link href="{{ asset('template_asset/plugins/jquery-steps/css/jquery.steps.css') }}" rel="stylesheet">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('image/logo/icon_1.png') }}">
@@ -58,9 +59,9 @@
                 <ul class="navbar-nav mr-auto">
 
                 </ul>
-                <a href="{{route('petunjuk')}}" class="btn btn-light mr-2"> <i class="fa fa-tasks mr-1"></i> Petunjuk</a>
-                <a href="{{route('kikd')}}" class="btn btn-light mr-2"> <i class="fa fa-book mr-1"></i> KI | KD</a>
-                <a href="{{route('tentang_kita')}}" class="btn btn-light"><i class="fa fa-commenting mr-1"></i> Tentang Kita</a>
+                <a href="{{route('petunjuk')}}" class="btn btn-light mr-2 margin-top-sm"> <i class="fa fa-tasks mr-1"></i> Petunjuk</a>
+                <a href="{{route('kikd')}}" class="btn btn-light mr-2 margin-top-sm"> <i class="fa fa-book mr-1"></i> KI | KD</a>
+                <a href="{{route('tentang_kita')}}" class="btn btn-light margin-top-sm"><i class="fa fa-commenting mr-1"></i> Tentang Kita</a>
                 {{-- <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
                         <a href="{{ route('landing_page') }}" class="btn btn-light">Dashboard</a>

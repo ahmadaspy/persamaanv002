@@ -75,3 +75,9 @@
 #footer-2 {
     background-color: #7571f9;
 }
+
+@media (max-width: 576px) {
+    .margin-top-sm {
+        margin-top: 10px;
+    }
+}
