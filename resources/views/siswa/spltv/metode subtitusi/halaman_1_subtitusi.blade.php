@@ -1,6 +1,6 @@
 @extends('siswa.template.main')
 @section('script_atas')
-    <script src="{{asset('js/halaman_1_siswa.js')}}"></script>
+    <script src="{{ asset('js/halaman_1_siswa.js') }}"></script>
 @endsection
 @section('content')
     <div class="card shadow mb-4">
@@ -74,7 +74,8 @@
                                     </td>
                                     <td>
                                         <p>
-                                            setelah kalian selesai membaca klik <button class="btn btn-primary">Lanjut</button> untuk melanjutkan membaca
+                                            setelah kalian selesai membaca klik <button
+                                                class="btn btn-primary">Lanjut</button> untuk melanjutkan membaca
                                         </p>
                                     </td>
                                 </tr>
@@ -93,7 +94,7 @@
                                         <li>
                                             <div class="row">
                                                 <div class="col-sm-3 col-lg-2">
-                                                   \(x-6y+2z=-5\)
+                                                    \(x-6y+2z=-5\)
                                                 </div>
                                                 <div class="col-sm-3 col-lg-2">
                                                     persamaan (a)
@@ -355,7 +356,8 @@
                                     </div>
                                 </div>
                                 <div class="row float-right">
-                                    <button class="btn btn-primary" id="btn-lanjut-3" onclick="lanjut_3()">Lanjut</button>
+                                    <button class="btn btn-primary" id="btn-lanjut-3"
+                                        onclick="lanjut_3()">Lanjut</button>
                                 </div>
                             </li>
                             <li class="list-group-item" id="list-4" style="visibility: hidden">
@@ -409,14 +411,17 @@
                                     </div>
                                 </div>
                                 <div class="row float-right">
-                                    <button class="btn btn-primary" id="btn-lanjut-5" onclick="lanjut_5()">Lanjut</button>
+                                    <button class="btn btn-primary" id="btn-lanjut-5"
+                                        onclick="lanjut_5()">Lanjut</button>
                                 </div>
                             </li>
                             <li class="list-group-item" id="list-5" style="visibility: hidden">
 
-                                    <div class="embed-responsive embed-responsive-16by9 ">
-                                        <iframe class="embed-responsive-item" scrolling="no" title="Contoh test 1" src="https://www.geogebra.org/material/iframe/id/wyabs7eq/width/854/height/480/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false"  style="border:0px;" allowfullscreen> </iframe>
-                                    </div>
+                                <div class="embed-responsive embed-responsive-16by9 ">
+                                    <iframe class="embed-responsive-item" scrolling="no" title="Contoh test 1"
+                                        src="https://www.geogebra.org/material/iframe/id/wyabs7eq/width/854/height/480/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/true/ctl/false"
+                                        style="border:0px;" allowfullscreen> </iframe>
+                                </div>
 
 
 
@@ -425,7 +430,15 @@
                     </div>
                 </div>
             </div>
-
+            <div class="card">
+                <div class="card-body">
+                    <h5>Untuk lebih jelasnya simak video di bawah ini</h5>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VLxgD447Hok"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     @include('siswa.spltv.metode subtitusi.halaman_footer_subtitusi')

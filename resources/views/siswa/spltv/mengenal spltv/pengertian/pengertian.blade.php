@@ -20,6 +20,10 @@
                     </ol>
                 </div>
             </div>
+            <div class="embed-responsive embed-responsive-16by9 mt-3 mb-4">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/sWDtSsjJkxw"
+                    allowfullscreen></iframe>
+            </div>
             <p>kalian sudah kenal dengan persamaan linear dua variabel, nah sekarang kita akan berkenalan dengan sistem
                 persamaan linear tiga variabel. Apa yang membedakan mereka ?, tentu saja perbedaannya terletak pada
                 banyaknya variabel dan banyaknya persamaan.</p>
@@ -90,7 +94,8 @@
                                         <img src="{{ asset('image/petunjuk/pengertian SPLTV/Jawaban Benar notif.jpg') }}"
                                             class="card-img-top" alt="...">
                                         <div class="card-body">
-                                            <p class="card-text">Apabila Jawaban Anda Benar Maka Ada Pemberitahuan Seperti Gambar</p>
+                                            <p class="card-text">Apabila Jawaban Anda Benar Maka Ada Pemberitahuan Seperti
+                                                Gambar</p>
                                         </div>
                                     </div>
                                 </div>
@@ -100,7 +105,8 @@
                                         <img src="{{ asset('image/petunjuk/pengertian SPLTV/Jawaban Salah notif.jpg') }}"
                                             class="card-img-top" alt="...">
                                         <div class="card-body">
-                                            <p class="card-text">Apabila Jawaban Anda Benar Maka Ada Pemberitahuan Seperti Gambar</p>
+                                            <p class="card-text">Apabila Jawaban Anda Benar Maka Ada Pemberitahuan Seperti
+                                                Gambar</p>
                                         </div>
                                     </div>
                                 </div>
