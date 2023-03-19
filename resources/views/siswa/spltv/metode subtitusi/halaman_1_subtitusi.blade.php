@@ -46,6 +46,15 @@
                     </div>
                 </div>
             </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5>Untuk lebih jelasnya simak video di bawah ini</h5>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/809476393?h=e889cd80ff&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
             <div class="card" style="background-color: #e3e3e3">
                 <div class="card-body">
                     <div class="card">
@@ -430,15 +439,7 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-body">
-                    <h5>Untuk lebih jelasnya simak video di bawah ini</h5>
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VLxgD447Hok"
-                            allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
     @include('siswa.spltv.metode subtitusi.halaman_footer_subtitusi')
