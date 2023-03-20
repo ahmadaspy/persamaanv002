@@ -33,6 +33,7 @@ class UserSeeder extends Seeder
             $user = User::create([
                 'name' => $this->faker->name(),
                 'email' => $email,
+                'nip_nis' => $this->faker->unique()->numberBetween($min = 0, $max = 9000),
                 'email_verified_at' => now(),
                 'kode_kelas_id' => $koleksi->random(),
                 'password' => Hash::make($email), // password
