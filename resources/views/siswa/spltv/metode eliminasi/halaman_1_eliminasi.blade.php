@@ -46,7 +46,7 @@
             </div>
             <div class="card">
                 <div class="card-body">
-                    <h5>Untuk lebih jelasnya simak video di bawah ini</h5>
+                    <h5>Video contoh eliminasi</h5>
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item" src="https://archive.org/embed/Eliminasi"
                             allowfullscreen></iframe>

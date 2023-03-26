@@ -1,6 +1,94 @@
 @section('script_atas')
     <script src="{{asset('js/gabungan/cara_2_contoh_gabungan.js')}}"></script>
 @endsection
+<div class="card">
+    <div class="card-header">
+        <h5>Petunjuk</h5>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <tr>
+                <td>
+                    <p>
+                        1
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        perhatian contoh di bawah
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>
+                        2
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        setelah kalian selesai membaca klik <button class="btn btn-primary">Lanjut</button> untuk
+                        melanjutkan membaca
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="card">
+    <div class="card-header">
+        <h5>Contoh</h5>
+    </div>
+    <div class="card-body">
+
+        <div class="row">
+            <div class="col-1">1</div>
+            <div class="col">
+                <ul>
+                    <li>
+                        <div class="row">
+                            <div class="col-sm-3 col-lg-2">
+                                \(x+2y-z=-1\)
+                            </div>
+                            <div class="col-sm-3 col-lg-2">
+                                persamaan (1)
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-sm-3 col-lg-2">
+                                \(x-5y+6z=-1\)
+                            </div>
+                            <div class="col-sm-3 col-lg-2">
+                                persamaan (2)
+                            </div>
+                        </div>
+
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-sm-3 col-lg-2">
+                                \(2x+3y-4z=4\)
+                            </div>
+                            <div class="col-sm-3 col-lg-2">
+                                persamaan (3)
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1">
+
+            </div>
+            <div class="col">
+                <p>Carilah Nilai dari \(x\), \(y\), dan \(z\)</p>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="card" style="background-color: #e3e3e3">
     <div class="card-header">
         <h5>Cara 2</h5>
