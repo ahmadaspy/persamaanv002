@@ -44,6 +44,16 @@
                     </div>
                 </div>
             </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5>Untuk lebih jelasnya simak video di bawah ini</h5>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://archive.org/embed/Eliminasi"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+
+            </div>
             <div class="card" style="background-color: #e3e3e3">
                 <div class="card-body">
                     <div class="card">
