@@ -47,10 +47,13 @@
             <div class="card">
                 <div class="card-body">
                     <h5>Video contoh eliminasi</h5>
-                    <div class="embed-responsive embed-responsive-16by9">
+                    {{-- <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item" src="https://archive.org/embed/Eliminasi"
                             allowfullscreen></iframe>
-                    </div>
+                    </div> --}}
+                    <video class="w-100" controls>
+                        <source src="https://archive.org/download/Eliminasi/Eliminasi.ia.mp4" type="video/mp4" />
+                    </video>
                 </div>
 
             </div>
