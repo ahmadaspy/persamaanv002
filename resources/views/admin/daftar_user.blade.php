@@ -32,6 +32,7 @@
                     <thead>
                         <tr>
                             <td>User</td>
+                            <td>NIP / NIS</td>
                             <td>Email</td>
                             <td>Kedudukan</td>
                             <td>Kode Kelas</td>
@@ -61,6 +62,7 @@
 
 
                                 </td>
+                                <td>{{ $users->nip_nis }}</td>
                                 <td>{{ $users->email }}</td>
                                 <td>
                                     <span @if ($users->roles[0]->name == 'admin') class="badge badge-primary" @endif
