@@ -103,12 +103,12 @@
                                                         <h4>Login Sebagai Guru</h4>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="email-guru">Alamat Email</label>
-                                                        <input type="email" class="form-control" id="email-guru"
-                                                            aria-describedby="email-desk" name="email"
-                                                            value="{{ old('email') }}">
+                                                        <label for="email-guru">NIP</label>
+                                                        <input type="number" class="form-control" id="email-guru"
+                                                            aria-describedby="email-desk" name="nip_nis"
+                                                            value="{{ old('nip_nis') }}">
                                                         <small id="email-desk" class="form-text text-muted">Masukan
-                                                            email
+                                                            NIP
                                                             kalian</small>
                                                     </div>
                                                     <div class="form-group">

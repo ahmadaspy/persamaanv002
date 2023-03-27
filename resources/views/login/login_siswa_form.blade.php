@@ -107,12 +107,12 @@
                                                         <h4>Login Sebagai Siswa</h4>
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="email-siswa">Alamat Email</label>
-                                                        <input type="email" class="form-control" id="email-siswa"
-                                                            aria-describedby="email-desk" name="email"
-                                                            value="{{ old('email') }}">
+                                                        <label for="email-siswa">NIS</label>
+                                                        <input type="number" class="form-control" id="email-siswa"
+                                                            aria-describedby="email-desk" name="nip_nis"
+                                                            value="{{ old('nip_nis') }}">
                                                         <small id="email-desk" class="form-text text-muted">Masukan
-                                                            email
+                                                            NIS
                                                             kalian</small>
                                                     </div>
                                                     <div class="form-group">

@@ -83,7 +83,7 @@ class LoginController extends Controller
     }
     public function guru_form_post(Request $request){
         $credentials = $request->validate([
-            'email' => ['required', 'email'],
+            'nip_nis' => ['required'],
             'password' => ['required'],
         ]);
         if (Auth::attempt($credentials)) {
@@ -126,9 +126,10 @@ class LoginController extends Controller
     }
     public function siswa_form_post(Request $request){
         $credentials = $request->validate([
-            'email' => ['required', 'email'],
+            'nip_nis' => ['required'],
             'password' => ['required'],
         ]);
+
         if (Auth::attempt($credentials)) {
 
             $request->session()->regenerate();
