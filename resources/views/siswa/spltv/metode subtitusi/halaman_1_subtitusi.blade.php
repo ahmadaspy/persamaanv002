@@ -35,10 +35,10 @@
                             persamaan linear dua variabel
                         </li>
                         <li class="list-group-item">
-                            3. Selesaikan persamaan linear dua variabel yang diperoleh
+                            3. Selesaikan persamaan yang diperoleh pada langkah kedua
                         </li>
                         <li class="list-group-item">
-                            4. Subtitusikan dua nilai variabel yang diperoleh di langkah ketiga
+                            4. Subtitusikan nilai variabel yang diperoleh di langkah ketiga
                             ke persamaan tiga variabel yang
                             semula.
                         </li>
@@ -46,17 +46,31 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
+            <div class="card shadow">
                 <div class="card-body">
-                    <h5>Untuk lebih jelasnya simak video di bawah ini</h5>
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/809476393?h=e889cd80ff&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                            allowfullscreen></iframe>
+                    <h5>Ayo menonton <i class="fa fa-play" aria-hidden="true"></i></h5>
+                    <div class="card" style="background-color: #e3e3e3">
+                        <div class="card-body">
+                            <p class="mt-2 mb-2"> <b>Petunjuk :</b></p>
+                            <ol type="1" style="padding-left: 15px;">
+                                <li class="mt-2 mb-2">Tonton video berikut untuk memahami contoh</li>
+                                <li class="mt-2 mb-2">Tekan tombol &#9654; untuk memulai video, tekan tombol 🔉 untuk mengatur volume, tekan
+                                    tombol &#x26F6; apabila ingin memperbesar tampilan video dan tekan tombol <b>&#8942;</b>
+                                    untuk pengaturan lanjutan.</li>
+                            </ol>
+                        </div>
                     </div>
+                    <video class="w-100" controls>
+                        <source src="https://archive.org/download/substitusi-v-3/substitusi%20v3.mp4" type="video/mp4" />
+                    </video>
                 </div>
+
             </div>
+
             <div class="card" style="background-color: #e3e3e3">
+
                 <div class="card-body">
+                    <h5>Contoh <i class="fa fa-exclamation" aria-hidden="true"></i></h5>
                     <div class="card">
                         <div class="card-header">
                             <h5>Petunjuk</h5>
@@ -268,7 +282,8 @@
                                     </div>
                                 </div>
                                 <div class="row float-right">
-                                    <button class="btn btn-primary" id="btn-lanjut-2" onclick="lanjut_2()">Lanjut</button>
+                                    <button class="btn btn-primary" id="btn-lanjut-2"
+                                        onclick="lanjut_2()">Lanjut</button>
                                 </div>
                             </li>
                             <li class="list-group-item" id="list-3" style="visibility: hidden">

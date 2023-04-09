@@ -104,6 +104,38 @@
                                         </div>
                                     </div>
 
+                                    <div class="card shadow">
+                                        <div class="card-body">
+                                            <h5>Ayo menonton <i class="fa fa-play" aria-hidden="true"></i></h5>
+                                            <div class="card" style="background-color: #e3e3e3">
+                                                <div class="card-body">
+                                                    <p class="mt-2 mb-2"> <b>Petunjuk :</b></p>
+                                                    <ol type="1" style="padding-left: 15px;">
+                                                        <li class="mt-2 mb-2">Tonton video berikut untuk memahami contoh
+                                                        </li>
+                                                        <li class="mt-2 mb-2">Tekan tombol &#9654; untuk memulai video,
+                                                            tekan tombol 🔉 untuk mengatur volume, tekan
+                                                            tombol &#x26F6; apabila ingin memperbesar tampilan video dan
+                                                            tekan tombol <b>&#8942;</b>
+                                                            untuk pengaturan lanjutan.</li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                            <div class="card" style="background-color: #e3e3e3">
+                                                <div class="card-body">
+                                                    <video class="w-100" controls>
+                                                        <source
+                                                            src="https://archive.org/download/pengertian-bentuk/Pengertian%20bentuk.mp4"
+                                                            type="video/mp4" />
+                                                    </video>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
                                     {{-- contoh --}}
                                     <div class="card">
                                         <div class="card-header">
@@ -191,7 +223,7 @@
                                                 </div>
                                             </div>
 
-                                            <div class="card"  style="background-color: #e3e3e3">
+                                            <div class="card" style="background-color: #e3e3e3">
                                                 <div class="card-header">
                                                     <h6>4. Menentukan bidang di dalam 3 dimensi</h6>
                                                 </div>
@@ -231,7 +263,8 @@
                                                                 <div class="modal-dialog">
                                                                     <div class="modal-content">
                                                                         <div class="modal-header">
-                                                                            <h5 class="modal-title" id="petunjukModalLabel">
+                                                                            <h5 class="modal-title"
+                                                                                id="petunjukModalLabel">
                                                                                 Petunjuk</h5>
                                                                             <button type="button" class="close"
                                                                                 data-dismiss="modal" aria-label="Close">
@@ -305,9 +338,12 @@
                                                 </div>
                                                 <div class="card-body">
                                                     <p>
-                                                        persamaan \(5x+4y-z=20\) membuat sebuah bidang dalam ruang 3 dimensi,
-                                                        cara yang paling sederhana dalam menentukan bentuk dari persamaan tersebut adalah dengan cara
-                                                        mencari titik yang di lalui oleh bidang pada persamaan tersebut yaitu pada sumbu \(x\), \(y\) dan \(z\) seperti di atas. <br>
+                                                        persamaan \(5x+4y-z=20\) membuat sebuah bidang dalam ruang 3
+                                                        dimensi,
+                                                        cara yang paling sederhana dalam menentukan bentuk dari persamaan
+                                                        tersebut adalah dengan cara
+                                                        mencari titik yang di lalui oleh bidang pada persamaan tersebut
+                                                        yaitu pada sumbu \(x\), \(y\) dan \(z\) seperti di atas. <br>
                                                         cara ini juga hanya berfungsi pada aplikasi geogebra.
                                                     </p>
                                                 </div>
@@ -563,7 +599,8 @@
                                                 </div>
                                                 <div class="card-body">
                                                     <p>
-                                                        persamaan \(4x+2y+z=8\) membuat sebuah bidang dalam ruang 3 dimensi,<br>
+                                                        persamaan \(4x+2y+z=8\) membuat sebuah bidang dalam ruang 3
+                                                        dimensi,<br>
 
                                                         salah satu cara untuk menentukan bidang yang memenuhi persamaan
                                                         adalah
@@ -571,7 +608,8 @@
                                                         sumbu
                                                         \(x\), \(y\), dan \(z\), yang dilalui oleh bidang persamaan
                                                         tersebut. <br>
-                                                        karena sistem persamaan linear tiga variabel harus mempunyai 3 persamaan maka, lakukan kepada ketiga persamaan yang ditanyakan
+                                                        karena sistem persamaan linear tiga variabel harus mempunyai 3
+                                                        persamaan maka, lakukan kepada ketiga persamaan yang ditanyakan
                                                         <br>
                                                         maka kalian akan mendapatkan solusi dari sistem persamaan tersebut.
                                                     </p>

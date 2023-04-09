@@ -38,7 +38,7 @@ function step_2() {
     $jawaban_3 = document.getElementById('step_2_3');
     $arr = [false, false, false];
     if ($jawaban_1.value !== '') {
-        if ($jawaban_1.value === 'x+y=13000') {
+        if ($jawaban_1.value.replace(/\s/g, '') === 'x+y=13000') {
             $jawaban_1.style.border = '1px solid green';
             $arr[0] = true;
         } else {
@@ -46,7 +46,7 @@ function step_2() {
         }
     }
     if ($jawaban_2.value !== '') {
-        if ($jawaban_2.value === '2x+4y+z=61000') {
+        if ($jawaban_2.value.replace(/\s/g, '') === '2x+4y+z=61000') {
             $jawaban_2.style.border = '1px solid green';
             $arr[1] = true;
         } else {
@@ -54,7 +54,7 @@ function step_2() {
         }
     }
     if ($jawaban_3.value !== '') {
-        if ($jawaban_3.value === 'x+y+z=38000') {
+        if ($jawaban_3.value.replace(/\s/g, '') === 'x+y+z=38000') {
             $jawaban_3.style.border = '1px solid green';
             $arr[2] = true;
         } else {

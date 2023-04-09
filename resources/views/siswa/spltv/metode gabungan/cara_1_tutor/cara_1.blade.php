@@ -3,12 +3,29 @@
 @endsection
 <div class="card">
     <div class="card-body">
-        <h5>Video contoh metode gabungan</h5>
-        <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://archive.org/embed/gabungan-cara-1"
-                allowfullscreen></iframe>
+        <h5>Ayo menonton <i class="fa fa-play" aria-hidden="true"></i></h5>
+        <div class="card" style="background-color: #e3e3e3">
+            <div class="card-body">
+                <p class="mt-2 mb-2"> <b>Petunjuk :</b></p>
+                <ol type="1" style="padding-left: 15px;">
+                    <li class="mt-2 mb-2">Tonton video berikut untuk memahami contoh</li>
+                    <li class="mt-2 mb-2">Tekan tombol &#9654; untuk memulai video, tekan tombol 🔉 untuk
+                        mengatur volume, tekan
+                        tombol &#x26F6; apabila ingin memperbesar tampilan video dan tekan tombol <b>&#8942;</b>
+                        untuk pengaturan lanjutan.</li>
+                </ol>
+            </div>
         </div>
+        <div class="card" style="background-color: #e3e3e3">
+            <div class="card-body">
+                <video class="w-100" controls>
+                    <source src="https://archive.org/download/gabungan-cara-1/Gabungan%20cara%201.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
     </div>
+
 </div>
 <div class="card">
     <div class="card-header">
