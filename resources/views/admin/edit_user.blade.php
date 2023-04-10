@@ -16,6 +16,13 @@
                     </div>
                 </div>
                 <div class="form-group row">
+                    <label for="nip_nis" class="col-sm-2 col-form-label">NIP / NIS</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" value="{{ $data_user->nip_nis }}" placeholder="NIP / NIS" id="nip_nis"
+                            name="nip_nis">
+                    </div>
+                </div>
+                <div class="form-group row">
                     <label for="email" class="col-sm-2 col-form-label">Email</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control" value="{{ $data_user->email }}" placeholder="Email"

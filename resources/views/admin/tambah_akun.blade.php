@@ -14,7 +14,13 @@
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
                 </div>
-
+                <div class="form-group">
+                    <label for="nip_nis">NIP / NIP</label>
+                    <input type="text" class="form-control" placeholder="NIP / NIS" id="nip_nis" name="nip_nis">
+                    @error('nip_nis')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
                 <div class="form-group">
                     <label for="email">Email</label>
                     <input type="email" class="form-control" placeholder="Email" id="email" name="email">

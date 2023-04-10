@@ -78,6 +78,7 @@ class AdminController extends Controller
             $data->name = $request->nama;
             $data->email = $request->email;
             $data->password = Hash::make($request->email);
+            $data->nip_nis = $request->nip_nis;
             if ($request->kode_kelas == 'kosong') {
                 $data->kode_kelas_id = null;
             } elseif ($request->kode_kelas == 'kode_baru') {
