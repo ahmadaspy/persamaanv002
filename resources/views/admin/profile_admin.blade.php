@@ -1,7 +1,7 @@
 @extends('admin.template.main')
 @section('content')
     <div class="row">
-        <div class="col-4">
+        <div class="col-lg-5 col-xl-4">
             <div class="card shadow">
                 <div class="card-body">
                     <div class="media align-items-center mb-4">

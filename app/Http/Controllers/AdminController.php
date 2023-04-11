@@ -53,8 +53,12 @@ class AdminController extends Controller
     public function daftar_user()
     {
         $data = User::latest();
+
         if (request('cari')) {
-            $data_user = $data->where('name', 'like', '%' . request('cari') . '%')->orWhere('email', 'like', '%' . request('cari') . '%')->paginate(10);
+            $data_user = $data->where('name', 'like', '%' . request('cari') . '%')
+            ->orWhere('email', 'like', '%' . request('cari') . '%')
+            ->orWhere('nip_nis', 'like', '%' . request('cari') . '%')
+            ->paginate(10);
         } else {
             $data_user = $data->paginate(10);
         }
