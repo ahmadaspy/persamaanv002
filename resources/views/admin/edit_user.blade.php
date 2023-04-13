@@ -1,4 +1,7 @@
 @extends('admin.template.main')
+@section('title')
+    Edit {{ $data_user->name}}
+@endsection
 @section('content')
     <div class="card shadow">
         <div class="card-header">

@@ -2,6 +2,9 @@
 @section('script_atas')
     <script src="{{ asset('js/admin.js') }}"></script>
 @endsection
+@section('title')
+    Daftar User
+@endsection
 @section('content')
     <div class="card shadow">
         <div class="card-body">

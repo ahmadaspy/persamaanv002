@@ -98,41 +98,44 @@
                             <h5>Petunjuk</h5>
                         </div>
                         <div class="card-body">
-                            <table class="table table-halaman-pengertian">
-                                <tr>
-                                    <td>
-                                        <img src="{{ asset('image/petunjuk/Sistem persamaan linear tiga variabel/termasuk atau tidak termasuk.jpg') }}"
-                                            alt="petunjuk 1" class="img-fluid">
-
-                                    </td>
-
-                                    <td>
-                                        <p>Pada tombol termasuk dan tidak termasuk akan berwarna hijau atau merah yang menandakan
-                                        </p>
-                                        <p>Hijau : Jawban Anda Benar</p>
-                                        <p>Merah : Jawaban Anda Salah</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="{{ asset('image/petunjuk/pengertian SPLTV/Jawaban benar.jpg') }}"
+                                            class="card-img-top" alt="...">
+                                        <img src="{{ asset('image/petunjuk/pengertian SPLTV/Jawaban benar.jpg') }}"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <p class="card-text">Pada tombol benar salah akan berwarna hijau atau merah yang
+                                                menandakan</p>
+                                            <p class="card-text">Hijau : Jawban Anda Benar</p>
+                                            <p class="card-text">Merah : Jawaban Anda Salah</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card">
                                         <img src="{{ asset('image/petunjuk/pengertian SPLTV/Jawaban Benar notif.jpg') }}"
-                                            alt="petunjuk 1" class="img-fluid">
-                                    </td>
-                                    <td>
-                                        <p>Apabila Jawaban Anda Benar Maka Ada Pemberitahuan Seperti Gambar</p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <img src="{{ asset('image/petunjuk/pengertian SPLTV/Jawaban Salah notif.jpg') }}"
-                                            alt="petunjuk 1" class="img-fluid">
-                                    </td>
-                                    <td>
-                                        <p>Apabila Jawaban Anda Salah Maka Ada Pemberitahuan Seperti Gambar</p>
-                                    </td>
-                                </tr>
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <p class="card-text">Apabila Jawaban Anda Benar Maka Ada Pemberitahuan Seperti
+                                                Gambar</p>
+                                        </div>
+                                    </div>
+                                </div>
 
-                            </table>
+                                <div class="col">
+                                    <div class="card">
+                                        <img src="{{ asset('image/petunjuk/pengertian SPLTV/Jawaban Salah notif.jpg') }}"
+                                            class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <p class="card-text">Apabila Jawaban Anda Benar Maka Ada Pemberitahuan Seperti
+                                                Gambar</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                     <div class="table-responsive">

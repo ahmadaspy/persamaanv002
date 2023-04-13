@@ -3,6 +3,9 @@
     <script src="{{ asset('js/siswa_2.js') }}"></script>
     <script src="{{ asset('js/halaman_1_siswa_eliminasi.js') }}"></script>
 @endsection
+@section('title')
+    Eliminasi halaman 1
+@endsection
 @section('content')
     <div class="card shadow mb-4">
         <div class="card-header py-3">

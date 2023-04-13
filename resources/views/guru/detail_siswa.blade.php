@@ -1,4 +1,7 @@
 @extends('guru.template.main')
+@section('title')
+    Detail Siswa {{$data_siswa->name}}
+@endsection
 @section('content')
     <div class="row">
         <div class="col-lg-5 col-xl-4 ">
@@ -69,7 +72,7 @@
                                                     <th>No</th>
                                                     <th>Nama</th>
                                                     <th>Nilai</th>
-                                                    <th>Melakukan</th>
+                                                    <th>Waktu Menyelesaikan</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -103,7 +106,7 @@
                                                     <th>No</th>
                                                     <th>Nama</th>
                                                     <th>Nilai</th>
-                                                    <th>Melakukan</th>
+                                                    <th>Waktu Menyelesaikan</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -153,7 +156,7 @@
                                                     <th>No</th>
                                                     <th>Nama</th>
                                                     <th>Nilai</th>
-                                                    <th>Melakukan</th>
+                                                    <th>Waktu Menyelesaikan</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -187,7 +190,7 @@
                                                     <th>No</th>
                                                     <th>Nama</th>
                                                     <th>Nilai</th>
-                                                    <th>Melakukan</th>
+                                                    <th>Waktu Menyelesaikan</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -237,7 +240,7 @@
                                                     <th>No</th>
                                                     <th>Nama</th>
                                                     <th>Nilai</th>
-                                                    <th>Melakukan</th>
+                                                    <th>Waktu Menyelesaikan</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -271,7 +274,7 @@
                                                     <th>No</th>
                                                     <th>Nama</th>
                                                     <th>Nilai</th>
-                                                    <th>Melakukan</th>
+                                                    <th>Waktu Menyelesaikan</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -321,7 +324,7 @@
                                                     <th>No</th>
                                                     <th>Nama</th>
                                                     <th>Nilai</th>
-                                                    <th>Melakukan</th>
+                                                    <th>Waktu Menyelesaikan</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -351,7 +354,7 @@
                                                     <th>No</th>
                                                     <th>Nama</th>
                                                     <th>Nilai</th>
-                                                    <th>Melakukan</th>
+                                                    <th>Waktu Menyelesaikan</th>
                                                 </tr>
                                             </thead>
                                             <tbody>

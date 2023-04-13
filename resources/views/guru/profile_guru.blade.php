@@ -1,4 +1,7 @@
 @extends('guru.template.main')
+@section('title')
+    Profile
+@endsection
 @section('content')
     <div class="row">
         <div class="col-4">

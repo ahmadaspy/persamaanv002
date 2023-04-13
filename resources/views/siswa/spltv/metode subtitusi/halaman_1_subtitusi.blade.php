@@ -2,6 +2,9 @@
 @section('script_atas')
     <script src="{{ asset('js/halaman_1_siswa.js') }}"></script>
 @endsection
+@section('title')
+    Substitusi halaman 1
+@endsection
 @section('content')
     <div class="card shadow mb-4">
         <div class="card-header py-3">

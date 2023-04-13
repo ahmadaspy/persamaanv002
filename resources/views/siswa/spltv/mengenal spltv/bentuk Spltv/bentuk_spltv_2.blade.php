@@ -3,6 +3,9 @@
     <link rel="stylesheet" href="{{ asset('css/mengenal_SPLTV.css') }}">
     <script src="{{ asset('js/mengenal SPLTV/mengenal_SPLTV.js') }}"></script>
 @endsection
+@section('title')
+    Bentuk SPLTV halaman 2
+@endsection
 @section('content')
     <div class="row">
         <div class="col">

@@ -4,6 +4,9 @@
     <script src="{{ asset('js/siswa_bentuk.js') }}"></script>
     <script src="{{ asset('js/contoh_bentuk_spltv_4.js') }}"></script>
 @endsection
+@section('title')
+    Bentuk SPLTV halaman 4
+@endsection
 @section('content')
     <div class="col">
         <div class="row">

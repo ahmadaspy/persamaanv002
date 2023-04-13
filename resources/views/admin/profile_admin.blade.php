@@ -1,4 +1,7 @@
 @extends('admin.template.main')
+@section('title')
+    Profile
+@endsection
 @section('content')
     <div class="row">
         <div class="col-lg-5 col-xl-4">

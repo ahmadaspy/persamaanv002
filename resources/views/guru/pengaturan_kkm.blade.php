@@ -1,4 +1,7 @@
 @extends('guru.template.main')
+@section('title')
+    Pengaturan KKM
+@endsection
 @section('content')
     <div class="row">
         <div class="col">

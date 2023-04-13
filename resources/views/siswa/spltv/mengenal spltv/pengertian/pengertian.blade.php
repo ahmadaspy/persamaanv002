@@ -3,6 +3,9 @@
     <script src="{{ asset('js/siswa_pengertian.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('css/mengenal_SPLTV.css') }}">
 @endsection
+@section('title')
+    Pengertian SPLTV
+@endsection
 @section('content')
     <div class="card shadow">
         <div class="card-header">
@@ -12,12 +15,15 @@
         <div class="card-body">
             <div class="card shadow">
                 <div class="card-header">
-                    <h6 class="text-primary">Tujuan pembelajaran</h6>
+                    <h4 class="text-primary">Tujuan pembelajaran</h4>
                 </div>
                 <div class="card-body">
-                    <ol>
-                        <li>1. Siswa dapat memahami pengertian Sistem persamaan linear tiga variabel</li>
-                    </ol>
+                    <h5>
+                        <ol>
+                            <li>1. Siswa dapat memahami pengertian Sistem persamaan linear tiga variabel</li>
+                        </ol>
+                    </h5>
+
                 </div>
             </div>
             <div class="card shadow">

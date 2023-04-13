@@ -1,4 +1,7 @@
 @extends('siswa.template.main')
+@section('title')
+    Subtitusi Halaman 2
+@endsection
 @section('content')
     <div class="card">
         <div class="card-header">

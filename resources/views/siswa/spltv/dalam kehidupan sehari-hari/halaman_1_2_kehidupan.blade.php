@@ -1,6 +1,9 @@
 @extends('siswa.template.main')
+@section('title')
+    Kontekstual halaman 1
+@endsection
 @section('content')
-     <div class="card shadow">
+    <div class="card shadow">
         <div class="card-body">
             <h5>Ayo menonton <i class="fa fa-play" aria-hidden="true"></i></h5>
             <div class="card" style="background-color: #e3e3e3">

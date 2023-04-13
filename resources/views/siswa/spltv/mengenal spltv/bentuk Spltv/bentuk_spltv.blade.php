@@ -1,5 +1,7 @@
 @extends('siswa.template.main')
-
+@section('title')
+    Bentuk SPLTV halaman 1
+@endsection
 @section('content')
     <div class="card shadow">
         <div class="card-header">
@@ -10,12 +12,14 @@
         <div class="card-body">
             <div class="card shadow">
                 <div class="card-header">
-                    <h6 class="text-primary">
+                    <h4 class="text-primary">
                         Tujuan Pembelajaran
-                    </h6>
+                    </h4>
                 </div>
                 <div class="card-body">
-                    <p>1. Siswa dapat membedakan bentuk dari sistem persamaan linear tiga variabel</p>
+                    <h5>
+                        <p>1. Siswa dapat membedakan bentuk dari sistem persamaan linear tiga variabel</p>
+                    </h5>
                 </div>
             </div>
             <p>Bentuk sederhana dari sistem persamaan linear tiga variabel adalah seperti ini :</p>

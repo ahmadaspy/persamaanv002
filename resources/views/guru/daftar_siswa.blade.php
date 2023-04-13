@@ -1,4 +1,7 @@
 @extends('guru.template.main')
+@section('title')
+    Daftar Siswa
+@endsection
 @section('content')
     <div class="card">
         <div class="card-body">

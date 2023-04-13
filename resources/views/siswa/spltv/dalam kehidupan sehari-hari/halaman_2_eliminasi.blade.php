@@ -1,4 +1,7 @@
 @extends('siswa.template.main')
+@section('title')
+    Kontkestual Halaman 2
+@endsection
 @section('content')
     <div class="card shadow mb-4">
         <div class="card-header py-3">
