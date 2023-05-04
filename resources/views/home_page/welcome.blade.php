@@ -13,7 +13,7 @@
                         pada Mata Pelajaran Matematika Semester Ganjil
                     </p>
 
-                    <a href="{{ route('Login_menu') }}">
+                    <a href="{{ route('login_siswa') }}">
                         <button class="btn-mulai">
                             @auth
                                 Dashboard
