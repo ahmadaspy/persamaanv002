@@ -23,7 +23,7 @@
                                 <p>Klik tombol belajar untuk memuali belajar</p>
                             </td>
                         </tr>
-                        <tr>
+                        {{-- <tr>
                             <td>
                                 <img src="{{ asset('image/petunjuk/petunjuk penggunaan/menu login.JPG') }}"
                                     alt="petunjuk 1" class="img-fluid">
@@ -31,14 +31,14 @@
                             <td>
                                 <p>kalian akan diarahkan ke menu login dimana kalian akan login sebagai siswa atau guru</p>
                             </td>
-                        </tr>
+                        </tr> --}}
                         <tr>
                             <td>
                                 <img src="{{ asset('image/petunjuk/petunjuk penggunaan/form login.JPG') }}"
                                     alt="petunjuk 1" class="img-fluid">
                             </td>
                             <td>
-                                <p>Isi email dan password kalian sesuai dengan akun yang telah diberikan</p>
+                                <p>Isi NIS dan password kalian sesuai dengan akun yang telah diberikan</p>
                             </td>
                         </tr>
                         <tr>
