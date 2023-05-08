@@ -1,4 +1,7 @@
 @extends('siswa.template.main')
+@section('title')
+    Kuis menyelesaikan SPLTV {{Auth::user()->name}}
+@endsection
 @section('content')
     <div class="card">
         <div class="card-body">

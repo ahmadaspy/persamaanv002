@@ -1,4 +1,7 @@
 @extends('siswa.template.main')
+@section('title')
+    Kuis mengenal SPLTV
+@endsection
 @section('content')
     <div class="card shadow">
         <div class="card-header">

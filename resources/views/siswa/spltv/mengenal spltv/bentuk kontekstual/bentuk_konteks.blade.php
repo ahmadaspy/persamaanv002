@@ -2,6 +2,9 @@
 @section('script_atas')
     <script src="{{ asset('js/siswa_bentuk_konteks.js') }}"></script>
 @endsection
+@section('title')
+    Bentuk Kontekstual
+@endsection
 @section('content')
     <div class="card shadow">
         <div class="card-header">
