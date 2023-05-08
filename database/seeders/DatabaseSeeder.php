@@ -25,7 +25,7 @@ class DatabaseSeeder extends Seeder
         $this->call(MariMencobaSPLTVSubtitusiSeeder::class);
         // \App\Models\MariMencobaSpltvEliminasi::factory(5)->create();
         $this->call(MariMencobaSPLTVEliminasiSeeder::class);
-        \App\Models\KodeKelas::factory(5)->create(); //disable
+        \App\Models\KodeKelas::factory(1)->create(); //disable
         $this->call(KuisMengenalSeeder::class);
         $this->call(KuisPertamaSeeder::class);
         $this->call(KuisKeduaSeeder::class);
