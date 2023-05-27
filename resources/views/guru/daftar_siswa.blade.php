@@ -8,7 +8,7 @@
             <div class="basic-form float-right">
 
                 <form class="form-inline" action="{{ route('halaman_siswa') }}">
-
+                    <a href="{{ route('tambah_siswa') }}" class="btn btn-primary form-inline mb-2">Tambah Akun</a>
                     <div class="form-group mx-sm-3 mb-2">
                         <input type="text" class="form-control" placeholder="Cari .... " name="cari"
                             value="{{ request('cari') }}">

@@ -11,6 +11,7 @@ use App\Http\Controllers\KuisPertamaController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\Mengenal_spltv;
 use App\Http\Controllers\ProfileSiswaController;
+use App\Http\Controllers\RekapitulasiUser;
 use App\Http\Controllers\SpldvMetodeEliminasiController;
 use App\Http\Controllers\SpldvMetodeGabunganController;
 use App\Http\Controllers\SpldvMetodegrafikController;
@@ -100,6 +101,8 @@ Route::prefix('guru')->group(function(){
     Route::middleware(['auth', 'role:guru'])->group(function(){
         Route::get('/dashboard', [GuruController::class, 'dashboard_guru'])->name('dashboard_guru');
         Route::get('/siswa', [GuruController::class, 'halaman_siswa'])->name('halaman_siswa');
+        Route::get('/siswa/tambah', [GuruController::class, 'tambah_siswa'])->name('tambah_siswa');
+        Route::post('/siswa/tambah', [GuruController::class, 'tambah_siswa_post'])->name('tambah_siswa_post');
         Route::get('/siswa/detail/{id}', [GuruController::class, 'halaman_siswa_detail'])->name('halaman_siswa_detail');
         Route::get('/profile', [GuruController::class, 'profile_guru'])->name('profile_guru');
         Route::post('/profile/post', [GuruController::class, 'profile_guru_post'])->name('profile_guru_post');
@@ -115,6 +118,7 @@ Route::prefix('siswa')->group(function () {
         Route::get('/profile', [ProfileSiswaController::class, 'index'])->middleware('verified')->name('profile');
         Route::post('/profile/edit/datadiri', [ProfileSiswaController::class, 'edit_profile'])->middleware('verified')->name('edit_profile');
         Route::post('/profile/edit/katasandi', [ProfileSiswaController::class, 'edit_password'])->middleware('verified')->name('edit_password');
+        Route::get('/rekapitulasi', [RekapitulasiUser::class, 'index'])->name('rekap_siswa');
         // Route::get('/kikd', [KikdController::class, 'index'])->name('kikd');
 
 

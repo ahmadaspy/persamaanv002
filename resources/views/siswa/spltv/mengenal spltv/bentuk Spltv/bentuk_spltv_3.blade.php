@@ -11,11 +11,12 @@
         <div class="col">
             <div class="card shadow">
                 <div class="card-header">
-                    <h4 class="m-0 font-weight-bold text-primary">
-                        Bentuk Sistem Persamaan Linear Tiga Variabel
-                    </h4>
+
                 </div>
                 <div class="card-body">
+                    <h3 class="m-0 font-weight-bold text-primary mb-4 text-center">
+                        Bentuk SPLTV (Sistem Persamaan Linear Tiga Variabel)
+                    </h3>
                     <h4>Perbedaan antara sistem persamaan linear 1 variabel, 2 variabel dan 3 variabel</h4>
                     <div class="card">
                         <div class="card-header">

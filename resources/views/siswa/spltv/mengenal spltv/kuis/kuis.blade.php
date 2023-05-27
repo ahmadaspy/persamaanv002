@@ -6,7 +6,7 @@
     <div class="card shadow">
         <div class="card-header">
             <h6 class="m-0 text-weight-bold text-primary">
-                Kuis 1
+                Kuis mengenal SPLTV (Sistem Persamaan Linear Tiga Variabel)
             </h6>
         </div>
         <div class="card-body">

@@ -1,6 +1,6 @@
 @extends('siswa.template.main')
 @section('title')
-    Hasil kuis mengenal SPLTV {{Auth::user()->name}}
+    Hasil kuis mengenal SPLTV {{ Auth::user()->name }}
 @endsection
 @section('content')
     <div class="card">
@@ -51,10 +51,18 @@
                         @else
                             <h5 class="card-title" style="color: rgb(255, 0, 0)">Jangan menyerah</h5>
                             <p class="card-text text-center">Nilai Kamu : {{ $nilai->nilai }}</p>
-                            <p class="card-text text-center">Pelajari lagi materi sebelumnya klik <a href="{{route('pengertian_spltv')}}" class="text-warning stretched-link">disini</a></p>
+                            <p class="card-text text-center">Pelajari lagi materi sebelumnya klik <a
+                                    href="{{ route('pengertian_spltv') }}" class="text-warning stretched-link">disini</a>
+                            </p>
                             <a href="{{ route('kuis_mengenal') }}" class="btn btn-danger">Ulang evaluasi</a>
                         @endif
+                        {{-- <div class="col">
+                            <div class="row text-center">
+                                <a href="{{ route('rekap_siswa') }}" class="btn btn-primary ">Rekap Nilai</a>
+                            </div>
+                        </div> --}}
                     </div>
+
                     @if ($nilai->created_at != null)
                         <div class="card-footer text-muted">
                             Terakhir melakukan soal evaluasi {{ $nilai->created_at->diffForHumans() }}

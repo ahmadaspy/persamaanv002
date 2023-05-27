@@ -35,7 +35,10 @@
                                             <a href="{{route('profile')}}"><i class="icon-user"></i>
                                                 <span>Profile</span></a>
                                         </li>
-
+                                        <li>
+                                            <a href="{{route('rekap_siswa')}}"><i class="icon-map"></i>
+                                                <span>Rekapitulasi Nilai</span></a>
+                                        </li>
 
                                         <hr class="my-2">
 

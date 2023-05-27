@@ -1,4 +1,7 @@
 @extends('siswa.template.main')
+@section('title')
+    Profile {{Auth::user()->name}}
+@endsection
 @section('content')
     <div class="container-fluid">
         <div class="row">

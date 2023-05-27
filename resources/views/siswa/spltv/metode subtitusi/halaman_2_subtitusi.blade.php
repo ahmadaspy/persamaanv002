@@ -5,10 +5,12 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            <h4 class="text-primary">Latihan</h4>
+            {{-- <h4 class="text-primary">Latihan</h4> --}}
         </div>
         <div class="card-body">
-            <div class="row">
+            <h3 class="m-0 font-weight-bold text-primary text-center mb-4">Metode Subtitusi SPLTV (Sistem Persamaan Linear Tiga Variabel)</h6>
+            <h4>Latihan</h4>
+                <div class="row">
                 <div class="col">
                     <div class="card">
                         <div class="card-header">

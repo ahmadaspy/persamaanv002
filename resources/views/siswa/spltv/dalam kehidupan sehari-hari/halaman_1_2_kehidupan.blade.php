@@ -5,6 +5,7 @@
 @section('content')
     <div class="card shadow">
         <div class="card-body">
+            <h3 class="m-0 font-weight-bold text-primary text-center mb-4">SPLTV (Sistem Persamaan Linear Tiga Variabel) dalam kehidupan sehari - hari</h6>
             <h5>Ayo menonton <i class="fa fa-play" aria-hidden="true"></i></h5>
             <div class="card" style="background-color: #e3e3e3">
                 <div class="card-body">

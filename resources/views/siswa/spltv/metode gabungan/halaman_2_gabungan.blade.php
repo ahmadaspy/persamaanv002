@@ -5,9 +5,11 @@
 @section('content')
 <div class="card">
     <div class="card-header">
-        <h5 class="text-primary">Latihan</h5>
+
     </div>
     <div class="card-body">
+        <h3 class="m-0 font-weight-bold text-primary text-center mb-4">Metode Gabungan SPLTV (Sistem Persamaan Linear Tiga Variabel)</h3>
+        <h5 >Latihan</h5>
         <div class="default-tab">
             <ul class="nav nav-tabs mb-3" role="tablist">
                 <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#contoh_cara_1">

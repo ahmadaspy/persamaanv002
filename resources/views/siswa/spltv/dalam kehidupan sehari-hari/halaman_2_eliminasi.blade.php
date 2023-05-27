@@ -5,9 +5,11 @@
 @section('content')
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h5 class="m-0 font-weight-bold text-primary">Latihan 2</h5>
+            {{-- <h5 class="m-0 font-weight-bold text-primary">Latihan 2</h5> --}}
         </div>
         <div class="card-body">
+            <h3 class="m-0 font-weight-bold text-primary text-center mb-4">SPLTV (Sistem Persamaan Linear Tiga Variabel) dalam kehidupan sehari - hari</h6>
+                <h4>Latihan</h4>
             <div class="accordion" id="petunjuk">
                 <div class="card">
                     <div class="card-header" id="headingOne">

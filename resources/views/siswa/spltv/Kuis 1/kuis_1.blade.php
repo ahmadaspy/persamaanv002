@@ -5,7 +5,7 @@
 @section('content')
     <div class="card shadow">
         <div class="card-header">
-            <h6 class="font-weight-bold text-primary">Kuis 2</h6>
+            <h6 class="font-weight-bold text-primary">Kuis Menyelesaikan SPLTV (Sistem Persamaan Linear Tiga Variabel)</h6>
         </div>
         <div class="card-body">
             <div class="mt-5">

@@ -2,9 +2,10 @@
 @section('content')
     <div class="card shadow">
         <div class="card-header">
-            <h6 class="m-0 font-weight-bold text-primary">Dalam Kehidupan sehari - hari</h6>
+            {{-- <h6 class="m-0 font-weight-bold text-primary">Dalam Kehidupan sehari - hari</h6> --}}
         </div>
         <div class="card-body">
+            <h3 class="m-0 font-weight-bold text-primary text-center mb-4">SPLTV (Sistem Persamaan Linear Tiga Variabel) dalam kehidupan sehari - hari</h6>
             <div class="card shadow">
                 <div class="card-header">
                     <h6 class="text-primary">

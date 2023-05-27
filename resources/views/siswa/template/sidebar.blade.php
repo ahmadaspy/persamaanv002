@@ -15,7 +15,8 @@
                             <i class="icon-notebook menu-icon"></i><span class="nav-text">KI | KD</span>
                         </a>
                     </li> --}}
-                    <li class="nav-label">Materi :</li>
+                    <li class="nav-label">Sistem Persamaan Linear Tiga Variabel (SPLTV)</li>
+                    {{-- <li class="nav-label">Materi :</li> --}}
                     {{-- <li>
                         <a href="{{ route('spltv_index') }}" aria-expanded="false">
 
@@ -52,11 +53,11 @@
                             <li><a href="{{ route('pengertian_spltv') }}">Pengertian SPLTV</a></li>
                             <li><a href="{{ route('bentuk_spltv') }}">Bentuk SPLTV</a></li>
                             <li><a href="{{ route('bentuk_spltv_kontekstual') }}">Bentuk Kontekstual SPLTV</a></li>
-                            <li><a href="{{ route('kuis_mengenal') }}">Kuis</a></li>
+                            <li><a href="{{ route('kuis_mengenal') }}">Kuis Mengenal SPTLV</a></li>
                             @if ((KuisMengenalNilai::where('user_id', Auth::user()->id)->first() or
                                 KuisMengenalNilai::where('user_id', Auth::user()->id)->onlyTrashed()->first()) !=
                                 null)
-                                <li><a href="{{ route('kuis_mengenal_hasil') }}">Hasil kuis</a></li>
+                                <li><a href="{{ route('kuis_mengenal_hasil') }}">Hasil kuis Mengenal SPTLV</a></li>
                             @endif
 
                         </ul>
@@ -90,14 +91,14 @@
                             </div> --}}
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="{{ route('spltv_subtitusi_1') }}">Metode Subtitusi</a></li>
-                            <li><a href="{{ route('spltv_eliminasi_1') }}">Metode Eliminasi</a></li>
-                            <li><a href="{{ route('spltv_gabungan_1') }}">Metode Gabungan</a></li>
-                            <li><a href="{{ route('kuis_index_page') }}">Kuis</a></li>
+                            <li><a href="{{ route('spltv_subtitusi_1') }}">Metode Subtitusi SPLTV</a></li>
+                            <li><a href="{{ route('spltv_eliminasi_1') }}">Metode Eliminasi SPLTV</a></li>
+                            <li><a href="{{ route('spltv_gabungan_1') }}">Metode Gabungan SPLTV</a></li>
+                            <li><a href="{{ route('kuis_index_page') }}">Kuis Menyelesaikan SPLTV</a></li>
                             @if ((kuis_1_nilai::where('user_id', Auth::user()->id)->first() or
                                 kuis_1_nilai::where('user_id', Auth::user()->id)->onlyTrashed()->first()) !=
                                 null)
-                                <li><a href="{{ route('kuis_1_hasil') }}">Hasil kuis</a></li>
+                                <li><a href="{{ route('kuis_1_hasil') }}">Hasil kuis Menyelesaikan SPLTV</a></li>
                             @endif
                         </ul>
                     </li>
@@ -119,7 +120,7 @@
                             @else
                                 <i class="icon-lock menu-icon"></i>
                             @endif
-                            <span class="nav-text">3. Masalah yangmelibatkan persamaan linear tiga variabel</span>
+                            <span class="nav-text">3. Masalah yang melibatkan sistem persamaan linear tiga variabel</span>
                             {{-- <div class="row">
                                 <i class="icon-music-tone-alt menu-icon col-1"></i>
                                 <span class="col-1 nav-text">2</span>
@@ -127,8 +128,8 @@
                             </div> --}}
                         </a>
                         <ul aria-expanded="false">
-                            <li><a href="{{ route('spltv_kehidupan_1') }}">Dalam kehidupan sehari - hari</a></li>
-                            <li><a href="{{ route('kuis_index2_page') }}">Kuis</a></li>
+                            <li><a href="{{ route('spltv_kehidupan_1') }}">SPLTV Dalam kehidupan sehari - hari</a></li>
+                            <li><a href="{{ route('kuis_index2_page') }}">Kuis SPLTV dalam kehidupan sehari - hari</a></li>
                             {{-- @if (($kuis_2 or $kuis_2_trash) != null)
                                 <li><a href="{{ route('kuis_2_hasil') }}">Hasil kuis</a></li>
                             @endif --}}

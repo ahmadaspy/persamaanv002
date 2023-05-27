@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\kkm;
 use App\Models\User;
+use App\Models\KodeKelas;
 use App\Models\kuis_1_nilai;
 use App\Models\kuis_2_nilai;
 use Illuminate\Http\Request;
@@ -454,5 +455,33 @@ class GuruController extends Controller
         }
         alert::success('Berhasil', 'Nilai KKM berhasil di ubah');
         return redirect()->back();
+    }
+    public function tambah_siswa(){
+
+        return view('guru.tambah_siswa');
+    }
+    public function tambah_siswa_post(Request $request){
+        $request->validate([
+            'nis' => 'required',
+            'nama' => 'required',
+            'email' => 'required',
+        ]);
+        if (Auth::user()->hasRole('guru')) {
+            $data = new User();
+            $data->name = $request->nama;
+            $data->email = $request->email;
+            $data->password = Hash::make($request->email);
+            $data->nip_nis = $request->nis;
+            $data->kode_kelas_id = Auth::user()->kode_kelas->id;
+
+            $data->save();
+            $data->attachRole('siswa');
+
+            Alert::success('Sukses', 'Data berhasil dimasukan');
+            return redirect()->route('tambah_siswa');
+        } else {
+            Auth::logout();
+            return redirect()->route('login_guru');
+        }
     }
 }

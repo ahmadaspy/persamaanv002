@@ -9,10 +9,11 @@
 @section('content')
     <div class="card shadow">
         <div class="card-header">
-            <h4 class="m-0 font-weight-bold text-primary">Pengertian sistem persamaan linear tiga variabel</h4>
+
         </div>
 
         <div class="card-body">
+            <h3 class="m-0 font-weight-bold text-primary text-center mb-4">Pengertian SPLTV (sistem persamaan linear tiga variabel)</h3>
             <div class="card shadow">
                 <div class="card-header">
                     <h4 class="text-primary">Tujuan pembelajaran</h4>

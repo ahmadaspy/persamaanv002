@@ -5,9 +5,10 @@
 @section('content')
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Metode Gabungan Sistem Persamaan Linear Tiga Variabel</h6>
+
         </div>
         <div class="card-body">
+            <h4 class="m-0 font-weight-bold text-primary text-center mb-4">Metode Gabungan SPLTV (Sistem Persamaan Linear Tiga Variabel)</h4>
             <div class="card shadow">
                 <div class="card-header">
                     <h6 class="text-primary">
