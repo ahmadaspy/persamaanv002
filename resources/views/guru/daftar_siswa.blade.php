@@ -8,7 +8,7 @@
             <div class="basic-form float-right">
 
                 <form class="form-inline" action="{{ route('halaman_siswa') }}">
-                    <a href="{{ route('tambah_siswa') }}" class="btn btn-primary form-inline mb-2">Tambah Akun</a>
+                    <a href="{{ route('tambah_siswa') }}" class="btn btn-primary form-inline mb-2">Tambah Siswa</a>
                     <div class="form-group mx-sm-3 mb-2">
                         <input type="text" class="form-control" placeholder="Cari .... " name="cari"
                             value="{{ request('cari') }}">
@@ -21,12 +21,13 @@
                     <thead>
                         <tr>
                             <th>No</th>
+                            <th>NIS</th>
                             <th>Nama</th>
                             <th>Tanggal Daftar</th>
                             <th>Nilai kuis 1</th>
                             <th>Nilai Kuis 2</th>
                             <th>Nilai Kuis 3</th>
-                            <th>Nilai Evaluias</th>
+                            <th>Nilai Evaluasi</th>
                             <th>Nilai Rata - Rata</th>
                             <th>Detail</th>
                         </tr>
@@ -35,6 +36,7 @@
                         @foreach ($siswa as $siswas)
                             <tr>
                                 <th scope="row">{{ $siswa->firstItem() + $loop->index }}</th>
+                                <td>{{$siswas->nip_nis}}</td>
                                 <td>{{ $siswas->name }}</td>
                                 <td>{{ $siswas->created_at->diffForhumans() }}</td>
                                 {{-- @if ($siswas->nilaikuis1->nilai != null)

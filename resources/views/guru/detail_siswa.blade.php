@@ -57,12 +57,12 @@
                 <div class="col">
                     <div class="card shadow">
                         <div class="card-header">
-                            <h6 class="text-primary">Nilai Kuis 1</h6>
+                            <h6 class="text-primary">Nilai Kuis Mengenal SPLTV</h6>
                         </div>
                         <div class="card-body">
                             <div class="card shadow">
                                 <div class="card-header">
-                                    <h6>Nilai kuis terbaru</h6>
+                                    <h6>Nilai Kuis Mengenal SPLTV terbaru</h6>
                                 </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
@@ -96,7 +96,7 @@
                             </div>
                             <div class="card shadow">
                                 <div class="card-header">
-                                    <h6>Nilai kuis terdahulu</h6>
+                                    <h6>Nilai Kuis Mengenal SPLTV terdahulu</h6>
                                 </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
@@ -127,7 +127,7 @@
                             </div>
                             <div class="card shadow">
                                 <div class="card-header">
-                                    <h6>Grafik Kuis 1</h6>
+                                    <h6>Grafik Kuis Mengenal SPLTV</h6>
                                 </div>
                                 <div class="card-body">
                                     {!! $chart_kuis_mengenal->render() !!}
@@ -141,12 +141,12 @@
                 <div class="col">
                     <div class="card shadow">
                         <div class="card-header">
-                            <h6 class="text-primary">Nilai Kuis 2</h6>
+                            <h6 class="text-primary">Nilai Kuis Meyelesaikan SPLTV</h6>
                         </div>
                         <div class="card-body">
                             <div class="card shadow">
                                 <div class="card-header">
-                                    <h6>Nilai kuis terbaru</h6>
+                                    <h6>Nilai Kuis Meyelesaikan SPLTV terbaru</h6>
                                 </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
@@ -180,7 +180,7 @@
                             </div>
                             <div class="card shadow">
                                 <div class="card-header">
-                                    <h6>Nilai kuis terdahulu</h6>
+                                    <h6>Nilai Kuis Meyelesaikan SPLTV terdahulu</h6>
                                 </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
@@ -211,7 +211,7 @@
                             </div>
                             <div class="card shadow">
                                 <div class="card-header">
-                                    <h6>Grafik Kuis 2</h6>
+                                    <h6>Grafik Kuis Meyelesaikan SPLTV</h6>
                                 </div>
                                 <div class="card-body">
                                     {!! $chart_kuis_1->render() !!}
@@ -225,12 +225,12 @@
                 <div class="col">
                     <div class="card shadow">
                         <div class="card-header">
-                            <h6 class="text-primary">Nilai Kuis 3</h6>
+                            <h6 class="text-primary">Nilai Kuis SPLTV dalam kehidupan sehari - hari</h6>
                         </div>
                         <div class="card-body">
                             <div class="card shadow">
                                 <div class="card-header">
-                                    <h6>Nilai kuis terbaru</h6>
+                                    <h6>Nilai Kuis SPLTV dalam kehidupan sehari - hari terbaru</h6>
                                 </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
@@ -264,7 +264,7 @@
                             </div>
                             <div class="card shadow">
                                 <div class="card-header">
-                                    <h6>Nilai kuis terdahulu</h6>
+                                    <h6>Nilai Kuis SPLTV dalam kehidupan sehari - hari terdahulu</h6>
                                 </div>
                                 <div class="card-body">
                                     <div class="table-responsive">
@@ -295,7 +295,7 @@
                             </div>
                             <div class="card shadow">
                                 <div class="card-header">
-                                    <h6>Grafik Kuis 3</h6>
+                                    <h6>Grafik Kuis SPLTV dalam kehidupan sehari - hari</h6>
                                 </div>
                                 <div class="card-body">
                                     {!! $chart_kuis_2->render() !!}

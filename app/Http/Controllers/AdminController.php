@@ -71,12 +71,23 @@ class AdminController extends Controller
     }
     public function tambah_user_post(Request $request)
     {
-        $request->validate([
-            'nama' => 'required',
-            'email' => 'required',
-            'kode_kelas' => 'required',
-            'role' => 'required',
-        ]);
+        if($request->role == 'guru' || $request->role == 'siswa'){
+            $request->validate([
+                'nama' => 'required',
+                'email' => 'required',
+                'nip_nis' => ['required', 'unique:users,nip_nis', 'min:10'],
+                'kode_kelas' => 'required',
+                'role' => 'required',
+            ]);
+        } else {
+            $request->validate([
+                'nama' => 'required',
+                'email' => 'required',
+                'kode_kelas' => 'required',
+                'role' => 'required',
+            ]);
+        }
+
         if (Auth::user()->hasRole('admin')) {
             $data = new User();
             $data->name = $request->nama;

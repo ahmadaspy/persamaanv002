@@ -462,7 +462,7 @@ class GuruController extends Controller
     }
     public function tambah_siswa_post(Request $request){
         $request->validate([
-            'nis' => 'required',
+            'nis' => ['required', 'unique:users,nip_nis', 'min:10'],
             'nama' => 'required',
             'email' => 'required',
         ]);
@@ -478,7 +478,7 @@ class GuruController extends Controller
             $data->attachRole('siswa');
 
             Alert::success('Sukses', 'Data berhasil dimasukan');
-            return redirect()->route('tambah_siswa');
+            return redirect()->route('halaman_siswa');
         } else {
             Auth::logout();
             return redirect()->route('login_guru');

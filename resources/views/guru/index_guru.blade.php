@@ -54,7 +54,7 @@
         <div class="col">
             <div class="card gradient-1">
                 <div class="card-body">
-                    <h3 class="card-title text-white">Data Kuis 1</h3>
+                    <h3 class="card-title text-white">Data Kuis Mengenal SPLTV</h3>
                     <div class="d-inline-block">
                         @if ($siswa->count() != null)
                             <h2 class="text-white">lulus : {{ count(array_keys($siswa_mengenal, 'lulus')) }}</h2>
@@ -71,7 +71,7 @@
         <div class="col">
             <div class="card gradient-1">
                 <div class="card-body">
-                    <h3 class="card-title text-white">Data Kuis 2</h3>
+                    <h3 class="card-title text-white">Data Kuis Meyelesaikan SPLTV</h3>
                     <div class="d-inline-block">
                         @if ($siswa->count() != null)
                             <h2 class="text-white">lulus : {{ count(array_keys($siswa_kuis1, 'lulus')) }}</h2>
@@ -87,7 +87,7 @@
         <div class="col">
             <div class="card gradient-1">
                 <div class="card-body">
-                    <h3 class="card-title text-white">Data Kuis 3</h3>
+                    <h3 class="card-title text-white">Data Kuis SPLTV dalam kehidupan sehari - hari</h3>
                     <div class="d-inline-block">
                         @if ($siswa->count() != null)
                             <h2 class="text-white">Lulus : {{ count(array_keys($siswa_kuis2, 'lulus')) }}</h2>
