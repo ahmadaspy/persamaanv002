@@ -254,6 +254,7 @@ class AdminController extends Controller
             $data_user = User::find($request->id);
             $data_user->update([
                 'name' => $request->name,
+                'nip_nis' => $request->nip_nis,
                 'email' => $request->email,
                 'update_at' => Carbon::now(),
             ]);
