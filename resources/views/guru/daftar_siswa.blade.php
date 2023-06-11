@@ -36,7 +36,7 @@
                         @foreach ($siswa as $siswas)
                             <tr>
                                 <th scope="row">{{ $siswa->firstItem() + $loop->index }}</th>
-                                <td>{{$siswas->nip_nis}}</td>
+                                <td>{{ $siswas->nip_nis }}</td>
                                 <td>{{ $siswas->name }}</td>
                                 <td>{{ $siswas->created_at->diffForhumans() }}</td>
                                 {{-- @if ($siswas->nilaikuis1->nilai != null)
@@ -60,7 +60,8 @@
                                         <div class="text-danger">{{ $siswas->nilaikuis1_all->max->nilai ?? 'Data kosong' }}
                                         </div>
                                     @else
-                                        <div class="text-success">{{ $siswas->nilaikuis1_all->max->nilai ?? 'Data kosong' }}
+                                        <div class="text-success">
+                                            {{ $siswas->nilaikuis1_all->max->nilai ?? 'Data kosong' }}
                                         </div>
                                     @endif
 
@@ -87,13 +88,22 @@
                                 </td>
                                 <td>{{ (($siswas->nilaikuismengenal_all->max->nilai ?? 0) + ($siswas->nilaikuis1_all->max->nilai ?? 0) + ($siswas->nilaikuis2_all->max->nilai ?? 0) + ($siswas->nilaievaluasi_all->max->nilai ?? 0)) / 4 }}
                                 </td>
-                                <td><a href="{{ route('halaman_siswa_detail', $siswas->id) }}"><button type="button"
-                                            class="btn mb-1 btn-rounded btn-outline-info">Detail</button></a></td>
+                                <td>
+                                    <a href="{{ route('halaman_siswa_detail', $siswas->id) }}">
+                                        <button type="button" class="btn mb-1 btn-rounded btn-primary">Detail
+                                        </button>
+                                    </a>
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>
                 </table>
+                <div class="d-flex justify-content-center">
+                    {{ $siswa->links() }}
+                </div>
             </div>
+
+
         </div>
     </div>
 @endsection

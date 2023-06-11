@@ -93,7 +93,7 @@
                                             <form action="{{ route('akun_verifikasi') }}" method="POST">
                                                 @csrf
                                                 <input type="hidden" value="{{ $users->id }}" name="id">
-                                                <button type="submit" class="btn btn-success">Verifikasi</button>
+                                                <button type="submit" class="btn btn-success text-whitephp">Verifikasi</button>
                                             </form>
                                         </div>
                                         <div class="col mt-2">
