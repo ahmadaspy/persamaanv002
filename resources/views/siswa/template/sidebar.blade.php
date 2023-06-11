@@ -159,7 +159,7 @@
                         <ul aria-expanded="false">
                             <li
                                 @if (isset($sidebar_aktif_kehidupan)) class=" {{ $sidebar_aktif_kehidupan ? 'active' : '' }}" @endif>
-                                ><a href="{{ route('spltv_kehidupan_1') }}"
+                                <a href="{{ route('spltv_kehidupan_1') }}"
                                     @if (isset($sidebar_aktif_kehidupan)) class=" {{ $sidebar_aktif_kehidupan ? 'active' : '' }}" @endif>SPLTV
                                     Dalam kehidupan sehari - hari</a></li>
                             <li><a href="{{ route('kuis_index2_page') }}">Kuis SPLTV dalam kehidupan sehari - hari</a>
