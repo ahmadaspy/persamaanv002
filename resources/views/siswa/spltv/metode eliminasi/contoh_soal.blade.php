@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-header">
-        {{-- <h5 class="text-primary">latihan</h5> --}}
+        {{Breadcrumbs::render('metode_eliminasi_2')}}
     </div>
     <div class="card-body">
         <h3 class="m-0 font-weight-bold text-primary text-center mb-4">Metode Eliminasi SPLTV (Sistem Persamaan Linear Tiga Variabel)</h6>

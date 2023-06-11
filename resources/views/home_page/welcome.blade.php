@@ -3,6 +3,7 @@
     Home
 @endsection
 @section('content')
+
     <section id="banner_1">
         <div class="container">
             <div class="row">
@@ -37,13 +38,11 @@
                                 <img class="d-block w-100" src="{{ asset('image/logo/3.png') }}" alt="Third slide">
                             </div>
                         </div>
-                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
-                            data-slide="prev">
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="sr-only">Previous</span>
                         </a>
-                        <a class="carousel-control-next" href="#carouselExampleControls" role="button"
-                            data-slide="next">
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
                         </a>
@@ -85,4 +84,3 @@
         </div>
     </section> --}}
 @endsection
-

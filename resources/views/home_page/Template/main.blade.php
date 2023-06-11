@@ -34,6 +34,7 @@
 </head>
 
 <body>
+    @include('sweetalert::alert')
     <div id="preloader">
         <div class="loader">
             <svg class="circular" viewBox="25 25 50 50">

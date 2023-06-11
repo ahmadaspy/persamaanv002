@@ -4850,12 +4850,12 @@ input[type="button"].btn-block {
 }
 
 .breadcrumb {
-    display: flex;
+    display: inline-flex;
     flex-wrap: wrap;
     padding: 0.75rem 1rem;
     margin-bottom: 1rem;
     list-style: none;
-    background-color: #e9ecef;
+    background-color: none;
     border-radius: 0.25rem;
 }
 
@@ -4866,7 +4866,7 @@ input[type="button"].btn-block {
 .breadcrumb-item+.breadcrumb-item::before {
     display: inline-block;
     padding-right: 0.5rem;
-    color: #f7fafc;
+    color: black;
     content: "/";
 }
 
@@ -4879,7 +4879,7 @@ input[type="button"].btn-block {
 }
 
 .breadcrumb-item.active {
-    color: #f7fafc;
+    color: black;
 }
 
 .pagination {

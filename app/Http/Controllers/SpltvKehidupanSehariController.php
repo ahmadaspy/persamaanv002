@@ -12,20 +12,31 @@ class SpltvKehidupanSehariController extends Controller
 {
     public function spltv_kehidupan_1()
     {
-        return view('siswa.spltv.dalam kehidupan sehari-hari.halaman_1_kehidupan');
+        $halaman_aktif = 0;
+        return view('siswa.spltv.dalam kehidupan sehari-hari.halaman_1_kehidupan')->with(compact('halaman_aktif'));
+    }
+
+    public function spltv_kehidupan_1_2()
+    {
+        $halaman_aktif = 1;
+        $sidebar_aktif_kehidupan = request()->url() == route('spltv_kehidupuan_1_2') ? true : false;
+        return view('siswa.spltv.dalam kehidupan sehari-hari.halaman_1_2_kehidupan')->with(compact('halaman_aktif', 'sidebar_aktif_kehidupan'));
     }
     public function spltv_kehidupan_2($id, $nomor)
     {
+        $halaman_aktif = 2;
+
         $soal = MariMencobaSpltvKehidupan::find($id);
         $soal_all = MariMencobaSpltvKehidupan::all();
+        $sidebar_aktif_kehidupan = request()->url() == route('spltv_kehidupan_2', [$soal_all->first()->id, 1]) ? true : false;
         if (session('jawaban_siswa')) {
             $jawaban_siswa = session()->get('jawaban_siswa');
             $percobaan = session()->get('percobaan');
-            return view('siswa.spltv.dalam kehidupan sehari-hari.halaman_2_eliminasi', compact('soal', 'soal_all', 'nomor', 'jawaban_siswa', 'percobaan'));
+            return view('siswa.spltv.dalam kehidupan sehari-hari.halaman_2_eliminasi', compact('soal', 'soal_all', 'nomor', 'jawaban_siswa', 'percobaan', 'halaman_aktif', 'sidebar_aktif_kehidupan'));
         } else {
             $percobaan = 0;
             $jawaban_siswa = null;
-            return view('siswa.spltv.dalam kehidupan sehari-hari.halaman_2_eliminasi', compact('soal', 'soal_all', 'nomor', 'jawaban_siswa', 'percobaan'));
+            return view('siswa.spltv.dalam kehidupan sehari-hari.halaman_2_eliminasi', compact('soal', 'soal_all', 'nomor', 'jawaban_siswa', 'percobaan', 'halaman_aktif', 'sidebar_aktif_kehidupan'));
         }
     }
     public function spltv_kehidupan_2_post(Request $request, $nomor)
@@ -76,7 +87,5 @@ class SpltvKehidupanSehariController extends Controller
         $nomor = $request->nomor;
         return view('siswa.spltv.dalam kehidupan sehari-hari.pembahasan.pembahasan_kehidupan', compact('pembahasan_soal', 'nomor'));
     }
-    public function spltv_kehidupan_1_2(){
-        return view('siswa.spltv.dalam kehidupan sehari-hari.halaman_1_2_kehidupan');
-    }
+
 }

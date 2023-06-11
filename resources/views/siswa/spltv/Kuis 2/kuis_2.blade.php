@@ -1,15 +1,22 @@
 @extends('siswa.template.main')
 @section('title')
-    Kuis masalah kontekstual SPLTV
+    Kuis SPLTV dalam kehidupan sehari - hari
+@endsection
+@section('script_atas')
+    <script src="{{ asset('js/kuis1_timer.js') }}"></script>
 @endsection
 @section('content')
     <div class="card shadow">
         <div class="card-header">
-            <h6>Kuis 3</h6>
+            <h6>Kuis SPLTV dalam kehidupan sehari - hari</h6>
         </div>
         <div class="card-body">
-            <div class="mt-5">
-
+            <div class="mt-5 row">
+                <div class="col">
+                    <div class="float-right d-flex">
+                        Waktu : <div id="timer">-:-</div>
+                    </div>
+                </div>
             </div>
             <div id="smartwizard">
                 <ul class="nav">
@@ -21,7 +28,7 @@
                         </li>
                     @endforeach
                 </ul>
-                <form action="{{ route('kuis_2_post') }}" method="post" onsubmit="return validateForm()" name="myForm">
+                <form action="{{ route('kuis_2_post') }}" method="post" onsubmit="return validateForm()" name="form" id="form">
                     @csrf
                     <div class="tab-content">
                         @foreach ($soal_kuis as $key => $content_kuis)
@@ -140,7 +147,7 @@
     </script>
     <script>
         function validateForm() {
-            let x = document.forms["myForm"]["{{ $content_kuis->id }}[jawaban_1]"].value;
+            let x = document.forms["form"]["{{ $content_kuis->id }}[jawaban_1]"].value;
             if (x == "") {
                 // alert("Name must be filled out");
                 Swal.fire(
@@ -150,8 +157,8 @@
                 );
                 return false;
             };
-            if (document.forms["myForm"]["{{ $content_kuis->id }}[jawaban_2]"]) {
-                let y = document.forms["myForm"]["{{ $content_kuis->id }}[jawaban_2]"].value;
+            if (document.forms["form"]["{{ $content_kuis->id }}[jawaban_2]"]) {
+                let y = document.forms["form"]["{{ $content_kuis->id }}[jawaban_2]"].value;
                 if (y == "") {
                     // alert("Name must be filled out");
                     Swal.fire(
@@ -162,8 +169,8 @@
                     return false;
                 };
             };
-            if (document.forms["myForm"]["{{ $content_kuis->id }}[jawaban_3]"]) {
-                let z = document.forms["myForm"]["{{ $content_kuis->id }}[jawaban_3]"].value;
+            if (document.forms["form"]["{{ $content_kuis->id }}[jawaban_3]"]) {
+                let z = document.forms["form"]["{{ $content_kuis->id }}[jawaban_3]"].value;
                 if (z == "") {
                     // alert("Name must be filled out");
                     Swal.fire(

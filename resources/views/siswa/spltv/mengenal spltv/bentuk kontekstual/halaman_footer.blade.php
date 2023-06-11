@@ -3,14 +3,14 @@
         <div class="d-flex justify-content-center">
             <nav aria-label="Page navigation example">
                 <ul class="pagination">
-                    @if (Request()->routeIs('bentuk_spltv_kontekstual'))
+                    {{-- @if (Request()->routeIs('bentuk_spltv_kontekstual'))
                         <li class="page-item">
                             <a class="page-link" href="{{route('bentuk_spltv_5')}}" aria-label="Next">
                                 <span aria-hidden="true">Sebelumnya</span>
 
                             </a>
                         </li>
-                    @endif
+                    @endif --}}
                     <li
                         class="page-item
                     @if (Request()->routeIs('bentuk_spltv_kontekstual'))
@@ -22,7 +22,7 @@
                     @if (Request()->routeIs('bentuk_spltv_kontekstual'))
                         <li class="page-item">
                             <a class="page-link" href="{{route('kuis_mengenal')}}" aria-label="Next">
-                                <span aria-hidden="true">Selanjutnya</span>
+                                <span aria-hidden="true">Materi selanjutnya</span>
 
                             </a>
                         </li>

@@ -2,6 +2,9 @@
 @section('title')
     Kuis mengenal SPLTV
 @endsection
+@section('script_atas')
+    <script src="{{ asset('js/kuis1_timer.js') }}"></script>
+@endsection
 @section('content')
     <div class="card shadow">
         <div class="card-header">
@@ -10,7 +13,13 @@
             </h6>
         </div>
         <div class="card-body">
-            <div class="mt-5">
+            <div class="mt-5 row">
+                <div class="col">
+                    <div class="float-right d-flex">
+                        Waktu : <div id="timer">-:-</div>
+                    </div>
+                </div>
+
 
             </div>
             <div id="smartwizard">
@@ -24,8 +33,8 @@
                     @endforeach
                 </ul>
 
-                <form action="{{ route('kuis_mengenal_post') }}" method="post" onsubmit="return validateForm()" name="myForm" id="form"
-                    >
+                <form action="{{ route('kuis_mengenal_post') }}" method="post" onsubmit="return validateForm()"
+                    name="myForm" id="form">
                     @csrf
                     <div class="tab-content">
                         @foreach ($soal_kuis_mengenal as $key => $content_kuis)
@@ -67,17 +76,16 @@
 
                                                         <input type="radio" name="{{ $content_kuis->id }}[jawaban]"
                                                             value="a" id="{{ $content_kuis->id }}[jawaban_a]"><label
-                                                            for="{{ $content_kuis->id }}[jawaban_a]"
-                                                            class="ml-3">A. {{$content_kuis->pilihan_a}}
-                                                            </label>
+                                                            for="{{ $content_kuis->id }}[jawaban_a]" class="ml-3">A.
+                                                            {{ $content_kuis->pilihan_a }}
+                                                        </label>
 
                                                     </div>
                                                     <div class="radio mb-3">
 
                                                         <input type="radio" name="{{ $content_kuis->id }}[jawaban]"
                                                             value="b" id="{{ $content_kuis->id }}[jawaban_b]"><label
-                                                            for="{{ $content_kuis->id }}[jawaban_b]"
-                                                            class="ml-3">B.
+                                                            for="{{ $content_kuis->id }}[jawaban_b]" class="ml-3">B.
                                                             {{ $content_kuis->pilihan_b }}</label>
 
                                                     </div>
@@ -85,8 +93,7 @@
 
                                                         <input type="radio" name="{{ $content_kuis->id }}[jawaban]"
                                                             value="c" id="{{ $content_kuis->id }}[jawaban_c]"><label
-                                                            for="{{ $content_kuis->id }}[jawaban_c]"
-                                                            class="ml-3">C.
+                                                            for="{{ $content_kuis->id }}[jawaban_c]" class="ml-3">C.
                                                             {{ $content_kuis->pilihan_c }}</label>
 
                                                     </div>
@@ -94,8 +101,7 @@
 
                                                         <input type="radio" name="{{ $content_kuis->id }}[jawaban]"
                                                             value="d" id="{{ $content_kuis->id }}[jawaban_d]"><label
-                                                            for="{{ $content_kuis->id }}[jawaban_d]"
-                                                            class="ml-3">D.
+                                                            for="{{ $content_kuis->id }}[jawaban_d]" class="ml-3">D.
                                                             {{ $content_kuis->pilihan_d }}</label>
 
                                                     </div>
@@ -103,8 +109,7 @@
 
                                                         <input type="radio" name="{{ $content_kuis->id }}[jawaban]"
                                                             value="e" id="{{ $content_kuis->id }}[jawaban_e]"> <label
-                                                            for="{{ $content_kuis->id }}[jawaban_e]"
-                                                            class="ml-3">E.
+                                                            for="{{ $content_kuis->id }}[jawaban_e]" class="ml-3">E.
                                                             {{ $content_kuis->pilihan_e }}</label>
 
                                                     </div>

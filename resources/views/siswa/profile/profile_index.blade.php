@@ -4,6 +4,7 @@
 @endsection
 @section('content')
     <div class="container-fluid">
+        {{ Breadcrumbs::render('profile') }}
         <div class="row">
             <div class="col-lg-5 col-xl-4">
                 <div class="card">

@@ -2,36 +2,51 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\kuis_1_nilai;
 use App\Models\KuisMengenal;
 use Illuminate\Http\Request;
 use App\Models\KuisMengenalNilai;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
-use App\Models\kuis_1_nilai;
 
 
 class Mengenal_spltv extends Controller
 {
     public function pengertian(){
+        // if(request()->url() == route('pengertian_spltv')){
+        //     $test = 'yes';
+        // }
+        // dd($test);
+
         return view('siswa.spltv.mengenal spltv.pengertian.pengertian');
     }
     public function bentuk(){
-        return view('siswa.spltv.mengenal spltv.bentuk Spltv.bentuk_spltv');
+        $halaman_aktif = 0;
+        return view('siswa.spltv.mengenal spltv.bentuk Spltv.bentuk_spltv')->with(compact('halaman_aktif'));
     }
     public function bentuk_2(){
-        return view('siswa.spltv.mengenal spltv.bentuk Spltv.bentuk_spltv_2');
+        $halaman_aktif = 1;
+        $sidebar_aktif = request()->url() == route('bentuk_spltv_2') ? true : false;
+        return view('siswa.spltv.mengenal spltv.bentuk Spltv.bentuk_spltv_2')->with(compact('halaman_aktif', 'sidebar_aktif'));
     }
     public function bentuk_3()
     {
-        return view('siswa.spltv.mengenal spltv.bentuk Spltv.bentuk_spltv_3');
+        $halaman_aktif = 2;
+        $sidebar_aktif = request()->url() == route('bentuk_spltv_3') ? true : false;
+        return view('siswa.spltv.mengenal spltv.bentuk Spltv.bentuk_spltv_3')->with(compact('halaman_aktif', 'sidebar_aktif'));
     }
     public function bentuk_4()
     {
-        return view('siswa.spltv.mengenal spltv.bentuk Spltv.bentuk_spltv_4');
+        $halaman_aktif = 3;
+        $sidebar_aktif = request()->url() == route('bentuk_spltv_4') ? true : false;
+        return view('siswa.spltv.mengenal spltv.bentuk Spltv.bentuk_spltv_4')->with(compact('halaman_aktif', 'sidebar_aktif'));
     }
     public function bentuk_5()
     {
-        return view('siswa.spltv.mengenal spltv.bentuk Spltv.bentuk_spltv_5');
+        $halaman_aktif = 4;
+        $sidebar_aktif = request()->url() == route('bentuk_spltv_5') ? true : false;
+        return view('siswa.spltv.mengenal spltv.bentuk Spltv.bentuk_spltv_5')->with(compact('halaman_aktif', 'sidebar_aktif'));
     }
     public function keontekstual(){
         return view('siswa.spltv.mengenal spltv.bentuk kontekstual.bentuk_konteks');

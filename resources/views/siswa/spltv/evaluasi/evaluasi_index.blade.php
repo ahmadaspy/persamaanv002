@@ -2,14 +2,21 @@
 @section('title')
     Evaluasi
 @endsection
+@section('script_atas')
+    <script src="{{ asset('js/evaluasi_timer.js') }}"></script>
+@endsection
 @section('content')
     <div class="card shadow">
         <div class="card-header">
             <h6>Evaluasi</h6>
         </div>
         <div class="card-body">
-            <div class="mt-5">
-
+            <div class="mt-5 row">
+                <div class="col">
+                    <div class="float-right d-flex">
+                        Waktu : <div id="timer">-:-</div>
+                    </div>
+                </div>
             </div>
             <div id="smartwizard">
                 <ul class="nav">

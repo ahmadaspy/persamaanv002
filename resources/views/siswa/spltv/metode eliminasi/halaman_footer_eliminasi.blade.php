@@ -1,14 +1,24 @@
+@php
+    $nama_route = ['spltv_eliminasi_1', 'spltv_eliminasi_2'];
+    $route_sebelumnya = $halaman_aktif > 0 ? $nama_route[$halaman_aktif - 1] : null;
+    $route_selanjutnya = $halaman_aktif < count($nama_route) - 1 ? $nama_route[$halaman_aktif + 1] : null;
+@endphp
 <div class="card">
     <div class="card-body shadow">
         <div class="d-flex justify-content-center">
             <nav aria-label="Page navigation example">
                 <ul class="pagination">
-                    @if (Request()->routeIs('spltv_eliminasi_1'))
+                    {{-- @if (Request()->routeIs('spltv_eliminasi_1'))
                         <li class="page-item">
                             <a class="page-link" href="{{ route('spltv_subtitusi_1') }}" aria-label="Previous">
                                 <span aria-hidden="true">Sebelumnya</span>
                             </a>
                         </li>
+                    @endif --}}
+                    @if ($route_sebelumnya)
+                        <a class="page-link" href="{{ route($route_sebelumnya) }}" aria-label="Previous">
+                            <span aria-hidden="true">Sebelumnya</span>
+                        </a>
                     @endif
                     <li
                         class="page-item
@@ -37,10 +47,15 @@
                     @if (Request()->routeIs('spltv_eliminasi_2'))
                         <li class="page-item">
                             <a class="page-link" href="{{route('spltv_gabungan_1')}}" aria-label="Next">
-                                <span aria-hidden="true">Selanjutnya</span>
+                                <span aria-hidden="true">Materi selanjutnya</span>
 
                             </a>
                         </li>
+                    @endif
+                     @if ($route_selanjutnya)
+                        <a class="page-link" href="{{ route($route_selanjutnya) }}" aria-label="Next">
+                            <span aria-hidden="true">Selanjutnya</span>
+                        </a>
                     @endif
                 </ul>
             </nav>

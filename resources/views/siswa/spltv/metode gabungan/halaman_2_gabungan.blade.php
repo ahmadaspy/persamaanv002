@@ -5,7 +5,7 @@
 @section('content')
 <div class="card">
     <div class="card-header">
-
+        {{Breadcrumbs::render('metode_gabungan_2')}}
     </div>
     <div class="card-body">
         <h3 class="m-0 font-weight-bold text-primary text-center mb-4">Metode Gabungan SPLTV (Sistem Persamaan Linear Tiga Variabel)</h3>

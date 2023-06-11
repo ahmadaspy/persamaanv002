@@ -10,11 +10,15 @@ class SpltvGabunganController extends Controller
 {
     public function spltv_gabungan_1()
     {
-        return view('siswa.spltv.metode gabungan.halaman_1_gabungan');
+        $halaman_aktif = 0;
+        return view('siswa.spltv.metode gabungan.halaman_1_gabungan')->with(compact('halaman_aktif'));
     }
     public function spltv_gabungan_2()
     {
-        return view('siswa.spltv.metode gabungan.halaman_2_gabungan');
+        $halaman_aktif = 1;
+        $sidebar_aktif_gabungan = request()->url() == route('spltv_gabungan_2') ? true : false;
+        $sidebar_aktif_metode = request()->url() == route('spltv_gabungan_2') ? true : false;
+        return view('siswa.spltv.metode gabungan.halaman_2_gabungan')->with(compact('halaman_aktif', 'sidebar_aktif_gabungan', 'sidebar_aktif_metode'));
     }
     public function spltv_gabungan_3($id, $nomor)
     {

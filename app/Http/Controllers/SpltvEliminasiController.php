@@ -10,11 +10,15 @@ class SpltvEliminasiController extends Controller
 {
     public function spltv_eliminasi_1()
     {
-        return view('siswa.spltv.metode eliminasi.halaman_1_eliminasi');
+        $halaman_aktif = 0;
+        return view('siswa.spltv.metode eliminasi.halaman_1_eliminasi')->with(compact('halaman_aktif'));
     }
     public function spltv_eliminasi_2()
     {
-        return view('siswa.spltv.metode eliminasi.halaman_2_eliminasi');
+        $halaman_aktif = 1;
+        $sidebar_aktif_eliminasi = request()->url() == route('spltv_eliminasi_2') ? true : false;
+        $sidebar_aktif_metode = request()->url() == route('spltv_eliminasi_2') ? true : false;
+        return view('siswa.spltv.metode eliminasi.halaman_2_eliminasi')->with(compact('sidebar_aktif_eliminasi', 'sidebar_aktif_metode', 'halaman_aktif'));
     }
     public function spltv_eliminasi_3($id, $nomor)
     {

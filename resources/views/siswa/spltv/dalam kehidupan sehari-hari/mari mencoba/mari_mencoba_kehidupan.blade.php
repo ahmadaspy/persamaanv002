@@ -97,7 +97,7 @@
                         $no = 1;
                     @endphp
                     @foreach ($soal_all as $all)
-                        <a href="{{ route('spltv_kehidupan_2_post', [$all->id, $no]) }}"
+                        <a href="{{ route('spltv_kehidupan_2', [$all->id, $no]) }}"
                             class="btn btn-light mt-1
                             @if ($all->id === $soal->id) active @endif
                             ">{{ $no++ }}</a>

@@ -7,8 +7,10 @@
     Pengertian SPLTV
 @endsection
 @section('content')
+
     <div class="card shadow">
         <div class="card-header">
+            {{ Breadcrumbs::render('pengertian') }}
 
         </div>
 

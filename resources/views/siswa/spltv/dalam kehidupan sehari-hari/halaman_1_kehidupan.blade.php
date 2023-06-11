@@ -1,8 +1,11 @@
 @extends('siswa.template.main')
+@section('title')
+    SPLTV dalam kehidupan sehari - hari halaman 1
+@endsection
 @section('content')
     <div class="card shadow">
         <div class="card-header">
-            {{-- <h6 class="m-0 font-weight-bold text-primary">Dalam Kehidupan sehari - hari</h6> --}}
+            {{Breadcrumbs::render('kehidupan_sehari')}}
         </div>
         <div class="card-body">
             <h3 class="m-0 font-weight-bold text-primary text-center mb-4">SPLTV (Sistem Persamaan Linear Tiga Variabel) dalam kehidupan sehari - hari</h6>

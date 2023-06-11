@@ -5,7 +5,7 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            {{-- <h4 class="text-primary">Latihan</h4> --}}
+            {{Breadcrumbs::render('metode substitusi halaman 2')}}
         </div>
         <div class="card-body">
             <h3 class="m-0 font-weight-bold text-primary text-center mb-4">Metode Subtitusi SPLTV (Sistem Persamaan Linear Tiga Variabel)</h6>

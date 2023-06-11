@@ -8,7 +8,7 @@
 @section('content')
     <div class="card shadow">
         <div class="card-header">
-
+            {{Breadcrumbs::render('Bentuk kontekstual')}}
         </div>
         <div class="card-body">
             <h4 class="m-0 font-weight-bold text-primary text-center mb-4">

@@ -8,7 +8,7 @@
 @section('content')
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-
+            {{Breadcrumbs::render('metode substitusi')}}
         </div>
         <div class="card-body">
             <h3 class="m-0 font-weight-bold text-primary text-center mb-4">Metode Subtitusi SPLTV (Sistem Persamaan Linear Tiga Variabel)</h6>

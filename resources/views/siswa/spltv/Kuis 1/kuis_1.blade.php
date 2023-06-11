@@ -2,14 +2,21 @@
 @section('title')
     Kuis menyelesaikan SPLTV
 @endsection
+@section('script_atas')
+    <script src="{{ asset('js/kuis1_timer.js') }}"></script>
+@endsection
 @section('content')
     <div class="card shadow">
         <div class="card-header">
             <h6 class="font-weight-bold text-primary">Kuis Menyelesaikan SPLTV (Sistem Persamaan Linear Tiga Variabel)</h6>
         </div>
         <div class="card-body">
-            <div class="mt-5">
-
+            <div class="mt-5 row">
+                <div class="col">
+                    <div class="float-right d-flex">
+                        Waktu : <div id="timer">-:-</div>
+                    </div>
+                </div>
             </div>
             <div id="smartwizard">
                 <ul class="nav">
@@ -21,7 +28,7 @@
                         </li>
                     @endforeach
                 </ul>
-                <form action="{{ route('kuis_1_post') }}" method="post" onsubmit="return validateForm()" name="myForm">
+                <form action="{{ route('kuis_1_post') }}" method="post" onsubmit="return validateForm()" name="form" id="form">
                     @csrf
                     <div class="tab-content">
                         @foreach ($soal_kuis as $key => $content_kuis)
@@ -49,14 +56,16 @@
                                                     <table class="table table-bordered table-hover">
                                                         <thead>
                                                             <tr>
-                                                                <td colspan="3">{{ $content_kuis->pertanyaan_soal }}</td>
+                                                                <td colspan="3">{{ $content_kuis->pertanyaan_soal }}
+                                                                </td>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
                                                             @if ($content_kuis->jawaban_1 != null)
                                                                 <tr>
                                                                     <td id="jawaban_1">
-                                                                        <input type="number" step="0.01" placeholder="{{ $content_kuis->placeholder_jawaban_1 }}"
+                                                                        <input type="number" step="0.01"
+                                                                            placeholder="{{ $content_kuis->placeholder_jawaban_1 }}"
                                                                             name="{{ $content_kuis->id }}[jawaban_1]"
                                                                             class="form-control input-default">
                                                                     </td>
@@ -65,7 +74,8 @@
                                                             @if ($content_kuis->jawaban_2 != null)
                                                                 <tr>
                                                                     <td id="jawaban_2">
-                                                                        <input type="number" step="0.01" placeholder="{{ $content_kuis->placeholder_jawaban_2 }}"
+                                                                        <input type="number" step="0.01"
+                                                                            placeholder="{{ $content_kuis->placeholder_jawaban_2 }}"
                                                                             name="{{ $content_kuis->id }}[jawaban_2]"
                                                                             class="form-control input-default">
                                                                     </td>
@@ -74,7 +84,8 @@
                                                             @if ($content_kuis->jawaban_3 != null)
                                                                 <tr>
                                                                     <td id="jawaban_3">
-                                                                        <input type="number" step="0.01" placeholder="{{ $content_kuis->placeholder_jawaban_3 }}"
+                                                                        <input type="number" step="0.01"
+                                                                            placeholder="{{ $content_kuis->placeholder_jawaban_3 }}"
                                                                             name="{{ $content_kuis->id }}[jawaban_3]"
                                                                             class="form-control input-default">
                                                                     </td>
@@ -140,7 +151,7 @@
     </script>
     <script>
         function validateForm() {
-            let x = document.forms["myForm"]["{{ $content_kuis->id }}[jawaban_1]"].value;
+            let x = document.forms["form"]["{{ $content_kuis->id }}[jawaban_1]"].value;
             if (x == "") {
                 // alert("Name must be filled out");
                 Swal.fire(
@@ -150,8 +161,8 @@
                 );
                 return false;
             };
-            if (document.forms["myForm"]["{{ $content_kuis->id }}[jawaban_2]"]) {
-                let y = document.forms["myForm"]["{{ $content_kuis->id }}[jawaban_2]"].value;
+            if (document.forms["form"]["{{ $content_kuis->id }}[jawaban_2]"]) {
+                let y = document.forms["form"]["{{ $content_kuis->id }}[jawaban_2]"].value;
                 if (y == "") {
                     // alert("Name must be filled out");
                     Swal.fire(
@@ -162,8 +173,8 @@
                     return false;
                 };
             };
-            if (document.forms["myForm"]["{{ $content_kuis->id }}[jawaban_3]"]) {
-                let z = document.forms["myForm"]["{{ $content_kuis->id }}[jawaban_3]"].value;
+            if (document.forms["form"]["{{ $content_kuis->id }}[jawaban_3]"]) {
+                let z = document.forms["form"]["{{ $content_kuis->id }}[jawaban_3]"].value;
                 if (z == "") {
                     // alert("Name must be filled out");
                     Swal.fire(

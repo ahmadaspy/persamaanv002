@@ -32,10 +32,10 @@ class DatabaseSeeder extends Seeder
         $this->call(MariMencobaSpltvKehidupanSeeder::class);
         $this->call(LaratrustSeeder::class);
         $this->call(AdminSeeder::class);
-        $this->call(UserSeeder::class); //disable
+        // $this->call(UserSeeder::class); //disable
         $this->call(EvaluasiASeeder::class);
         // $this->call(EvaluasiBSeeder::class);
-        $this->call(KkmSeeder::class); //disable
+        // $this->call(KkmSeeder::class); //disable
         // \App\Models\User::factory(10)->create();
     }
 }

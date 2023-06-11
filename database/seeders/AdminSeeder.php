@@ -18,12 +18,24 @@ class AdminSeeder extends Seeder
      */
     public function run()
     {
-        $this->faker = Faker::create();
-        $email = $this->faker->unique()->safeEmail();
+        // $this->faker = Faker::create();
+        // $email = $this->faker->unique()->safeEmail();
+        // $user = User::create([
+        //     'name' => $this->faker->name(),
+        //     'email' => $email,
+        //     'nip_nis' => $this->faker->unique()->numberBetween($min = 0, $max = 9000),
+        //     'email_verified_at' => now(),
+        //     'kode_kelas_id' => null,
+        //     'password' => Hash::make($email), // password
+        //     'remember_token' => Str::random(10),
+        //     'updated_at' => Carbon::now(),
+        //     'created_at' => Carbon::now(),
+        // ]);
+        $email = '1610131310001@mhs.ulm.ac.id';
         $user = User::create([
-            'name' => $this->faker->name(),
+            'name' => 'Ahmad Aspiannoor',
             'email' => $email,
-            'nip_nis' => $this->faker->unique()->numberBetween($min = 0, $max = 9000),
+            'nip_nis' => null,
             'email_verified_at' => now(),
             'kode_kelas_id' => null,
             'password' => Hash::make($email), // password

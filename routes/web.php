@@ -59,6 +59,7 @@ Route::get('/tentangkita', function () {
 // });
 
 Route::get('/logout', [Controller::class, 'logout'])->name('logout_user');
+Route::get('/logout/selesai', [Controller::class, 'logout_selesai'])->name('logout_selesai');
 
 Route::get('/landingpage', [DashController::class, 'landingpage'])->middleware(['auth'])->name('landing_page');
 
@@ -151,15 +152,15 @@ Route::prefix('siswa')->group(function () {
         Route::prefix('spltv')->group(function () {
             Route::get('/menyelesaikanspltv', [spltv::class, 'index'])->name('spltv_index');
             Route::prefix('/mengenal')->group(function () {
-                Route::get('/pengertian-spltv', [Mengenal_spltv::class, 'pengertian'])->name('pengertian_spltv');
-                Route::prefix('/bentukspltv')->group(function(){
+                Route::get('/pengertian spltv', [Mengenal_spltv::class, 'pengertian'])->name('pengertian_spltv');
+                Route::prefix('/bentuk spltv')->group(function(){
                     Route::get('/1', [Mengenal_spltv::class, 'bentuk'])->name('bentuk_spltv');
                     Route::get('/2', [Mengenal_spltv::class, 'bentuk_2'])->name('bentuk_spltv_2');
                     Route::get('/3', [Mengenal_spltv::class, 'bentuk_3'])->name('bentuk_spltv_3');
                     Route::get('/4', [Mengenal_spltv::class, 'bentuk_4'])->name('bentuk_spltv_4');
                     Route::get('/5', [Mengenal_spltv::class, 'bentuk_5'])->name('bentuk_spltv_5');
                 });
-                Route::get('/bentuk-spltv/kontekstual', [Mengenal_spltv::class, 'keontekstual'])->name('bentuk_spltv_kontekstual');
+                Route::get('/bentuk spltv/SPLTV kontekstual', [Mengenal_spltv::class, 'keontekstual'])->name('bentuk_spltv_kontekstual');
                 Route::get('/kuis', [Mengenal_spltv::class, 'kuis'])->name('kuis_mengenal');
                 Route::post('/kuis-post', [Mengenal_spltv::class, 'kuis_mengenal_post'])->name('kuis_mengenal_post');
                 Route::get('/hasil-kuis', [Mengenal_spltv::class, 'kuis_mengenal_hasil'])->name('kuis_mengenal_hasil');

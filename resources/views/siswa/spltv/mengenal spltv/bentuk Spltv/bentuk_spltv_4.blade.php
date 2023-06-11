@@ -12,7 +12,7 @@
         <div class="row">
             <div class="card shadow">
                 <div class="card-header">
-
+                    {{Breadcrumbs::render('Bentuk SPLTV 4')}}
                 </div>
 
                 <div class="card-body">

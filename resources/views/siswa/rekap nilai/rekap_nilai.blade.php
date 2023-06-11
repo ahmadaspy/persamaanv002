@@ -6,6 +6,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
 @endsection
 @section('content')
+    {{Breadcrumbs::render('rekap_halaman_siswa')}}
     <div class="row">
         <div class="col">
             <div class="row">

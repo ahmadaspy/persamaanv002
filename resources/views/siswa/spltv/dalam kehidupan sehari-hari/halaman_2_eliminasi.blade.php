@@ -1,11 +1,11 @@
 @extends('siswa.template.main')
 @section('title')
-    Kontkestual Halaman 2
+    SPLTV dalam kehidupan sehari - hari halaman 2
 @endsection
 @section('content')
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            {{-- <h5 class="m-0 font-weight-bold text-primary">Latihan 2</h5> --}}
+            {{Breadcrumbs::render('kehidupan_sehari_3')}}
         </div>
         <div class="card-body">
             <h3 class="m-0 font-weight-bold text-primary text-center mb-4">SPLTV (Sistem Persamaan Linear Tiga Variabel) dalam kehidupan sehari - hari</h6>

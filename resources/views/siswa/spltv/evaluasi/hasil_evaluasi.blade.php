@@ -47,11 +47,13 @@
                             <h5 class="card-title" style="color: rgb(71, 255, 71)">Selamat</h5>
                             <p class="card-text text-center">Nilai Kamu : {{ $nilai->nilai }}</p>
                             <a href="{{ route('evaluasi_index') }}" class="btn btn-danger">Ulang evaluasi</a>
+
+                            <p class="card-text text-center mt-3"><a href="{{ route('logout_selesai') }}" class="btn btn-success text-white">Selesai</a></p>
                             {{-- <a href="{{ route('spltv_kehidupan_1') }}" class="btn btn-primary">Materi selanjutnya</a> --}}
                         @else
                             <h5 class="card-title" style="color: rgb(255, 0, 0)">Jangan menyerah</h5>
-                            <p class="card-text text-cente">Nilai Kamu : {{ $nilai->nilai }}</p>
-                            <p class="card-text text-cente">Pelajari lagi materi sebelumnya klik <a href="{{route('spltv_subtitusi_1')}}" class="text-warning stretched-link">disini</a></p>
+                            <p class="card-text text-center">Nilai Kamu : {{ $nilai->nilai }}</p>
+                            <p class="card-text text-center">Pelajari lagi materi sebelumnya klik <a href="{{route('spltv_subtitusi_1')}}" class="text-warning stretched-link">disini</a></p>
                             <a href="{{ route('evaluasi_index') }}" class="btn btn-danger">Ulang evaluasi</a>
                         @endif
                     </div>

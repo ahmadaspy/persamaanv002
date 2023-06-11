@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 use App\Models\MariMencobaSpltvSubtitusi;
 use Illuminate\Support\Facades\Validator;
 
@@ -10,11 +11,16 @@ class SpltvSubtitusi extends Controller
 {
     public function spltv_subtitusi_1()
     {
-        return view('siswa.spltv.metode subtitusi.halaman_1_subtitusi');
+
+        $halaman_aktif = 0;
+        return view('siswa.spltv.metode subtitusi.halaman_1_subtitusi')->with(compact('halaman_aktif'));
     }
     public function spltv_subtitusi_2()
     {
-        return view('siswa.spltv.metode subtitusi.halaman_2_subtitusi');
+        $halaman_aktif = 1;
+        $sidebar_aktif_substitusi = request()->url() == route('spltv_subtitusi_2') ? true : false;
+        $sidebar_aktif_metode = request()->url() == route('spltv_subtitusi_2') ? true : false;
+        return view('siswa.spltv.metode subtitusi.halaman_2_subtitusi')->with(compact('halaman_aktif', 'sidebar_aktif_substitusi', 'sidebar_aktif_metode'));
     }
     public function spltv_subtitusi_3($id, $nomor)
     {
